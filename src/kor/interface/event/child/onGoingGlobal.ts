@@ -9,6 +9,4 @@
  * - Condition 목록을 만족하지 못했다가 만족한다면,
  *   Action을 다시 실행하려 할 것입니다.
  */
-export interface IOnGoingGlobal {
-
-}
+export interface IOnGoingGlobal {}

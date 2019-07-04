@@ -48,15 +48,3 @@ Secondly, we want to provide visual scripting such as Unreal Engine. A great vis
 ## License
 
 MIT Licensed.
-
-
-
-스크립트를 생성하기 위해서는
-
-Rule(규칙)을 추가하고,
-Event(사건)를 선택한 후,
-Condition(조건)을 추가한 다음
-Action(행동)을 추가하면 된다.
-
-Condition을 추가하는 것은 선택 사항으로,
-조건이 필요 없는 경우 추가하지 않아도 된다.

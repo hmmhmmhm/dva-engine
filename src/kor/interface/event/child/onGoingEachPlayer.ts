@@ -1,3 +1,8 @@
+import {
+    TeamType,
+    EventPlayerType
+} from '../../../type'
+
 /**
  * 플레이어가 게임에 참여하면각 플레이어마다 이 Rule의 인스턴스가 생성됩니다.
  * 이 인스턴스는 해당 플레이어가 게임을 떠나거나, 게임이 끝날 때까지 활성화되어 있습니다.
@@ -11,5 +16,6 @@
  *   Action을 다시 실행하려 할 것입니다.
  */
 export interface IOnGoingEachPlayer {
-
+    team: TeamType
+    player: EventPlayerType
 }

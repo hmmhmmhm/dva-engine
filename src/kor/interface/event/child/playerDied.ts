@@ -1,3 +1,8 @@
+import {
+    TeamType,
+    EventPlayerType
+} from '../../../type'
+
 /**
  * 플레이어 한 명이 사망할 때마다 Rule을 실행합니다.
  * 이 Rule은 특정 플레이어를 대상으로 한 번에 하나의 인스턴스만 활성화합니다.
@@ -7,5 +12,6 @@
  *   하나라도 만족하지 않으면 Action이 실행되지 않습니다.
  */
 export interface IPlayerDied {
-
+    team: TeamType
+    player: EventPlayerType
 }

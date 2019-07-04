@@ -1,7 +1,40 @@
-import { IHeroList } from '../heroList'
-import { IAbsoluteValue } from './child'
+import { 
+    HeroType,
+    ValueAddType
+} from '../../type'
 
-export interface IValueType {
+import {
+    // Number Type
+    IAbsoluteValue,
+
+    // Custom Array Type
+    IAllDeadPlayers,
+    IAllLivingPlayers,
+    IAllPlayers,
+    IAllPlayersNotOnObjective,
+    IAllPlayersOnObjective,
+    IAllowedHeroes,
+
+    // Method Type
+    IAltitudeOf,
+    IVector,
+    ILocalVectorOf,
+    IWorldVectorOf,
+    IVectorTowards,
+
+    // Operator Type
+    IAnd,
+
+    // Variable Type
+    IGlobalVariable,
+    IPlayerVariable,
+    INumber,
+
+    // Unclassified
+
+} from './child'
+
+export interface IValue {
     /**
      * 지정된 값의 절대값입니다.
      */
@@ -10,55 +43,55 @@ export interface IValueType {
     /**
      * 두 숫자 또는 벡터의 합입니다.
      */
-    add
+    add: ValueAddType
 
     /**
      * 팀 또는 경기 내에서 사망한 모든 플레이어가 있는 배열입니다.
      */
-    allDeadPlayers
+    allDeadPlayers: IAllDeadPlayers
 
     /**
      * 오버워치의 모든 영웅 배열입니다.
      */
-    allHeroes
+    allHeroes: {}
 
     /**
      * 팀 또는 경기 내에서 생존한 모든 플레이어가 있는 배열입니다.
      */
-    allLivingPlayers
+    allLivingPlayers: IAllLivingPlayers
 
     /**
      * 팀 또는 경기 내 모든 플레이어가 있는 배열입니다.
      */
-    allPlayers
+    allPlayers: IAllPlayers
 
     /**
      * 팀 또는 경기 내에서 화물을 확보하지도,
      * 점령 중이지도 않은 모든 플레이어가 있는 배열입니다.
      */
-    allPlayersNotOnObjective
+    allPlayersNotOnObjective: IAllPlayersNotOnObjective
 
     /**
      * 팀 또는 경기 내에서 화물 확보 또는
      * 점령 중인 모든 플레이어가 있는 배열입니다.
      */
-    allPlayersOnObjective
+    allPlayersOnObjective: IAllPlayersOnObjective
 
     /**
      * 지정된 플레이어가 선택할 수 있는 영웅 배열입니다.
      */
-    allowedHeroes
+    allowedHeroes: IAllowedHeroes
 
     /**
      * 표면으로부터 측정한 플레이어의 높이(미터)입니다.
      * 플레이어가 표면에 있으면 0입니다.
      */
-    altitudeOf
+    altitudeOf: IAltitudeOf
 
     /**
      * 두 입력 정보 모두 TRUE(또는 그에 상응하는 경우)인지 여부입니다.
      */
-    and
+    and: IAnd
 
     /**
      * 두 방향 벡터 (정규화 불필요) 사이의 각입니다. (단위: 도)
@@ -287,7 +320,7 @@ export interface IValueType {
     /**
      * 게임 자체에 종속된 전역 변수의 현재 값입니다.
      */
-    globalVariable
+    globalVariable: IGlobalVariable
 
     /**
      * 월드에 개체가 생성되었는지 여부입니다.
@@ -310,7 +343,7 @@ export interface IValueType {
     /**
      * 영웅 상수입니다.
      */
-    hero: IHeroList
+    hero: HeroType
 
     /**
      * HERO 매개변수를 아이콘으로 표시할 문자열로 변환합니다.
@@ -603,7 +636,7 @@ export interface IValueType {
     /**
      * 제공된 월드 좌표 벡터에 해당하는 로컬 좌표 벡터입니다.
      */
-    localVectorOf
+    localVectorOf: ILocalVectorOf
 
     /**
      * 경기의 현재 라운드입니다. 1부터 증가합니다.
@@ -676,7 +709,7 @@ export interface IValueType {
     /**
      * 실수 형식의 상수입니다.
      */
-    number
+    number: INumber
 
     /**
      * 팀 또는 경기 내 사망 플레이어 수입니다.
@@ -769,7 +802,7 @@ export interface IValueType {
     /**
      * 지정된 플레이어가 가진 플레이어 변수의 현재 값입니다.
      */
-    playerVariable
+    playerVariable: IPlayerVariable
 
     /**
      * 게임 내 지정된 슬롯을 점유하는 플레이어의 배열입니다.
@@ -985,12 +1018,12 @@ export interface IValueType {
      * X는 좌측, Y는 위, Z는 전방을 의미합니다.
      * 벡터는 위치, 방향, 속도로 사용됩니다.
      */
-    vector
+    vector: IVector
 
     /**
      * 한 위치에서 다른 위치까지의 변위 벡터입니다.
      */
-    vectorTowards
+    vectorTowards: IVectorTowards
 
     /**
      * 플레이어의 현재 속도(벡터)입니다.
@@ -1034,7 +1067,7 @@ export interface IValueType {
     /**
      * 제공된 로컬 좌표 벡터에 해당하는 월드 좌표 벡터입니다.
      */
-    worldVectorOf
+    worldVectorOf: IWorldVectorOf
 
     /**
      * 지정된 벡터의 X 구성요소입니다.
