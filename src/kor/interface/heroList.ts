@@ -1,0 +1,32 @@
+export interface IHeroList {
+    genji
+    doomfist
+    reaper
+    mcCree
+    mei
+    bastion
+    soldier76
+    sombra
+    symmetra
+    ashe
+    widowmaker
+    junkrat
+    torbjorn
+    tracer
+    pharah
+    hanzo
+    dva
+    reinhardt
+    wreckingBall
+    roadhog
+    orisa
+    winston
+    zarya
+    lucio
+    mercy
+    moira
+    baptiste
+    brigitte
+    ana
+    zenyatta
+}
