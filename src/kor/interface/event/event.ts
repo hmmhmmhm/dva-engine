@@ -1,3 +1,12 @@
+import {
+    IOnGoingGlobal,
+    IOnGoingEachPlayer,
+    IPlayerEarnedElimination,
+    IPlayerDealtFinalBlow,
+    IPlayerTookDamage,
+    IPlayerDied
+} from './child'
+
 export interface IEvent {
     /**
      * 게임 시작 시 이 Rule의 개별 인스턴스 하나를 생성합니다.
@@ -10,7 +19,7 @@ export interface IEvent {
      * - Condition 목록을 만족하지 못했다가 만족한다면,
      *   Action을 다시 실행하려 할 것입니다.
      */
-    ongoingGlobal: IOngoingGlobal
+    ongoingGlobal: IOnGoingGlobal
 
     /**
      * 플레이어가 게임에 참여하면각 플레이어마다 이 Rule의 인스턴스가 생성됩니다.
@@ -24,7 +33,7 @@ export interface IEvent {
      * - Condition 목록을 만족하지 못했다가 만족한다면,
      *   Action을 다시 실행하려 할 것입니다.
      */
-    ongoingEachPlayer: IOngoingEachPlayer
+    ongoingEachPlayer: IOnGoingEachPlayer
 
     /**
      * 플레이어 한 명이 처치를 달성할 때마다 Rule을 실행합니다.
