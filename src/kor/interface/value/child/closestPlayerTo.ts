@@ -1,5 +1,5 @@
 import { ValueVectorType } from '../../../type'
-import { ITeam } from './'
+import { ValueTeamType } from '../../../type'
 
 /**
  * 한 위치에서 가장 가까운 플레이어입니다.
@@ -15,5 +15,5 @@ export interface IClosestPlayerTo {
     /**
      * 가장 가까이 있는 플레이어가 소속된 팀입니다.
      */
-    team: ITeam
+    team: ValueTeamType
 }

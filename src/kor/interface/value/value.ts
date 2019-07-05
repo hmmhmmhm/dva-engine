@@ -1,6 +1,7 @@
 import { 
     HeroType,
-    ValueAddType
+    ValueAddType,
+    ValueDivideType
 } from '../../type'
 
 import {
@@ -45,10 +46,20 @@ import {
     // Variable Type
     IGlobalVariable,
     IPlayerVariable,
+
+    // Unclassified
     IClosestPlayerTo,
     ICompare,
     IControlModeScoringPercentage,
     IControlModeScoringTeam,
+    ICosineFromDegrees,
+    ICosineFromRadians,
+    ICountOf,
+    ICrossProduct,
+    ICurrentArrayElement,
+    IDirectionFromAngles,
+    IDirectionTowards,
+    IDistanceBetween,
 
 
 } from './child'
@@ -210,50 +221,50 @@ export interface IValue {
     /**
      * 지정된 각(단위: 도)의 코사인 값입니다.
      */
-    cosineFromDegrees
+    cosineFromDegrees: ICosineFromDegrees
 
     /**
      * 지정된 각(단위: RAD)의 코사인 값입니다.
      */
-    cosineFromRadians
+    cosineFromRadians: ICosineFromRadians
 
     /** 
      * 지정된 배열 내 요소의 수입니다. 
      */
-    countOf
+    countOf: ICountOf
 
     /**
      * 지정된 값의 가위곱입니다.(왼쪽과 위쪽의 벡터 곱은 전방 방향)
      */
-    crossProduct
+    crossProduct: ICrossProduct
 
     /**
      * 현재 연산 대상인 배열 요소입니다.
      * FILTERED ARRAY 나 SORTED ARRAY 등의
      * 값을 확인할 때에만 의미가 있습니다.
      */
-    currentArrayElement
+    currentArrayElement: ICurrentArrayElement
 
     /**
      * 지정된 각에 대응하는 단위 길이 방향 벡터입니다.
      */
-    directionFromAngles
+    directionFromAngles: IDirectionFromAngles
 
     /**
      * 한 위치에서 다른 위치까지의 단위 길이 방향 벡터입니다.
      */
-    directionTowards
+    directionTowards: IDirectionTowards
 
     /**
      * 두 위치 사이의 거리(미터)입니다.
      */
-    distanceBetween
+    distanceBetween: IDistanceBetween
     
     /**
      * 두 숫자 또는 벡터의 비율입니다. 벡터를 숫자로 나누면
      * 비율이 증감된 벡터가 도출됩니다. 0으로 나누면 0이 됩니다.
      */
-    divide
+    divide: ValueDivideType
 
     /**
      * 지정된 값의 점곱입니다.

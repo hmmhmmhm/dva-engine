@@ -6,6 +6,7 @@ import {
     IAngleBetweenVectors,
 
     IAltitudeOf,
+    ICountOf,
 
     IAcrossineInDegrees,
     IArccosineInRadians,
@@ -13,6 +14,11 @@ import {
     IArcsineInRadians,
     IArctangentInDegrees,
     IArctangentInRadians,
+    ICosineFromDegrees,
+    ICosineFromRadians,
+
+    IControlModeScoringPercentage,
+    IDistanceBetween,
 
 } from "../../interface/value/child"
 
@@ -23,11 +29,13 @@ import {
 
 export type ValueNumberType
     = INumber
+    | IAddNumber
 
     | IAngleDifference
-    | IAltitudeOf
     | IAngleBetweenVectors
-    | IAddNumber
+
+    | IAltitudeOf
+    | ICountOf
 
     | IAcrossineInDegrees
     | IArccosineInRadians
@@ -35,6 +43,11 @@ export type ValueNumberType
     | IArcsineInRadians
     | IArctangentInDegrees
     | IArctangentInRadians
+    | ICosineFromDegrees
+    | ICosineFromRadians
+
+    | IControlModeScoringPercentage
 
     | IGlobalVariable
     | IPlayerVariable
+    | IDistanceBetween

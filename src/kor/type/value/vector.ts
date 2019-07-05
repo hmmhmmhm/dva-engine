@@ -5,7 +5,10 @@ import {
     IVectorTowards,
     IGlobalVariable,
     IPlayerVariable,
-    IBackward
+    IBackward,
+    ICrossProduct,
+    IDirectionFromAngles,
+    IDirectionTowards,
 } from '../../interface/value/child'
 
 export type ValueVectorType
@@ -16,3 +19,6 @@ export type ValueVectorType
     | IGlobalVariable
     | IPlayerVariable
     | IBackward
+    | ICrossProduct
+    | IDirectionFromAngles
+    | IDirectionTowards

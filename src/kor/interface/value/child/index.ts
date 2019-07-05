@@ -35,3 +35,17 @@ export * from './closestPlayerTo'
 export * from './compare'
 export * from './controlModeScoringPercentage'
 export * from './controlModeScoringTeam'
+export * from './cosineFromDegrees'
+export * from './cosineFromRadians'
+export * from './countOf'
+export * from './crossProduct'
+export * from './currentArrayElement'
+export * from './directionFromAngles'
+export * from './directionTowards'
+export * from './distanceBetween'
+
+// 여기서부터 아직 MEMO.md 미정리
+
+// 아래부터 아직 연관 타입 미분류
+export * from './divideNumber'
+export * from './divideVector'

@@ -43,6 +43,7 @@ For productive coding, some types defined in the existing workshop need to be ob
 1. AppendToArray
 2. ArrayContains
 3. ArraySlice
+4. CountOf
 
 
 
@@ -59,6 +60,15 @@ For productive coding, some types defined in the existing workshop need to be ob
 9. ArctangentInDegrees
 10. ArctangentInRadians
 11. ClosestPlayerTo
+12. ControlModeScoringPercentage
+13. ControlModeScoringTeam
+14. CosineFromDegrees
+15. CosineFromRadians
+16. CrossProduct
+17. CurrentArrayElement
+18. DirectionFromAngles
+19. DirectionTowards
+20. DistanceBetween
 
 ### Class Type
 
