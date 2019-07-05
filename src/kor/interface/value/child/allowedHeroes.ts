@@ -1,8 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * 팀 또는 경기 내에서 사망한 모든 플레이어가 있는 배열입니다.
+ * 지정된 플레이어가 선택할 수 있는 영웅 배열입니다.
  */
 export interface IAllowedHeroes {
+    /**
+     * 이 플레이어가 선택할 수 있는 영웅 목록을 가져옵니다.
+     */
     player: ValuePlayerType
 }

@@ -4,7 +4,8 @@ import {
     IWorldVectorOf,
     IVectorTowards,
     IGlobalVariable,
-    IPlayerVariable
+    IPlayerVariable,
+    IBackward
 } from '../../interface/value/child'
 
 export type ValueVectorType
@@ -14,3 +15,4 @@ export type ValueVectorType
     | IVectorTowards
     | IGlobalVariable
     | IPlayerVariable
+    | IBackward

@@ -6,6 +6,7 @@ import {
 import {
     // Number Type
     IAbsoluteValue,
+    INumber,
 
     // Custom Array Type
     IAllDeadPlayers,
@@ -14,13 +15,29 @@ import {
     IAllPlayersNotOnObjective,
     IAllPlayersOnObjective,
     IAllowedHeroes,
+    IAllHeroes,
+    IAcrossineInDegrees,
+    IArccosineInRadians,
+    IArcsineInDegrees,
+    IArcsineInRadians,
+    IArctangentInDegrees,
+    IArctangentInRadians,
+
+    IAppendToArray,
+    IArrayContains,
+    IArraySlice,
 
     // Method Type
     IAltitudeOf,
-    IVector,
     ILocalVectorOf,
     IWorldVectorOf,
     IVectorTowards,
+    IAngleBetweenVectors,
+    IAngleDifference,
+
+    // Class Type
+    IVector,
+    IAttacker,
 
     // Operator Type
     IAnd,
@@ -28,11 +45,15 @@ import {
     // Variable Type
     IGlobalVariable,
     IPlayerVariable,
-    INumber,
+    IClosestPlayerTo,
+    ICompare,
+    IControlModeScoringPercentage,
+    IControlModeScoringTeam,
 
-    // Unclassified
 
 } from './child'
+import { IBackward } from './child/backward';
+import { ITeam } from './child/team';
 
 export interface IValue {
     /**
@@ -53,7 +74,7 @@ export interface IValue {
     /**
      * 오버워치의 모든 영웅 배열입니다.
      */
-    allHeroes: {}
+    allHeroes: IAllHeroes
 
     /**
      * 팀 또는 경기 내에서 생존한 모든 플레이어가 있는 배열입니다.
@@ -96,95 +117,95 @@ export interface IValue {
     /**
      * 두 방향 벡터 (정규화 불필요) 사이의 각입니다. (단위: 도)
      */
-    angleBetweenVectors
+    angleBetweenVectors: IAngleBetweenVectors
 
     /**
      * 두 각을 비교한 각도 차이(단위: 도) 입니다. 두 각을 서로 +/- 180
      * 이내에서 펼쳐서 두 번째 각이 첫 번째 각보다 크다면 결과각은 양수입니다.
      * 이외의 경우 0이나 음수가 될 수 있습니다.
      */
-    angleDifference
+    angleDifference: IAngleDifference
 
     /**
      * 맨 뒤에 하나 이상의 값을 덧붙인 배열의 복사본입니다.
      */
-    appendToArray
+    appendToArray: IAppendToArray
 
     /**
      * 지정된 각(단위: 도)의 아크코사인 값입니다.
      */
-    acrossineInDegrees
+    acrossineInDegrees: IAcrossineInDegrees
 
     /**
      * 지정된 각(단위: RAD)의 아크코사인 값입니다.
      */
-    arccosineInRadians
+    arccosineInRadians: IArccosineInRadians
 
     /**
      * 지정된 각(단위: 도)의 아크사인 값입니다.
      */
-    arcsineInDegrees
+    arcsineInDegrees: IArcsineInDegrees
 
     /**
      * 지정된 각(단위: RAD)의 아크사인 값입니다.
      */
-    arcsineInRadians
+    arcsineInRadians: IArcsineInRadians
 
     /**
      * 지정된 분자와 분모(단위: 도)의 아크탄젠트 값입니다.
      * (흔히 ATAN2 로 불림)
      */
-    arctangentInDegrees
+    arctangentInDegrees: IArctangentInDegrees
 
     /**
      * 지정된 분자와 분모(단위: RAD)의 아크탄젠트 값입니다.
      * (흔히 ATAN2 로 불림)
      */
-    arctangentInRadians
+    arctangentInRadians: IArctangentInRadians
 
     /**
      * 지정된 배열에 지정된 값이 있는지 여부입니다.
      */
-    arrayContains
+    arrayContains: IArrayContains
 
     /**
      * 지정된 범위 인덱스의 값만을
      * 포함하고 있는 지정된 배열의 복사본입니다.
      */
-    arraySlice
+    arraySlice: IArraySlice
 
     /**
      * 이 규칙으로 처리된 이벤트로 인해 피해를 준 플레이어입니다.
      * VICTIM 또는 EVENT PLAYER와 동일할 수 있습니다.
      */
-    attacker
+    attacker: IAttacker
 
     /**
      * 후방을 가리키는 방향 벡터(0, 0, -1)의 약칭입니다.
      */
-    backward
+    backward: IBackward
 
     /**
      * 한 위치에서 가장 가까운 플레이어입니다.
      * 팀으로 제한할 수 있습니다.
      */
-    closestPlayerTo
+    closestPlayerTo: IClosestPlayerTo
 
     /**
      * 두 입력 정보의 비교 결과가 TRUE인지 여부입니다.
      */
-    compare
+    compare: ICompare
 
     /**
      * 쟁탈 전장에서 지정된 팀의 점수 비율입니다.
      */
-    controlModeScoringPercentage
+    controlModeScoringPercentage: IControlModeScoringPercentage
 
     /**
      * 현재 쟁탈 전장에서 점수를 축적하고 있는 팀입니다.
      * 아무 팀도 점수를 축적하지 못한 경우 결과값은 ALL입니다.
      */
-    controlModeScoringTeam
+    controlModeScoringTeam: IControlModeScoringTeam
 
     /**
      * 지정된 각(단위: 도)의 코사인 값입니다.
@@ -965,7 +986,7 @@ export interface IValue {
      * 팀 상수입니다. ALL 옵션은 팀전의 양팀,
      * 또는 개별 전투 게임의 모든 플레이어를 뜻합니다.
      */
-    team
+    team: ITeam
 
     /**
      * 해당 플레이어의 소속 팀입니다.

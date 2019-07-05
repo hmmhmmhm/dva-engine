@@ -23,7 +23,10 @@ For productive coding, some types defined in the existing workshop need to be ob
 
 ### Number Type
 
-1. Absolute Value(0)
+1. Absolute Value
+2. Number  Value
+
+
 
 ### Custom Array Type
 
@@ -35,12 +38,33 @@ For productive coding, some types defined in the existing workshop need to be ob
    2. AllPlayersOnObjective
 5. AllowedHeroes
 
+#### Custom Array Controller
+
+1. AppendToArray
+2. ArrayContains
+3. ArraySlice
+
+
+
 ### Method Type
 
 1. AltitudeOf
 2. AngleBetwwenVectors
-3. Vector
 4. LocalVectorOf
+4. AngleDifference
+5. AcrossineInDegrees
+6. ArccosineInRadians
+7. ArcsineInDegrees
+8. ArcsineInRadians
+9. ArctangentInDegrees
+10. ArctangentInRadians
+11. ClosestPlayerTo
+
+### Class Type
+
+1. Vector
+2. Attacker
+3. Team
 
 ### Operator Type
 
@@ -48,9 +72,11 @@ For productive coding, some types defined in the existing workshop need to be ob
 2. Add
    1. Add(Number, Number)
    2. Add(Vector, Vector)
+3. Compare
 
 ### Variable Type
 
 1. GlobalVariable
 2. PlayerVariable
 
+### Boolean Type
