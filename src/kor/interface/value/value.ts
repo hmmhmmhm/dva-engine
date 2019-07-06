@@ -88,6 +88,45 @@ import {
     IHorizontalFacingAngleOf,
     IHorizontalSpeedOf,
     IIndexOfArrayValue,
+    IIsAlive,
+    IIsAssemblingHeroes,
+    IIsBetwwenRounds,
+    IIsButtonHeld,
+    IIsCommunicating,
+    IIsCommunicatingAny,
+    IIsCommunicatingAnyEmote,
+    IIsCommunicatingVoiceLine,
+    IIsControlModePointLocked,
+    IIsCrouching,
+    IIsCTFModeInSuddenDeath,
+    IIsDead,
+    IIsFiringPrimary,
+    IIsFlagAtBase,
+    IIsFlagBeingCarried,
+    IIsGameInProgress,
+    IIsHeroBeingPlayed,
+    IIsInAir,
+    IIsInLineOfSight,
+    IIsInSetup,
+    IIsInSpawnRoom,
+    IIsInViewAngle,
+    IIsMatchComplete,
+    IIsMoving,
+    IIsObjectiveComplete,
+    IIsOnGround,
+    IIsOnObjective,
+    IIsOnWall,
+    IIsPortraitOnFire,
+    IIsStanding,
+    IIsTeamOnDefense,
+    IIsFiringSecondary,
+    IIsTeamOnOffense,
+    IIsTrueForAll,
+    IIsTrueForAny,
+    IIsUsingAbility1,
+    IIsUsingAbility2,
+    IIsUsingUltimate,
+    IIsWaitingForPlayers,
 
 } from './child'
 
@@ -447,206 +486,214 @@ export interface IValue {
     /**
      * 플레이어의 생존 여부 입니다.
      */
-    isAlive
+    isAlive: IIsAlive
     
     /**
      * 경기가 현재 영웅 선택 단계인지 여부입니다.
      */
-    isAssemblingHeroes
+    isAssemblingHeroes: IIsAssemblingHeroes
 
     /**
      * 경기 중 라운드 전환 시기인지 여부입니다.
      */
-    isBetwwenRounds
+    isBetwwenRounds : IIsBetwwenRounds
 
     /**
      * 플레이어가 지정된 버튼을 누르고 있는지 여부입니다.
      */
-    isButtonHeld
+    isButtonHeld: IIsButtonHeld
 
     /**
      * 플레이어가 지정된 의사소통 유형
      * (감정 표현, 음성 대사 등)을 사용하는지 여부입니다.
      */
-    isCommunicating
+    isCommunicating: IIsCommunicating
 
     /**
      * 플레이어가 아무 것이든 의사소통 유형
      * (감정 표현, 음성 대사 등)을 사용하는지 여부입니다.
      */
-    isCommunicatingAny
+    isCommunicatingAny: IIsCommunicatingAny
 
     /**
      * 플레이어가 감정 표현을 사용하는지 여부입니다.
      */
-    isCommunicatingAnyEmote
+    isCommunicatingAnyEmote: IIsCommunicatingAnyEmote
 
     /**
      * 플레이어가 음성 대사를 사용하는지 여부입니다.
      * (음성 대사의 지속 시간은 4초로 추정)
      */
-    isCommunicatingVoiceLine
+    isCommunicatingVoiceLine: IIsCommunicatingVoiceLine
 
     /**
      * 쟁탈 전장에서 해당 거점이 잠겨있는지 여부입니다.
      */
-    isControlModePointLocked
+    isControlModePointLocked : IIsControlModePointLocked
     
     /**
      * 플레이어가 웅크리고 있는 상태인지 여부입니다.
      */
-    isCrouching
+    isCrouching: IIsCrouching
 
     /**
      * 현재 깃발 뺏기 게임이 승자 결정전인지 여부입니다.
      */
-    isCTFModeInSuddenDeath
+    isCTFModeInSuddenDeath: IIsCTFModeInSuddenDeath
 
     /**
      * 플레이어의 사망 여부입니다.
      */
-    isDead
+    isDead: IIsDead
 
     /**
      * 지정된 플레이어의 주무기가 사용 중인지 여부입니다.
      */
-    isFiringPrimary
+    isFiringPrimary: IIsFiringPrimary
 
     /**
      * 지정된 플레이어의 보조 무기 공격이 사용 중인지 여부입니다.
      */
-    isFiringSecondary
+    isFiringSecondary: IIsFiringSecondary
 
     /**
      * 깃발 뺏기에서 지정된 팀의 깃발이 해당 팀의 기지에 있는지 여부입니다.
      */
-    isFlagAtBase
+    isFlagAtBase: IIsFlagAtBase
 
     /**
      * 깃발 뺏기에서 상대 팀이 지정된 팀의 깃발을 점유하고 있는지 여부입니다.
      */
-    isFlagBeingCarried
+    isFlagBeingCarried: IIsFlagBeingCarried
 
     /**
      * 경기의 주요 단계(전투 및 점수 산정이 허용되는 시기)가 진행 중인지 여부입니다.
      */
-    isGameInProgress
+    isGameInProgress: IIsGameInProgress
 
     /**
      * (팀 또는 경기 내에서) 지정된 영웅이 사용되고 있는지 여부입니다.
      */
-    isHeroBeingPlayed
+    isHeroBeingPlayed: IIsHeroBeingPlayed
 
     /**
      * 플레이어가 공중에 있는 상태인지 여부입니다.
      */
-    isInAir
+    isInAir: IIsInAir
 
     /**
      * 두 위치가 서로 보이는지 여부입니다.
      */
-    isInLineOfSight
+    isInLineOfSight: IIsInLineOfSight
 
     /**
      * 경기가 현재 준비 단계인지 여부입니다.
      */
-    isInSetup
+    isInSetup: IIsInSetup
 
     /**
      * 지정된 플레이어가 전투준비실에 있는지
      * (또한 치유되고 영웅을 변경할 수 있는지) 여부 입니다.
      */
-    isInSpawnRoom
+    isInSpawnRoom: IIsInSpawnRoom
 
     /**
      * LOCATION이 플레이어의 시야에 있는지 여부입니다.
      */
-    isInViewAngle
+    isInViewAngle: IIsInViewAngle
 
     /**
      * 경기가 완료되었는지 여부입니다.
      */
-    isMatchComplete
+    isMatchComplete: IIsMatchComplete
 
     /**
-     * 플레이어가 이동하고 있는지 여부(현재 속도가 0인지 여부로 판단)입니다.
+     * 플레이어가 이동하고 있는지
+     * 여부(현재 속도가 0인지 여부로 판단)입니다.
      */
-    isMoving
+    isMoving: IIsMoving
 
     /**
-     * 지정된 목표가 완료되었는지 여부입니다. 게임 모드가 점령, 호위 또는
-     * 점령/호위가 아닌 경우 결과값은 FALSE입니다.
+     * 지정된 목표가 완료되었는지 여부입니다.
+     * 게임 모드가 점령, 호위 또는
+     * 점령/호위가 아닌 경우
+     * 결과값은 FALSE입니다.
      */
-    isObjectiveComplete
+    isObjectiveComplete: IIsObjectiveComplete
 
     /**
      * 플레이어가 착지(또는 걷기가 가능한 표면에 있는) 상태인지 여부입니다.
      */
-    isOnGround
+    isOnGround: IIsOnGround
 
     /**
      * 지정된 플레이어가 현재 화물 또는 점령 지점을 점유하고 있는지 여부입니다.
      */
-    isOnObjective
+    isOnObjective: IIsOnObjective
 
     /**
      * 플레이어가 벽에 있는 상태(오르거나 타는 상태)인지 여부입니다.
      */
-    isOnWall
+    isOnWall: IIsOnWall
 
     /**
      * 지정된 플레이어의 초상화가 폭주 상태인지 여부입니다.
      */
-    isPortraitOnFire
+    isPortraitOnFire: IIsPortraitOnFire
 
     /**
      * 플레이어가 서 있는 상태인지 여부
-     * (이동하지 않고 공중에 있는 상태가 아닌 경우로 판단)입니다.
+     * (이동하지 않고 공중에 있는
+     * 상태가 아닌 경우로 판단)입니다.
      */
-    isStanding
+    isStanding: IIsStanding
 
     /**
-     * 지정된 팀이 현재 수비 중인지 여부입니다. 게임 모드가 점령, 호위,
-     * 또는 점령/호위가 아닌 경우 결과값은 FALSE입니다.
+     * 지정된 팀이 현재 수비 중인지 여부입니다.
+     * 게임 모드가 점령, 호위,
+     * 또는 점령/호위가 아닌 경우
+     * 결과값은 FALSE입니다.
      */
-    isTeamOnDefense
+    isTeamOnDefense: IIsTeamOnDefense
 
     /**
-     * 지정된 팀이 현재 공격 중인지 여부입니다. 게임 모드가 점령, 호위,
-     * 또는 점령/호위가 아닌 경우 결과값은 FALSE입니다.
+     * 지정된 팀이 현재 공격 중인지 여부입니다.
+     * 게임 모드가 점령, 호위,
+     * 또는 점령/호위가 아닌 경우
+     * 결과값은 FALSE입니다.
      */
-    isTeamOnOffense
+    isTeamOnOffense: IIsTeamOnOffense
 
     /**
      * 지정된 배열의 모든 값이 지정된 조건에 대해 TRUE인지 여부입니다.
      */
-    isTrueForAll
+    isTrueForAll: IIsTrueForAll
 
     /**
      * 지정된 배열의 값 중 하나가 지정된 조건에 대해 TRUE인지 여부입니다.
      */
-    isTrueForAny
+    isTrueForAny: IIsTrueForAny
 
     /**
      * 지정된 플레이어가 기술 1을 사용하는지 여부입니다.
      */
-    isUsingAbility1
+    isUsingAbility1: IIsUsingAbility1
 
     /**
      * 지정된 플레이어가 기술 2를 사용하는지 여부입니다.
      */
-    isUsingAbility2
+    isUsingAbility2: IIsUsingAbility2
 
     /**
      * 플레이어가 궁극기를 사용하는지 여부입니다.
      */
-    isUsingUltimate
+    isUsingUltimate: IIsUsingUltimate
 
     /**
      * 경기 시작에 앞서 플레이어가 참여하기를
      * 기다리고 있는지 여부입니다.
      */
-    isWaitingForPlayers
+    isWaitingForPlayers: IIsWaitingForPlayers
 
     /**
      * EVENT PLAYER 또는 전역 레벨에서 가장 마지막에
