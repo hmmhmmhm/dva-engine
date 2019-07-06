@@ -19,6 +19,15 @@ import {
 
     IControlModeScoringPercentage,
     IDistanceBetween,
+    IDivideNumber,
+    IEventDamage,
+    IEyePosition,
+    IHealth,
+    IHorizontalAngleFromDirection,
+    IHorizontalAngleTowards,
+    IHorizontalFacingAngleOf,
+    IHorizontalSpeedOf,
+    IIndexOfArrayValue,
 
 } from "../../interface/value/child"
 
@@ -51,3 +60,15 @@ export type ValueNumberType
     | IGlobalVariable
     | IPlayerVariable
     | IDistanceBetween
+
+    | IDivideNumber
+    | IEventDamage
+    | IEyePosition
+    | IHealth
+
+    | IHorizontalAngleFromDirection
+    | IHorizontalAngleTowards
+    | IHorizontalFacingAngleOf
+    | IHorizontalSpeedOf
+
+    | IIndexOfArrayValue

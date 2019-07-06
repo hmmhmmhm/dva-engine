@@ -90,3 +90,10 @@ For productive coding, some types defined in the existing workshop need to be ob
 2. PlayerVariable
 
 ### Boolean Type
+
+# Additional NOTE
+
+Necessity of unofficial launcher
+
+- Music Resources
+- Save Workshop Settings

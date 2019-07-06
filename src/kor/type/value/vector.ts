@@ -9,6 +9,12 @@ import {
     ICrossProduct,
     IDirectionFromAngles,
     IDirectionTowards,
+    IDotProduct,
+    IDown,
+    IDivideVector,
+    IFacingDirectionOf,
+    IFlagPosition,
+    IForward,
 } from '../../interface/value/child'
 
 export type ValueVectorType
@@ -22,3 +28,9 @@ export type ValueVectorType
     | ICrossProduct
     | IDirectionFromAngles
     | IDirectionTowards
+    | IDivideVector
+    | IDotProduct
+    | IDown
+    | IFacingDirectionOf
+    | IFlagPosition
+    | IForward

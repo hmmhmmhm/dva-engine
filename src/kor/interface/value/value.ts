@@ -60,11 +60,36 @@ import {
     IDirectionFromAngles,
     IDirectionTowards,
     IDistanceBetween,
-
+    IDotProduct,
+    IEmptyArray,
+    IEntityExists,
+    IEventDamage,
+    IEventPlayer,
+    IBackward,
+    ITeam,
+    IDown,
+    IEventWasCriticalHit,
+    IEyePosition,
+    IFacingDirectionOf,
+    IFalse,
+    IFarthestPlayerFrom,
+    IFilteredArray,
+    IFirstOf,
+    IFlagPosition,
+    IForward,
+    IHasSpawned,
+    IHasStatus,
+    IHealth,
+    IHero,
+    IHeroIconString,
+    IHeroOf,
+    IHorizontalAngleFromDirection,
+    IHorizontalAngleTowards,
+    IHorizontalFacingAngleOf,
+    IHorizontalSpeedOf,
+    IIndexOfArrayValue,
 
 } from './child'
-import { IBackward } from './child/backward';
-import { ITeam } from './child/team';
 
 export interface IValue {
     /**
@@ -269,85 +294,85 @@ export interface IValue {
     /**
      * 지정된 값의 점곱입니다.
      */
-    dotProduct
+    dotProduct: IDotProduct
 
     /**
      * 아래를 가리키는 방향 벡터(0, -1, 0)의 약칭입니다.
      */
-    down
+    down: IDown
 
     /**
      * 요소가 없는 배열입니다.
      */
-    emptyArray
+    emptyArray: IEmptyArray
 
     /**
      * 특정 플레이어, 아이콘 개체, 효과 개체가 아직 존재하는지 여부입니다.
      * 플레이어가 경기를 나갔는지, 개체가 소멸됐는지 등을 판별할 때 유용합니다.
      */
-    entityExists
+    entityExists: IEntityExists
 
     /**
      * 이 규칙에 의해 현재 처리되고 있는
      * 이벤트의 VICTIM이 받는 피해량입니다.
      */
-    eventDamage
+    eventDamage: IEventDamage
 
     /**
      * 이벤트로 지정된 이 규칙을 실행 중인 플레이어입니다.
      * ATTACKER 또는 VICTIM과 동일할 수 있습니다.
      */
-    eventPlayer
+    eventPlayer: IEventPlayer
 
     /**
      * 이 규칙에 의해 현재 처리되고 있는 이벤트에 대한
      * 피해가 치명타(헤드샷 등)인지 여부입니다.
      */
-    eventWasCriticalHit
+    eventWasCriticalHit: IEventWasCriticalHit
 
     /**
      * (조준에 쓰인) 플레이어의 1인칭 시점 위치입니다.
      */
-    eyePosition
+    eyePosition: IEyePosition
 
     /**
      * 월드에 대해 상대적으로 플레이어가 바라보고 있는
      * 방향의 상대적인 단위 길이 방향 벡터입니다.
      * 이 값에는 종 및 횡 방향이 있습니다.
      */
-    facingDirectionOf
+    facingDirectionOf: IFacingDirectionOf
 
     /**
      * false 의 부울 값입니다.
      */
-    false
+    false: IFalse
 
     /**
      * 지정된 위치로부터 가장 멀리 떨어진 플레이어로, 팀의 제한을 받을 수 있습니다.
      */
-    farthestPlayerFrom
+    farthestPlayerFrom: IFarthestPlayerFrom
 
     /**
      * 제거된 지정 조건에 해당하지 않는 값을 가진
      * 지정된 배열의 복사본입니다.
      */
-    filteredArray
+    filteredArray: IFilteredArray
 
     /**
      * 지정된 배열의 맨 앞에 있는 값입니다.
      * 해당 배열이 비어 있으면 결과 값은 0 입니다.
      */
-    firstOf
+    firstOf: IFirstOf
 
     /**
      * 깃발 뺏기에서 지정된 팀의 깃발 위치입니다.
      */
-    flagPosition
+    flagPosition: IFlagPosition
 
     /**
      * 전방을 가리키는 방향 벡터(0, 0, 1)의 약칭입니다.
      */
-    forward
+    forward: IForward
 
     /**
      * 게임 자체에 종속된 전역 변수의 현재 값입니다.
@@ -359,46 +384,45 @@ export interface IValue {
      * 플레이어가 영웅을 선택하지 않은 경우
      * 결과값은 FALSE 입니다.
      */
-    hasSpawned
+    hasSpawned: IHasSpawned
 
     /**
      * 지정된 플레이어가 SET STATUS 액션 또는 스크립트 이외의
      * 게임 메카닉을 통해 지정된 상태를 갖게 되었는지 여부입니다.
      */
-    hasStatus
+    hasStatus: IHasStatus
 
     /**
      * 한 플레이어의 현재 생명력(방어력 및 보호막 포함)입니다.
      */
-    health
+    health: IHealth
 
     /**
      * 영웅 상수입니다.
      */
-    hero: HeroType
+    hero: IHero
 
     /**
      * HERO 매개변수를 아이콘으로 표시할 문자열로 변환합니다.
      */
-    heroIconString
+    heroIconString: IHeroIconString
 
     /**
      * 플레이어가 현재 사용하는 영웅입니다.
      */
-    heroOf
+    heroOf: IHeroOf
 
     /**
      * 지정된 방향 벡터에 대응하는 횡축각(단위: 도)입니다.
      */
-    horizontalAngleFromDirection
-
+    horizontalAngleFromDirection: IHorizontalAngleFromDirection
     
     /**
      * 플레이어의 전방에서 지정된 위치까지의 횡축각(단위: 도)입니다.
      * 이 값은 해당 위치가 플레이엉 좌측에 있는 경우 양수이며,
      * 그 외의 경우 0이거나 음수입니다.
      */
-    horizontalAngleTowards
+    horizontalAngleTowards: IHorizontalAngleTowards
 
     /**
      * 월드에 대해 상대적으로 플레이어가 바라보고 있는
@@ -406,17 +430,19 @@ export interface IValue {
      * 이 값은 플레이어가 좌측으로 회전 시 증가합니다.
      * (+/- 180도 범위)
      */
-    horizontalFacingAngleOf
+    horizontalFacingAngleOf: IHorizontalFacingAngleOf
 
     /**
-     * 플레이어의 현재 횡축 속도(초당 미터)입니다. 여기에는 모든 종축 움직임이 배제됩니다.
+     * 플레이어의 현재 횡축 속도(초당 미터)입니다.
+     * 여기에는 모든 종축 움직임이 배제됩니다.
      */
-    horizontalSpeedOf
+    horizontalSpeedOf: IHorizontalSpeedOf
 
     /**
-     * 배열 내에 있는 값의 인덱스입니다. 해당 값을 찾을 수 없는 경우 -1입니다.
+     * 배열 내에 있는 값의 인덱스입니다.
+     * 해당 값을 찾을 수 없는 경우 -1입니다.
      */
-    indexOfArrayValue
+    indexOfArrayValue: IIndexOfArrayValue
 
     /**
      * 플레이어의 생존 여부 입니다.

@@ -45,7 +45,37 @@ export * from './directionTowards'
 export * from './distanceBetween'
 
 // 여기서부터 아직 MEMO.md 미정리
-
-// 아래부터 아직 연관 타입 미분류
+export * from './dotProduct'
+export * from './down'
 export * from './divideNumber'
 export * from './divideVector'
+export * from './emptyArray'
+export * from './entityExists'
+export * from './eventDamage'
+export * from './eventPlayer'
+export * from './eventWasCriticalHit'
+export * from './eyePosition'
+export * from './facingDirectionOf'
+export * from './false'
+export * from './farthestPlayerFrom'
+export * from './filteredArray'
+export * from './firstOf'
+export * from './flagPosition'
+export * from './forward'
+export * from './hasSpawned'
+export * from './hasStatus'
+export * from './health'
+export * from './hero'
+export * from './heroIconString'
+export * from './heroOf'
+export * from './horizontalAngleFromDirection'
+export * from './horizontalAngleTowards'
+export * from './horizontalFacingAngleOf'
+export * from './horizontalSpeedOf'
+
+// 아래부터 아직 연관 타입 미분류
+
+/**
+export * from './'
+*/
+export * from './indexOfArrayValue'

@@ -6,7 +6,9 @@ import {
     IAllPlayersNotOnObjective,
     IAllPlayersOnObjective,
     IAllowedHeroes,
-    IArraySlice
+    IArraySlice,
+    IEmptyArray,
+    IFilteredArray
 } from '../../interface/value/child'
 
 export type ValueArrayType
@@ -18,3 +20,5 @@ export type ValueArrayType
     | IAllPlayersOnObjective
     | IAllowedHeroes
     | IArraySlice
+    | IEmptyArray
+    | IFilteredArray

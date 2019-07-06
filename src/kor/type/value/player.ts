@@ -1,11 +1,15 @@
 import {
     IGlobalVariable,
     IPlayerVariable,
-    IClosestPlayerTo
+    IClosestPlayerTo,
+    IEventPlayer,
+    IFarthestPlayerFrom
 } from '../../interface/value/child'
 
 export type ValuePlayerType
-    = 'Event Player'
+    //= 'Event Player'
+    = IEventPlayer
+
     | 'Victim'
     | 'Attacker'
 
@@ -13,4 +17,4 @@ export type ValuePlayerType
 
     | IGlobalVariable
     | IPlayerVariable
-    
+    | IFarthestPlayerFrom

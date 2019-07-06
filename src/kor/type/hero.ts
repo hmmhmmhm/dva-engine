@@ -1,3 +1,8 @@
+import {
+    IGlobalVariable,
+    IPlayerVariable
+} from '../interface/value/child'
+
 export type HeroType
     = '리퍼' 
     | '트레이서'
@@ -30,3 +35,5 @@ export type HeroType
     | '레킹볼'
     | '애쉬'
     | '바티스트'
+    | IGlobalVariable
+    | IPlayerVariable
