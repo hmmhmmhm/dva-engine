@@ -15,6 +15,10 @@ import {
     IFacingDirectionOf,
     IFlagPosition,
     IForward,
+    ILeft,
+    INearestWalkablePostion,
+    INormalize,
+    IObjectivePosition,
 } from '../../interface/value/child'
 
 export type ValueVectorType
@@ -34,3 +38,7 @@ export type ValueVectorType
     | IFacingDirectionOf
     | IFlagPosition
     | IForward
+    | ILeft
+    | INearestWalkablePostion
+    | INormalize
+    | IObjectivePosition

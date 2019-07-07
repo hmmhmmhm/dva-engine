@@ -97,3 +97,9 @@ Necessity of unofficial launcher
 
 - Music Resources
 - Save Workshop Settings
+
+Official Resource Support (* Translation Data)
+
+- EN Corp 
+  - https://us.forums.blizzard.com/en/overwatch/t/wiki-workshop-syntax-script-database/335011
+  - https://playoverwatch.com/en-gb/news/22938941/introducing-the-overwatch-workshop#moltenfloor

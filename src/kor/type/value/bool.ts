@@ -45,6 +45,7 @@ import {
     IIsUsingAbility2,
     IIsUsingUltimate,
     IIsWaitingForPlayers,
+    INot,
 } from '../../interface/value'
 
 export type ValueBoolType
@@ -96,3 +97,4 @@ export type ValueBoolType
     | IIsUsingAbility2
     | IIsUsingUltimate
     | IIsWaitingForPlayers
+    | INot

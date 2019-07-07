@@ -1,7 +1,8 @@
 import { 
     HeroType,
     ValueAddType,
-    ValueDivideType
+    ValueDivideType,
+    ValueMultiplyType
 } from '../../type'
 
 import {
@@ -127,6 +128,65 @@ import {
     IIsUsingAbility2,
     IIsUsingUltimate,
     IIsWaitingForPlayers,
+    ILastCreatedEntity,
+    ILastDamageModificationId,
+    ILastDamageOverTimeId,
+    ILastHealOverTimeId,
+    ILastOf,
+    ILastTextId,
+    ILeft,
+    IMatchRound,
+    IMatchTime,
+    IMax,
+    IMaxHealth,
+    IMin,
+    IModulo,
+    INearestWalkablePostion,
+    INormalize,
+    INormalizedHealth,
+    INot,
+    INull,
+    INumberOfDeadPlayers,
+    INumberOfDeaths,
+    INumberOfEliminations,
+    INumberOfFinalBlows,
+    INumberOfHeroes,
+    INumberOfLivingPlayers,
+    INumberOfPlayers,
+    INumberOfPlayersOnObjective,
+    IObjectiveIndex,
+    IObjectivePosition,
+    IOppositeTeamOf,
+    IOr,
+    IPayloadPosition,
+    IPayloadProgressPercentage,
+    IPlayerCarryingFlag,
+    IPlayerClosestToReticle,
+    IPlayersInSlot,
+    IPlayersInViewAngle,
+    IPlayersOnHero,
+    IPlayersWithinRadius,
+    IPointCapturePercentage,
+    IPositionOf,
+    IRaiseToPower,
+    IRandomInteger,
+    IRandomReal,
+    IRandomValueInArray,
+    IRandomizedArray,
+    IRayCastHitNormal,
+    IRayCastHitPlayer,
+    IRayCastHitPosition,
+    IRemoveFromArray,
+    IRight,
+    IRoundToInteger,
+    IScoreOf,
+    ISineFromDegrees,
+    ISineFromRadians,
+    ISlotOf,
+    ISortedArray,
+    ISpeedOf,
+    ISpeedOfInDirection,
+    ISquareRoot,
 
 } from './child'
 
@@ -699,31 +759,31 @@ export interface IValue {
      * EVENT PLAYER 또는 전역 레벨에서 가장 마지막에
      * 생성된 효과 또는 아이콘 개체에 대한 참조입니다.
      */
-    lastCreatedEntity
+    lastCreatedEntity: ILastCreatedEntity
 
     /**
      * EVENT PLAYER 또는 전역 레벨에서 실행된 최근의
      * START DAMGE MODIFICATION 액션의 ID입니다.
      */
-    lastDamageModificationId
+    lastDamageModificationId: ILastDamageModificationId
 
     /**
      * EVENT PLAYER 또는 전역 레벨에서 가장 최근에 실행된
      * DAMAGE OVER TIME 액션의 ID입니다.
      */
-    lastDamageOverTimeId
+    lastDamageOverTimeId: ILastDamageOverTimeId
 
     /**
      * EVENT PLAYER 또는 전역 레벨에서 가장 최근에 실행된
      * HEAL OVER TIME 액션의 ID입니다.
      */
-    lastHealOverTimeId
+    lastHealOverTimeId: ILastHealOverTimeId
 
     /**
      * 지정된 배열의 끝에 있는 값입니다.
      * 해당 배열이 비어있으면 결과값은 0입니다.
      */
-    lastOf
+    lastOf: ILastOf
 
     /**
      * EVENT PLAYER 또는 전역 레벨에서
@@ -731,12 +791,12 @@ export interface IValue {
      * CREATE IN-WORLD TEXT 액션으로
      * 생성한 텍스트의 마지막 부분에 대한 참조입니다.
      */
-    lastTextId
+    lastTextId: ILastTextId
 
     /**
      * 좌측을 가리키는 방향 벡터(1, 0,0)의 약칭입니다.
      */
-    left
+    left: ILeft
 
     /**
      * 제공된 월드 좌표 벡터에 해당하는 로컬 좌표 벡터입니다.
@@ -746,50 +806,50 @@ export interface IValue {
     /**
      * 경기의 현재 라운드입니다. 1부터 증가합니다.
      */
-    matchRound
+    matchRound: IMatchRound
 
     /**
      * 현재 게임 모드 단계의 잔여 시간(초)입니다.
      */
-    matchTime
+    matchTime: IMatchTime
 
     /**
      * 두 숫자 중 높은 수입니다.
      */
-    max
+    max: IMax
 
     /**
      * 플레이어의 최대 생명력(방어력 및 보호막 포함)입니다.
      */
-    maxHealth
+    maxHealth: IMaxHealth
 
     /**
      * 두 숫자 중 낮은 수입니다.
      */
-    min
+    min: IMin
 
     /**
      * 좌측 피연산자를 우측 피연산자로 나눈 나머지입니다.
      * 어떤 숫자이든 MODULO 0의 결과는 0입니다.
      */
-    modulo
+    modulo: IModulo
 
     /**
      * 두 숫자 또는 벡터의 곱입니다. 벡터에 숫자를
      * 곱하면 비율이 증감된 벡터가 도출됩니다.
      */
-    multiply
+    multiply: ValueMultiplyType
 
     /**
      * 서 있을 수 있고 생성 지점에서 접근 가능하며
      * 지정된 위치에서 가장 가까운 위치입니다.
      */
-    nearestWalkablePostion
+    nearestWalkablePostion: INearestWalkablePostion
 
     /**
      * 벡터의 단위 길이 정규화입니다.
      */
-    normalize
+    normalize: INormalize
 
     /**
      * 방어력 및 보호막을 포함하여 0과 1사이로 
@@ -797,19 +857,19 @@ export interface IValue {
      * (예를 들어, 0은 생명력 없음,
      * 0.5는 생명력 절반, 1은 최대 생명력 등등)
      */
-    normalizedHealth
+    normalizedHealth: INormalizedHealth
 
     /**
      * 입력 정보가 FALSE(또는 그에 상응하는 경우)인지 여부입니다.
      */
-    not
+    not: INot
 
     /**
      * 플레이어가 없음을 나타냅니다. 지정된 입력 정보에
      * 플레이어를 지정하고 싶지 않을 때 사용할 수 있습니다.
      * 비교 또는 디버그용으로 실수 0을 사용하는 것과 동일합니다.
      */
-    null
+    null: INull
 
     /**
      * 실수 형식의 상수입니다.
@@ -819,90 +879,92 @@ export interface IValue {
     /**
      * 팀 또는 경기 내 사망 플레이어 수입니다.
      */
-    numberOfDeadPlayers
+    numberOfDeadPlayers: INumberOfDeadPlayers
 
     /**
      * 지정된 플레이어가 기록한 사망 수입니다.
      * 이 값은 게임이 진행 중일때만 누적됩니다.
      */
-    numberOfDeaths
+    numberOfDeaths: INumberOfDeaths
 
     /**
      * 지정된 플레이어가 기록한 처치 수입니다.
      * 이 값은 게임이 진행 중일 때만 누적됩니다.
      */
-    numberOfEliminations
+    numberOfEliminations: INumberOfEliminations
 
     /**
      * 지정된 플레이어가 기록한 결정타 개수입니다.
      * 이 값은 게임이 진행 중일 때만 쌓이게 됩니다.
      */
-    numberOfFinalBlows
+    numberOfFinalBlows: INumberOfFinalBlows
 
     /**
      * 팀 또는 경기 내에서 지정된 영웅을
      * 플레이하는 플레이어의 수입니다.
      */
-    numberOfHeroes
+    numberOfHeroes: INumberOfHeroes
 
     /**
      * 팀 또는 경기에서 생존한 플레이어의 수입니다.
      */
-    numberOfLivingPlayers
+    numberOfLivingPlayers: INumberOfLivingPlayers
 
     /**
      * 팀 또는 경기 내 존재하는 플레이어 수입니다.
      */
-    numberOfPlayers
+    numberOfPlayers: INumberOfPlayers
 
     /**
-     * 팀 또는 경기 내에서 화물 또는 거점을 확보하려는 플레이어 수입니다.
+     * 팀 또는 경기 내에서 화물 또는
+     * 거점을 확보하려는 플레이어 수입니다.
      */
-    numberOfPlayersOnObjective
+    numberOfPlayersOnObjective: INumberOfPlayersOnObjective
 
     /**
      * 현재 활성화 중인 거점, 화물 경유지, 화물 목적지입니다.
      * (0, 1, 2 중 하나) 점령, 점령/호위, 호위, 쟁탈 전장에서 유효합니다.
      */
-    objectiveIndex
+    objectiveIndex: IObjectiveIndex
 
     /**
      * 지정된 목표가 있는 월드 내의 위치(거점, 화물 경유지, 화물 목적지) 입니다.
      * 점령, 점령/호위, 호위, 쟁탈 전장에서 유효합니다.
      */
-    objectivePosition
+    objectivePosition: IObjectivePosition
 
     /**
      * 지정된 팀의 상대 팀입니다.
      */
-    oppositeTeamOf
+    oppositeTeamOf: IOppositeTeamOf
 
     /**
      * 두 입력 정보 중 하나가 TRUE(또는 그에 상응하는 경우)인지 여부입니다.
      */
-    or
+    or: IOr
 
     /**
      * 월드 내의 활성화 된 화물 위치입니다.
      */
-    payloadPosition
+    payloadPosition: IPayloadPosition
 
     /**
      * 해당 활성화 화물의 목적지까지 진행률입니다.(비율로 표시됨)
      */
-    payloadProgressPercentage
+    payloadProgressPercentage: IPayloadProgressPercentage
 
     /**
      * 깃발 뺏기에서 지정된 팀의 깃발을 지닌 플레이어입니다.
      * 아무도 깃발을 가지지 않은 경우 결과값은 NULL입니다.
      */
-    playerCarryingFlag
+    playerCarryingFlag: IPlayerCarryingFlag
 
     /**
-     * 지정된 플레이어의 조준선에서 가장 가까운 플레이어입니다.
+     * 지정된 플레이어의 조준선에서
+     * 가장 가까운 플레이어입니다.
      * 팀으로 제한할 수 있습니다.
      */
-    playerClosestToReticle
+    playerClosestToReticle: IPlayerClosestToReticle
 
     /**
      * 지정된 플레이어가 가진 플레이어 변수의 현재 값입니다.
@@ -912,138 +974,147 @@ export interface IValue {
     /**
      * 게임 내 지정된 슬롯을 점유하는 플레이어의 배열입니다.
      */
-    playersInSlot
+    playersInSlot: IPlayersInSlot
 
     /**
      * 지정된 플레이어의 조준선을 기준으로
      * 시야각 안에 있는 플레이어입니다.
      * 팀 단위로 제한할 수 있습니다.
      */
-    playersInViewAngle
+    playersInViewAngle: IPlayersInViewAngle
 
     /**
-     * 팀 또는 경기 내에서 지정된 영웅을 플레이하는 플레이어가 있는 배열입니다.
+     * 팀 또는 경기 내에서 지정된 영웅을
+     * 플레이하는 플레이어가 있는 배열입니다.
      */
-    playersOnHero
+    playersOnHero: IPlayersOnHero
 
     /**
      * 한 위치의 지정된 거리 내 모든 플레이어를 포함하고 있는 배열입니다.
      * 팀 또는 시야 범위로 제한할 수 있습니다.
      */
-    playersWithinRadius
+    playersWithinRadius: IPlayersWithinRadius
 
     /**
      * 활성화된 거점에서, 점령 중인 거점의 점령 진척도입니다.(비율로 표시)
      */
-    pointCapturePercentage
+    pointCapturePercentage: IPointCapturePercentage
 
     /**
      * 플레이어의 현재 위치(벡터)입니다.
      */
-    positionOf
+    positionOf: IPositionOf
 
     /**
      * 좌측 피연산자를 우측 피연산자만큼 제곱합니다.
      * 좌측 피연산자가 음수이면 결과는 항상 0입니다.
      */
-    raiseToPower
+    raiseToPower: IRaiseToPower
 
     /**
-     * 지정한 최대값 이하, 최소값 이상 범위 내에서 무작위 정수값입니다.
+     * 지정한 최대값 이하, 최소값 이상
+     * 범위 내에서 무작위 정수값입니다.
      */
-    randomInteger
+    randomInteger: IRandomInteger
 
     /**
-     * 지정된 최대 및 최소값 범위 내에서의 무작위 실수값 하나입니다.
+     * 지정된 최대 및 최소값 범위
+     * 내에서의 무작위 실수값 하나입니다.
      */
-    randomReal
+    randomReal: IRandomReal
 
     /**
      * 지정된 배열의 무작위 값입니다.
      */
-    randomValueInArray
+    randomValueInArray: IRandomValueInArray
 
     /**
-     * 지정된 배열의 값을 무작위 순서로 나열한 복사본입니다.
+     * 지정된 배열의 값을
+     * 무작위 순서로 나열한 복사본입니다.
      */
-    randomizedArray
+    randomizedArray :IRandomizedArray
 
     /**
      * RAY CAST HIT POSITION에서의 표면 법선
      * (아무것도 맞지 않은 경우 END POS에서 START POS)입니다.
      */
-    rayCastHitNormal
+    rayCastHitNormal: IRayCastHitNormal
 
     /**
-     * 레이캐스트로 맞힌 플레이어(맞은 플레이어가 없는 경우 NULL)입니다.
+     * 레이캐스트로 맞힌 플레이어
+     * (맞은 플레이어가 없는 경우 NULL)입니다.
      */
-    rayCastHitPlayer
+    rayCastHitPlayer :IRayCastHitPlayer
 
     /**
-     * 레이캐스트로 맞힌 표면, 오브젝트, 또는 플레이어의 위치
+     * 레이캐스트로 맞힌 표면,
+     * 오브젝트, 또는 플레이어의 위치
      * (아무것도 맞지 않는 경우 END POS)입니다.
      */
-    rayCastHitPosition
+    rayCastHitPosition: IRayCastHitPosition
 
     /**
-     * 하나 이상의 값(있는 경우)이 제거된 배열의 복사본입니다.
+     * 하나 이상의 값(있는 경우)이
+     * 제거된 배열의 복사본입니다.
      */
-    removeFromArray
+    removeFromArray: IRemoveFromArray
 
     /**
      * 우측을 가리키는 방향 벡터(-1, 0, 0)의 약칭입니다.
      */
-    right
+    right: IRight
 
     /**
      * 지정된 값을 반올림할 대상 정수입니다.
      */
-    roundToInteger
+    roundToInteger: IRoundToInteger
 
     /**
      * 지정된 플레이어의 현재 점수입니다.
      * 게임 모드가 개별 전투가 아닌 경우
      * 결과값은 0이 됩니다.
      */
-    scoreOf
+    scoreOf: IScoreOf
 
     /**
      * 지정된 각(단위: 도)의 사인 값입니다.
      */
-    sineFromDegrees
+    sineFromDegrees: ISineFromDegrees
 
     /**
      * 지정된 각(단위: RAD)의 사인 값입니다.
      */
-    sineFromRadians
+    sineFromRadians: ISineFromRadians
 
     /**
      * 지정된 플레이어의 슬롯 번호입니다.
      * 팀전에서 각 팀은 0에서 5개의 슬롯을 보유하며,
      * 개별 전투 게임에서 슬롯 수는 0에서 11까지입니다.
      */
-    slotOf
+    slotOf: ISlotOf
 
     /**
-     * 지정된 배열의 각 요소를 VALUE RANK에 따라 평가하고
+     * 지정된 배열의 각 요소를
+     * VALUE RANK에 따라 평가하고
      * 정렬해서 만든 새 배열 복사본입니다.
      */
-    sortedArray
+    sortedArray: ISortedArray
 
     /**
      * 플레이어의 현재 속도(초당 미터)입니다.
      */
-    speedOf
+    speedOf: ISpeedOf
 
     /**
-     * 지정된 방향에서 플레이어의 현재 속도(초당 미터)입니다.
+     * 지정된 방향에서 플레이어의
+     * 현재 속도(초당 미터)입니다.
      */
-    speedOfInDirection
+    speedOfInDirection: ISpeedOfInDirection
 
     /**
      * 지정된 값의 제곱근입니다.
      */
-    squareRoot
+    squareRoot: ISquareRoot
 
     /**
      * 선택한 텍스트와 지정된 값으로 구성된 텍스트입니다.

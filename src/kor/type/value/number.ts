@@ -28,6 +28,25 @@ import {
     IHorizontalFacingAngleOf,
     IHorizontalSpeedOf,
     IIndexOfArrayValue,
+    ILastDamageModificationId,
+    ILastDamageOverTimeId,
+    ILastHealOverTimeId,
+    ILastTextId,
+    IMatchRound,
+    IMax,
+    IMaxHealth,
+    IMin,
+    IModulo,
+    INormalizedHealth,
+    INumberOfDeadPlayers,
+    INumberOfDeaths,
+    INumberOfEliminations,
+    INumberOfFinalBlows,
+    INumberOfHeroes,
+    INumberOfLivingPlayers,
+    INumberOfPlayers,
+    INumberOfPlayersOnObjective,
+    IObjectiveIndex,
 
 } from "../../interface/value/child"
 
@@ -72,3 +91,23 @@ export type ValueNumberType
     | IHorizontalSpeedOf
 
     | IIndexOfArrayValue
+    | ILastDamageModificationId
+    | ILastDamageOverTimeId
+    | ILastHealOverTimeId
+    | ILastTextId
+    | IMatchRound
+    | IMax
+    | IMaxHealth
+    | IMin
+    | IModulo
+    | INormalizedHealth
+
+    | INumberOfDeadPlayers
+    | INumberOfDeaths
+    | INumberOfEliminations
+    | INumberOfFinalBlows
+    | INumberOfHeroes
+    | INumberOfLivingPlayers
+    | INumberOfPlayers
+    | INumberOfPlayersOnObjective
+    | IObjectiveIndex

@@ -1,5 +1,6 @@
 import {
-    ValuePlayerType
+    ValuePlayerType,
+    ILastCreatedEntity
 
     /**
      * @TODO
@@ -13,3 +14,4 @@ import {
  */
 export type ValueEntityType
     = ValuePlayerType
+    | ILastCreatedEntity
