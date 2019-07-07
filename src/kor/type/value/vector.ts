@@ -11,7 +11,7 @@ import {
     IDirectionTowards,
     IDotProduct,
     IDown,
-    IDivideVector,
+    IDivide,
     IFacingDirectionOf,
     IFlagPosition,
     IForward,
@@ -19,6 +19,20 @@ import {
     INearestWalkablePostion,
     INormalize,
     IObjectivePosition,
+    IPayloadPosition,
+    IPositionOf,
+    IRayCastHitNormal,
+    IRayCastHitPlayer,
+    IRayCastHitPosition,
+    IRight,
+    ISubstract,
+    IThrottleOf,
+    ITotalTimeElapsed,
+    IUp,
+    IVelocityOf,
+    IXComponentOf,
+    IYComponentOf,
+    IZComponentOf,
 } from '../../interface/value/child'
 
 export type ValueVectorType
@@ -32,7 +46,7 @@ export type ValueVectorType
     | ICrossProduct
     | IDirectionFromAngles
     | IDirectionTowards
-    | IDivideVector
+    | IDivide
     | IDotProduct
     | IDown
     | IFacingDirectionOf
@@ -42,3 +56,17 @@ export type ValueVectorType
     | INearestWalkablePostion
     | INormalize
     | IObjectivePosition
+    | IPayloadPosition
+    | IPositionOf
+    | IRayCastHitNormal
+    | IRayCastHitPlayer
+    | IRayCastHitPosition
+    | IRight
+    | ISubstract
+    | IThrottleOf
+    | ITotalTimeElapsed
+    | IUp
+    | IVelocityOf
+    | IXComponentOf
+    | IYComponentOf
+    | IZComponentOf

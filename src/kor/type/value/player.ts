@@ -3,18 +3,22 @@ import {
     IPlayerVariable,
     IClosestPlayerTo,
     IEventPlayer,
-    IFarthestPlayerFrom
+    IFarthestPlayerFrom,
+    IPlayerCarryingFlag,
+    IPlayerClosestToReticle,
+    IVictim,
+    IAttacker,
 } from '../../interface/value/child'
 
 export type ValuePlayerType
-    //= 'Event Player'
     = IEventPlayer
-
-    | 'Victim'
-    | 'Attacker'
+    | IVictim
+    | IAttacker
 
     | IClosestPlayerTo
 
     | IGlobalVariable
     | IPlayerVariable
     | IFarthestPlayerFrom
+    | IPlayerCarryingFlag
+    | IPlayerClosestToReticle

@@ -1,6 +1,6 @@
 import {
     INumber,
-    IAddNumber,
+    IAdd,
 
     IAngleDifference,
     IAngleBetweenVectors,
@@ -19,7 +19,7 @@ import {
 
     IControlModeScoringPercentage,
     IDistanceBetween,
-    IDivideNumber,
+    IDivide,
     IEventDamage,
     IEyePosition,
     IHealth,
@@ -47,6 +47,28 @@ import {
     INumberOfPlayers,
     INumberOfPlayersOnObjective,
     IObjectiveIndex,
+    IPayloadProgressPercentage,
+    IPointCapturePercentage,
+    IRaiseToPower,
+    IRandomInteger,
+    IRandomReal,
+    IRoundToInteger,
+    IScoreOf,
+    ISineFromDegrees,
+    ISineFromRadians,
+    ISlotOf,
+    ISpeedOf,
+    ISpeedOfInDirection,
+    ISquareRoot,
+    ISubstract,
+    ITangentFromDegrees,
+    ITangentFromRadians,
+    ITeamScore,
+    IUltimateChargePercent,
+    IVerticalAngleFromDirection,
+    IVerticalAngleTowards,
+    IVerticalFacingAngleOf,
+    IVerticalSpeedOf,
 
 } from "../../interface/value/child"
 
@@ -57,7 +79,7 @@ import {
 
 export type ValueNumberType
     = INumber
-    | IAddNumber
+    | IAdd
 
     | IAngleDifference
     | IAngleBetweenVectors
@@ -80,7 +102,7 @@ export type ValueNumberType
     | IPlayerVariable
     | IDistanceBetween
 
-    | IDivideNumber
+    | IDivide
     | IEventDamage
     | IEyePosition
     | IHealth
@@ -111,3 +133,25 @@ export type ValueNumberType
     | INumberOfPlayers
     | INumberOfPlayersOnObjective
     | IObjectiveIndex
+    | IPayloadProgressPercentage
+    | IPointCapturePercentage
+    | IRaiseToPower
+    | IRandomInteger
+    | IRandomReal
+    | IRoundToInteger
+    | IScoreOf
+    | ISineFromDegrees
+    | ISineFromRadians
+    | ISlotOf
+    | ISpeedOf
+    | ISpeedOfInDirection
+    | ISquareRoot
+    | ISubstract
+    | ITangentFromDegrees
+    | ITangentFromRadians
+    | ITeamScore
+    | IUltimateChargePercent
+    | IVerticalAngleFromDirection
+    | IVerticalAngleTowards
+    | IVerticalFacingAngleOf
+    | IVerticalSpeedOf

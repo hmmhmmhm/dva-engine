@@ -8,7 +8,14 @@ import {
     IAllowedHeroes,
     IArraySlice,
     IEmptyArray,
-    IFilteredArray
+    IFilteredArray,
+    IPlayersInSlot,
+    IPlayersInViewAngle,
+    IPlayersOnHero,
+    IPlayersWithinRadius,
+    IRandomizedArray,
+    IRemoveFromArray,
+    ISortedArray,
 } from '../../interface/value/child'
 
 export type ValueArrayType
@@ -22,3 +29,10 @@ export type ValueArrayType
     | IArraySlice
     | IEmptyArray
     | IFilteredArray
+    | IPlayersInSlot
+    | IPlayersInViewAngle
+    | IPlayersOnHero
+    | IPlayersWithinRadius
+    | IRandomizedArray
+    | IRemoveFromArray
+    | ISortedArray

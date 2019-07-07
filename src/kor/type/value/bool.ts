@@ -46,14 +46,23 @@ import {
     IIsUsingUltimate,
     IIsWaitingForPlayers,
     INot,
+    IOr,
+    ITrue,
+    IAnd,
 } from '../../interface/value'
 
 export type ValueBoolType
-    = IArrayContains
+    = IFalse
+    | ITrue
+
+    | INot
+    | IOr
+    | IAnd
+
+    | IArrayContains
     | ICompare
     | IEntityExists
     | IEventWasCriticalHit
-    | IFalse
     | IHasSpawned
     | IHasStatus
     | IIsAlive
@@ -97,4 +106,3 @@ export type ValueBoolType
     | IIsUsingAbility2
     | IIsUsingUltimate
     | IIsWaitingForPlayers
-    | INot

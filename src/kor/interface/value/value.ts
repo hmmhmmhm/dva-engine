@@ -1,10 +1,3 @@
-import { 
-    HeroType,
-    ValueAddType,
-    ValueDivideType,
-    ValueMultiplyType
-} from '../../type'
-
 import {
     // Number Type
     IAbsoluteValue,
@@ -187,6 +180,30 @@ import {
     ISpeedOf,
     ISpeedOfInDirection,
     ISquareRoot,
+    IString,
+    ISubstract,
+    IAdd,
+    IDivide,
+    IMultiply,
+    ITangentFromDegrees,
+    ITangentFromRadians,
+    ITeamOf,
+    ITeamScore,
+    IThrottleOf,
+    ITotalTimeElapsed,
+    ITrue,
+    IUltimateChargePercent,
+    IUp,
+    IValueInArray,
+    IVelocityOf,
+    IVerticalAngleFromDirection,
+    IVerticalAngleTowards,
+    IVerticalFacingAngleOf,
+    IVerticalSpeedOf,
+    IVictim,
+    IXComponentOf,
+    IYComponentOf,
+    IZComponentOf,
 
 } from './child'
 
@@ -199,7 +216,7 @@ export interface IValue {
     /**
      * 두 숫자 또는 벡터의 합입니다.
      */
-    add: ValueAddType
+    add: IAdd
 
     /**
      * 팀 또는 경기 내에서 사망한 모든 플레이어가 있는 배열입니다.
@@ -388,7 +405,7 @@ export interface IValue {
      * 두 숫자 또는 벡터의 비율입니다. 벡터를 숫자로 나누면
      * 비율이 증감된 벡터가 도출됩니다. 0으로 나누면 0이 됩니다.
      */
-    divide: ValueDivideType
+    divide: IDivide
 
     /**
      * 지정된 값의 점곱입니다.
@@ -838,7 +855,7 @@ export interface IValue {
      * 두 숫자 또는 벡터의 곱입니다. 벡터에 숫자를
      * 곱하면 비율이 증감된 벡터가 도출됩니다.
      */
-    multiply: ValueMultiplyType
+    multiply: IMultiply
 
     /**
      * 서 있을 수 있고 생성 지점에서 접근 가능하며
@@ -1119,23 +1136,22 @@ export interface IValue {
     /**
      * 선택한 텍스트와 지정된 값으로 구성된 텍스트입니다.
      */
-    string
+    string: IString
 
     /**
      * 두 숫자 또는 벡터의 차이입니다.
      */
-    subtract
+    subtract: ISubstract
 
     /**
      * 지정된 각(단위: 도)의 탄젠트 값입니다.
      */
-    tangentFromDegrees
-
+    tangentFromDegrees: ITangentFromDegrees
 
     /**
      * 지정된 각(단위: RAD)의 탄젠트 값입니다.
      */
-    tangentFromRadians
+    tangentFromRadians: ITangentFromRadians
 
     /**
      * 팀 상수입니다. ALL 옵션은 팀전의 양팀,
@@ -1147,47 +1163,47 @@ export interface IValue {
      * 해당 플레이어의 소속 팀입니다.
      * 게임 모드가 개별 전투인 경우 팀은 ALL로 간주됩니다.
      */
-    teamOf
+    teamOf: ITeamOf
 
     /**
      * 지정된 팀의 현재 점수입니다.
      * 개별 전투 모드에서는 결과값이 0입니다.
      */
-    teamScore
+    teamScore: ITeamScore
 
     /**
      * 한 플레이어의 방향 입력 정보입니다. 
      * X 구성요소가 횡방향 입력 정보(왼쪽이 양),
      * Z 구성 요소가 종방향 입력 정보(위쪽이 양)인 벡터로 표현됩니다.
      */
-    throttleOf
+    throttleOf: IThrottleOf
 
     /**
      * 게임 인스턴스 생성 후 경과 시간(단위: 초)입니다.
      * (설정 및 전환 시간 포함)
      */
-    totalTimeElapsed
+    totalTimeElapsed: ITotalTimeElapsed
 
     /**
      * TRUE의 부울 값입니다.
      */
-    true
+    true: ITrue
 
     /**
      * 플레이어의 현재 궁극기 충전량 비율입니다.
      */
-    ultimateChargePercent
+    ultimateChargePercent: IUltimateChargePercent
 
     /**
      * 위를 가리키는 방향 벡터(0, 1, 0)의 약칭입니다.
      */
-    up
+    up: IUp
 
     /**
      * 한 배열의 지정된 요소에 있는 값입니다.
      * 대상 요소가 없는 경우 결과값은 0입니다.
      */
-    valueInArray
+    valueInArray: IValueInArray
 
     /**
      * 3개의 실수(X, Y, Z)로 이루어진 벡터입니다.
@@ -1206,39 +1222,41 @@ export interface IValue {
      * 해당 플레이어가 표면 위에 있는 경우,
      * 경사로를 오르 내린다고 해도 Y 구성요소 속도는 0입니다.
      */
-    velocityOf
+    velocityOf: IVelocityOf
 
     /**
      * 지정된 방향 벡터의 대응하는 종축각(단위: 도)입니다.
      */
-    verticalAngleFromDirection
+    verticalAngleFromDirection: IVerticalAngleFromDirection
 
     /**
-     * 플레이어의 전방에서 지정된 위치까지의 종축각(단위: 도)입니다.
-     * 이 값은 해당 위치가 플레이어 아래에 있는 경우 양수이며,
+     * 플레이어의 전방에서 지정된
+     * 위치까지의 종축각(단위: 도)입니다.
+     * 이 값은 해당 위치가
+     * 플레이어 아래에 있는 경우 양수이며,
      * 그 외의 경우 0이거나 음수입니다.
      */
-    verticalAngleTowards
+    verticalAngleTowards: IVerticalAngleTowards
 
     /**
      * 월드에 대해 상대적으로 플레이어가
      * 바라보고 있는 방향의 종축각(단위: 도)입니다.
      * 이 값은 플레이어가 내려다보는 경우 증가합니다.
      */
-    verticalFacingAngleOf
+    verticalFacingAngleOf: IVerticalFacingAngleOf
 
     /**
      * 플레이어의 현재 종축 속도(초당 미터)입니다.
      * 여기에는 경사로를 오르내리는 등의 움직임 등
      * 모든 횡축 이동이 배제됩니다.
      */
-    verticalSpeedOf
+    verticalSpeedOf: IVerticalSpeedOf
 
     /**
      * 이 규칙으로 처리된 이벤트로 인해 피해를 받은 플레이어입니다.
      * ATTACKER 또는 EVENT PLAYER와 동일할 수 있습니다.
      */
-    victim
+    victim: IVictim
 
     /**
      * 제공된 로컬 좌표 벡터에 해당하는 월드 좌표 벡터입니다.
@@ -1249,19 +1267,17 @@ export interface IValue {
      * 지정된 벡터의 X 구성요소입니다.
      * 일반적으로 왼쪽 방향의 벡터량입니다.
      */
-    xComponentOf
+    xComponentOf: IXComponentOf
     
     /**
      * 지정된 벡터의 Y 구성요소입니다.
      * 일반적으로 왼쪽 방향의 벡터량입니다.
      */
-    yComponentOf
+    yComponentOf: IYComponentOf
 
     /**
      * 지정된 벡터의 Z 구성요소입니다.
      * 일반적으로 왼쪽 방향의 벡터량입니다.
      */
-    zComponentOf
-
-    
+    zComponentOf: IZComponentOf
 }

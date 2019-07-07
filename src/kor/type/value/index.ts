@@ -1,12 +1,7 @@
-export * from './add'
-export * from './multiply'
-export * from './divide'
-
 export * from './number'
 export * from './array'
 export * from './bool'
 export * from './string'
-
 export * from './value'
 export * from './player'
 export * from './vector'
