@@ -2,6 +2,7 @@ import {
     ValueTextType,
     ValueStringType,
 } from '../../../type'
+import { INull } from './null'
 
 /**
  * 지정된 값의 제곱근입니다.
@@ -15,13 +16,13 @@ export interface IString {
     /**
      * 텍스트로 전환되어 {0}을 대체할 값입니다.
      */
-    0: ValueStringType
+    0: ValueStringType | INull
     /**
      * 텍스트로 전환되어 {1}을 대체할 값입니다.
      */
-    1: ValueStringType
+    1: ValueStringType | INull
     /**
      * 텍스트로 전환되어 {2}를 대체할 값입니다.
      */
-    2: ValueStringType
+    2: ValueStringType | INull
 }

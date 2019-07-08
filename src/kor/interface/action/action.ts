@@ -1,86 +1,131 @@
-export interface IActionType {
+import {
+    IAbort,
+    IAbortIf,
+    IAbortIfConditionsIsFalse,
+    IAbortIfConditionsIsTrue,
+    IAllowButton,
+    IApplyImpulse,
+    IBigMessage,
+    IChaseGlobalVariableAtRate,
+    IChaseGlobalVariableOverTime,
+    IChasePlayerVariableAtRate,
+    IChasePlayerVariableOverTime,
+    IClearStatus,
+    ICommunicate,
+    ICreateEffect,
+    ICreateHudText,
+    ICreateIcon,
+    ICreateInWorldText,
+    IDamage,
+    IDeclareMatchDraw,
+    IDeclarePlayerVictory,
+    IDeclareRoundVictory,
+    IDeclareTeamVictory,
+    IDestoryAllEffects,
+    IDestoryAllHudText,
+    IDestroyAllIcons,
+    IDestroyAllInWorldText,
+    IDestroyEffect,
+    IDestroyHudText,
+} from "./child"
+
+export interface IAction {
     /**
      * 액션 목록 실행을 중지합니다.
      */
-    abort
+    abort: IAbort
 
     /**
      * 이 액션 조건이 TRUE일 때 액션 목록 실행을 중지합니다.
      * 그 외에 경우 다음 액션을 진행합니다.
      */
-    abortIf
+    abortIf: IAbortIf
 
     /**
      * 조건 목록에 있는 조건 중
      * 하나 이상이 FALSE인 경우 액션 목록의 실행을 중지합니다.
      * 모든 조건이 TRUE인 경우 다음 액션을 진행합니다.
      */
-    abortIfConditionsIsFalse
-    
+    abortIfConditionsIsFalse: IAbortIfConditionsIsFalse
+
     /**
      * 조건 목록에 있는 조건 중
      * 하나 이상이 TRUE인 경우 액션 목록의 실행을 중지합니다.
      * 모든 조건이 FALSE인 경우 다음 액션을 진행합니다.
      */
-    abortIfConditionsIsTrue
+    abortIfConditionsIsTrue: IAbortIfConditionsIsTrue
 
     /**
      * 플레이어에 대해 DISALLOW BUTTON 액션의 효과를 취소합니다.
      */
-    allowButton
+    allowButton: IAllowButton
 
     /**
      * 플레이어의 움직임에 즉각적인 속도 변화를 줍니다.
      */
-    applyImpulse
+    applyImpulse: IApplyImpulse
     
     /**
-     * 지정된 플레이엉에게 보이도록 큰 메시지를 조준선 위쪽에 표시합니다.
+     * 지정된 플레이엉에게 보이도록
+     * 큰 메시지를 조준선 위쪽에 표시합니다.
      */
-    bigMessage
+    bigMessage: IBigMessage
 
     /**
-     * 전역 변수 값을 지정된 비율로 점진적으로 수정합니다.
-     * (전역 변수(GLOBAL VARIABLE)는 게임 자체에 종속된 변수입니다.)
+     * 전역 변수 값을 지정된 비율로
+     * 점진적으로 수정합니다.
+     * (전역 변수(GLOBAL VARIABLE)는
+     * 게임 자체에 종속된 변수입니다.)
      */
-    chaseGlobalVariableAtRate
+    chaseGlobalVariableAtRate: IChaseGlobalVariableAtRate
     
     /**
-     * 전역 변수 값을 시간이 지남에 따라 점진적으로 수정합니다.
-     * (전역 변수(GLOBAL VARIABLE)는 게임 자체에 종속된 변수입니다.)
+     * 전역 변수 값을 시간이 지남에
+     * 따라 점진적으로 수정합니다.
+     * (전역 변수(GLOBAL VARIABLE)는
+     * 게임 자체에 종속된 변수입니다.)
      */
-    chaseGlobalVariableOverTime
+    chaseGlobalVariableOverTime: IChaseGlobalVariableOverTime
 
     /**
-     * 플레이어 변수 값을 지정된 비율로 점진적으로 수정합니다.
-     * (플레이어 변수(PLAYER VARIABLE)는 게임 자체에 종속된 변수입니다.)
+     * 플레이어 변수 값을 지정된
+     * 비율로 점진적으로 수정합니다.
+     * (플레이어 변수(PLAYER VARIABLE)는
+     * 게임 자체에 종속된 변수입니다.)
      */
-    chasePlayerVariableAtRate
+    chasePlayerVariableAtRate: IChasePlayerVariableAtRate
 
     /**
-     * 플레이어 변수 값을 시간의 경과에 따라 점진적으로 수정합니다.
-     * (플레이어 변수(PLAYER VARIABLE)는 게임 자체에 종속된 변수입니다.)
+     * 플레이어 변수 값을 시간의
+     * 경과에 따라 점진적으로 수정합니다.
+     * (플레이어 변수(PLAYER VARIABLE)는
+     * 게임 자체에 종속된 변수입니다.)
      */
-    chasePlayerVariableOverTime
+    chasePlayerVariableOverTime: IChasePlayerVariableOverTime
 
     /**
-     * SET STATUS 액션을 통해 플레이어에게 적용된 상태 하나를 제거합니다.
+     * SET STATUS 액션을 통해
+     * 플레이어에게 적용된
+     * 상태 하나를 제거합니다.
      */
-    clearStatus
+    clearStatus: IClearStatus
 
     /**
      * 플레이어가 감정 표현, 음성 대사,
-     * 또는 기타 장착한 의사소통 수단을 사용하도록 합니다.
+     * 또는 기타 장착한 의사소통
+     * 수단을 사용하도록 합니다.
      */
-    communicate
+    communicate: ICommunicate
 
     /**
      * 월드 내에 효과 개체를 생성합니다.
      * 이 효과 개체는 제거하기 전까지 지속됩니다.
-     * 이 효과를 참조하려면 LAST CREATED ENTITY 값을 사용하면 됩니다.
-     * 개체가 너무 많이 생성될 경우 이 액션이 실패할 수 있습니다.
+     * 이 효과를 참조하려면
+     * LAST CREATED ENTITY 값을 사용하면 됩니다.
+     * 개체가 너무 많이 생성될 경우
+     * 이 액션이 실패할 수 있습니다.
      */
-    createEffect
+    createEffect: ICreateEffect
 
     /**
      * 지정된 플레이어 화면의 지정된 위치에
@@ -91,16 +136,17 @@ export interface IActionType {
      * 텍스트 요소가 너무 많이 생성될 경우
      * 이 액션이 실패할 수 있습니다.
      */
-    createHudText
+    createHudText: ICreateHudText
 
     /**
      * 월드 내에 아이콘 개체를 생성합니다.
      * 이 아이콘 개체는 제거하기 전까지 지속됩니다.
      * 이 개체를 참조하려면
      * LAST CREATED ENTITY 값을 사용하면 됩니다.
-     * 개체가 너무 많이 생성될 경우 이 액션이 실패할 수 있습니다.
+     * 개체가 너무 많이 생성될 경우
+     * 이 액션이 실패할 수 있습니다.
      */
-    createIcon
+    createIcon: ICreateIcon
 
     /**
      * 월드의 지정된 위치에서 지정된 플레이어에게
@@ -110,71 +156,78 @@ export interface IActionType {
      * LAST TEXT ID 값을 사용하면 됩니다.
      * 텍스트 요소가 너무 많이 생성된 경우 이 액션은 실패할 수 있습니다.
      */
-    createInWorldtext
+    createInWorldText: ICreateInWorldText
 
     /**
-     * 플레이어에게 즉시 피해를 적용하며, 피해를 받은 대상이 죽을 수 있습니다.
+     * 플레이어에게 즉시 피해를 적용하며,
+     * 피해를 받은 대상이 죽을 수 있습니다.
      */
-    damage
+    damage: IDamage
 
     /**
      * 경기를 즉시 무승부로 종료합니다.
      * 이 액션은 개별 전투 모드에서는 효과가 없습니다.
      */
-    declareMatchDraw
+    declareMatchDraw: IDeclareMatchDraw
 
     /**
      * 지정된 플레이어를 승자로 하여 경기를 즉시 종료합니다.
      * 이 액션은 개별 전투 모드에서만 효과가 있습니다.
      */
-    declarePlayerVictory
+    declarePlayerVictory: IDeclarePlayerVictory
 
     /**
      * 팀 하나를 현재 라운드의 승자로 설정합니다.
      * 쟁탈 및 섬멸전 게임 모드에서만 작동합니다.
      */
-    declareRoundVictory
+    declareRoundVictory: IDeclareRoundVictory
 
     /**
      * 지정된 팀을 승자로 하여 경기를 즉시 종료합니다.
      * 이 액션은 개별 전투 모드에서는 효과가 없습니다.
      */
-    declareTeamVictory
+    declareTeamVictory: IDeclareTeamVictory
 
     /**
-     * CREATE EFFECT에 의해 생성된 모든 효과 개체를 제거합니다.
+     * CREATE EFFECT에 의해 생성된
+     * 모든 효과 개체를 제거합니다.
      */
-    destoryAllEffects
+    destoryAllEffects: IDestoryAllEffects
 
     /**
-     * CREATE HUD TEXT 액션에 의해 생성된 모든 HUD 텍스트를 제거합니다.
+     * CREATE HUD TEXT 액션에 의해
+     * 생성된 모든 HUD 텍스트를 제거합니다.
      */
-    destoryAllHudText
+    destoryAllHudText: IDestoryAllHudText
 
     /**
-     * CREATE ICON에 의해 생성된 모든 아이콘 개체를 제거합니다.
+     * CREATE ICON에 의해 생성된
+     * 모든 아이콘 개체를 제거합니다.
      */
-    destroyAllIcons
+    destroyAllIcons: IDestroyAllIcons
 
     /**
-     * CREATE IN-WORLD TEXT에 의해 생성된 월드 내 텍스트를 모두 제거합니다.
+     * CREATE IN-WORLD TEXT에 의해
+     * 생성된 월드 내 텍스트를 모두 제거합니다.
      */
-    destroyAllInWorldText
+    destroyAllInWorldText: IDestroyAllInWorldText
 
     /**
-     * CREATE EFFECT에 의해 생성된 효과 개체 하나를 제거합니다.
+     * CREATE EFFECT에 의해 생성된
+     * 효과 개체 하나를 제거합니다.
      */
-    destroyEffect
+    destroyEffect: IDestroyEffect
 
     /**
-     * CREATE HUD TEXT 액션에 의해 생성된 HUD 텍스트를 제거합니다.
+     * CREATE HUD TEXT 액션에 의해
+     * 생성된 HUD 텍스트를 제거합니다.
      */
-    destroyHudText
+    destroyHudText: IDestroyHudText
 
     /**
      * CREATE ICON에 의해 생성된 아이콘 개체를 제거합니다.
      */
-    destroyIcon
+    destroyIcon 
 
     /**
      * CREATE IN-WORD TEXT에 의해 생성된 월드 내 텍스트를 제거합니다.

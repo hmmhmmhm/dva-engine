@@ -1,6 +1,3 @@
-/**
- * 
- */
 export type ValueCommunicationType
     = 'VOICE LINE UP'
     | 'VOICE LINE LEFT'
