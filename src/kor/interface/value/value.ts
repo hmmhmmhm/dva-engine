@@ -573,7 +573,7 @@ export interface IValue {
     /**
      * 경기 중 라운드 전환 시기인지 여부입니다.
      */
-    isBetwwenRounds : IIsBetwwenRounds
+    isBetwwenRounds: IIsBetwwenRounds
 
     /**
      * 플레이어가 지정된 버튼을 누르고 있는지 여부입니다.
@@ -606,7 +606,7 @@ export interface IValue {
     /**
      * 쟁탈 전장에서 해당 거점이 잠겨있는지 여부입니다.
      */
-    isControlModePointLocked : IIsControlModePointLocked
+    isControlModePointLocked: IIsControlModePointLocked
     
     /**
      * 플레이어가 웅크리고 있는 상태인지 여부입니다.
@@ -1049,7 +1049,7 @@ export interface IValue {
      * 지정된 배열의 값을
      * 무작위 순서로 나열한 복사본입니다.
      */
-    randomizedArray :IRandomizedArray
+    randomizedArray: IRandomizedArray
 
     /**
      * RAY CAST HIT POSITION에서의 표면 법선
@@ -1061,7 +1061,7 @@ export interface IValue {
      * 레이캐스트로 맞힌 플레이어
      * (맞은 플레이어가 없는 경우 NULL)입니다.
      */
-    rayCastHitPlayer :IRayCastHitPlayer
+    rayCastHitPlayer: IRayCastHitPlayer
 
     /**
      * 레이캐스트로 맞힌 표면,

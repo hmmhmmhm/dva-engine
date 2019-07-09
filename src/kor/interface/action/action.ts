@@ -124,8 +124,8 @@ import {
     ITeleport,
     IUnpauseMatchTime,
     IWait,
-} from "./child"
-import { ISetPlayerScore } from "./child/setPlayerScore";
+} from './child'
+import { ISetPlayerScore } from './child/setPlayerScore'
 
 export interface IAction {
     /**
@@ -606,7 +606,7 @@ export interface IAction {
      * 순수 피해량 대비
      * % 비율로 설정합니다.
      */
-    setDamageDealt:ISetDamageDealt
+    setDamageDealt: ISetDamageDealt
     
     /**
      * 플레이어가 받는 피해를

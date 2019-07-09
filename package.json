@@ -1,0 +1,27 @@
+{
+  "name": "dva-engine",
+  "version": "1.0.0",
+  "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
+  "main": "./dist/dva.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.6.1",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "lint": "eslint --fix -c ./.eslintrc.js --ext .ts ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmmhmmhm/overwatch-workshop-javascript.git"
+  },
+  "author": "hmmhmmhm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hmmhmmhm/overwatch-workshop-javascript/issues"
+  },
+  "homepage": "https://github.com/hmmhmmhm/overwatch-workshop-javascript#readme"
+}

@@ -1,4 +1,4 @@
-import { ValuePlayerType, ValueNumberType } from '../../../type'
+import { ValuePlayerType } from '../../../type'
 import { INull } from '../../value'
 
 /**

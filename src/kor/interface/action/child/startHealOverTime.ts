@@ -1,5 +1,5 @@
 import { ValuePlayerType, ValueNumberType } from '../../../type'
-import { INull } from '../../value';
+import { INull } from '../../value'
 
 /**
  * HEAL OVER TIME 인스턴스를 시작합니다.

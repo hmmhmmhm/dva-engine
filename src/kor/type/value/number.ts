@@ -70,7 +70,7 @@ import {
     IVerticalFacingAngleOf,
     IVerticalSpeedOf,
 
-} from "../../interface/value/child"
+} from '../../interface/value/child'
 
 import {
     IGlobalVariable,

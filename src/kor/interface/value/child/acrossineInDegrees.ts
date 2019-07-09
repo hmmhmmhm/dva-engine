@@ -1,4 +1,4 @@
-import { ValueNumberType } from "../../../type"
+import { ValueNumberType } from '../../../type'
 
 /**
  * 지정된 각(단위: 도)의 아크코사인 값입니다.

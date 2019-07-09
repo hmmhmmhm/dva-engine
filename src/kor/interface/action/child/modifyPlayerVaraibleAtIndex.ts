@@ -1,5 +1,5 @@
 import { ValueType, ValueNumberType, ValueVariableOperation, ValuePlayerType } from '../../../type'
-import { IPlayerVariable } from '../../value';
+import { IPlayerVariable } from '../../value'
 
 /**
  * 인덱스에서 지정된 플레이어가
