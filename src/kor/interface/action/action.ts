@@ -27,6 +27,47 @@ import {
     IDestroyAllInWorldText,
     IDestroyEffect,
     IDestroyHudText,
+    IDestroyIcon,
+    IDestroyInWorldText,
+    IDisableBuiltInGameModeAnnouncer,
+    IDisableBuiltInGameModeCompletion,
+    IDisableBuiltInGameModeMusic,
+    IDisableBuiltInGameModeRespawning,
+    IDisableBuiltInGameModeScoring,
+    IDisableDeathSpectateAllPlayers,
+    IDisableDeathSpectateTargetHud,
+    IDisallowButton,
+    IEnableBuiltInGameModeAnnouncer,
+    IEnableBuiltInGameModeCompletion,
+    IEnableBuildInGameModeMusic,
+    IEnableBuiltInGameModeRespawning,
+    IEnableBuiltInGameModeScoring,
+    IEnableDeathSpectateAllPlayers,
+    IEnableDeathSpecateTargetHud,
+    IGoToAssembleHeroes,
+    IHeal,
+    IKill,
+    ILoop,
+    ILoopIf,
+    ILoopIfConditionIsFalse,
+    ILoopIfConditionIsTrue,
+    IModifyGlobalVariable,
+    IModifyGlobalVariableAtIndex,
+    IModifyPlayerScore,
+    IModifyPlayerVariable,
+    IModifyPlayerVaraibleAtIndex,
+    IModifyTeamScore,
+    IPauseMatchTime,
+    IPlayEffect,
+    IPreloadHero,
+    IPressButton,
+    IResetPlayerHeroAvalability,
+    IRespawn,
+    IResurrect,
+    ISetAbility1Enabled,
+    ISetAbility2Enabled,
+    ISetAimSpeed,
+    ISetDamageDealt,
 } from "./child"
 
 export interface IAction {
@@ -225,129 +266,149 @@ export interface IAction {
     destroyHudText: IDestroyHudText
 
     /**
-     * CREATE ICON에 의해 생성된 아이콘 개체를 제거합니다.
+     * CREATE ICON에 의해 생성된
+     * 아이콘 개체를 제거합니다.
      */
-    destroyIcon 
+    destroyIcon: IDestroyIcon
 
     /**
-     * CREATE IN-WORD TEXT에 의해 생성된 월드 내 텍스트를 제거합니다.
+     * CREATE IN-WORD TEXT에 의해
+     * 생성된 월드 내 텍스트를 제거합니다.
      */
-    destroyInWorldText
+    destroyInWorldText: IDestroyInWorldText
 
     /**
-     * 다시 사용하거나 경기가 종료될 때까지 아나운서의
-     * 게임 모드 안내 음성을 사용하지 않도록 합니다.
+     * 다시 사용하거나 경기가
+     * 종료될 때까지 아나운서의
+     * 게임 모드 안내 음성을
+     * 사용하지 않도록 합니다.
      */
-    disableBuiltInGameModeAnnouncer
+    disableBuiltInGameModeAnnouncer: IDisableBuiltInGameModeAnnouncer
 
     /**
-     * 게임 모드 자체에서 경기 종료가 되지 않도록 합니다.
-     * 스크립트 명령어로만 경기를 마칠 수 있도록 허용합니다.
+     * 게임 모드 자체에서 경기
+     * 종료가 되지 않도록 합니다.
+     * 스크립트 명령어로만 경기를
+     * 마칠 수 있도록 허용합니다.
      */
-    disableBuiltInGameModeCompletion
+    disableBuiltInGameModeCompletion: IDisableBuiltInGameModeCompletion
 
     /**
-     * 다시 사용하거나 경기가 종료될 때까지
-     * 모든 게임 모드 음악을 사용하지 않도록 합니다.
+     * 다시 사용하거나
+     * 경기가 종료될 때까지
+     * 모든 게임 모드 음악을
+     * 사용하지 않도록 합니다.
      */
-    disableBuiltInGameModeMusic
+    disableBuiltInGameModeMusic: IDisableBuiltInGameModeMusic
 
     /**
-     * 플레이어에 대해 자동 부활 기능을 비활성화하고,
-     * 스크립트 명령어를 통한 부활만 허용합니다.
+     * 플레이어에 대해 자동
+     * 부활 기능을 비활성화하고,
+     * 스크립트 명령어를 통한
+     * 부활만 허용합니다.
      */
-    disableBuiltInGameModeRespawning
+    disableBuiltInGameModeRespawning: IDisableBuiltInGameModeRespawning
 
     /**
-     * 게임 모드 자체에서 플레이어 점수와 팀 점수를
+     * 게임 모드 자체에서
+     * 플레이어 점수와 팀 점수를
      * 변경하지 못하도록 하며,
-     * 스크립트 명령어로만 점수 변경이 가능하도록 합니다.
+     * 스크립트 명령어로만
+     * 점수 변경이 가능하도록 합니다.
      */
-    disableBuiltInGameModeScoring
+    disableBuiltInGameModeScoring: IDisableBuiltInGameModeScoring
 
     /**
-     * 플레이어에 대한 ENABLE DEATH SPECTATE ALL PLAYERS
+     * 플레이어에 대한
+     * ENABLE DEATH SPECTATE ALL PLAYERS
      * 액션의 효과를 취소합니다.
      */
-    disableDeathSpectateAllPlayers
+    disableDeathSpectateAllPlayers: IDisableDeathSpectateAllPlayers
 
     /**
-     * 플레이어를 대상으로 ENABLE DEATH SPECTATE TARGET HUD
+     * 플레이어를 대상으로
+     * ENABLE DEATH SPECTATE TARGET HUD
      * 액션의 효과를 취소합니다.
      */
-    disableDeathSpectateTargetHud
+    disableDeathSpectateTargetHud: IDisableDeathSpectateTargetHud
 
     /**
-     * 플레이어가 논리적 버튼을 사용 못 하게 하여
-     * 눌러도 아무 효과 없도록 합니다.
+     * 플레이어가 논리적 버튼을
+     * 사용 못 하게 하여 눌러도
+     * 아무 효과 없도록 합니다.
      */
-    disallowButton
+    disallowButton: IDisallowButton
 
     /**
      * DISABLE BUILT-IN GAME MODE ANNOUNCER
      * 액션의 효과를 취소합니다.
      */
-    enableBuiltInGameModeAnnouncer
+    enableBuiltInGameModeAnnouncer: IEnableBuiltInGameModeAnnouncer
 
     /**
      * DISABLE BUILT-IN GAME MODE COMPLETION
      * 액션의 효과를 취소합니다.
      */
-    enableBuiltInGameMOdeCompletion
+    enableBuiltInGameModeCompletion: IEnableBuiltInGameModeCompletion
 
     /**
      * DISABLE BUILT-IN GAME MODE MUSIC
      * 액션의 효과를 취소합니다.
      */
-    enableBuildInGameModeMusic
+    enableBuildInGameModeMusic: IEnableBuildInGameModeMusic
 
     /**
-     * 플레이어에 대해 DISABLE BUILT-IN GAME MODE RESPAWNING
+     * 플레이어에 대해
+     * DISABLE BUILT-IN GAME MODE RESPAWNING
      * 액션의 효과를 취소합니다.
      */
-    enableBuiltInGameModeRespawning
+    enableBuiltInGameModeRespawning: IEnableBuiltInGameModeRespawning
 
     /**
      * DISABLE BUILT-IN GAME MODE SCORING
      * 액션의 효과를 취소합니다.
      */
-    enableBuiltInGameModeScoring
+    enableBuiltInGameModeScoring: IEnableBuiltInGameModeScoring
     
     /**
-     * 플레이어 사망 시, 아군뿐 아니라
-     * 모든 플레이어를 관전할 수 있도록 허용합니다.
+     * 플레이어 사망 시,
+     * 아군뿐 아니라 모든 플레이어를
+     * 관전할 수 있도록 허용합니다.
      */
-    enableDeathSpectateAllPlayers
+    enableDeathSpectateAllPlayers: IEnableDeathSpectateAllPlayers
 
     /**
-     * 사망 후 관전 시 플레 자신의 HUD 대신
+     * 사망 후 관전 시
+     * 플레이어 자신의 HUD 대신
      * 관전 대상의 HUD를 볼 수 있습니다.
      */
-    enableDeathSpecateTargetHud
+    enableDeathSpecateTargetHud: IEnableDeathSpecateTargetHud
 
     /**
-     * 경기를 해당 게임 모드의 영웅 선택 단계로 되돌립니다.
+     * 경기를 해당 게임 모드의
+     * 영웅 선택 단계로 되돌립니다.
      * 게임이 진행 중일 때만 작동합니다.
      */
-    goToAssembleHeroes
+    goToAssembleHeroes: IGoToAssembleHeroes
 
     /**
      * 플레이어를 즉시 치유합니다.
-     * 이 기능으로 죽은 플레이어가 부활하지는 않습니다.
+     * 이 기능으로 죽은 플레이어가
+     * 부활하지는 않습니다.
      */
-    heal
+    heal: IHeal
 
     /**
      * 플레이어를 즉시 처치합니다.
      */
-    kill
+    kill: IKill
 
     /**
      * 액션 목록을 처음부터 다시 시작합니다.
      * 무한 반복을 방지하려면 액션 목록의 시작과
      * 이 액션 사이에 WAIT 액션을 실행해야 합니다.
      */
-    loop
+    loop: ILoop
 
     /**
      * 이 액션의 조건이 TRUE인 경우
@@ -356,7 +417,7 @@ export interface IAction {
      * 무한 반복을 방지하려면 액션 목록의 시작과
      * 이 액션 사이에 WAIT 액션을 실행해야 합니다.
      */
-    loopIf
+    loopIf: ILoopIf
 
     /**
      * 조건 목록의 조건이 하나라도 FALSE인 경우
@@ -365,7 +426,7 @@ export interface IAction {
      * 무한 반복을 방지하려면 액션 목록의 시작과
      * 이 액션 사이에 WAIT 액션을 실행해야 합니다.
      */
-    loopIfConditionIsFalse
+    loopIfConditionIsFalse: ILoopIfConditionIsFalse
 
     /**
      * 조건 목록의 조건이 하나라도 TRUE인 경우
@@ -374,68 +435,75 @@ export interface IAction {
      * 무한 반복을 방지하려면 액션 목록의 시작과
      * 이 액션 사이에 WAIT 액션을 실행해야 합니다.
      */
-    loopIfConditionIsTrue
+    loopIfConditionIsTrue: ILoopIfConditionIsTrue
 
     /**
-     * 게임 자체에 종속된 전역 변수 값을 수정합니다.
+     * 게임 자체에 종속된
+     * 전역 변수 값을 수정합니다.
      */
-    modifyGlobalVariable
+    modifyGlobalVariable: IModifyGlobalVariable
 
     /**
-     * 인덱스에서 게임 자체에 종속된 전역 변수 값을 수정합니다.
+     * 인덱스에서 게임 자체에
+     * 종속된 전역 변수 값을 수정합니다.
      */
-    modifyGlobalVariableAtIndex
+    modifyGlobalVariableAtIndex: IModifyGlobalVariableAtIndex
 
     /**
      * 플레이어의 점수(처치수)를 수정합니다.
-     * 이 액션은 개별 전투 모드에서만 효과가 있습니다.
+     * 이 액션은 개별 전투
+     * 모드에서만 효과가 있습니다.
      */
-    modifyPlayerScore
+    modifyPlayerScore: IModifyPlayerScore
 
     /**
      * 지정된 플레이어가 가진 플레이어 변수 값을 수정합니다.
      */
-    modifyPlayerVariable
+    modifyPlayerVariable: IModifyPlayerVariable
 
     /**
-     * 인덱스에서 지정된 플레이어가 가진 플레이어 변수 값을 수정합니다.
+     * 인덱스에서 지정된 플레이어가
+     * 가진 플레이어 변수 값을 수정합니다.
      */
-    modifyPlayerVaraibleAtIndex
+    modifyPlayerVaraibleAtIndex: IModifyPlayerVaraibleAtIndex
 
     /**
      * 한 팀 또는 두 팀 모두의 점수를 수정합니다.
      * 이 액션은 개별 전투 모드나 팀 점수가
      * 존재하지 않는 모드에서는 효과가 없습니다.
      */
-    modifyTeamScore
+    modifyTeamScore: IModifyTeamScore
 
     /**
      * 경기 시간을 일시정지합니다.
      * 플레이어, 목표 로직, 게임 모드 진행 기준 등은
      * 일시정지의 영향을 받지 않습니다.
      */
-    pauseMatchTime
+    pauseMatchTime: IPauseMatchTime
 
     /**
      * 월드의 한 위치에 효과를 발생시킵니다.
      * 이 효과는 갱신되거나 제거할 필요 없도록
      * 짧게 유지되었다가 사라집니다.
      */
-    playEffect
+    playEffect: IPlayEffect
 
     /**
      * 지정된 플레이어의 스킨을 사용하여,
-     * 지정된 영웅을 메모리에서 허용하는 만큼 먼저 불러옵니다.
+     * 지정된 영웅을 메모리에서
+     * 허용하는 만큼 먼저 불러옵니다.
      * 빠르게 영웅을 바꿀 수 있으며,
      * 다음 영웅을 알고 있는 경우 유용합니다.
      */
-    preloadHero
+    preloadHero: IPreloadHero
 
     /**
-     * 플레이어에 대해 한 프레임 동안 가상으로
-     * 버튼 하나를 누르도록 강제합니다.
+     * 플레이어에 대해
+     * 한 프레임 동안
+     * 가상으로 버튼 하나를
+     * 누르도록 강제합니다.
      */
-    pressButton
+    pressButton: IPressButton
 
     /**
      * 플레이어가 사용할 수 있는 영웅 목록을
@@ -444,39 +512,44 @@ export interface IAction {
      * 플레이어는 강제로 다른 영웅을 선택하여
      * 적절한 생성 지점에서 부활합니다.
      */
-    resetPlayerHeroAvalability
+    resetPlayerHeroAvalability: IResetPlayerHeroAvalability
 
     /**
      * 플레이어의 생존 여부와 관계 없이,
      * 플레이어를 적절한 생성 지점에서
      * 최대 생명력으로 부활시킵니다.
      */
-    respawn
+    respawn: IRespawn
 
     /**
-     * 전환 없이 플레이어를 사망한 자리에서 즉시 부활시킵니다.
+     * 전환 없이 플레이어를
+     * 사망한 자리에서 즉시 부활시킵니다.
      */
-    resurrect
+    resurrect: IResurrect
 
     /**
      * 플레이어의 기술1 활성화 여부를 설정합니다.
      */
-    setAbility1Enabled
+    setAbility1Enabled: ISetAbility1Enabled
 
     /**
      * 플레이어의 기술2 활성화 여부를 설정합니다.
      */
-    setAbility2Enabled
+    setAbility2Enabled: ISetAbility2Enabled
 
     /**
-     * 플레이어의 조준 속도를 일반 조준 속도 대비 % 비율로 설정합니다.
+     * 플레이어의 조준 속도를
+     * 일반 조준 속도 대비
+     * % 비율로 설정합니다.
      */
-    setAimSpeed
+    setAimSpeed: ISetAimSpeed
 
     /**
-     * 플레이어가 주는 피해를 순수 피해량 대비 % 비율로 설정합니다.
+     * 플레이어가 주는 피해를
+     * 순수 피해량 대비
+     * % 비율로 설정합니다.
      */
-    setDamageDealt
+    setDamageDealt:ISetDamageDealt
     
     /**
      * 플레이어가 받는 피해를 순수 피해량 대비 % 비율로 설정합니다.

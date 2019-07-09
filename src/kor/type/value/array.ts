@@ -16,6 +16,8 @@ import {
     IRandomizedArray,
     IRemoveFromArray,
     ISortedArray,
+    IGlobalVariable,
+    IPlayerVariable,
 } from '../../interface/value/child'
 
 export type ValueArrayType
@@ -36,3 +38,6 @@ export type ValueArrayType
     | IRandomizedArray
     | IRemoveFromArray
     | ISortedArray
+
+    | IGlobalVariable
+    | IPlayerVariable
