@@ -247,6 +247,12 @@ For productive coding, some types defined in the existing workshop need to be ob
 7. rayCastHitPlayer
 8. rayCastHitPosition
 
+### Action
+
+#### Independent
+
+> **All of the 126's item**
+
 ## AST Type
 
 ### Number
