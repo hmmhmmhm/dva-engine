@@ -39,9 +39,6 @@
             "error",
             "unix"
         ],
-        "quotes": [
-            "error",
-            "single"
-        ]
+        "quotes": "off"
     }
 }

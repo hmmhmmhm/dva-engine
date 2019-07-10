@@ -1,5 +1,3 @@
-import { IOnGoingGlobal } from '../../../interface'
-
 /**
  * 게임 시작 시 이 Rule의 개별 인스턴스 하나를 생성합니다.
  * 이 인스턴스는 게임이 지속되는 동안 활성화되어 있습니다.

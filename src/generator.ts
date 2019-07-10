@@ -41,7 +41,8 @@ export const Generator = async (lang = 'kor') => {
      * @description
      * `Event Collect`
      */
-    Logger.debug('\nEntering Event Generate...')
+    console.log('')
+    Logger.debug('Entering Event Generate...')
     collectInterfaceFiles(
         `${process.cwd()}/src/${lang}/interface/event/child`,
         async (collectedDatas)=>{
@@ -64,16 +65,17 @@ export const Generator = async (lang = 'kor') => {
                     /**
                      * `resolverCode` [import]
                      */
-                    let resolverCode = `import { ${interfaceName} } from '../../../interface'\n\n`
+                    let resolverCode = ``
+                    if(isPropertiesExist) resolverCode += `import { ${interfaceName} } from '../../../interface'\n\n`
 
                     /**
                      * `resolverCode` [description]
                      */
-                    let resolverDescription = `/**\n`
+                    let resolverDescription = '/**\n'
                     for(let description of interfaces[interfaceName].description.split('\n')){
                         resolverDescription += ` * ${description}\n`
                     }
-                    resolverDescription += ` */\n`
+                    resolverDescription += ' */\n'
                     resolverCode += resolverDescription
 
                     /**
@@ -93,9 +95,7 @@ export const Generator = async (lang = 'kor') => {
                     /**
                      * [sub] `workshopCode` [properties]
                      */
-                    if(interfaces[interfaceName].properties
-                        && interfaces[interfaceName].properties.length != 0){
-
+                    if(isPropertiesExist){
                         for(let propertie of Object.keys(interfaces[interfaceName].properties))
                             workshopCode += `\t\t\$\{value.${propertie}\};\n`
                     }
@@ -121,18 +121,145 @@ export const Generator = async (lang = 'kor') => {
             }
 
             // Create child index
-            let indexCode = ``
+            let indexCode = ''
             for(let { fileName } of collectedDatas)
                 indexCode += `export * from './${fileName.split('.')[0]}'\n`
             fs.writeFileSync(`${resolverPath}/event/index.ts`, indexCode)
-            Logger.debug(`Created Event Resolver <event/index.ts>`)
+            Logger.debug('Created Event Resolver <event/index.ts>')
         }
     )
 
     /**
      * @description
+     * Archived Value Function Collector
+     */
+
+    /*
+    collectInterfaceFiles(
+        `${process.cwd()}/src/${lang}/interface/value/child`,
+        async (collectedDatas)=>{
+
+            // Create child resolvers
+            let json = {}
+            for(let {
+                fileName,
+                interfaceName
+            } of collectedDatas){
+
+                json[fileName] = camelCaseToPascalCase(interfaceName, true, true)
+            }
+            fs.writeFileSync(`${resolverPath}/test.json`, JSON.stringify(json, null, 2))
+        }
+    )
+    return
+    */
+
+    /**
+     * @description
      * `Value Collect`
      */
+    console.log('')
+    Logger.debug('Entering Value Generate...')
+    collectInterfaceFiles(
+        `${process.cwd()}/src/${lang}/interface/value/child`,
+        async (collectedDatas)=>{
+
+            // Create child resolvers
+            for(let {
+                fileName,
+                interfaceName
+            } of collectedDatas){
+                try{
+                    // Create child resolver folder
+                    try{ fs.mkdirSync(`${resolverPath}/value`) } catch(e) {}
+
+                    let isPropertiesExist = false
+                    try{
+                        isPropertiesExist =
+                            interfaces[interfaceName].properties
+                            && interfaces[interfaceName].properties.length != 0
+                    }catch(e){}
+
+                    let valueName = generatorData['value']['valueName'][fileName]
+
+                    /**
+                     * `resolverCode` [import]
+                     */
+                    let resolverCode = ``
+                    if(isPropertiesExist) resolverCode += `import { ${interfaceName} } from '../../../interface'\n\n`
+
+                    /**
+                     * `resolverCode` [description]
+                     */
+                    try{
+                        if(interfaces[interfaceName].description){
+                            let resolverDescription = '/**\n'
+                            for(let description of interfaces[interfaceName].description.split('\n')){
+                                resolverDescription += ` * ${description}\n`
+                            }
+                            resolverDescription += ' */\n'
+                            resolverCode += resolverDescription
+                        }
+                    }catch(e){}
+
+                    /**
+                     * `resolverCode` [export]
+                     */
+                    let resolverName = fileName.split('.')[0]
+                    if(typeof generatorData['value']['methodNameReplace'][resolverName] != 'undefined')
+                        resolverName = generatorData['value']['methodNameReplace'][resolverName]
+
+                    resolverCode += (isPropertiesExist) ?
+                        `export const ${resolverName} = (value: ${interfaceName}) => {\n`
+                        : `export const ${resolverName} = () => {\n`
+                    resolverCode += '\treturn `'
+
+                    /**
+                     * [sub] `workshopCode` [init]
+                     */
+                    let workshopCode = valueName
+
+                    /**
+                     * [sub] `workshopCode` [properties]
+                     */
+                    if(isPropertiesExist){
+                        workshopCode += '('
+                        let properties = Object.keys(interfaces[interfaceName].properties)
+                        for(let propertieIndex in properties){
+                            if(Number(propertieIndex) != 0) workshopCode += ', '
+                            let propertie = properties[propertieIndex]
+                            workshopCode += `\$\{value['${propertie}']\}`
+                        }
+                        workshopCode += ')'
+                    }
+
+                    /**
+                     * `resolverCode` [workshopCode]
+                     */
+                    resolverCode += workshopCode
+                    resolverCode += '`\n}'
+
+                    // console.log(`${fileName}, ${interfaceName}`)
+                    // console.log(interfaces[interfaceName])
+                    // console.log(resolverCode)
+
+                    Logger.debug(`Created Resolver <value/${fileName}>`)
+                    fs.writeFileSync(`${resolverPath}/value/${fileName}`, resolverCode)
+
+                }catch(e){
+                    Logger.critical('Generator Crashed#1')
+                    console.log(e)
+                }
+            }
+
+            // Create child index
+            let indexCode = ''
+            for(let { fileName } of collectedDatas)
+                indexCode += `export * from './${fileName.split('.')[0]}'\n`
+            fs.writeFileSync(`${resolverPath}/value/index.ts`, indexCode)
+            Logger.debug('Created Value Resolver <value/index.ts>')
+        }
+    )
 }
 
 /**
@@ -203,7 +330,13 @@ const collectInterfaceFiles = async (
     })
 }
 
-const camelCaseToPascalCase = (name: string, doSpace = true)=>{
+const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove = false)=>{
+    if(prefixRemove && name[0] == 'I'){
+        let temp = name.split('')
+        temp.shift()
+        name = temp.join('')
+    }
+
     let pascalCase = ''
     for(let alphabetIndex in name.split('')){
         let alphabet = name[alphabetIndex]
