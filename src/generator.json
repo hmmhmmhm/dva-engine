@@ -1,0 +1,13 @@
+{
+    "event": {
+        "eventName": {
+            "onGoingGlobal.ts": "Ongoing - Global",
+            "onGoingEachPlayer.ts": "Ongoing - Each Player",
+            "playerEarnedElimination.ts": "Player earned elimination",
+            "playerDealtFinalBlow.ts": "Player dealt final blow",
+            "playerDealtDamage.ts": "Player dealt damage",
+            "playerTookDamage.ts": "Player took damage",
+            "playerDied.ts": "Player Died"
+        }
+    }
+}

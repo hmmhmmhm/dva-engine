@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "commonjs": true,
         "es6": true,
@@ -6,9 +6,9 @@ module.exports = {
         "browser": true
     },
     "extends": [
-        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "parser":  '@typescript-eslint/parser',
+    "parser":  "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2017,
         "sourceType": "module"
@@ -19,16 +19,18 @@ module.exports = {
         "semi": "off",
         "@typescript-eslint/semi": [
             "error",
-            "never", 
+            "never"
         ],
         "@typescript-eslint/member-delimiter-style": [
             "error", {
                 "multiline": {
                     "delimiter": "none",
-                    "requireLast": false,
+                    "requireLast": false
                 }
             }
         ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-use-before-define": "off",
         "indent": [
             "error",
             4
@@ -40,6 +42,6 @@ module.exports = {
         "quotes": [
             "error",
             "single"
-        ],
+        ]
     }
 }

@@ -9,10 +9,15 @@
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.1",
-    "typescript": "^3.5.3"
+    "folder-logger": "^1.0.4",
+    "nested-static": "^1.1.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
-    "lint": "eslint --fix -c ./.eslintrc.js --ext .ts ."
+    "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
+    "generator": "ts-node ./src/generator.ts"
   },
   "repository": {
     "type": "git",
