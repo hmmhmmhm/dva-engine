@@ -1,8 +1,16 @@
-import { IIsFiringSecondary } from '../../../interface'
+import { 
+	ValuePlayerType,
+ } from '../../../interface'
 
 /**
  * 지정된 플레이어의 보조 무기 공격이 사용 중인지 여부입니다.
  */
-export const isFiringSecondary = (value: IIsFiringSecondary) => {
-	return `Is Firing Secondary(${value['player']})`
+export const isFiringSecondary = (
+	/**
+	 * 보조 무기 공격 사용 여부를 확인할 플레이어입니다.
+	 */
+	player: ValuePlayerType
+) => {
+
+	return `Is Firing Secondary(${player})`
 }

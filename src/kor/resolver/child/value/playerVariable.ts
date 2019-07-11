@@ -1,5 +1,12 @@
-import { IPlayerVariable } from '../../../interface'
+import { 
+	ValuePlayerType,
+	VariableType,
+ } from '../../../interface'
 
-export const playerVariable = (value: IPlayerVariable) => {
-	return `Player Variable(${value['player']}, ${value['variable']})`
+export const playerVariable = (
+	player: ValuePlayerType,
+	variable: VariableType
+) => {
+
+	return `Player Variable(${player}, ${variable})`
 }

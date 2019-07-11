@@ -1,3 +1,5 @@
-export const globalVariable = () => {
+export const globalVariable = (
+) => {
+
 	return `Global Variable`
 }

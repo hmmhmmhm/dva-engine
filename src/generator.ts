@@ -35,6 +35,7 @@ export const Generator = async (lang = 'kor') => {
      */
     Logger.debug('Typescript Interface Initialize...')
     let interfaces = await parseInterfaces(`${process.cwd()}/src/${lang}/interface/index.ts`)
+    // fs.writeFileSync(`${resolverPath}/test.json`, JSON.stringify(interfaces, null, 2))
     Logger.debug('Typescript Interface Initialized.')
 
     /**
@@ -186,13 +187,51 @@ export const Generator = async (lang = 'kor') => {
                      * `resolverCode` [import]
                      */
                     let resolverCode = ``
-                    if(isPropertiesExist) resolverCode += `import { ${interfaceName} } from '../../../interface'\n\n`
+                    //if(isPropertiesExist) resolverCode += `import { ${interfaceName} } from '../../../interface'\n\n`
+                    let propertieTypeMap = {}
+                    if(isPropertiesExist){
+                        let interfaceNames = ``
+                        let interfaceNamesMap = {}
+
+                        // Collect All Unique Interface (All type will be converted interface)
+                        for(let propertieName of Object.keys(interfaces[interfaceName].properties)){
+                            // Case 1 (Single Ref)
+                            if(typeof interfaces[interfaceName].properties[propertieName]['$ref'] != 'undefined'){
+                                if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
+                                let notUniqueInterface = interfaces[interfaceName].properties[propertieName]
+                                let notUniqueInterfaceName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
+                                interfaceNamesMap[notUniqueInterfaceName] = true
+                                propertieTypeMap[propertieName].push(notUniqueInterfaceName)
+                            }
+
+                            // Case 2 (Multiple Ref)
+                            if(interfaces[interfaceName].properties[propertieName].anyOf){
+                                if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
+                                for(let notUniqueInterface of interfaces[interfaceName].properties[propertieName].anyOf){
+                                    let notUniqueInterfaceName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
+                                    interfaceNamesMap[notUniqueInterfaceName] = true
+                                    propertieTypeMap[propertieName].push(notUniqueInterfaceName)
+                                }
+                            }
+                        }
+                        for(let propertieTypeName of Object.keys(interfaceNamesMap)){
+                            try{
+                                if(interfaceNames.length == 0) interfaceNames += `\n`
+                                interfaceNames += `\t${propertieTypeName},\n`
+                            }catch(e){ console.log(e) }
+                        }
+
+                        // Write Interface
+                        if(interfaceNames.length != 0)
+                            resolverCode += `import { ${interfaceNames} } from '../../../interface'\n\n`
+                    }
 
                     /**
                      * `resolverCode` [description]
                      */
                     try{
                         if(interfaces[interfaceName].description){
+                            // Create Interface Description
                             let resolverDescription = '/**\n'
                             for(let description of interfaces[interfaceName].description.split('\n')){
                                 resolverDescription += ` * ${description}\n`
@@ -209,9 +248,45 @@ export const Generator = async (lang = 'kor') => {
                     if(typeof generatorData['value']['methodNameReplace'][resolverName] != 'undefined')
                         resolverName = generatorData['value']['methodNameReplace'][resolverName]
 
-                    resolverCode += (isPropertiesExist) ?
-                        `export const ${resolverName} = (value: ${interfaceName}) => {\n`
-                        : `export const ${resolverName} = () => {\n`
+                    // Values Collect
+                    let valueProperties = ``
+                    if(isPropertiesExist){
+                        for(let propertieName of Object.keys(interfaces[interfaceName].properties)){
+                            try{
+                                //let propertieTypeName = interfaces[interfaceName].properties[propertieName].type
+                                
+                                let propertieTypeName = ``
+                                if(typeof propertieTypeMap[propertieName] != 'undefined'){
+                                    propertieTypeName = propertieTypeMap[propertieName].join(' | ')
+                                }else{
+                                    // Allow Default Data Type
+                                    try{
+                                        propertieTypeName = interfaces[interfaceName].properties[propertieName].type
+                                    }catch(e){
+                                        console.log(`Unexpected Interface Param Type! (fileName:${fileName})`)
+                                        console.log(interfaces[interfaceName].properties[propertieName])
+                                    }
+                                }
+                                valueProperties += (valueProperties.length == 0) ? `\n` : `,\n`
+                                // TODO Propertie Description
+                                if(interfaces[interfaceName].properties[propertieName].description){
+                                    let propertiesDescription = '\t/**\n'
+                                    for(let description of interfaces[interfaceName].properties[propertieName].description.split('\n')){
+                                        propertiesDescription += `\t * ${description}\n`
+                                    }
+                                    propertiesDescription += '\t */\n'
+                                    valueProperties += propertiesDescription
+                                }
+
+                                valueProperties += `\t${propertieName}: ${propertieTypeName}`
+                            }catch(e){
+                                console.log(`ERROR fileName: ${fileName}`)
+                                console.log(e) 
+                            }
+                        }
+                    }
+
+                    resolverCode += `export const ${resolverName} = (${valueProperties}\n) => {\n\n`
                     resolverCode += '\treturn `'
 
                     /**
@@ -228,7 +303,7 @@ export const Generator = async (lang = 'kor') => {
                         for(let propertieIndex in properties){
                             if(Number(propertieIndex) != 0) workshopCode += ', '
                             let propertie = properties[propertieIndex]
-                            workshopCode += `\$\{value['${propertie}']\}`
+                            workshopCode += `\$\{${propertie}\}`
                         }
                         workshopCode += ')'
                     }
@@ -267,7 +342,10 @@ export const Generator = async (lang = 'kor') => {
  * Built-in Time Typescript Interface Parser
  */
 const parseInterfaces = async ( filePath: string) => {
-    const settings: TJS.PartialArgs = { required: true }
+    const settings: TJS.PartialArgs = {
+        aliasRef: true,
+        required: true
+    }
     const compilerOptions: TJS.CompilerOptions = { strictNullChecks: true }
 
     const program = TJS.getProgramFromFiles([resolve(filePath)], compilerOptions)

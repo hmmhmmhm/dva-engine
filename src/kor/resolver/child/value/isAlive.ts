@@ -1,8 +1,16 @@
-import { IIsAlive } from '../../../interface'
+import { 
+	ValuePlayerType,
+ } from '../../../interface'
 
 /**
  * 플레이어의 생존 여부 입니다.
  */
-export const isAlive = (value: IIsAlive) => {
-	return `Is Alive(${value['player']})`
+export const isAlive = (
+	/**
+	 * 생존 여부를 확인할 플레이어입니다.
+	 */
+	player: ValuePlayerType
+) => {
+
+	return `Is Alive(${player})`
 }
