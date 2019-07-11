@@ -1,4 +1,4 @@
-import { ValueArrayType, ValueType } from '../../../type'
+import { ValueType } from '../../../type'
 
 /**
  * 지정된 배열의 무작위 값입니다.
@@ -9,5 +9,5 @@ export interface IRandomValueInArray {
      * 배열이 아닌 값이 주어진 경우,
      * 주어진 값이 그대로 결과값이 됩니다.
      */
-    array: ValueArrayType | ValueType
+    array: ValueType
 }

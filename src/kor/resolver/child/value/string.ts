@@ -1,8 +1,6 @@
 import { 
 	ValueTextType,
-	IHeroIconString,
-	IString,
-	INull,
+	ValueStringParamType,
  } from '../../../interface'
 
 /**
@@ -17,15 +15,15 @@ export const string = (
 	/**
 	 * 텍스트로 전환되어 {0}을 대체할 값입니다.
 	 */
-	_0: IHeroIconString | IString | INull,
+	_0: ValueStringParamType,
 	/**
 	 * 텍스트로 전환되어 {1}을 대체할 값입니다.
 	 */
-	_1: IHeroIconString | IString | INull,
+	_1: ValueStringParamType,
 	/**
 	 * 텍스트로 전환되어 {2}를 대체할 값입니다.
 	 */
-	_2: IHeroIconString | IString | INull
+	_2: ValueStringParamType
 ) => {
 
 	return `String(${string}, ${_0}, ${_1}, ${_2})`

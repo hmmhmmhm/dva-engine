@@ -257,13 +257,15 @@ export const Generator = async (lang = 'kor') => {
                                 
                                 let propertieTypeName = ``
                                 if(typeof propertieTypeMap[propertieName] != 'undefined'){
+                                    if(propertieTypeMap[propertieName].length > 1)
+                                        Logger.critical(`[TYPE BROKEN ALERT] Multiple Types in Propertie! (value/${fileName})`)
                                     propertieTypeName = propertieTypeMap[propertieName].join(' | ')
                                 }else{
                                     // Allow Default Data Type
                                     try{
                                         propertieTypeName = interfaces[interfaceName].properties[propertieName].type
                                     }catch(e){
-                                        console.log(`Unexpected Interface Param Type! (fileName:${fileName})`)
+                                        Logger.critical(`Unexpected Interface Param Type! (value/${fileName})`)
                                         console.log(interfaces[interfaceName].properties[propertieName])
                                     }
                                 }
@@ -335,13 +337,64 @@ export const Generator = async (lang = 'kor') => {
             Logger.debug('Created Value Resolver <value/index.ts>')
         }
     )
+
+    /**
+     * @description
+     * `Type Collect`
+     */
+    console.log('')
+    Logger.debug('Entering Type Generate...')
+    collectInterfaceFiles(
+        `${process.cwd()}/src/${lang}/interface/type/`,
+        async (collectedDatas)=>{
+
+            // Create child resolvers
+            for(let {
+                fileName,
+                fileData,
+                interfaceName
+            } of collectedDatas){
+                try{
+                    // Create child resolver folder
+                    try{ fs.mkdirSync(`${resolverPath}/type`) } catch(e) {}
+
+                    let resolverName = camelCaseToPascalCase(fileName.split('.')[0], false, false)
+                    // interfaces[interfaceName].properties
+                    let resolverTypes = typeExtractor(fileData)
+
+                    /**
+                     * `resolverCode` [export]
+                     */
+                    let resolverCode = ``
+
+                    // console.log(`${fileName}, ${interfaceName}`)
+                    // console.log(interfaces[interfaceName])
+                    // console.log(resolverCode)
+
+                    Logger.debug(`Created Resolver <type/${fileName}>`)
+                    fs.writeFileSync(`${resolverPath}/type/${fileName}`, resolverCode)
+
+                }catch(e){
+                    Logger.critical('Generator Crashed#1')
+                    console.log(e)
+                }
+            }
+
+            // Create child index
+            let indexCode = ''
+            for(let { fileName } of collectedDatas)
+                indexCode += `export * from './${fileName.split('.')[0]}'\n`
+            fs.writeFileSync(`${resolverPath}/value/index.ts`, indexCode)
+            Logger.debug('Created Value Resolver <value/index.ts>')
+        }
+    )
 }
 
 /**
  * @description
  * Built-in Time Typescript Interface Parser
  */
-const parseInterfaces = async ( filePath: string) => {
+export const parseInterfaces = async ( filePath: string) => {
     const settings: TJS.PartialArgs = {
         aliasRef: true,
         required: true
@@ -359,7 +412,7 @@ const parseInterfaces = async ( filePath: string) => {
  * @description
  * Collect Typescript Interface Files Code
  */
-const collectInterfaceFiles = async (
+export const collectInterfaceFiles = async (
     folderPath: string,
     callback: (argument: {
         fileName: string
@@ -387,10 +440,6 @@ const collectInterfaceFiles = async (
                 let fileData = String(fs.readFileSync(filePath))
                 let interfaceName = ''
 
-                /**
-                 * @description
-                 * Yes Its Hardcoding..'~'
-                 */
                 try{
                     interfaceName = fileData.split('export interface ')[1].split(' {')[0]
                 }catch(e){}
@@ -408,7 +457,7 @@ const collectInterfaceFiles = async (
     })
 }
 
-const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove = false)=>{
+export const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove = false)=>{
     if(prefixRemove && name[0] == 'I'){
         let temp = name.split('')
         temp.shift()
@@ -433,6 +482,25 @@ const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove = fals
         }
     }
     return pascalCase
+}
+
+const typeExtractor = (code) => {
+    let contexts = code
+    contexts = contexts.split('\t').join('')
+    contexts = contexts.split('export type ')[1].split('\n')
+    contexts.shift()
+
+    let list: any = []
+    for(let context of contexts){
+        if(context[0] == '=' || context[0] == '|'){
+            if(context[1] == ' '){
+                context = context.split('= ').join('')
+                context = context.split('| ').join('')
+                list.push(context)
+            }
+        }
+    }
+    return list
 }
 
 // Test Only
