@@ -181,7 +181,7 @@ import {
     ISpeedOfInDirection,
     ISquareRoot,
     IString,
-    ISubstract,
+    ISubtract,
     IAdd,
     IDivide,
     IMultiply,
@@ -1141,7 +1141,7 @@ export interface IValue {
     /**
      * 두 숫자 또는 벡터의 차이입니다.
      */
-    subtract: ISubstract
+    subtract: ISubtract
 
     /**
      * 지정된 각(단위: 도)의 탄젠트 값입니다.

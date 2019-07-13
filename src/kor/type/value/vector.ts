@@ -25,7 +25,7 @@ import {
     IRayCastHitPlayer,
     IRayCastHitPosition,
     IRight,
-    ISubstract,
+    ISubtract,
     IThrottleOf,
     ITotalTimeElapsed,
     IUp,
@@ -62,7 +62,7 @@ export type ValueVectorType
     | IRayCastHitPlayer
     | IRayCastHitPosition
     | IRight
-    | ISubstract
+    | ISubtract
     | IThrottleOf
     | ITotalTimeElapsed
     | IUp

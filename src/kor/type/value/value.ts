@@ -166,7 +166,7 @@ import {
     ISpeedOfInDirection,
     ISquareRoot,
     IString,
-    ISubstract,
+    ISubtract,
     ITangentFromDegrees,
     ITangentFromRadians,
     ITeam,
@@ -364,7 +364,7 @@ export type ValueType
     | ISpeedOfInDirection
     | ISquareRoot
     | IString
-    | ISubstract
+    | ISubtract
     | ITangentFromDegrees
     | ITangentFromRadians
     | ITeam

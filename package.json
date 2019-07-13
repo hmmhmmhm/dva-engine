@@ -11,6 +11,7 @@
     "eslint": "^6.0.1",
     "folder-logger": "^1.0.4",
     "nested-static": "^1.1.0",
+    "rimraf": "^2.6.3",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
     "typescript-json-schema": "^0.38.3"

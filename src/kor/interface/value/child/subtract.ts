@@ -3,7 +3,7 @@ import { ValueSubtractType } from '../../../type'
 /**
  * 두 숫자 또는 벡터의 차이입니다.
  */
-export interface ISubstract {
+export interface ISubtract {
     /**
      * 좌측 피연산자입니다.
      * 결과값이 숫자 또는 벡터로 나올 수 있는

@@ -60,7 +60,7 @@ import {
     ISpeedOf,
     ISpeedOfInDirection,
     ISquareRoot,
-    ISubstract,
+    ISubtract,
     ITangentFromDegrees,
     ITangentFromRadians,
     ITeamScore,
@@ -146,7 +146,7 @@ export type ValueNumberType
     | ISpeedOf
     | ISpeedOfInDirection
     | ISquareRoot
-    | ISubstract
+    | ISubtract
     | ITangentFromDegrees
     | ITangentFromRadians
     | ITeamScore

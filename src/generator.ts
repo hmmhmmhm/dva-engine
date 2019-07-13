@@ -1,5 +1,6 @@
 import fs from 'fs'
 import { resolve } from 'path'
+import rimraf from 'rimraf'
 
 import * as TJS from 'typescript-json-schema'
 import FolderLogger from 'folder-logger'
@@ -26,7 +27,7 @@ export const Generator = async (lang = 'kor') => {
     Logger.debug('Running on Generator Initialize Sequence...')
     Logger.debug('Delete all previously generated Resolver codes...')
     const resolverPath = `${process.cwd()}/src/${lang}/resolver/child/`
-    try{ fs.rmdirSync(resolverPath) } catch(e){}
+    try{ rimraf.sync(resolverPath) } catch(e){}
     try{ fs.mkdirSync(resolverPath) } catch(e){}
 
     /**
@@ -35,8 +36,55 @@ export const Generator = async (lang = 'kor') => {
      */
     Logger.debug('Typescript Interface Initialize...')
     let interfaces = await parseInterfaces(`${process.cwd()}/src/${lang}/interface/index.ts`)
+
+    // Collected Interfaces write
     // fs.writeFileSync(`${resolverPath}/test.json`, JSON.stringify(interfaces, null, 2))
     Logger.debug('Typescript Interface Initialized.')
+
+    /**
+     * @description
+     * `Collects the file name that type matches.`
+     * (Doesn't collect file extension)
+     */
+    let preCollectedTypeFileNames = {}
+    /**
+     * @description
+     * `Pre Type Names Collect`
+     */
+    await collectInterfaceFiles(
+        `${process.cwd()}/src/${lang}/type/`,
+        async (collectedDatas)=>{
+            for(let {
+                fileName,
+                subPath,
+                typeName
+            } of collectedDatas){
+                // Add folder name before type name.
+                let subPathArray = subPath.split('/').filter(path => path.length > 0)
+                for(let subPathIndex in subPathArray){
+                    let subPath = subPathArray[subPathIndex]
+
+                    let fileNames = fileName.split('')
+                    fileNames[0] = fileNames[0].toUpperCase()
+                    fileName = fileNames.join('')
+
+                    if(Number(subPathIndex) != 0){
+                        let subPaths = subPath.split('')
+                        subPaths[0] = subPaths[0].toUpperCase()
+                        subPath = subPaths.join('')
+                    }
+
+                    fileName = `${subPath}${fileName}`
+                }
+
+                if(typeName.length != 0){
+                    preCollectedTypeFileNames[typeName] = `${fileName.split('.')[0]}`
+                }else{
+                    Logger.warn(`Failed to find type of fileName: ${fileName}`)
+                }
+            }
+        }
+    )
 
     /**
      * @description
@@ -342,18 +390,38 @@ export const Generator = async (lang = 'kor') => {
      * @description
      * `Type Collect`
      */
+    let typeIndexCode =``
     console.log('')
     Logger.debug('Entering Type Generate...')
     collectInterfaceFiles(
-        `${process.cwd()}/src/${lang}/interface/type/`,
+        `${process.cwd()}/src/${lang}/type/`,
         async (collectedDatas)=>{
 
             // Create child resolvers
             for(let {
                 fileName,
                 fileData,
-                interfaceName
+                subPath
             } of collectedDatas){
+
+                // Add folder name before type name.
+                let subPathArray = subPath.split('/').filter(path => path.length > 0)
+                for(let subPathIndex in subPathArray){
+                    let subPath = subPathArray[subPathIndex]
+
+                    let fileNames = fileName.split('')
+                    fileNames[0] = fileNames[0].toUpperCase()
+                    fileName = fileNames.join('')
+
+                    if(Number(subPathIndex) != 0){
+                        let subPaths = subPath.split('')
+                        subPaths[0] = subPaths[0].toUpperCase()
+                        subPath = subPaths.join('')
+                    }
+
+                    fileName = `${subPath}${fileName}`
+                }
+
                 try{
                     // Create child resolver folder
                     try{ fs.mkdirSync(`${resolverPath}/type`) } catch(e) {}
@@ -362,17 +430,57 @@ export const Generator = async (lang = 'kor') => {
                     // interfaces[interfaceName].properties
                     let resolverTypes = typeExtractor(fileData)
 
+                    // TODO
+                    //console.log(resolverTypes)
+
                     /**
                      * `resolverCode` [export]
                      */
                     let resolverCode = ``
+                    let typeFilePaths: string[] = []
+
+                    // Collect Resolver Type Names
+                    for(let resolverType of resolverTypes){
+                        if(resolverType[0] == 'I'){
+                            // Case I*
+                            let typeFilePath = pascalCaseToCamelCase(resolverType, false, true)
+                            typeFilePaths.push(`export * from '../value/${typeFilePath}'\n`)
+                        }else{
+                            // Case Value*Type
+                            if(typeof preCollectedTypeFileNames[resolverType] != 'undefined'){
+                                let typeFilePath = preCollectedTypeFileNames[resolverType]
+                                typeFilePaths.push(`export * from './${typeFilePath}'\n`)
+                            }else{
+                                if(resolverType.indexOf(`\'`) != -1) continue
+                                if(resolverType.indexOf(`\``) != -1) continue
+                                Logger.critical(`Undetected resolverType: <${resolverType}> (type/${fileName})`)
+                            }
+                        }
+                    }
+
+                    // Write Export Codes
+                    for(let typeFilePath of typeFilePaths)
+                        resolverCode += typeFilePath
 
                     // console.log(`${fileName}, ${interfaceName}`)
                     // console.log(interfaces[interfaceName])
                     // console.log(resolverCode)
 
-                    Logger.debug(`Created Resolver <type/${fileName}>`)
-                    fs.writeFileSync(`${resolverPath}/type/${fileName}`, resolverCode)
+                    if(resolverCode.length != 0){
+                        fs.writeFileSync(`${resolverPath}/type/${fileName}`, resolverCode)
+                        Logger.debug(`Created Resolver <type/${fileName}>`)
+
+                        let lowerCaseFileName = fileName.split('.')[0]
+
+                        let upperCaseFileName = lowerCaseFileName
+                        let upperCaseFileNameArr = upperCaseFileName.split('')
+                        upperCaseFileNameArr[0] = upperCaseFileName[0].toUpperCase()
+                        upperCaseFileName = upperCaseFileNameArr.join('')
+
+                        //typeIndexData.push(`export * from './${fileName.split('.')[0]}'\n`)
+                        typeIndexCode += `import * as ${upperCaseFileName} from './${lowerCaseFileName}'\n`
+                        typeIndexCode += `export \{${upperCaseFileName}\}\n\n`
+                    }
 
                 }catch(e){
                     Logger.critical('Generator Crashed#1')
@@ -381,11 +489,8 @@ export const Generator = async (lang = 'kor') => {
             }
 
             // Create child index
-            let indexCode = ''
-            for(let { fileName } of collectedDatas)
-                indexCode += `export * from './${fileName.split('.')[0]}'\n`
-            fs.writeFileSync(`${resolverPath}/value/index.ts`, indexCode)
-            Logger.debug('Created Value Resolver <value/index.ts>')
+            fs.writeFileSync(`${resolverPath}/type/index.ts`, typeIndexCode)
+            Logger.debug('Created Value Resolver <type/index.ts>')
         }
     )
 }
@@ -417,8 +522,10 @@ export const collectInterfaceFiles = async (
     callback: (argument: {
         fileName: string
         filePath: string
+        subPath: string
         fileData: string
         interfaceName: string
+        typeName: string
     }[]) => Promise<void>
 ) => {
     
@@ -439,16 +546,27 @@ export const collectInterfaceFiles = async (
 
                 let fileData = String(fs.readFileSync(filePath))
                 let interfaceName = ''
+                let typeName = ``
 
                 try{
-                    interfaceName = fileData.split('export interface ')[1].split(' {')[0]
+                    interfaceName = fileData.split('export interface ')[1]
+                        .split(' {')[0]
+                        .split(' ').join('')
+                }catch(e){}
+
+                try{
+                    typeName = fileData.split('export type ')[1]
+                        .split('\n')[0]
+                        .split(' ').join('')
                 }catch(e){}
 
                 data.push({
                     fileName: file,
                     filePath,
+                    subPath: folder.subPath,
                     fileData,
-                    interfaceName
+                    interfaceName,
+                    typeName
                 })
             }
         }
@@ -484,18 +602,55 @@ export const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove
     return pascalCase
 }
 
-const typeExtractor = (code) => {
+
+export const pascalCaseToCamelCase = (name: string, doSpace = true, prefixRemove = false, prefixInstall = false)=>{
+    let camelCase = ''
+
+    if(prefixRemove && name[0] == 'I'){
+        let temp = name.split('')
+        temp.shift()
+        name = temp.join('')
+    }
+
+    for(let alphabetIndex in name.split('')){
+        let alphabet = name[alphabetIndex]
+
+        if(Number(alphabetIndex) == 0){
+            camelCase += alphabet.toLowerCase()
+            continue
+        }
+
+        let isLowerCase = alphabet == alphabet.toLowerCase()
+        if(isLowerCase){
+            camelCase += alphabet.toLowerCase()
+        }else{
+            if(doSpace) camelCase += ' '
+            camelCase += alphabet.toUpperCase()
+        }
+    }
+
+    if(prefixInstall && name[0] != 'I')
+        name = `I${name}`
+
+    return camelCase
+}
+
+const typeExtractor = (code): string[] => {
     let contexts = code
     contexts = contexts.split('\t').join('')
+    contexts = contexts.split('    ').join('')
     contexts = contexts.split('export type ')[1].split('\n')
     contexts.shift()
 
     let list: any = []
     for(let context of contexts){
+        //console.log(context)
         if(context[0] == '=' || context[0] == '|'){
             if(context[1] == ' '){
-                context = context.split('= ').join('')
-                context = context.split('| ').join('')
+                context = context
+                    .split('= ').join('')
+                    .split('| ').join('')
+                    .split('\r').join('')
                 list.push(context)
             }
         }
