@@ -1,2 +1,2 @@
-export * from '../value/globalVariable'
-export * from '../value/playerVariable'
+export * from '../value/hero'
+export * from '../value/heroOf'

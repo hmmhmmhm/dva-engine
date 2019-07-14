@@ -1,7 +1,3 @@
-import { 
-	ValueNumberType,
- } from '../../../interface'
-
 /**
  * 지정된 목표가 완료되었는지 여부입니다.
  * 게임 모드가 점령, 호위 또는
@@ -15,8 +11,10 @@ export const isObjectiveComplete = (
 	 * 각 거점, 화물 경유지,
 	 * 화물 목적지에는
 	 * 각기 고유의 인덱스가 있습니다.
+	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	number: ValueNumberType
+	number: string
 ) => {
 
 	return `Is Objective Complete(${number})`

@@ -1,5 +1,5 @@
 import {
-    TeamType,
+    TeamConstantType,
     EventPlayerType
 } from '../../../type'
 
@@ -12,6 +12,6 @@ import {
  *   하나라도 만족하지 않으면 실행되지 않습니다.
  */
 export interface IPlayerEarnedElimination {
-    team: TeamType
+    team: TeamConstantType
     player: EventPlayerType
 }

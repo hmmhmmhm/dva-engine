@@ -1,10 +1,10 @@
 import {
-    ValueHeroType
+    HeroConstantType
 } from '../../../type'
 
 /**
  * 영웅 상수입니다.
  */
 export interface IHero {
-    hero: ValueHeroType
+    hero: HeroConstantType
 }

@@ -12,9 +12,9 @@
     },
     "value": {
         "methodNameReplace": {
-            "false": "_false",
-            "null": "_null",
-            "true": "_true"
+            "false": "False",
+            "null": "Null",
+            "true": "True"
         },
         "valueName": {
             "absoluteValue.ts": "Absolute Value",
@@ -91,7 +91,7 @@
             "isCommunicatingVoiceLine.ts": "Is Communicating Voice Line",
             "isControlModePointLocked.ts": "Is Control Mode Point Locked",
             "isCrouching.ts": "Is Crouching",
-            "isCTFModeInSuddenDeath.ts": "Is C T F Mode In Sudden Death",
+            "isCTFModeInSuddenDeath.ts": "Is CTF Mode In Sudden Death",
             "isDead.ts": "Is Dead",
             "isFiringPrimary.ts": "Is Firing Primary",
             "isFiringSecondary.ts": "Is Firing Secondary",

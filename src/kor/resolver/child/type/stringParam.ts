@@ -1,2 +1,2 @@
-export * from './valueString'
+export * from './string'
 export * from '../value/null'

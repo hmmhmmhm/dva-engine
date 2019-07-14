@@ -1,7 +1,3 @@
-import { 
-	ValueNumberType,
- } from '../../../interface'
-
 /**
  * 두 각을 비교한 각도 차이(단위: 도) 입니다. 두 각을 서로 +/- 180
  * 이내에서 펼쳐서 두 번째 각이 첫 번째 각보다 크다면 결과각은 양수입니다.
@@ -10,12 +6,16 @@ import {
 export const angleDifference = (
 	/**
 	 * 결과각을 도출하기 위한 두 각 중 하나입니다.
+	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	angle1: ValueNumberType,
+	angle1: string,
 	/**
 	 * 결과각을 도출하기 위한 두 각 중 하나입니다.
+	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	angle2: ValueNumberType
+	angle2: string
 ) => {
 
 	return `Angle Difference(${angle1}, ${angle2})`

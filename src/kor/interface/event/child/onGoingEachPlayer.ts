@@ -1,5 +1,5 @@
 import {
-    TeamType,
+    TeamConstantType,
     EventPlayerType
 } from '../../../type'
 
@@ -18,6 +18,6 @@ import {
  *   Action을 다시 실행하려 할 것입니다.
  */
 export interface IOnGoingEachPlayer {
-    team: TeamType
+    team: TeamConstantType
     player: EventPlayerType
 }

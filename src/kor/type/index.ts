@@ -1,5 +1,5 @@
-export * from './hero'
 export * from './event'
 export * from './value'
-export * from './team'
+export * from './heroConstant'
+export * from './teamConstant'
 export * from './variable'

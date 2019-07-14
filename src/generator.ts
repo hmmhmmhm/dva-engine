@@ -61,17 +61,20 @@ export const Generator = async (lang = 'kor') => {
             } of collectedDatas){
                 // Add folder name before type name.
                 let subPathArray = subPath.split('/').filter(path => path.length > 0)
-                for(let subPathIndex in subPathArray){
+                for(let subPathIndexStr in subPathArray){
+                    let subPathIndex = Number(subPathIndexStr)
                     let subPath = subPathArray[subPathIndex]
 
-                    let fileNames = fileName.split('')
-                    fileNames[0] = fileNames[0].toUpperCase()
-                    fileName = fileNames.join('')
-
-                    if(Number(subPathIndex) != 0){
-                        let subPaths = subPath.split('')
-                        subPaths[0] = subPaths[0].toUpperCase()
-                        subPath = subPaths.join('')
+                    //
+                    if(subPathIndex == 0 && subPath == 'value'){
+                        subPath = ''
+                        let fileNames = fileName.split('')
+                        fileNames[0] = fileNames[0].toLowerCase()
+                        fileName = fileNames.join('')
+                    }else{
+                        let fileNames = fileName.split('')
+                        fileNames[0] = fileNames[0].toUpperCase()
+                        fileName = fileNames.join('')
                     }
 
                     fileName = `${subPath}${fileName}`
@@ -247,19 +250,27 @@ export const Generator = async (lang = 'kor') => {
                             if(typeof interfaces[interfaceName].properties[propertieName]['$ref'] != 'undefined'){
                                 if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
                                 let notUniqueInterface = interfaces[interfaceName].properties[propertieName]
+
+                                // TODO 
                                 let notUniqueInterfaceName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
+                                notUniqueInterfaceName = pureTypeNameExtractor(notUniqueInterfaceName)
+                                // ValueArrayType
+                                // pureTypeNameExtractor
                                 interfaceNamesMap[notUniqueInterfaceName] = true
                                 propertieTypeMap[propertieName].push(notUniqueInterfaceName)
                             }
 
                             // Case 2 (Multiple Ref)
                             if(interfaces[interfaceName].properties[propertieName].anyOf){
+                                Logger.warn(`Can't Use Multiple Type Reference in One Propertie (value/${fileName})`)
+                                /*
                                 if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
                                 for(let notUniqueInterface of interfaces[interfaceName].properties[propertieName].anyOf){
                                     let notUniqueInterfaceName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
                                     interfaceNamesMap[notUniqueInterfaceName] = true
                                     propertieTypeMap[propertieName].push(notUniqueInterfaceName)
                                 }
+                                */
                             }
                         }
                         for(let propertieTypeName of Object.keys(interfaceNamesMap)){
@@ -270,8 +281,9 @@ export const Generator = async (lang = 'kor') => {
                         }
 
                         // Write Interface
-                        if(interfaceNames.length != 0)
-                            resolverCode += `import { ${interfaceNames} } from '../../../interface'\n\n`
+                        //if(interfaceNames.length != 0){
+                        //    resolverCode += `import { ${interfaceNames} } from '../../../interface'\n\n`
+                        //}
                     }
 
                     /**
@@ -279,11 +291,11 @@ export const Generator = async (lang = 'kor') => {
                      */
                     try{
                         if(interfaces[interfaceName].description){
+
                             // Create Interface Description
                             let resolverDescription = '/**\n'
-                            for(let description of interfaces[interfaceName].description.split('\n')){
+                            for(let description of interfaces[interfaceName].description.split('\n'))
                                 resolverDescription += ` * ${description}\n`
-                            }
                             resolverDescription += ' */\n'
                             resolverCode += resolverDescription
                         }
@@ -302,7 +314,7 @@ export const Generator = async (lang = 'kor') => {
                         for(let propertieName of Object.keys(interfaces[interfaceName].properties)){
                             try{
                                 //let propertieTypeName = interfaces[interfaceName].properties[propertieName].type
-                                
+
                                 let propertieTypeName = ``
                                 if(typeof propertieTypeMap[propertieName] != 'undefined'){
                                     if(propertieTypeMap[propertieName].length > 1)
@@ -318,17 +330,31 @@ export const Generator = async (lang = 'kor') => {
                                     }
                                 }
                                 valueProperties += (valueProperties.length == 0) ? `\n` : `,\n`
-                                // TODO Propertie Description
-                                if(interfaces[interfaceName].properties[propertieName].description){
-                                    let propertiesDescription = '\t/**\n'
-                                    for(let description of interfaces[interfaceName].properties[propertieName].description.split('\n')){
-                                        propertiesDescription += `\t * ${description}\n`
-                                    }
-                                    propertiesDescription += '\t */\n'
-                                    valueProperties += propertiesDescription
-                                }
 
-                                valueProperties += `\t${propertieName}: ${propertieTypeName}`
+                                /**
+                                 * `Insert Propertie Description`
+                                 */
+                                let propertiesDescription = '\t/**\n'
+                                if(interfaces[interfaceName].properties[propertieName].description)
+                                    for(let description of interfaces[interfaceName].properties[propertieName].description.split('\n'))
+                                        propertiesDescription += `\t * ${description}\n`
+
+                                /**
+                                 * `Insert Propertie Type Reference By JSDoc`
+                                 */
+                                let typescriptTypeList = ['number']
+                                if(typescriptTypeList.indexOf(propertieTypeName) == -1){
+                                    propertiesDescription += `\t * - \`${propertieTypeName}.\` 또는 \`Type.${propertieTypeName}.\` 를 입력하면 \n`
+                                    propertiesDescription += `\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
+                                }
+                                propertiesDescription += '\t */\n'
+                                valueProperties += propertiesDescription
+
+                                if(typescriptTypeList.indexOf(propertieTypeName) == -1){
+                                    valueProperties += `\t${propertieName}: string`
+                                }else{
+                                    valueProperties += `\t${propertieName}: ${propertieTypeName}`
+                                }
                             }catch(e){
                                 console.log(`ERROR fileName: ${fileName}`)
                                 console.log(e) 
@@ -406,17 +432,20 @@ export const Generator = async (lang = 'kor') => {
 
                 // Add folder name before type name.
                 let subPathArray = subPath.split('/').filter(path => path.length > 0)
-                for(let subPathIndex in subPathArray){
+                for(let subPathIndexStr in subPathArray){
+                    let subPathIndex = Number(subPathIndexStr)
                     let subPath = subPathArray[subPathIndex]
 
-                    let fileNames = fileName.split('')
-                    fileNames[0] = fileNames[0].toUpperCase()
-                    fileName = fileNames.join('')
-
-                    if(Number(subPathIndex) != 0){
-                        let subPaths = subPath.split('')
-                        subPaths[0] = subPaths[0].toUpperCase()
-                        subPath = subPaths.join('')
+                    //
+                    if(subPathIndex == 0 && subPath == 'value'){
+                        subPath = ''
+                        let fileNames = fileName.split('')
+                        fileNames[0] = fileNames[0].toLowerCase()
+                        fileName = fileNames.join('')
+                    }else{
+                        let fileNames = fileName.split('')
+                        fileNames[0] = fileNames[0].toUpperCase()
+                        fileName = fileNames.join('')
                     }
 
                     fileName = `${subPath}${fileName}`
@@ -438,6 +467,7 @@ export const Generator = async (lang = 'kor') => {
                      */
                     let resolverCode = ``
                     let typeFilePaths: string[] = []
+                    let stringTypes: string[] = []
 
                     // Collect Resolver Type Names
                     for(let resolverType of resolverTypes){
@@ -451,11 +481,17 @@ export const Generator = async (lang = 'kor') => {
                                 let typeFilePath = preCollectedTypeFileNames[resolverType]
                                 typeFilePaths.push(`export * from './${typeFilePath}'\n`)
                             }else{
-                                if(resolverType.indexOf(`\'`) != -1) continue
-                                if(resolverType.indexOf(`\``) != -1) continue
+                                if(resolverType.length != 0 && resolverType.indexOf(`\'`) != -1){
+                                    stringTypes.push (resolverType)
+                                    continue
+                                }
                                 Logger.critical(`Undetected resolverType: <${resolverType}> (type/${fileName})`)
                             }
                         }
+                    }
+                    if(stringTypes.length != 0){
+                        typeFilePaths.push(`/**\n * @param str 문자열 값입니다. \`''\`를 입력해서\n * 사용가능한 문자열 목록을 확인 할 수 있습니다.\n */\n`)
+                        typeFilePaths.push(`export const Default = (str: ${stringTypes.join(' | ')}) => str\n`)
                     }
 
                     // Write Export Codes
@@ -479,7 +515,7 @@ export const Generator = async (lang = 'kor') => {
 
                         //typeIndexData.push(`export * from './${fileName.split('.')[0]}'\n`)
                         typeIndexCode += `import * as ${upperCaseFileName} from './${lowerCaseFileName}'\n`
-                        typeIndexCode += `export \{${upperCaseFileName}\}\n\n`
+                        typeIndexCode += `export \{ ${upperCaseFileName} \}\n\n`
                     }
 
                 }catch(e){
@@ -656,6 +692,31 @@ const typeExtractor = (code): string[] => {
         }
     }
     return list
+}
+
+const pureTypeNameExtractor = (name) => {
+    let typeNames: string[] = []
+
+    let word = ''
+    for(let char of name.split('')){
+        let isUpperCase = char.toUpperCase() == char
+        if(word.length != 0 && isUpperCase){
+            typeNames.push(word)
+            word = ''
+        }
+        word += char
+    }
+
+    if(word.length != 0)
+        typeNames.push(word)
+
+    typeNames.pop()
+    if(typeNames.length > 1){
+        if(typeNames[0] == 'Value')
+            typeNames.shift()
+    }
+
+    return typeNames.join('')
 }
 
 // Test Only

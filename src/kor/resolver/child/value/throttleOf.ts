@@ -1,7 +1,3 @@
-import { 
-	ValuePlayerType,
- } from '../../../interface'
-
 /**
  * 한 플레이어의 방향 입력 정보입니다. 
  * X 구성요소가 횡방향 입력 정보(왼쪽이 양),
@@ -10,8 +6,10 @@ import {
 export const throttleOf = (
 	/**
 	 * 방향 입력 정보를 가져올 플레이어입니다.
+	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: ValuePlayerType
+	player: string
 ) => {
 
 	return `Throttle Of(${player})`

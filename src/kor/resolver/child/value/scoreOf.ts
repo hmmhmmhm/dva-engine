@@ -1,7 +1,3 @@
-import { 
-	ValuePlayerType,
- } from '../../../interface'
-
 /**
  * 지정된 플레이어의 현재 점수입니다.
  * 게임 모드가 개별 전투가 아닌 경우
@@ -10,8 +6,10 @@ import {
 export const scoreOf = (
 	/**
 	 * 점수 정보를 가져올 플레이어입니다.
+	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: ValuePlayerType
+	player: string
 ) => {
 
 	return `Score Of(${player})`

@@ -4,7 +4,7 @@ import {
 } from '../../../type'
 
 /**
- * 지정된 값의 제곱근입니다.
+ * 선택한 텍스트와 지정된 값으로 구성된 텍스트입니다.
  */
 export interface IString {
     /**

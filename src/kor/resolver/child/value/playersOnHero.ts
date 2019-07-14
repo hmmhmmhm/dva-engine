@@ -1,8 +1,3 @@
-import { 
-	ValueHeroType,
-	ValueTeamType,
- } from '../../../interface'
-
 /**
  * 팀 또는 경기 내에서 지정된 영웅을
  * 플레이하는 플레이어가 있는 배열입니다.
@@ -10,12 +5,16 @@ import {
 export const playersOnHero = (
 	/**
 	 * 플레이 현황을 확인할 영웅입니다.
+	 * - `Hero.` 또는 `Type.Hero.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	hero: ValueHeroType,
+	hero: string,
 	/**
 	 * 영웅 플레이 현황을 확인할 팀입니다.
+	 * - `Team.` 또는 `Type.Team.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: ValueTeamType
+	team: string
 ) => {
 
 	return `Players On Hero(${hero}, ${team})`

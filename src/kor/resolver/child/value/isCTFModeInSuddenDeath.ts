@@ -4,5 +4,5 @@
 export const isCTFModeInSuddenDeath = (
 ) => {
 
-	return `Is C T F Mode In Sudden Death`
+	return `Is CTF Mode In Sudden Death`
 }
