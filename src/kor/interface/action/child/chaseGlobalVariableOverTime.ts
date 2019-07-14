@@ -1,7 +1,7 @@
 import {
     VariableType,
+    ValueDestinationParamType,
     ValueNumberType,
-    ValueVectorType,
     ValueReevaluationType,
 } from '../../../type'
 
@@ -21,7 +21,7 @@ export interface IChaseGlobalVariableOverTime {
      * 이 값의 유형은 숫자 또는 벡터가 될 수 있지만,
      * 추적 시작 전 기존 변수 값의 유형이 동일해야 합니다.
      */
-    destination: ValueNumberType | ValueVectorType
+    destination: ValueDestinationParamType
     /**
      * 해당 변수값이 목표치에
      * 도달하기까지의 시간(초)입니다.

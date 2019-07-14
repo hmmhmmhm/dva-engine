@@ -16,6 +16,9 @@ export { Add }
 import * as Array from './array'
 export { Array }
 
+import * as AssisterParam from './assisterParam'
+export { AssisterParam }
+
 import * as Barrier from './barrier'
 export { Barrier }
 
@@ -42,6 +45,9 @@ export { DamageModificationReevaluation }
 
 import * as DamageOverTimeId from './damageOverTimeId'
 export { DamageOverTimeId }
+
+import * as DestinationParam from './destinationParam'
+export { DestinationParam }
 
 import * as Divide from './divide'
 export { Divide }
@@ -105,6 +111,9 @@ export { PlayEffect }
 
 import * as Player from './player'
 export { Player }
+
+import * as PlayersParam from './playersParam'
+export { PlayersParam }
 
 import * as Reevaluation from './reevaluation'
 export { Reevaluation }

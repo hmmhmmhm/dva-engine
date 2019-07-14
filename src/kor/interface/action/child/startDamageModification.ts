@@ -1,4 +1,5 @@
 import {
+    ValuePlayersParamType,
     ValuePlayerType,
     ValueArrayType,
     ValueNumberType,
@@ -18,12 +19,12 @@ export interface IStartDamageModification {
      * (DAMAGER의 공격을 받는 경우)
      * 받는 피해를 수정할 플레이어입니다.
      */
-    receivers: ValuePlayerType | ValueArrayType
+    receivers: ValuePlayersParamType
     /**
      * (RECEIVER를 공격하는 경우)
      * 주는 피해를 변경할 플레이어입니다.
      */
-    damagers: ValuePlayerType | ValueArrayType
+    damagers: ValuePlayersParamType
     /**
      * DAMAGER의 공격을 받는 경우
      * RECEIVER에게 적용할 피해 비율입니다.

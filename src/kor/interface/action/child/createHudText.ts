@@ -5,6 +5,7 @@ import {
     ValueStringType,
     ValueLocationType,
     ValueHudTextReevaluationType,
+    ValueStringParamType,
 } from '../../../type'
 
 import { INull } from '../../value'
@@ -30,11 +31,11 @@ export interface ICreateHudText {
     /**
      * 표시할 부제목입니다. (비워두기 가능)
      */
-    subHeader: ValueStringType | INull
+    subHeader: ValueStringParamType
     /**
      * 표시할 본문입니다. (비워두기 가능)
      */
-    text: ValueStringType | INull
+    text: ValueStringParamType
     /**
      * 텍스트를 표시할 화면 상의 위치입니다.
      */

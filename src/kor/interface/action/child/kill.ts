@@ -1,5 +1,4 @@
-import { ValuePlayerType } from '../../../type'
-import { INull } from '../../value'
+import { ValuePlayerType, ValueAssisterParamType } from '../../../type'
 
 /**
  * 플레이어를 즉시 처치합니다.
@@ -16,5 +15,5 @@ export interface IKill {
      * 집계될 플레이어가
      * 없음을 의미합니다.
      */
-    killer: INull | ValuePlayerType
+    killer: ValueAssisterParamType
 }

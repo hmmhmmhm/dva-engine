@@ -1,41 +1,50 @@
 import { Sequence } from 'async-sequencer'
-import { IData } from '../interface'
-import * as Util from '../util'
+import { IData } from './interface'
+import * as Util from './util'
 
 import fs from 'fs'
 
 /**
  * @description
- * `Collect Value`
+ * Overwatch Workshop
+ * Advanced Scripting Engine
+ * Common Generator
  */
-export default Sequence(async ({resolve, reject, data: preData})=>{
+export default ({
+    interfacePath,
+    interfaceType
+}: {
+    interfacePath: string
+    interfaceType: string
+}) => {
+    return Sequence(async ({resolve, reject, data: preData})=>{
 
-    // Generator Data
-    let data: IData = preData
-    let { Logger } = data
+        // Generator Data
+        let data: IData = preData
+        let { Logger } = data
+    
+        // Sequence Logic
+        Logger.debug(`Entering ${interfaceType} Generate...`)
+        Util.collectInterfaceFiles(
+            `${process.cwd()}/src/${data.lang}/${interfacePath}`,
+            async (collectedDatas)=>{
+    
+                // Create child resolvers
+                for(let {
+                    fileName,
+                    interfaceName
+                } of collectedDatas){
 
-    // Sequence Logic
-    Logger.debug('Entering Value Generate...')
-    Util.collectInterfaceFiles(
-        `${process.cwd()}/src/${data.lang}/interface/value/child`,
-        async (collectedDatas)=>{
-
-            // Create child resolvers
-            for(let {
-                fileName,
-                interfaceName
-            } of collectedDatas){
-                try{
-
-                    // Check Interface Is Exist
+                    // Check overwatch interfaces data is exist
                     if(!data.interfaces || data.interfaces == undefined){
                         reject()
                         return
                     }
 
                     // Create child resolver folder
-                    try{ fs.mkdirSync(`${data.resolverPath}/value`) } catch(e) {}
+                    try{ fs.mkdirSync(`${data.resolverPath}/${interfaceType.toLowerCase()}`) } catch(e) {}
 
+                    // Check is interface have properties
                     let isPropertiesExist = false
                     try{
                         isPropertiesExist =
@@ -43,42 +52,77 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                             && data.interfaces[interfaceName].properties.length != 0
                     }catch(e){}
 
-                    let valueName = data.generatorData['value']['valueName'][fileName]
+                    // Get overwatch method name (pacal case)
+                    let valueName = 
+                        data.generatorData
+                            [interfaceType.toLowerCase()]
+                            [`${interfaceType.toLowerCase()}Name`]
+                            [fileName]
 
                     /**
-                     * `resolverCode` [import]
+                     * `resolverCode`
                      */
                     let resolverCode = ``
 
                     // Create External Type Import
                     // if(isPropertiesExist) resolverCode += `import { ${interfaceName} } from '../../../interface'\n\n`
 
+                    /**
+                     * @description
+                     * `propertieTypeMap` is store every properties type names.
+                     */
                     let propertieTypeMap = {}
                     if(isPropertiesExist){
-                        let interfaceNames = ``
-                        let interfaceNamesMap = {}
-
-                        // Collect All Unique Interface (All type will be converted interface)
+    
+                        /**
+                         * @deprecated
+                         * Collect Import Target
+                         */
+                        // let interfaceNamesMap = {}
+    
+                        /**
+                         * @description
+                         * Collect all unique interface name
+                         * (All type will be converted interface)
+                         */
                         for(let propertieName of Object.keys(data.interfaces[interfaceName].properties)){
-
-                            // Case 1 (Single Ref)
+    
+                            /**
+                             * Case 1 (Single Ref)
+                             * @example 'ValueArrayType'
+                             */
                             if(typeof data.interfaces[interfaceName].properties[propertieName]['$ref'] != 'undefined'){
                                 if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
                                 let notUniqueInterface = data.interfaces[interfaceName].properties[propertieName]
-
+    
                                 let notUniqueInterfaceName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
-
-                                // ValueArrayType -> Array
+    
+                                /**
+                                 * Convert Type Name `ValueArrayType` To `Array`
+                                 */
                                 notUniqueInterfaceName = Util.pureTypeNameExtractor(notUniqueInterfaceName)
-
-                                interfaceNamesMap[notUniqueInterfaceName] = true
+    
+                                /**
+                                 * @deprecated
+                                 * Collect Import Target
+                                 */
+                                // interfaceNamesMap[notUniqueInterfaceName] = true
                                 propertieTypeMap[propertieName].push(notUniqueInterfaceName)
                             }
-
-                            // Case 2 (Multiple Ref)
+    
+                            /**
+                             * Case 2 (Multiple Ref)
+                             * @example 'ValueArrayType' | 'ValueNumberType'
+                             */
                             if(data.interfaces[interfaceName].properties[propertieName].anyOf){
-
-                                Logger.warn(`Can't Use Multiple Type Reference in One Propertie (value/${fileName})`)
+    
+                                Logger.warn(`Please don't be use multiple type reference in properties (${interfaceType.toLowerCase()}/${fileName})`)
+    
+                                /**
+                                 * @deprecated
+                                 * Collect Import Target
+                                 */
+    
                                 /*
                                 if(typeof propertieTypeMap[propertieName] == 'undefined') propertieTypeMap[propertieName] = []
                                 for(let notUniqueInterface of interfaces[interfaceName].properties[propertieName].anyOf){
@@ -89,26 +133,32 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                                 */
                             }
                         }
-
+    
+                        /**
+                         * @deprecated
+                         * Write External Type Import
+                         */
+    
+                        /*
+                        let interfaceNames = ``
                         for(let propertieTypeName of Object.keys(interfaceNamesMap)){
                             try{
                                 if(interfaceNames.length == 0) interfaceNames += `\n`
                                 interfaceNames += `\t${propertieTypeName},\n`
                             }catch(e){ console.log(e) }
                         }
-
-                        // Write External Type Import
-                        // if(interfaceNames.length != 0){
-                        //     resolverCode += `import { ${interfaceNames} } from '../../../interface'\n\n`
-                        // }
+                        if(interfaceNames.length != 0){
+                            resolverCode += `import { ${interfaceNames} } from '../../../interface'\n\n`
+                        }
+                        */
                     }
-
+    
                     /**
                      * `resolverCode` [description]
                      */
                     try{
                         if(data.interfaces[interfaceName].description){
-
+    
                             // Create Interface Description
                             let resolverDescription = '/**\n'
                             for(let description of data.interfaces[interfaceName].description.split('\n'))
@@ -117,37 +167,39 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                             resolverCode += resolverDescription
                         }
                     }catch(e){}
-
+    
                     /**
                      * `resolverCode` [export]
                      */
                     let resolverName = fileName.split('.')[0]
-                    if(typeof data.generatorData['value']['methodNameReplace'][resolverName] != 'undefined')
-                        resolverName = data.generatorData['value']['methodNameReplace'][resolverName]
-
+                    try{
+                        if(typeof data.generatorData[interfaceType.toLowerCase()]['methodNameReplace'][resolverName] != 'undefined')
+                            resolverName = data.generatorData[interfaceType.toLowerCase()]['methodNameReplace'][resolverName]
+                    }catch(e){}
+    
                     // Values Collect
                     let valueProperties = ``
                     if(isPropertiesExist){
                         for(let propertieName of Object.keys(data.interfaces[interfaceName].properties)){
                             try{
                                 //let propertieTypeName = interfaces[interfaceName].properties[propertieName].type
-
+    
                                 let propertieTypeName = ``
                                 if(typeof propertieTypeMap[propertieName] != 'undefined'){
                                     if(propertieTypeMap[propertieName].length > 1)
-                                        Logger.critical(`[TYPE BROKEN ALERT] Multiple Types in Propertie! (value/${fileName})`)
+                                        Logger.critical(`[TYPE BROKEN ALERT] Multiple Types in Propertie! (${interfaceType.toLowerCase()}/${fileName})`)
                                     propertieTypeName = propertieTypeMap[propertieName].join(' | ')
                                 }else{
                                     // Allow Default Data Type
                                     try{
                                         propertieTypeName = data.interfaces[interfaceName].properties[propertieName].type
                                     }catch(e){
-                                        Logger.critical(`Unexpected Interface Param Type! (value/${fileName})`)
+                                        Logger.critical(`Unexpected Interface Param Type! (${interfaceType.toLowerCase()}/${fileName})`)
                                         console.log(data.interfaces[interfaceName].properties[propertieName])
                                     }
                                 }
                                 valueProperties += (valueProperties.length == 0) ? `\n` : `,\n`
-
+    
                                 /**
                                  * `Insert Propertie Description`
                                  */
@@ -155,7 +207,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                                 if(data.interfaces[interfaceName].properties[propertieName].description)
                                     for(let description of data.interfaces[interfaceName].properties[propertieName].description.split('\n'))
                                         propertiesDescription += `\t * ${description}\n`
-
+    
                                 /**
                                  * `Insert Propertie Type Reference By JSDoc`
                                  */
@@ -166,7 +218,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                                 }
                                 propertiesDescription += '\t */\n'
                                 valueProperties += propertiesDescription
-
+    
                                 if(typescriptTypeList.indexOf(propertieTypeName) == -1){
                                     valueProperties += `\t${propertieName}: string`
                                 }else{
@@ -178,15 +230,15 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                             }
                         }
                     }
-
+    
                     resolverCode += `export const ${resolverName} = (${valueProperties}\n) => {\n\n`
                     resolverCode += '\treturn `'
-
+    
                     /**
                      * [sub] `workshopCode` [init]
                      */
                     let workshopCode = valueName
-
+    
                     /**
                      * [sub] `workshopCode` [properties]
                      */
@@ -200,34 +252,30 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                         }
                         workshopCode += ')'
                     }
-
+    
                     /**
                      * `resolverCode` [workshopCode]
                      */
                     resolverCode += workshopCode
                     resolverCode += '`\n}'
-
+    
                     // console.log(`${fileName}, ${interfaceName}`)
                     // console.log(interfaces[interfaceName])
                     // console.log(resolverCode)
-
-                    Logger.debug(`Created Resolver <value/${fileName}>`)
-                    fs.writeFileSync(`${data.resolverPath}/value/${fileName}`, resolverCode)
-
-                }catch(e){
-                    Logger.critical('Generator Crashed#1')
-                    console.log(e)
+    
+                    Logger.debug(`Created Resolver <${interfaceType.toLowerCase()}/${fileName}>`)
+                    fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/${fileName}`, resolverCode)
                 }
+    
+                // Create child index
+                let indexCode = ''
+                for(let { fileName } of collectedDatas)
+                    indexCode += `export * from './${fileName.split('.')[0]}'\n`
+                fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/index.ts`, indexCode)
+                Logger.debug(`Created Value Resolver <${interfaceType.toLowerCase()}/index.ts>`)
             }
-
-            // Create child index
-            let indexCode = ''
-            for(let { fileName } of collectedDatas)
-                indexCode += `export * from './${fileName.split('.')[0]}'\n`
-            fs.writeFileSync(`${data.resolverPath}/value/index.ts`, indexCode)
-            Logger.debug('Created Value Resolver <value/index.ts>')
-        }
-    )
-
-    resolve()
-})
+        )
+    
+        resolve()
+    })
+}

@@ -1,5 +1,4 @@
-import { ValuePlayerType, ValueNumberType } from '../../../type'
-import { INull } from '../../value'
+import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../../type'
 
 /**
  * HEAL OVER TIME 인스턴스를 시작합니다.
@@ -21,7 +20,7 @@ export interface IStartHealOverTime {
      * 집계될 플레이어가
      * 없음을 의미합니다.
      */
-    healer: INull | ValuePlayerType
+    healer: ValueAssisterParamType
     /**
      * HEAL OVER TIME의 지속 시간(초)입니다.
      * HEAL OVER TIME이 스크립트에 의해

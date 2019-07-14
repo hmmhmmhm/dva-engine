@@ -1,4 +1,4 @@
-import { ValuePlayerType, ValueArrayType } from '../../../type'
+import { ValuePlayersParamType } from '../../../type'
 
 /**
  * 플레이어에 대해
@@ -10,5 +10,5 @@ export interface IEnableBuiltInGameModeRespawning {
      * 부활 설정의 영향을
      * 받게 되는 플레이어입니다.
      */
-    players: ValuePlayerType | ValueArrayType
+    players: ValuePlayersParamType
 }

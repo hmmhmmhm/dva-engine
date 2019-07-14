@@ -4,6 +4,10 @@ import * as Util from '../util'
 
 import fs from 'fs'
 
+const interfaceType
+    : 'event' | 'action' | 'value'
+    = `action`
+
 /**
  * @description
  * `Archived Value Function Collector`
@@ -16,7 +20,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     Util.collectInterfaceFiles(
-        `${process.cwd()}/src/${data.lang}/interface/value/child`,
+        `${process.cwd()}/src/${data.lang}/interface/${interfaceType}/child`,
         async (collectedDatas)=>{
 
             // Create child resolvers

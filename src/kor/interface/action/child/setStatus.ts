@@ -1,6 +1,9 @@
-import { ValuePlayerType, ValueStatusType, ValueNumberType } from '../../../type'
-import { INull } from '../../value'
-
+import {
+    ValuePlayerType,
+    ValueAssisterParamType,
+    ValueStatusType,
+    ValueNumberType,
+} from '../../../type'
 /**
  * 지정된 상태를 플레이어에게 적용합니다.
  * 이 상태는 지정된 지속 시간 동안,
@@ -19,7 +22,7 @@ export interface ISetStatus {
      * ASSISTER가 NULL이면
      * 집계될 플레이가 없음을 의미합니다.
      */
-    assister: INull | ValuePlayerType
+    assister: ValueAssisterParamType
     /**
      * 플레이어에게 적용할 상태입니다.
      * 영웅 능력에 의해 적용되는

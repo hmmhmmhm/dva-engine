@@ -1,8 +1,8 @@
 import {
     ValuePlayerType,
     VariableType,
+    ValueDestinationParamType,
     ValueNumberType,
-    ValueVectorType,
     ValueReevaluationType,
 } from '../../../type'
 
@@ -28,7 +28,7 @@ export interface IChasePlayerVariableAtRate {
      * 이 값의 유형은 숫자 또는 벡터가 될 수 있지만,
      * 추적 시작 전 기존 변수 값의 유형이 동일해야 합니다.
      */
-    destination: ValueNumberType | ValueVectorType
+    destination: ValueDestinationParamType
     /**
      * 변수값의 초당 변화량입니다.
      */

@@ -1,15 +1,17 @@
-import { Sequencer } from 'async-sequencer'
 import FolderLogger from 'folder-logger'
+import { Sequencer } from 'async-sequencer'
 import { IData } from './interface'
-import generatorData from './generator.json'
+
+import Generator from './generator'
+import generatorData from './generatorData.json'
 
 import tempDir from 'temp-dir'
 
 /**
  * @description
- * Resolver Generator
+ * Generator Resolver
  */
-export const Generator = async (lang = 'kor') => {
+export const Resolver = async (lang = 'kor') => {
 
     /**
      * @description
@@ -43,8 +45,22 @@ export const Generator = async (lang = 'kor') => {
             // require('./sequence/collectArchivedValue'),
 
             require('./sequence/collectPreTypeNames'),
-            require('./sequence/collectEvent'),
-            require('./sequence/collectValue'),
+
+            Generator({
+                interfacePath: `interface/event/child`,
+                interfaceType: 'Event'
+            }),
+
+            Generator({
+                interfacePath: `interface/value/child`,
+                interfaceType: 'Value'
+            }),
+
+            Generator({
+                interfacePath: `interface/action/child`,
+                interfaceType: 'Action'
+            }),
+
             require('./sequence/collectType'),
         ],
 
@@ -52,10 +68,10 @@ export const Generator = async (lang = 'kor') => {
         ({
             sequenceNumber,
             isSequenceSuccess,
-            isEndOfSequence,
-            sequenceResult
+            isEndOfSequence
         })=>{
-    
+
+            // Enter the CLI output for each sequence.
             console.log('')
 
             // Callback Logic
@@ -71,4 +87,4 @@ export const Generator = async (lang = 'kor') => {
     , sequencerData)
 }
 
-Generator()
+Resolver()

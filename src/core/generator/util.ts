@@ -58,15 +58,17 @@ export const collectInterfaceFiles = async (
                 let typeName = ``
 
                 try{
-                    interfaceName = fileData.split('export interface ')[1]
-                        .split(' {')[0]
-                        .split(' ').join('')
+                    interfaceName = 
+                        fileData.split('export interface ')[1]
+                            .split(' {')[0]
+                            .split(' ').join('')
                 }catch(e){}
 
                 try{
-                    typeName = fileData.split('export type ')[1]
-                        .split('\n')[0]
-                        .split(' ').join('')
+                    typeName =
+                        fileData.split('export type ')[1]
+                            .split('\n')[0]
+                            .split(' ').join('')
                 }catch(e){}
 
                 data.push({
@@ -84,7 +86,21 @@ export const collectInterfaceFiles = async (
     })
 }
 
-export const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove = false)=>{
+/**
+ * @description
+ * The functions in the overwatch
+ * workshop are named in the pascal case.
+ * But the javascript are uses a camelcase,
+ * so we need to convert it.
+ * 
+ * It'll be using in archived value function collector
+ * (`sequence/collectArchivedValue.ts`)
+ */
+export const camelCaseToPascalCase = (
+    name: string,
+    doSpace = true,
+    prefixRemove = false
+)=>{
     if(prefixRemove && name[0] == 'I'){
         let temp = name.split('')
         temp.shift()
@@ -111,7 +127,21 @@ export const camelCaseToPascalCase = (name: string, doSpace = true, prefixRemove
     return pascalCase
 }
 
-export const pascalCaseToCamelCase = (name: string, doSpace = true, prefixRemove = false, prefixInstall = false)=>{
+/**
+ * @description
+ * The javascript interface name uses a pascal case.
+ * Conversion to camera case is required to
+ * infer variable names etc. through interface name.
+ * 
+ * It'll be using when the collects resolver type names
+ * (`sequence/collectType.ts`)
+ */
+export const pascalCaseToCamelCase = (
+    name: string,
+    doSpace = true,
+    prefixRemove = false,
+    prefixInstall = false
+)=>{
     let camelCase = ''
 
     if(prefixRemove && name[0] == 'I'){
@@ -143,6 +173,11 @@ export const pascalCaseToCamelCase = (name: string, doSpace = true, prefixRemove
     return camelCase
 }
 
+/**
+ * @description
+ * Extracts the custom type name
+ * defined in the typescript file.
+ */
 export const typeExtractor = (code): string[] => {
     let contexts = code
     contexts = contexts.split('\t').join('')
@@ -166,6 +201,13 @@ export const typeExtractor = (code): string[] => {
     return list
 }
 
+/**
+ * @description
+ * In some overwatch interfaces,
+ * typedescript data type is sometimes used as it is.
+ * This pure data type designation
+ * must be extracted to form a generator.
+ */
 export const pureTypeNameExtractor = (name) => {
     let typeNames: string[] = []
 

@@ -1,5 +1,3 @@
-import { IOnGoingEachPlayer } from '../../../interface'
-
 /**
  * 플레이어가 게임에 참여하면
  * 각 플레이어마다 이 Rule의 인스턴스가 생성됩니다.
@@ -14,12 +12,18 @@ import { IOnGoingEachPlayer } from '../../../interface'
  * - Condition 목록을 만족하지 못했다가 만족한다면,
  *    Action을 다시 실행하려 할 것입니다.
  */
-export const onGoingEachPlayer = (value: IOnGoingEachPlayer) => {
-	return`
-	event
-	{
-		Ongoing - Each Player;
-		${value.team};
-		${value.player};
-	}`
+export const onGoingEachPlayer = (
+	/**
+	 * - `TeamConstant.` 또는 `Type.TeamConstant.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 */
+	team: string,
+	/**
+	 * - `EventPlayer.` 또는 `Type.EventPlayer.` 를 입력하면 
+	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 */
+	player: string
+) => {
+
+	return `Ongoing - Each Player(${team}, ${player})`
 }

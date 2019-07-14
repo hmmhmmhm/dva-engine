@@ -1,5 +1,4 @@
-import { ValuePlayerType, ValueNumberType } from '../../../type'
-import { INull } from '../../value'
+import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../../type'
 
 /**
  * 플레이어를 즉시 치유합니다.
@@ -18,7 +17,7 @@ export interface IHeal {
      * 집계될 플레이어가
      * 없음을 의미합니다.
      */
-    healer: INull | ValuePlayerType
+    healer: ValueAssisterParamType
     /**
      * 적용할 치유량입니다.
      * 이 치유량은 강화 효과,

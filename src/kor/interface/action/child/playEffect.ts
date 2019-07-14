@@ -1,6 +1,5 @@
 import {
-    ValuePlayerType,
-    ValueArrayType,
+    ValuePlayersParamType,
     ValuePlayEffect,
     ValueColorType,
     ValueVectorType,
@@ -16,7 +15,7 @@ export interface IPlayEffect {
     /**
      * 해당 효과를 보게 될 플레이어입니다.
      */
-    visibleTo: ValuePlayerType | ValueArrayType
+    visibleTo: ValuePlayersParamType
     /**
      * 생성할 효과의 유형입니다.
      */

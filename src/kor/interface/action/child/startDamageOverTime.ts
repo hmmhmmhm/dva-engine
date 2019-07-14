@@ -1,5 +1,4 @@
-import { ValuePlayerType, ValueNumberType } from '../../../type'
-import { INull } from '../../value'
+import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../../type'
 
 /**
  * DAMAGE OVER TIME (DOT)
@@ -25,7 +24,7 @@ export interface IStartDamageOverTime {
      * 집계될 플레이어가
      * 없음을 의미합니다.
      */
-    damager: INull | ValuePlayerType
+    damager: ValueAssisterParamType
     /**
      * DAMAGE OVER TIME의
      * 지속 시간(초)입니다.

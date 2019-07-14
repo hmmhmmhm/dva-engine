@@ -54,7 +54,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                     // Create child resolver folder
                     try{ fs.mkdirSync(`${data.resolverPath}/type`) } catch(e) {}
 
-                    let resolverName = Util.camelCaseToPascalCase(fileName.split('.')[0], false, false)
+                    // let resolverName = Util.camelCaseToPascalCase(fileName.split('.')[0], false, false)
                     let resolverTypes = Util.typeExtractor(fileData)
 
                     /**
