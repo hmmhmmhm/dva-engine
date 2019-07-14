@@ -122,7 +122,7 @@ For productive coding, some types defined in the existing workshop need to be ob
 
 #### Dependent
 
-1. angleBetwwenVectors
+1. angleBetweenVectors
 2. localVectorOf
 3. worldVectorOf
 4. angleDifference

@@ -1,5 +1,6 @@
 {
     "player": {
+        "independent": [],
         "dependent": [
             "altitudeOf",
             "closestPlayerTo",
@@ -50,6 +51,83 @@
             "verticalAngleTowards",
             "verticalFacingAngleOf",
             "verticalSpeedOf"
+        ]
+    },
+    "vector": {
+        "independent": [],
+        "dependent": [
+            "angleBetweenVectors",
+            "localVectorOf",
+            "worldVectorOf",
+            "angleDifference",
+            "acrossineInDegrees",
+            "arccosineInRadians",
+            "arcsineInDegrees",
+            "arcsineInRadians",
+            "arctangentInDegrees",
+            "arctangentInRadians",
+            "cosineFromDegrees",
+            "cosineFromRadians",
+            "crossProduct",
+            "directionFromAngles",
+            "directionTowards",
+            "distanceBetween",
+            "dotProduct",
+            "down",
+            "forward",
+            "horizontalAngleTowards",
+            "isInLineOfSight",
+            "isInViewAngle",
+            "left",
+            "nearestWalkablePostion",
+            "normalize",
+            "playersWithinRadius",
+            "right",
+            "sineFromDegrees",
+            "sineFromRadians",
+            "slotOf",
+            "tangentFromDegrees",
+            "tangentFromRadians",
+            "up",
+            "verticalAngleFromDirection",
+            "xComponentOf",
+            "yComponentOf",
+            "zComponentOf"
+        ]
+    },
+    "team": {
+        "independent": [
+            "controlModeScoringTeam"
+        ],
+        "dependent": [
+            "controlModeScoringPercentage",
+            "isHeroBeingPlayed",
+            "isTeamOnDefense",
+            "isTeamOnOffense",
+            "numberOfDeadPlayers",
+            "numberOfHeroes",
+            "numberOfLivingPlayers",
+            "numberOfPlayers",
+            "numberOfPlayersOnObjective",
+            "oppositeTeamOf",
+            "playersInSlot",
+            "playersOnHero",
+            "teamScore"
+        ]
+    },
+    "event": {
+        "independent": [
+            "eventDamage",
+            "eventPlayer",
+            "eventWasCriticalHit"
+        ],
+        "dependent": []
+    },
+    "entity": {
+        "independent": [],
+        "dependent": [
+            "entityExists",
+            "hasSpawned"
         ]
     }
 }

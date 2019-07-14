@@ -35,7 +35,7 @@ Secondly, we want to provide visual scripting such as Unreal Engine. A great vis
 ## Todo
 
 - [x] Collect Basic Interface
-- [ ] Create Interface Compiler
+- [x] Create Interface Compiler
 - [ ] Condition AST Parser
 - [ ] Action Method Chain
 - [ ] Rule Component Interface for NPM

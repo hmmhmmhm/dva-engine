@@ -8,5 +8,5 @@ export interface IZComponentOf {
     /**
      * Z 구성요소 정보를 가져올 벡터입니다.
      */
-    value: ValueVectorType
+    vector: ValueVectorType
 }

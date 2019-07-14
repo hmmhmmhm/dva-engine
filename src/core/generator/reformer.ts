@@ -52,16 +52,21 @@ export default () => {
             reformCode += `\t */\n`
             reformCode += `\tconstructor(${interfaceType}: string){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
 
+            if(typeof reformerData[interfaceType]['independent'] != 'undefined')
+                reformerData[interfaceType]['dependent'] = 
+                    reformerData[interfaceType]['dependent'].concat(reformerData[interfaceType]['independent'])
+
             for(let dependent of reformerData[interfaceType]['dependent']){
                 let interfaceName = `I${Util.camelCaseToPascalCase(dependent, false, false)}`
+                let innerFunctionCode = ``
 
                 // Function Description
                 try{
                     if(data.interfaces[interfaceName].description){
-                        reformCode += `\n\t/**\n`
+                        innerFunctionCode += `\n\t/**\n`
                         for(let description of data.interfaces[interfaceName].description.split('\n'))
-                            reformCode += `\t * ${description}\n`
-                        reformCode += `\t */\n`
+                        innerFunctionCode += `\t * ${description}\n`
+                            innerFunctionCode += `\t */\n`
                     }
                 }catch(e){}
 
@@ -83,7 +88,17 @@ export default () => {
                 }catch(e){}
 
                 // Function Define
-                reformCode += `\t${dependent}(${isAdditionalPropertiesExist? '\n' : ''}`
+                innerFunctionCode += `\t`
+                
+                let isIndependent = false
+                if(typeof reformerData[interfaceType]['independent'] != 'undefined'){
+                    if(reformerData[interfaceType]['independent'].indexOf(dependent) != -1){
+                        isIndependent = true
+                        innerFunctionCode += `$$static$$`
+                    }
+                }
+                // reformerData[interfaceType]['independent']
+                innerFunctionCode += `$$dependent$$(${isAdditionalPropertiesExist? '\n' : ''}`
 
                 // Collect Function Linking Data
                 let functionParamLinkingCodes: string[] = []
@@ -131,13 +146,29 @@ export default () => {
                         functionParamLinkingCodes.push(propertieName)
                     }
 
-                    reformCode += propertiesCodes.join(`,\n`)
+                    innerFunctionCode += propertiesCodes.join(`,\n`)
                 }
-                reformCode += `${isAdditionalPropertiesExist? '\n\t' : ''}){\n`
+                innerFunctionCode += `${isAdditionalPropertiesExist? '\n\t' : ''}){\n`
 
                 // Function Linking
-                reformCode += `\t\treturn Value.${dependent}(${functionParamLinkingCodes.join(', ')})\n`
-                reformCode += `\t}\n`
+                innerFunctionCode += `\t\treturn Value.${dependent}(${functionParamLinkingCodes.join(', ')})\n`
+                innerFunctionCode += `\t}\n`
+
+                if(isIndependent){
+                    let dependentPascalCase = dependent.split('')
+                    dependentPascalCase[0] = dependentPascalCase[0].toUpperCase()
+                    dependentPascalCase = dependentPascalCase.join('')
+
+                    reformCode += innerFunctionCode
+                        .replace('$$static$$', 'static ')
+                        .replace('$$dependent$$', `${dependentPascalCase}`)
+                    reformCode += innerFunctionCode
+                        .replace('$$static$$', '')
+                        .replace('$$dependent$$', `${dependent}`)
+                }else{
+                    reformCode += innerFunctionCode
+                        .replace('$$dependent$$', `${dependent}`)
+                }
             }
 
             reformCode += `}\n\nexport default ${interfaceTypePascalCase}`
