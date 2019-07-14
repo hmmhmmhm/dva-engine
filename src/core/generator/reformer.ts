@@ -50,7 +50,13 @@ export default () => {
             reformCode += `\t * @param ${interfaceType} \`Type.${interfaceTypePascalCase}.\` 를 입력하면\n`
             reformCode += `\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
             reformCode += `\t */\n`
-            reformCode += `\tconstructor(${interfaceType}: string){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
+
+            // Write Constructor Init
+            let constructorInit = ``
+            if(typeof reformerData[interfaceType]['constructorInit'] != 'undefined')
+                constructorInit = ` = ${reformerData[interfaceType]['constructorInit']}`
+
+            reformCode += `\tconstructor(${interfaceType}: string${constructorInit}){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
 
             if(typeof reformerData[interfaceType]['independent'] != 'undefined')
                 reformerData[interfaceType]['dependent'] = 

@@ -7,7 +7,7 @@ class Player {
 	 * @param player `Type.Player.` 를 입력하면
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	constructor(player: string){
+	constructor(player: string = Type.Player.eventPlayer()){
 		this.player = player
 	}
 

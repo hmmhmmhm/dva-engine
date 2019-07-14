@@ -1,5 +1,6 @@
 {
     "player": {
+        "constructorInit": "Type.Player.eventPlayer()",
         "independent": [],
         "dependent": [
             "altitudeOf",
