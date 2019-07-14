@@ -10,31 +10,31 @@
 export const createHudText = (
 	/**
 	 * 해당 HUD 텍스트를 보게 될 플레이어입니다.
-	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	visibleTo: string,
 	/**
 	 * 표시할 텍스트입니다. (비워두기 가능)
-	 * - `String.` 또는 `Type.String.` 를 입력하면 
+	 * - `Type.String.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	header: string,
 	/**
 	 * 표시할 부제목입니다. (비워두기 가능)
-	 * - `StringParam.` 또는 `Type.StringParam.` 를 입력하면 
+	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	subHeader: string,
 	/**
 	 * 표시할 본문입니다. (비워두기 가능)
-	 * - `StringParam.` 또는 `Type.StringParam.` 를 입력하면 
+	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	text: string,
 	/**
 	 * 텍스트를 표시할 화면 상의 위치입니다.
-	 * - `Location.` 또는 `Type.Location.` 를 입력하면 
+	 * - `Type.Location.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	location: string,
@@ -44,7 +44,7 @@ export const createHudText = (
 	 * 정렬 순서 상 우선순위가 높은
 	 * 텍스트는 낮은 우선순위의
 	 * 텍스트 다음에 위치하게 됩니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	sortOrder: string,
@@ -54,7 +54,7 @@ export const createHudText = (
 	 * 해당 팀이 보는 사람에게 적인지
 	 * 여부에 따라 빨강 또는 파랑으로
 	 * 효과 색상이 설정됩니다.
-	 * - `Color.` 또는 `Type.Color.` 를 입력하면 
+	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	headerColor: string,
@@ -64,7 +64,7 @@ export const createHudText = (
 	 * 해당 팀이 보는 사람에게 적인지
 	 * 여부에 따라 빨강 또는 파랑으로
 	 * 효과 색상이 설정됩니다.
-	 * - `Color.` 또는 `Type.Color.` 를 입력하면 
+	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	subHeaderColor: string,
@@ -74,7 +74,7 @@ export const createHudText = (
 	 * 해당 팀이 보는 사람에게 적인지
 	 * 여부에 따라 빨강 또는 파랑으로
 	 * 효과 색상이 설정됩니다.
-	 * - `Color.` 또는 `Type.Color.` 를 입력하면 
+	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	textColor: string,
@@ -83,7 +83,7 @@ export const createHudText = (
 	 * 지속적으로 재확인할 것인지 지정합니다.
 	 * 해당 액션은 입력 정보의 새로운 값을
 	 * 계속 묻게 되며, 재확인한 값을 사용합니다.
-	 * - `HudTextReevaluation.` 또는 `Type.HudTextReevaluation.` 를 입력하면 
+	 * - `Type.HudTextReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	reevaluation: string

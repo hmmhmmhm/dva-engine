@@ -1,9 +1,10 @@
 import FolderLogger from 'folder-logger'
-import generatorData from './generator.json'
+import generatorData from './generatorData.json'
 
 let loggerTemp = new FolderLogger('./')
 
 export interface IData {
+
     /**
      * Generator Logger
      */
@@ -27,6 +28,12 @@ export interface IData {
      * The folder path where resolver will be created.
      */
     resolverPath?: string
+
+    /**
+     * @description
+     * The folder path where reformer will be created.
+     */
+    reformerPath?: string
 
     /**
      * @description

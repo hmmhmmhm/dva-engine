@@ -4,13 +4,13 @@
 export const crossProduct = (
 	/**
 	 * 가위곱의 왼쪽 벡터 피연산자입니다.
-	 * - `Vector.` 또는 `Type.Vector.` 를 입력하면 
+	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	value1: string,
 	/**
 	 * 가위곱의 오른쪽 벡터 피연산자입니다.
-	 * - `Vector.` 또는 `Type.Vector.` 를 입력하면 
+	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	value2: string

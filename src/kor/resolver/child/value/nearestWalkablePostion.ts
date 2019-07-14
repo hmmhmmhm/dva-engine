@@ -5,7 +5,7 @@
 export const nearestWalkablePostion = (
 	/**
 	 * 가장 가까운 도보 가능 위치를 검색할 대상 위치입니다.
-	 * - `Vector.` 또는 `Type.Vector.` 를 입력하면 
+	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	position: string

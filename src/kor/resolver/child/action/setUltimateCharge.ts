@@ -6,13 +6,13 @@ export const setUltimateCharge = (
 	/**
 	 * 궁극기 사용에 있어
 	 * 영향을 받는 플레이어입니다.
-	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	player: string,
 	/**
 	 * 최대 충전량 비율입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	chargePercent: string

@@ -6,7 +6,7 @@ export const skip = (
 	/**
 	 * 건너뛸 액션의 수입니다.
 	 * 이 액션은 제외한 개수입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	numberOfActions: string

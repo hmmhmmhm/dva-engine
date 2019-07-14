@@ -5,13 +5,13 @@
 export const valueInArray = (
 	/**
 	 * 요소 정보를 가져올 대상 배열입니다.
-	 * - `Array.` 또는 `Type.Array.` 를 입력하면 
+	 * - `Type.Array.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	array: string,
 	/**
 	 * 요소 정보를 가져올 인덱스입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	index: string

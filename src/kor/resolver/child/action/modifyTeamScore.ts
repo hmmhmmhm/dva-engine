@@ -6,7 +6,7 @@
 export const modifyTeamScore = (
 	/**
 	 * 점수를 변경할 팀입니다.
-	 * - `Team.` 또는 `Type.Team.` 를 입력하면 
+	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	team: string,
@@ -14,7 +14,7 @@ export const modifyTeamScore = (
 	 * 점수 증감량입니다.
 	 * 양수인 경우 점수가 오르고
 	 * 음수인 경우 감소합니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	score: string

@@ -9,13 +9,13 @@
 export const setTeamScore = (
 	/**
 	 * 점수를 설정할 팀입니다.
-	 * - `Team.` 또는 `Type.Team.` 를 입력하면 
+	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	team: string,
 	/**
 	 * 설정할 점수입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	score: string

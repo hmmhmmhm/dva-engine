@@ -10,21 +10,21 @@ export const startDamageModification = (
 	/**
 	 * (DAMAGER의 공격을 받는 경우)
 	 * 받는 피해를 수정할 플레이어입니다.
-	 * - `PlayersParam.` 또는 `Type.PlayersParam.` 를 입력하면 
+	 * - `Type.PlayersParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	receivers: string,
 	/**
 	 * (RECEIVER를 공격하는 경우)
 	 * 주는 피해를 변경할 플레이어입니다.
-	 * - `PlayersParam.` 또는 `Type.PlayersParam.` 를 입력하면 
+	 * - `Type.PlayersParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	damagers: string,
 	/**
 	 * DAMAGER의 공격을 받는 경우
 	 * RECEIVER에게 적용할 피해 비율입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	damagePercent: string,
@@ -35,7 +35,7 @@ export const startDamageModification = (
 	 * 해당 액션은 입력 정보의
 	 * 새로운 값을 계속 묻게 되며,
 	 * 재확인한 값을 사용합니다.
-	 * - `DamageModificationReevaluation.` 또는 `Type.DamageModificationReevaluation.` 를 입력하면 
+	 * - `Type.DamageModificationReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	reevaluation: string

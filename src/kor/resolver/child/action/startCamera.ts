@@ -6,21 +6,21 @@ export const startCamera = (
 	/**
 	 * 카메라를 해당 위치에
 	 * 배치할 플레이어입니다.
-	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	player: string,
 	/**
 	 * 카메라 위치입니다.
 	 * 지속적으로 확인됩니다.
-	 * - `Vector.` 또는 `Type.Vector.` 를 입력하면 
+	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	eyePosition: string,
 	/**
 	 * 카메라가 바라보는 방향입니다.
 	 * 지속적으로 확인됩니다.
-	 * - `Vector.` 또는 `Type.Vector.` 를 입력하면 
+	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	lookAtPosition: string,
@@ -29,7 +29,7 @@ export const startCamera = (
 	 * 블렌딩 속도를 설정합니다.
 	 * 0인 경우 블렌딩하지 않고
 	 * 위치만 즉시 변경한다는 뜻입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	blendSpeed: string

@@ -2,8 +2,10 @@ import FolderLogger from 'folder-logger'
 import { Sequencer } from 'async-sequencer'
 import { IData } from './interface'
 
+import Reformer from './reformer'
 import Generator from './generator'
 import generatorData from './generatorData.json'
+
 
 import tempDir from 'temp-dir'
 
@@ -62,6 +64,7 @@ export const Resolver = async (lang = 'kor') => {
             }),
 
             require('./sequence/collectType'),
+            Reformer(),
         ],
 
         // Sequence Callback

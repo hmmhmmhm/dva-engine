@@ -7,7 +7,6 @@ import fs from 'fs'
 /**
  * @description
  * Overwatch Workshop
- * Advanced Scripting Engine
  * Common Generator
  */
 export default ({
@@ -28,7 +27,7 @@ export default ({
         Util.collectInterfaceFiles(
             `${process.cwd()}/src/${data.lang}/${interfacePath}`,
             async (collectedDatas)=>{
-    
+
                 // Create child resolvers
                 for(let {
                     fileName,
@@ -213,7 +212,7 @@ export default ({
                                  */
                                 let typescriptTypeList = ['number']
                                 if(typescriptTypeList.indexOf(propertieTypeName) == -1){
-                                    propertiesDescription += `\t * - \`${propertieTypeName}.\` 또는 \`Type.${propertieTypeName}.\` 를 입력하면 \n`
+                                    propertiesDescription += `\t * - \`Type.${propertieTypeName}.\` 를 입력하면 \n`
                                     propertiesDescription += `\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
                                 }
                                 propertiesDescription += '\t */\n'

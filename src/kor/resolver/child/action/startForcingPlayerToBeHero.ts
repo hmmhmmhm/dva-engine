@@ -9,14 +9,14 @@ export const startForcingPlayerToBeHero = (
 	/**
 	 * 지정된 영웅이 강제
 	 * 선택되는 플레이어입니다.
-	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	player: string,
 	/**
 	 * 플레이어에게 강제로
 	 * 설정된 영웅입니다.
-	 * - `Hero.` 또는 `Type.Hero.` 를 입력하면 
+	 * - `Type.Hero.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	hero: string

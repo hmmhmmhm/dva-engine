@@ -5,7 +5,7 @@
 export const abortIf = (
 	/**
 	 * 실행 중지 여부를 지정합니다.
-	 * - `Bool.` 또는 `Type.Bool.` 를 입력하면 
+	 * - `Type.Bool.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	condition: string

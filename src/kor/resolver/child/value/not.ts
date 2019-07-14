@@ -8,7 +8,7 @@ export const not = (
 	 * NOT 값은 TRUE입니다.
 	 * 그 이외의 경우,
 	 * NOT 값은 FALSE입니다.
-	 * - `Bool.` 또는 `Type.Bool.` 를 입력하면 
+	 * - `Type.Bool.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	value: string

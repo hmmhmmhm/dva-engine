@@ -6,13 +6,13 @@
 export const angleDifference = (
 	/**
 	 * 결과각을 도출하기 위한 두 각 중 하나입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	angle1: string,
 	/**
 	 * 결과각을 도출하기 위한 두 각 중 하나입니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	angle2: string

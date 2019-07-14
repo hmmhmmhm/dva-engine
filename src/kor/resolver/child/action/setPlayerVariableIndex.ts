@@ -10,7 +10,7 @@ export const setPlayerVariableIndex = (
 	 * 변수를 수정할 플레이어입니다.
 	 * 플레이어가 다수인 경우,
 	 * 각각의 변수가 수정됩니다
-	 * - `Player.` 또는 `Type.Player.` 를 입력하면 
+	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	player: string,
@@ -19,7 +19,7 @@ export const setPlayerVariableIndex = (
 	 * 수정할 배열에 지정합니다.
 	 * 변수값이 배열이 아닌 경우,
 	 * 해당 값은 빈 배열이 됩니다.
-	 * - `Variable.` 또는 `Type.Variable.` 를 입력하면 
+	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	variable: string,
@@ -28,13 +28,13 @@ export const setPlayerVariableIndex = (
 	 * 인덱스가 배열의 끝을 벗어난 경우,
 	 * 해당 배열이 확장되며
 	 * 새 요소는 0의 값을 가집니다.
-	 * - `Number.` 또는 `Type.Number.` 를 입력하면 
+	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	index: string,
 	/**
 	 * 배열에 저장할 값입니다.
-	 * - `Value.` 또는 `Type.Value.` 를 입력하면 
+	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
 	value: string
