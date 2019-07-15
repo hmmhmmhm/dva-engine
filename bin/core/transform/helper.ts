@@ -317,6 +317,135 @@ export default class Helper{
         })
     }
 
+    /**
+    * @description
+    * Check node is top
+    * 
+    * @example
+    * 
+    * new Rule({
+    *  condition: []
+    * })
+    */
+    static checkNodeIsTopCondition(node: ts.Node): boolean {
+
+       // Check [...]
+        if(ts.isArrayLiteralExpression(node.parent)){
+            // Check :
+            if(ts.isPropertyAssignment(node.parent.parent)){
+                // Check condition:
+                if(node.parent.parent.name.getText() == 'condition'){
+                    // Check {...}
+                    if(ts.isObjectLiteralExpression(node.parent.parent.parent)){
+                        // Check new
+                        if(ts.isNewExpression(node.parent.parent.parent.parent)){
+                            // Check Rule
+                            if(node.parent.parent.parent.parent.expression.getText() == 'Rule')
+                                return true
+                        }
+                    }
+                }
+            }
+        }
+        return false
+    }
+
+    static compareOverride(node: ts.Node, interfaceVaraible: ts.Expression, forceApplyTop?: boolean) {
+        // Parse Nested Parenthesize
+        if(ts.isParenthesizedExpression(node))
+            return Helper.compareOverride(node.expression, interfaceVaraible, forceApplyTop)
+
+        if(ts.isBinaryExpression(node)){
+
+            // Parse Nested Left Expression
+            if(ts.isParenthesizedExpression(node.left)
+                || ts.isBinaryExpression(node.left)){
+                node.left
+            }
+
+            // Debug Only
+            // console.log(`[FOUND] token:${node.operatorToken.getText()}\t left:${node.left.getText()}\t right:${node.right.getText()}`)
+
+            /**
+             * @description
+             * 1. Compare Function Override
+             */
+            let token = node.operatorToken.getText()
+
+            // No Deep Type Check
+            if(token == '===') token = '=='
+            if(token == '!==') token = '!='
+
+            switch(token){
+                case '==':
+                case '!=':
+                case '>=':
+                case '<=':
+                case '>':
+                case '<':
+
+                    let coompareProperty
+
+                    /**
+                     * Check Node Is Top of Rule.
+                     * 
+                     * Each method of application is
+                     * different when used in values
+                     * and when used in rules.
+                     */
+                    if(Helper.checkNodeIsTopCondition(node) || (forceApplyTop === true)){
+
+                        // Rule Condition
+                        coompareProperty = 
+                        // interface_1.Value.compare
+                        ts.createPropertyAccess(
+
+                            // interface_1.Value
+                            ts.createPropertyAccess(
+                                interfaceVaraible,
+                                // Yep Hard coding
+                                ts.createIdentifier('Classes.Compiler')
+                            ),
+                            ts.createIdentifier('ruleCompare')
+                        )
+
+                    }else{
+                        // Value Condition
+                        coompareProperty = 
+                            // interface_1.Value.compare
+                            ts.createPropertyAccess(
+
+                                // interface_1.Value
+                                ts.createPropertyAccess(
+                                    interfaceVaraible,
+                                    ts.createIdentifier('Value')
+                                ),
+                                ts.createIdentifier('compare')
+                            )
+                    }
+
+                    // interface_1.Value.compare()
+                    return ts.createCall(
+
+                        // FunctionName
+                        coompareProperty,
+
+                        // Type
+                        undefined,
+
+                        // Use only one paramaeter
+                        [
+                            // It'll be remove JSDoc
+                            ts.createIdentifier(`${node.left.getText()}`),
+                            ts.createIdentifier(`'${token}'`),
+                            ts.createIdentifier(`${node.right.getText()}`),
+                        ]
+                    )
+            }
+        }
+        return
+    }
+
     /*
     var d = ((a + a) + b + b)+ c + c
     isVariableDeclarationList

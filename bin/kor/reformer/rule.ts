@@ -9,10 +9,8 @@ interface IRule {
     action: string[]
 }
 
-class Rule {
+export default class Rule {
     constructor(data: IRule){
         //
     }
 }
-
-export default Rule

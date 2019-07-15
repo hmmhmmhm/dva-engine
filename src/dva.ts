@@ -12,14 +12,42 @@ import { Type, Value, Action, RuleEvent, Level, Match, Util, Classes } from '../
  */
 const { Rule, Player, Event, Entity, Team, Vector } = Classes
 
+let checkValue = Value.attacker() == Value.attacker()
 
 // 아래에서부터 개인코드 작성을 작성합니다.
+
 new Rule({
     event:
         RuleEvent.onGoingGlobal(),
 
     condition: [
-        Value.attacker() == Event.EventPlayer()
+        /***
+         * @TODO
+         * IF COMPARE NOT SHOW FIRST THROW ERROR
+         */
+
+        // Compare
+        Value.attacker() == Event.EventPlayer(),
+        Value.attacker() === Event.EventPlayer(),
+        Value.attacker() != Event.EventPlayer(),
+        Value.attacker() !== Event.EventPlayer(),
+        Value.attacker() >= Event.EventPlayer(),
+        Value.attacker() <= Event.EventPlayer(),
+        Value.attacker() > Event.EventPlayer(),
+        Value.attacker() < Event.EventPlayer(),
+
+        // Nested Compare
+        checkValue != checkValue,
+
+        // Complex Compare
+        (checkValue >= (checkValue < checkValue)) != checkValue,
+        ((checkValue >= (checkValue < checkValue)) != checkValue),
+
+        // Unary Compare
+        checkValue,
+
+        // And
+        // Or
     ],
     
     action: [

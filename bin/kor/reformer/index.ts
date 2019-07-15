@@ -4,6 +4,7 @@ import Team from './child/team'
 import Event from './child/event'
 import Entity from './child/entity'
 import Rule from './rule'
+import * as Compiler from './compiler'
 
 export {
     Player,
@@ -11,5 +12,6 @@ export {
     Team,
     Event,
     Entity,
-    Rule
+    Rule,
+    Compiler
 }
