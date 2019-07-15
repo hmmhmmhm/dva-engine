@@ -14,7 +14,6 @@ const { Rule, Player, Event, Entity, Team, Vector } = Classes
 
 
 // 아래에서부터 개인코드 작성을 작성합니다.
-
 new Rule({
     event:
         RuleEvent.onGoingGlobal(),

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "bin/core/transform/dist",
+        "outDir": "./dist",
         "plugins": [
             { "transform": "./bin/core/transform/index.ts" },
         ],
@@ -36,7 +36,7 @@
         "./bin/*",
         "./bin/**/*",
         "./src/*",
-        "./src/**/*",
+        "./src/**/*", "index.ts",
     ],
     "awesomeTypescriptLoaderOptions": {
         "reportFiles": [
