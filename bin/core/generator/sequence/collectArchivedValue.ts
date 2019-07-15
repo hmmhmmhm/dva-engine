@@ -20,7 +20,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     Util.collectInterfaceFiles(
-        `${process.cwd()}/src/${data.lang}/interface/${interfaceType}/child`,
+        `${process.cwd()}/bin/${data.lang}/interface/${interfaceType}/child`,
         async (collectedDatas)=>{
 
             // Create child resolvers

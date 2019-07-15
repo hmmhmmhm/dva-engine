@@ -29,14 +29,14 @@ export default () => {
         }
         
         // Create child resolver folder
-        data.reformerPath = `${process.cwd()}/src/${data.lang}/reformer/child/`
+        data.reformerPath = `${process.cwd()}/bin/${data.lang}/reformer/child/`
         try{ rimraf.sync(data.reformerPath) } catch(e){}
         try{ fs.mkdirSync(data.reformerPath) } catch(e){
             reject()
             return
         }
 
-        //const resolverPath = `${process.cwd()}/src/${data.lang}/interface/value/child/`
+        //const resolverPath = `${process.cwd()}/bin/${data.lang}/interface/value/child/`
         for(let interfaceType of Object.keys(reformerData)){
             let interfaceTypePascalCase = Util.camelCaseToPascalCase(interfaceType, false, false)
             let reformCode = ``
@@ -178,8 +178,15 @@ export default () => {
             }
 
             reformCode += `}\n\nexport default ${interfaceTypePascalCase}`
+            Logger.debug(`Created Reformer <${interfaceType.toLowerCase()}.ts>`)
             fs.writeFileSync(`${data.reformerPath}/${interfaceType.toLowerCase()}.ts`, reformCode)
         }
+
+        let indexCode = ``
+        for(let interfaceType of Object.keys(reformerData))
+            indexCode += `export * from './${interfaceType}'\n`
+        fs.writeFileSync(`${data.reformerPath}/index.ts`, indexCode)
+        Logger.debug(`Created Reformer Index <index.ts>`)
 
         resolve()
     })

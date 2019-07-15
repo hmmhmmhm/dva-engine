@@ -2,7 +2,6 @@
   "name": "dva-engine",
   "version": "1.0.0",
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
-  "main": "./dist/dva.js",
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^12.6.1",
@@ -15,12 +14,15 @@
     "rimraf": "^2.6.3",
     "temp-dir": "^2.0.0",
     "ts-node": "^8.3.0",
+    "ttypescript": "^1.5.7",
     "typescript": "^3.5.3",
     "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
+    "start": "npx ttsc",
+    "build": "npx ttsc",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
-    "generator": "ts-node ./src/core/generator"
+    "update": "ts-node ./bin/core/generator"
   },
   "repository": {
     "type": "git",

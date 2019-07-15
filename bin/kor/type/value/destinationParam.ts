@@ -1,4 +1,4 @@
-import { ValueNumberType, ValueVectorType } from './'
+import { ValueNumberType, ValueVectorType } from '.'
 
 export type ValueDestinationParamType
     = ValueNumberType

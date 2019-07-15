@@ -25,7 +25,7 @@ export default ({
         // Sequence Logic
         Logger.debug(`Entering ${interfaceType} Generate...`)
         Util.collectInterfaceFiles(
-            `${process.cwd()}/src/${data.lang}/${interfacePath}`,
+            `${process.cwd()}/bin/${data.lang}/${interfacePath}`,
             async (collectedDatas)=>{
 
                 // Create child resolvers
@@ -271,7 +271,7 @@ export default ({
                 for(let { fileName } of collectedDatas)
                     indexCode += `export * from './${fileName.split('.')[0]}'\n`
                 fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/index.ts`, indexCode)
-                Logger.debug(`Created Value Resolver <${interfaceType.toLowerCase()}/index.ts>`)
+                Logger.debug(`Created Resolver Index <${interfaceType.toLowerCase()}/index.ts>`)
             }
         )
     

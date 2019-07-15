@@ -1,7 +1,7 @@
 import {
     INull,
     ValuePlayerType
-} from '../../interface/'
+} from '../../interface'
 
 export type ValueAssisterParamType
     = INull

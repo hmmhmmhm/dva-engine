@@ -14,7 +14,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     Logger.debug('Typescript Interface Initialize...')
-    data.interfaces = await Util.parseInterfaces(`${process.cwd()}/src/${data.lang}/interface/index.ts`)
+    data.interfaces = await Util.parseInterfaces(`${process.cwd()}/bin/${data.lang}/interface/index.ts`)
 
     // Collected Interfaces write
     // fs.writeFileSync(`${resolverPath}/test.json`, JSON.stringify(interfaces, null, 2))

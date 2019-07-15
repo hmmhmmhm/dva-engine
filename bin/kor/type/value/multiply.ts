@@ -1,8 +1,8 @@
 import {
     ValueNumberType,
     ValueVectorType
-} from './'
+} from '.'
 
-export type ValueSubtractType
+export type ValueMultiplyType
     = ValueNumberType
     | ValueVectorType

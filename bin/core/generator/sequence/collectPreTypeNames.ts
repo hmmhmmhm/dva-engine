@@ -14,7 +14,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     await Util.collectInterfaceFiles(
-        `${process.cwd()}/src/${data.lang}/type/`,
+        `${process.cwd()}/bin/${data.lang}/type/`,
 
         async (collectedDatas)=>{
             for(let {

@@ -1,14 +1,23 @@
 {
     "compilerOptions": {
+        "outDir": "bin/core/transform/dist",
+        "plugins": [
+            { "transform": "./bin/core/transform/index.ts" },
+        ],
         "baseUrl": ".",
-        "paths": { "*": ["types/*"] },
-        "outDir": "./dist/",
+        "paths": {
+            "*": [
+                "types/*",
+                "bin"
+            ]
+        },
         "importHelpers": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "inlineSourceMap": false,
         "noImplicitAny": false,
         "module": "commonjs",
         "target": "ES5",
+        "allowJs": true,
         "types": ["node"],
         "lib": ["es5", "es6", "dom"],
         "moduleResolution": "node",
@@ -24,12 +33,15 @@
         "experimentalDecorators": true,
     },
     "include": [
+        "./bin/*",
+        "./bin/**/*",
         "./src/*",
-        "./src/**/*"
+        "./src/**/*",
     ],
     "awesomeTypescriptLoaderOptions": {
         "reportFiles": [
-            "./src/**/*"
+            "./src/**/*",
+            "./bin/**/*"
         ]
     },
     "typeRoots": [

@@ -8,11 +8,11 @@ export * from './child/value/randomizedArray'
 export * from './child/value/roundToInteger'
 export * from './child/value/squareRoot'
 
-import { Type } from './'
+import { Type } from '../resolver'
 import {
     roundToInteger,
     squareRoot
-} from './child/value/'
+} from './child/value'
 
 /**
  * @param value Type `Type.Number.`

@@ -1,7 +1,7 @@
 import {
     ValueNumberType,
     ValueVectorType
-} from './'
+} from '.'
 
 export type ValueDivideType
     = ValueNumberType

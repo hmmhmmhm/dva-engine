@@ -1,6 +1,6 @@
 import {
     ValuePlayerType
-} from './'
+} from '.'
 
 import {
     IGlobalVariable,

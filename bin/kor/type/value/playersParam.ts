@@ -1,7 +1,7 @@
 import {
     ValuePlayerType,
     ValueArrayType,
-} from './'
+} from '.'
 
 export type ValuePlayersParamType
     = ValuePlayerType

@@ -1,7 +1,7 @@
 /**
  * @description 오버워치 워크샵의 함수 유형입니다.
  */
-import { Type, Value, Action, RuleEvent, Level, Match, Util, Classes } from './kor'
+import { Type, Value, Action, RuleEvent, Level, Match, Util, Classes } from '../bin/kor'
 
 /**
  * @description 오버워치 워크샵의 클래스입니다.

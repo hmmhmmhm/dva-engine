@@ -17,7 +17,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
     // Sequence Logic
     Logger.debug('Entering Type Generate...')
     Util.collectInterfaceFiles(
-        `${process.cwd()}/src/${data.lang}/type/`,
+        `${process.cwd()}/bin/${data.lang}/type/`,
         async (collectedDatas)=>{
 
             let typeIndexCode =``
