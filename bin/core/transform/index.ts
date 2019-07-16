@@ -8,7 +8,7 @@ const data: {
     interfaceVaraible?: ts.Identifier
     interfaceVaraibleIsHoisted: boolean
 } = {
-    srcPath: path.resolve(`${process.cwd()}/src`),
+    srcPath: path.resolve(`${process.cwd()}`),
     interfaceVaraibleIsHoisted: false
 }
 
@@ -29,77 +29,105 @@ export default Hook({
         node,
         ctx
     }) => {
+
         // Data Check
         if(!data.interfaceVaraible) return
 
         // Overload only src folder codes
         let filePath = path.resolve(sourceFile.fileName)
-        if(filePath.indexOf(data.srcPath) == -1) return
+        let isPathMatch = false
+        for(let pathSuffix of ['/src', '/test']){
+            let fixedPath = path.resolve(`${process.cwd()}${pathSuffix}`)
+            if(filePath.indexOf(fixedPath) != -1){
+                isPathMatch = true
+                data.srcPath = fixedPath
+                break
+            }
+        }
+
+        // If Src Folder Doesn't Match
+        if(!isPathMatch) return
 
         /**
          * @description
-         * Operator Overload
-         * - Compare Function (Binary Expression)
-         *   - Rule Condition
-         *   - Value Condition
+         * Typescript Operator-Overload
+         * 
+         * 1. `Compare` Function Context Override
+         * 2. `And` Function Context Override
          */
-        let overrideContext =
-            Helper.compareOverride(
-                node, data.interfaceVaraible)
+        let overrideOps = [
+            Helper.compareOverload,
+            Helper.andOrOverload('and'),
+            Helper.andOrOverload('or'),
+        ]
+        for(let overrideOp of overrideOps){
+            let overrideContext =
+                Helper.operatorOverload(
+                    node,
+                    program,
+                    data,
 
-        if(overrideContext){
-            // Check interface is used
-            data.interfaceVaraibleIsHoisted = true
-            return overrideContext
+                    // Only Process Binary Expression Overload
+                    Helper.binaryExpressionOverload,
+
+                    // Overrided Context Generator
+                    overrideOp
+                )
+            if(overrideContext) return overrideContext
         }
 
         /**
          * @description
-         * Operator Overload
-         * - Compare Function (Binary Expression)
-         *   - Rule Condition
-         *   - Value Condition
+         * Typescript Operator-Overload
+         * 
+         * - `Not` Function Context Override
          */
-        if(ts['isUnaryExpression'](node)){
-            // To Unary Rule Condition Definition Support
-            if(Helper.checkNodeIsTopCondition(node)){
-                let symbol = program.getTypeChecker().getSymbolAtLocation(node)
+        if(ts.isPrefixUnaryExpression(node)){
+            if(node.operator == ts.SyntaxKind.ExclamationToken){
 
-                if(symbol != undefined){
-                    if(ts.isVariableDeclaration(symbol.valueDeclaration)){
-                        if(symbol.valueDeclaration.initializer != undefined){
-                            console.log(symbol.valueDeclaration.initializer.getText())
-                            console.log(ts.isBinaryExpression(symbol.valueDeclaration.initializer))
+                let property = 
+                // interface_1.Value.compare
+                ts.createPropertyAccess(
+    
+                    // interface_1.Value
+                    ts.createPropertyAccess(
+                        data.interfaceVaraible,
+                        ts.createIdentifier('Value')
+                    ),
+                    ts.createIdentifier('not')
+                )
 
-                            let overrideContext = 
-                                Helper.compareOverride(
-                                    symbol.valueDeclaration.initializer,
-                                    data.interfaceVaraible,
-                                    true // Fore Apply Top Condition
-                                )
-
-                            if(overrideContext){
-                                // Check interface is used
-                                data.interfaceVaraibleIsHoisted = true
-                                return overrideContext
-                            }
-                        }
-                    }
-                }
+                // interface_1.Value.and()
+                return ts.createCall(
+    
+                    // FunctionName
+                    property,
+    
+                    // Type
+                    undefined,
+    
+                    // Paramaeter
+                    [
+                        node.operand
+                    ]
+                )
             }
+
+            // node.operator
+            // type PrefixUnaryOperator =
+            //    SyntaxKind.PlusPlusToken | SyntaxKind.MinusMinusToken | SyntaxKind.PlusToken | SyntaxKind.MinusToken | SyntaxKind.TildeToken | SyntaxKind.ExclamationToken;
         }
 
         /*
-        Helper.binaryExpressionDisassemble(node, (assembles, collection) => {
-            console.log('COLLECTED!')
-            for(let collectedItem of collection){
-                console.log(`collectedItem: ${collectedItem.getText()}`)
-            }
-            for(let assemble of assembles){
-                console.log(`assemble: ${assemble.getText()}`)
-            }
-        })
+        if(node.getText() == '!Value.attacker()'){
+            console.log(Helper.statementTypeAnalyze(node))
+        }
         */
+
+        /**
+         * @TODO
+         * If Statement Remover
+         */
 
         return
     },
@@ -109,6 +137,7 @@ export default Hook({
         sourceFile,
         ctx
     }) => {
+
         // Data Check
         if(!data.interfaceVaraible) return
 

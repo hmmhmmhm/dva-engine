@@ -1,4 +1,5 @@
 import * as ts from 'typescript'
+import { programFromConfig } from 'typescript-json-schema';
 
 var binaryCollectCount: any = null
 var binaryCollection: any = []
@@ -350,99 +351,272 @@ export default class Helper{
         return false
     }
 
-    static compareOverride(node: ts.Node, interfaceVaraible: ts.Expression, forceApplyTop?: boolean) {
-        // Parse Nested Parenthesize
-        if(ts.isParenthesizedExpression(node))
-            return Helper.compareOverride(node.expression, interfaceVaraible, forceApplyTop)
+    static compareOverload(
+        node: ts.BinaryExpression,
+        interfaceVaraible: ts.Expression,
+        forceApplyTop?: boolean
+    ){
+        let token = node.operatorToken.getText()
 
-        if(ts.isBinaryExpression(node)){
+        // No Deep Type Check
+        if(token == '===') token = '=='
+        if(token == '!==') token = '!='
 
-            // Parse Nested Left Expression
-            if(ts.isParenthesizedExpression(node.left)
-                || ts.isBinaryExpression(node.left)){
-                node.left
-            }
+        switch(token){
+            case '==':
+            case '!=':
+            case '>=':
+            case '<=':
+            case '>':
+            case '<':
 
-            // Debug Only
-            // console.log(`[FOUND] token:${node.operatorToken.getText()}\t left:${node.left.getText()}\t right:${node.right.getText()}`)
+                let compareProperty
 
-            /**
-             * @description
-             * 1. Compare Function Override
-             */
-            let token = node.operatorToken.getText()
+                /**
+                 * Check Node Is Top of Rule.
+                 * 
+                 * Each method of application is
+                 * different when used in values
+                 * and when used in rules.
+                 */
+                if(Helper.checkNodeIsTopCondition(node) || (forceApplyTop === true)){
 
-            // No Deep Type Check
-            if(token == '===') token = '=='
-            if(token == '!==') token = '!='
+                    // Rule Condition
+                    compareProperty = 
+                    // interface_1.Value.compare
+                    ts.createPropertyAccess(
 
-            switch(token){
-                case '==':
-                case '!=':
-                case '>=':
-                case '<=':
-                case '>':
-                case '<':
+                        // interface_1.Value
+                        ts.createPropertyAccess(
+                            interfaceVaraible,
+                            // Yep Hard coding
+                            ts.createIdentifier('Classes.Compiler')
+                        ),
+                        ts.createIdentifier('ruleCompare')
+                    )
 
-                    let coompareProperty
-
-                    /**
-                     * Check Node Is Top of Rule.
-                     * 
-                     * Each method of application is
-                     * different when used in values
-                     * and when used in rules.
-                     */
-                    if(Helper.checkNodeIsTopCondition(node) || (forceApplyTop === true)){
-
-                        // Rule Condition
-                        coompareProperty = 
+                }else{
+                    // Value Condition
+                    compareProperty = 
                         // interface_1.Value.compare
                         ts.createPropertyAccess(
 
                             // interface_1.Value
                             ts.createPropertyAccess(
                                 interfaceVaraible,
-                                // Yep Hard coding
-                                ts.createIdentifier('Classes.Compiler')
+                                ts.createIdentifier('Value')
                             ),
-                            ts.createIdentifier('ruleCompare')
+                            ts.createIdentifier('compare')
                         )
+                }
 
-                    }else{
-                        // Value Condition
-                        coompareProperty = 
-                            // interface_1.Value.compare
-                            ts.createPropertyAccess(
+                // interface_1.Value.compare()
+                return ts.createCall(
 
-                                // interface_1.Value
-                                ts.createPropertyAccess(
-                                    interfaceVaraible,
-                                    ts.createIdentifier('Value')
-                                ),
-                                ts.createIdentifier('compare')
-                            )
-                    }
+                    // FunctionName
+                    compareProperty,
 
-                    // interface_1.Value.compare()
-                    return ts.createCall(
+                    // Type
+                    undefined,
 
-                        // FunctionName
-                        coompareProperty,
+                    // Paramaeter
+                    [
+                        node.left,
+                        ts.createIdentifier(`'${token}'`),
+                        node.right,
+                    ]
+                )
+        }
 
-                        // Type
-                        undefined,
+        return
+    }
 
-                        // Use only one paramaeter
-                        [
-                            // It'll be remove JSDoc
-                            ts.createIdentifier(`${node.left.getText()}`),
-                            ts.createIdentifier(`'${token}'`),
-                            ts.createIdentifier(`${node.right.getText()}`),
-                        ]
+    static andOrOverload(type: 'and' | 'or'){
+        return (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => {
+            let token = node.operatorToken.getText()
+
+            // Check Token List
+            let checkToken
+            if(type == 'and') checkToken = '&&'
+            if(type == 'or') checkToken = '||'
+
+            if(checkToken && (token == checkToken)){
+                // Value Condition
+                let property = 
+                // interface_1.Value.compare
+                ts.createPropertyAccess(
+    
+                    // interface_1.Value
+                    ts.createPropertyAccess(
+                        interfaceVaraible,
+                        ts.createIdentifier('Value')
+                    ),
+                    ts.createIdentifier(type)
+                )
+    
+                // interface_1.Value.and()
+                return ts.createCall(
+    
+                    // FunctionName
+                    property,
+    
+                    // Type
+                    undefined,
+    
+                    // Paramaeter
+                    [
+                        node.left,
+                        node.right,
+                    ]
+                )
+            }
+    
+            return
+        }
+    }
+
+    static binaryExpressionOverload(
+        node: ts.Node,
+        interfaceVaraible: ts.Expression,
+        callback: (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => ts.Expression | undefined,
+        forceApplyTop?: boolean,
+    ){
+        // Parse Nested Parenthesize
+        if(ts.isParenthesizedExpression(node)){
+
+            //
+            if(forceApplyTop === undefined)
+                forceApplyTop = Helper.checkNodeIsTopCondition(node)
+
+            return Helper.binaryExpressionOverload(
+                node.expression,
+                interfaceVaraible,
+                callback,
+                forceApplyTop
+            )
+        }
+
+        if(ts.isBinaryExpression(node)){
+
+            // Parse Nested Left Expression
+            if(ts.isParenthesizedExpression(node.left)
+                || ts.isBinaryExpression(node.left)){
+
+                let overridedExpression =
+                    Helper.binaryExpressionOverload(
+                        node.left,
+                        interfaceVaraible,
+                        callback
                     )
+
+                if(overridedExpression) node.left = overridedExpression
+            }
+
+            // Parse Nested Right Expression
+            if(ts.isParenthesizedExpression(node.right)
+                || ts.isBinaryExpression(node.right)){
+
+                let overridedExpression =
+                    Helper.binaryExpressionOverload(
+                        node.right,
+                        interfaceVaraible,
+                        callback
+                    )
+
+                if(overridedExpression) node.right = overridedExpression
+            }
+
+            // Debug Only
+            // console.log(`[FOUND] token:${node.operatorToken.getText()}\t left:${node.left.getText()}\t right:${node.right.getText()}`)
+
+            let overrideContext =
+                callback(
+                    node,
+                    interfaceVaraible,
+                    forceApplyTop
+                )
+
+            if(overrideContext) return overrideContext
+        }
+        return
+    }
+
+    static operatorOverload(
+        node: ts.Node,
+        program,
+        data,
+        overloader,
+        callback: (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => ts.Expression | undefined
+
+    ){
+
+        /**
+         * @description
+         * Operator Overload
+         * - Compare Function (Binary Expression)
+         *   - Rule Condition
+         *   - Value Condition
+         */
+        let overrideContext =
+        overloader(
+                node,
+                data.interfaceVaraible,
+                callback
+            )
+
+        if(overrideContext){
+            // Check interface is used
+            data.interfaceVaraibleIsHoisted = true
+            return overrideContext
+        }
+
+        /**
+         * @description
+         * Operator Overload
+         * - Compare Function (UnaryExpression)
+         *   - Rule Condition
+         *   - Value Condition
+         */
+        if(ts['isUnaryExpression'](node)){
+            // To Unary Rule Condition Definition Support
+            if(Helper.checkNodeIsTopCondition(node)){
+                let symbol = program.getTypeChecker().getSymbolAtLocation(node)
+
+                if(symbol != undefined){
+                    if(ts.isVariableDeclaration(symbol.valueDeclaration)){
+                        if(symbol.valueDeclaration.initializer != undefined){
+
+                            let overrideContext = 
+                                overloader(
+                                    symbol.valueDeclaration.initializer,
+                                    data.interfaceVaraible,
+                                    callback,
+                                    true // Fore Apply Top Condition
+                                )
+
+                            if(overrideContext){
+                                // Check interface is used
+                                data.interfaceVaraibleIsHoisted = true
+                                return overrideContext
+                            }
+                        }
+                    }
+                }
             }
         }
+
         return
     }
 

@@ -37,7 +37,8 @@ export const Hook = ({
     return function(program: ts.Program, pluginOptions: {}) {
 
         return (ctx: ts.TransformationContext) => {
-            return (sourceFile: ts.SourceFile) => {
+            return (originSourceFile: ts.SourceFile) => {
+                let sourceFile = originSourceFile
 
                 // Initialize Sequqence
                 if(initialize){

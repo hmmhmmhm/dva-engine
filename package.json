@@ -14,13 +14,15 @@
     "rimraf": "^2.6.3",
     "temp-dir": "^2.0.0",
     "ts-node": "^8.3.0",
+    "tsc-watch": "^2.2.1",
     "ttypescript": "^1.5.7",
     "typescript": "^3.5.3",
     "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
-    "start": "npx ttsc",
-    "build": "npx ttsc",
+    "start": "tsc-watch --onSuccess \"ts-node ./bin/core/transform/afterSuccess.ts\" --onFailure \"ts-node ./bin/core/transform/afterFail.ts\" --compiler ttypescript/bin/tsc",
+    "build": "ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
+    "clean": "rm -rf ./dist",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "update": "ts-node ./bin/core/generator"
   },

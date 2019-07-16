@@ -33,15 +33,15 @@
         "experimentalDecorators": true,
     },
     "include": [
-        "./bin/*",
         "./bin/**/*",
-        "./src/*",
-        "./src/**/*", "index.ts",
+        "./src/**/*",
+        "./test/**/*",
     ],
     "awesomeTypescriptLoaderOptions": {
         "reportFiles": [
             "./src/**/*",
-            "./bin/**/*"
+            "./bin/**/*",
+            "./test/**/*",
         ]
     },
     "typeRoots": [
