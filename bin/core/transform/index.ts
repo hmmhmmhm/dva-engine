@@ -21,17 +21,6 @@ export default Hook({
 
         // Create unique variable name in source file
         data.interfaceVaraible = ts.createUniqueName('interface')
-    },
-
-    context: ({
-        program,
-        sourceFile,
-        node,
-        ctx
-    }) => {
-
-        // Data Check
-        if(!data.interfaceVaraible) return
 
         // Overload only src folder codes
         let filePath = path.resolve(sourceFile.fileName)
@@ -47,6 +36,44 @@ export default Hook({
 
         // If Src Folder Doesn't Match
         if(!isPathMatch) return
+    },
+
+    context: ({
+        program,
+        sourceFile,
+        node,
+        ctx
+    }) => {
+
+        // Data Check
+        if(!data.interfaceVaraible) return
+
+        // Overload only src folder codes
+        let isPathMatch = false
+        let filePath = path.resolve(sourceFile.fileName)
+        if(filePath.indexOf(data.srcPath) != -1)
+            isPathMatch = true
+
+        // If Src Folder Doesn't Match
+        if(!isPathMatch) return
+
+        /**
+         * @description
+         * Override the grammar only when it is a specific file name.
+         * 
+         * ※ File name rules to which
+         *    grammatical overrides apply.
+         * - `script.ts`
+         * - `script_*.ts`
+         * - `@*.ts`
+         */
+        {
+            let checkFileName = path.basename(filePath).toLowerCase()
+            let checkFileExt = checkFileName.split('.')[1]
+            if(checkFileName != 'script.ts'
+                && !(checkFileName.indexOf(`script_`) == 0 && checkFileExt =='ts')
+                && !(checkFileName.indexOf(`@`) == 0 && checkFileExt =='ts')) return
+        }
 
         /**
          * @description
@@ -57,8 +84,7 @@ export default Hook({
          */
         let overrideOps = [
             Helper.compareOverload,
-            Helper.andOrOverload('and'),
-            Helper.andOrOverload('or'),
+            Helper.arithmeticOverload()
         ]
         for(let overrideOp of overrideOps){
             let overrideContext =
@@ -112,10 +138,6 @@ export default Hook({
                     ]
                 )
             }
-
-            // node.operator
-            // type PrefixUnaryOperator =
-            //    SyntaxKind.PlusPlusToken | SyntaxKind.MinusMinusToken | SyntaxKind.PlusToken | SyntaxKind.MinusToken | SyntaxKind.TildeToken | SyntaxKind.ExclamationToken;
         }
 
         /*
@@ -127,6 +149,8 @@ export default Hook({
         /**
          * @TODO
          * If Statement Remover
+         * 1. {} 로 다문장일때
+         * 2. {} 없이 단문장 일때
          */
 
         return

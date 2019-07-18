@@ -1,10 +1,326 @@
 import * as ts from 'typescript'
-import { programFromConfig } from 'typescript-json-schema';
 
-var binaryCollectCount: any = null
-var binaryCollection: any = []
+const IS_DEBUG_PRINT = false
 
 export default class Helper{
+    static operatorOverload(
+        node: ts.Node,
+        program,
+        data,
+        overloader,
+        callback: (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => ts.Expression | undefined
+
+    ){
+
+        /**
+         * @description
+         * Operator Overload
+         * - Compare Function (Binary Expression)
+         *   - Rule Condition
+         *   - Value Condition
+         */
+        let overrideContext =
+        overloader(
+                node,
+                data.interfaceVaraible,
+                callback
+            )
+
+        if(overrideContext){
+            // Check interface is used
+            data.interfaceVaraibleIsHoisted = true
+            return overrideContext
+        }
+
+        /**
+         * @description
+         * Operator Overload
+         * - Compare Function (UnaryExpression)
+         *   - Rule Condition
+         *   - Value Condition
+         */
+        if(ts['isUnaryExpression'](node)){
+            // To Unary Rule Condition Definition Support
+            if(Helper.checkNodeIsTopCondition(node)){
+                let symbol = program.getTypeChecker().getSymbolAtLocation(node)
+
+                if(symbol != undefined){
+                    if(ts.isVariableDeclaration(symbol.valueDeclaration)){
+                        if(symbol.valueDeclaration.initializer != undefined){
+
+                            let overrideContext = 
+                                overloader(
+                                    symbol.valueDeclaration.initializer,
+                                    data.interfaceVaraible,
+                                    callback,
+                                    true // Fore Apply Top Condition
+                                )
+
+                            if(overrideContext){
+                                // Check interface is used
+                                data.interfaceVaraibleIsHoisted = true
+                                return overrideContext
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return
+    }
+
+    static binaryExpressionOverload(
+        node: ts.Node,
+        interfaceVaraible: ts.Expression,
+        callback: (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => ts.Expression | void,
+        forceApplyTop?: boolean,
+
+    ): ts.Expression | undefined {
+
+        // Parse Nested Parenthesize
+        if(ts.isParenthesizedExpression(node)){
+            if(forceApplyTop === undefined)
+                forceApplyTop = Helper.checkNodeIsTopCondition(node)
+
+            return Helper.binaryExpressionOverload(
+                node.expression,
+                interfaceVaraible,
+                callback,
+                forceApplyTop
+            )
+        }
+
+        if(ts.isBinaryExpression(node)){
+
+            // Parse Nested Left Expression
+            if(ts.isParenthesizedExpression(node.left)
+                || ts.isBinaryExpression(node.left)){
+
+                let overridedExpression =
+                    Helper.binaryExpressionOverload(
+                        node.left,
+                        interfaceVaraible,
+                        callback
+                    )
+
+                if(overridedExpression)
+                    node.left = overridedExpression
+            }
+
+            // Parse Nested Right Expression
+            if(ts.isParenthesizedExpression(node.right)
+                || ts.isBinaryExpression(node.right)){
+
+                let overridedExpression =
+                    Helper.binaryExpressionOverload(
+                        node.right,
+                        interfaceVaraible,
+                        callback
+                    )
+
+                if(overridedExpression)
+                    node.right = overridedExpression
+            }
+
+            let overrideContext =
+                callback(
+                    node,
+                    interfaceVaraible,
+                    forceApplyTop
+                )
+
+            if(overrideContext)
+                return overrideContext
+        }
+        return
+    }
+
+    /**
+    * @description
+    * Check node is top condition
+    * of overwatch workshop condition
+    * 
+    * @example
+    * 
+    * new Rule({
+    *  condition: []
+    * })
+    */
+    static checkNodeIsTopCondition(node: ts.Node): boolean {
+
+       // Check [...]
+        if(ts.isArrayLiteralExpression(node.parent)){
+            // Check :
+            if(ts.isPropertyAssignment(node.parent.parent)){
+                // Check condition:
+                if(node.parent.parent.name.getText() == 'condition'){
+                    // Check {...}
+                    if(ts.isObjectLiteralExpression(node.parent.parent.parent)){
+                        // Check new
+                        if(ts.isNewExpression(node.parent.parent.parent.parent)){
+                            // Check Rule
+                            if(node.parent.parent.parent.parent.expression.getText() == 'Rule')
+                                return true
+                        }
+                    }
+                }
+            }
+        }
+        return false
+    }
+
+    static compareOverload(
+        node: ts.BinaryExpression,
+        interfaceVaraible: ts.Expression,
+        forceApplyTop?: boolean
+    ){
+        let token = node.operatorToken.getText()
+
+        // No Deep Type Check
+        if(token == '===') token = '=='
+        if(token == '!==') token = '!='
+
+        switch(token){
+            case '==':
+            case '!=':
+            case '>=':
+            case '<=':
+            case '>':
+            case '<':
+
+                let compareProperty
+
+                /**
+                 * Check Node Is Top of Rule.
+                 * 
+                 * Each method of application is
+                 * different when used in values
+                 * and when used in rules.
+                 */
+                if(Helper.checkNodeIsTopCondition(node) || (forceApplyTop === true)){
+
+                    // Rule Condition
+                    compareProperty = 
+
+                        // interface_1.Value.compare
+                        ts.createPropertyAccess(
+
+                            // interface_1.Value
+                            ts.createPropertyAccess(
+                                interfaceVaraible,
+                                // Yep Hard coding
+                                ts.createIdentifier('Classes.Compiler')
+                            ),
+                            ts.createIdentifier('ruleCompare')
+                        )
+
+                }else{
+                    // Value Condition
+                    compareProperty = 
+                        // interface_1.Value.compare
+                        ts.createPropertyAccess(
+
+                            // interface_1.Value
+                            ts.createPropertyAccess(
+                                interfaceVaraible,
+                                ts.createIdentifier('Value')
+                            ),
+                            ts.createIdentifier('compare')
+                        )
+                }
+
+                // interface_1.Value.compare()
+                return ts.createCall(
+
+                    // FunctionName
+                    compareProperty,
+
+                    // Type
+                    undefined,
+
+                    // Paramaeter
+                    [
+                        node.left,
+                        ts.createIdentifier(`'${token}'`),
+                        node.right,
+                    ]
+                )
+        }
+
+        return
+    }
+
+    static arithmeticOverload(){
+        return (
+            node: ts.BinaryExpression,
+            interfaceVaraible: ts.Expression,
+            forceApplyTop?: boolean
+        ) => {
+
+            // Check Token List
+            let tokenMap = {
+                and: '&&',
+                or: '||',
+
+                add: '+',
+                subtract: '-',
+                divide: '/',
+                multiply: '*',
+
+                modulo: '%',
+                raiseToPower: '**'
+            }
+
+            for(let type of Object.keys(tokenMap)){
+                let needToMatchToken = tokenMap[type]
+
+                if(needToMatchToken &&
+                    (node.operatorToken.getText() == needToMatchToken)
+                ){
+                    // Value Condition
+                    let property = 
+                        // interface_1.Value.compare
+                        ts.createPropertyAccess(
+
+                            // interface_1.Value
+                            ts.createPropertyAccess(
+                                interfaceVaraible,
+                                ts.createIdentifier('Value')
+                            ),
+                            ts.createIdentifier(type)
+                        )
+
+                    // interface_1.Value.and()
+                    return ts.createCall(
+        
+                        // FunctionName
+                        property,
+        
+                        // Type
+                        undefined,
+        
+                        // Paramaeter
+                        [
+                            node.left,
+                            node.right,
+                        ]
+                    )
+                }
+            }
+    
+            return
+        }
+    }
+
     static statementTypeAnalyze(node){
         let opt: any = []
         let typeList = [
@@ -177,464 +493,4 @@ export default class Helper{
         }
         return opt
     }
-
-    /**
-     * 괄호로 정의된 연산자 문법의
-     * 괄호 깊이가 어디까지인지를 확인합니다.
-     * 
-     * 아예  괄호가 없으면 0을 반환하며 
-     * (c)+(a) 와 같이 컴파일러에서 무시되는
-     * 단일 객체가 괄호로 감싸진 것은 괄호취급하지 않습니다.
-     * 
-     * (예: 우선순위 적용이 무의미한 괄호)
-     * 
-     * @param node 
-     * @param collectedData 
-     * @param depth 
-     */
-    static binaryCollectDepth(node, collectedData: any = [], depth = 0){
-        if(ts.isParenthesizedExpression(node.left)
-            || ts.isBinaryExpression(node.left)){
-            //console.log(`PATH LEFT: ${node.left.getText()}`)
-            collectedData.push(node.left)
-            ++depth
-        }
-        if(ts.isParenthesizedExpression(node.right)
-            || ts.isBinaryExpression(node.right)){
-            //console.log(`PATH RIGHT: ${node.right.getText()}`)
-            collectedData.push(node.right)
-            ++depth
-        }
-
-        if(collectedData.length != 0){
-            for(;;){
-                if(collectedData.length == 0) break
-                let collectedItem = collectedData.shift()
-
-                if(ts.isParenthesizedExpression(collectedItem)){
-                    if(ts.isBinaryExpression(collectedItem.expression))
-                        collectedItem = collectedItem.expression
-                    //console.log(`PACK:`, collectedItem.getText())
-                    //++depth
-                }
-
-                if(ts.isBinaryExpression(collectedItem)){
-                    // ITS  NOT INVOLVED TO  KNOW  DEPTH
-                    // console.log(`(check lefts: ${collectedItem.left.getText()})`, ts.isBinaryExpression(collectedItem.left))
-                    // console.log(`(check right: ${collectedItem.right.getText()})`, ts.isBinaryExpression(collectedItem.right))
-
-                    if(ts.isParenthesizedExpression(collectedItem.left)
-                        || ts.isBinaryExpression(collectedItem.left)){
-
-                        let ignoreDepthExtend = false
-                        if(ts.isParenthesizedExpression(collectedItem.left)){
-                            if(collectedItem.left.expression.getChildCount() == 0)
-                                ignoreDepthExtend = true
-                        }
-                        //console.log(`PARENT.left: ${collectedItem.left.getText()}`, ts.isParenthesizedExpression(collectedItem.left), ts.isBinaryExpression(collectedItem.left))
-
-                        if(!ignoreDepthExtend){
-                            collectedData.push(collectedItem.left)
-                            ++depth
-                        }
-                    }
-                    if(ts.isParenthesizedExpression(collectedItem.right)
-                        || ts.isBinaryExpression(collectedItem.right)){
-
-                        let ignoreDepthExtend = false
-                        if(ts.isParenthesizedExpression(collectedItem.right)){
-                            if(collectedItem.right.expression.getChildCount() == 0)
-                                ignoreDepthExtend = true
-                        }
-                        //console.log(`PARENT.right: ${collectedItem.right.getText()}`)
-
-                        if(!ignoreDepthExtend){
-                            collectedData.push(collectedItem.right)
-                            ++depth
-                        }
-                    }
-                }
-            }
-        }
-
-        return depth
-    }
-
-    /**
-     * 괄호로 우선순위가 정의된 연산자 문법을
-     * 우선순위 순으로 쪼개서 반환합니다.
-     * 
-     * @param node 
-     * @param callback 
-     */
-    static binaryExpressionCollect(node : ts.BinaryExpression, callback : Function){
-        if(binaryCollectCount === null){
-            let depth = this.binaryCollectDepth(node)
-            //console.log(`DEPTH: ${depth}`)
-            binaryCollectCount = depth+1 //  +1 is it full syntax
-        }
-        if(binaryCollectCount-- == 0){
-            callback(binaryCollection.reverse())
-            binaryCollection = []
-            binaryCollectCount = null
-        }else{
-            binaryCollection.push(node)
-        }
-    }
-
-    /**
-     * 연산자 문법에서 쓰인 각 객체를 
-     * 우선순위가 높으면서 왼쪽에 위치한 값 순으로
-     * 배열화해서 반환하여 줍니다.
-     * 
-     * @param node 
-     * @param callback 
-     */
-    static binaryExpressionDisassemble(node : ts.BinaryExpression, callback : Function){
-        Helper.binaryExpressionCollect(node, (collection)=>{
-            let assembles: any = []
-            for(let collectedItem of collection){
-                if(ts.isBinaryExpression(collectedItem)){
-                    if(!ts.isParenthesizedExpression(collectedItem.left)){
-                        if(!ts.isBinaryExpression(collectedItem.left))
-                            assembles.push(collectedItem.left)
-                    }else{
-                        if(collectedItem.left.expression.getChildCount() == 0)
-                            if(!ts.isBinaryExpression(collectedItem.left))
-                                assembles.push(collectedItem.left.expression)
-                    }
-                    if(!ts.isParenthesizedExpression(collectedItem.right)){
-                        if(!ts.isBinaryExpression(collectedItem.right))
-                            assembles.push(collectedItem.right)
-                    }else{
-                        if(collectedItem.right.expression.getChildCount() == 0)
-                            if(!ts.isBinaryExpression(collectedItem.right))
-                                assembles.push(collectedItem.right.expression)
-                    }
-                }
-            }
-
-            callback(assembles, collection)
-        })
-    }
-
-    /**
-    * @description
-    * Check node is top
-    * 
-    * @example
-    * 
-    * new Rule({
-    *  condition: []
-    * })
-    */
-    static checkNodeIsTopCondition(node: ts.Node): boolean {
-
-       // Check [...]
-        if(ts.isArrayLiteralExpression(node.parent)){
-            // Check :
-            if(ts.isPropertyAssignment(node.parent.parent)){
-                // Check condition:
-                if(node.parent.parent.name.getText() == 'condition'){
-                    // Check {...}
-                    if(ts.isObjectLiteralExpression(node.parent.parent.parent)){
-                        // Check new
-                        if(ts.isNewExpression(node.parent.parent.parent.parent)){
-                            // Check Rule
-                            if(node.parent.parent.parent.parent.expression.getText() == 'Rule')
-                                return true
-                        }
-                    }
-                }
-            }
-        }
-        return false
-    }
-
-    static compareOverload(
-        node: ts.BinaryExpression,
-        interfaceVaraible: ts.Expression,
-        forceApplyTop?: boolean
-    ){
-        let token = node.operatorToken.getText()
-
-        // No Deep Type Check
-        if(token == '===') token = '=='
-        if(token == '!==') token = '!='
-
-        switch(token){
-            case '==':
-            case '!=':
-            case '>=':
-            case '<=':
-            case '>':
-            case '<':
-
-                let compareProperty
-
-                /**
-                 * Check Node Is Top of Rule.
-                 * 
-                 * Each method of application is
-                 * different when used in values
-                 * and when used in rules.
-                 */
-                if(Helper.checkNodeIsTopCondition(node) || (forceApplyTop === true)){
-
-                    // Rule Condition
-                    compareProperty = 
-                    // interface_1.Value.compare
-                    ts.createPropertyAccess(
-
-                        // interface_1.Value
-                        ts.createPropertyAccess(
-                            interfaceVaraible,
-                            // Yep Hard coding
-                            ts.createIdentifier('Classes.Compiler')
-                        ),
-                        ts.createIdentifier('ruleCompare')
-                    )
-
-                }else{
-                    // Value Condition
-                    compareProperty = 
-                        // interface_1.Value.compare
-                        ts.createPropertyAccess(
-
-                            // interface_1.Value
-                            ts.createPropertyAccess(
-                                interfaceVaraible,
-                                ts.createIdentifier('Value')
-                            ),
-                            ts.createIdentifier('compare')
-                        )
-                }
-
-                // interface_1.Value.compare()
-                return ts.createCall(
-
-                    // FunctionName
-                    compareProperty,
-
-                    // Type
-                    undefined,
-
-                    // Paramaeter
-                    [
-                        node.left,
-                        ts.createIdentifier(`'${token}'`),
-                        node.right,
-                    ]
-                )
-        }
-
-        return
-    }
-
-    static andOrOverload(type: 'and' | 'or'){
-        return (
-            node: ts.BinaryExpression,
-            interfaceVaraible: ts.Expression,
-            forceApplyTop?: boolean
-        ) => {
-            let token = node.operatorToken.getText()
-
-            // Check Token List
-            let checkToken
-            if(type == 'and') checkToken = '&&'
-            if(type == 'or') checkToken = '||'
-
-            if(checkToken && (token == checkToken)){
-                // Value Condition
-                let property = 
-                // interface_1.Value.compare
-                ts.createPropertyAccess(
-    
-                    // interface_1.Value
-                    ts.createPropertyAccess(
-                        interfaceVaraible,
-                        ts.createIdentifier('Value')
-                    ),
-                    ts.createIdentifier(type)
-                )
-    
-                // interface_1.Value.and()
-                return ts.createCall(
-    
-                    // FunctionName
-                    property,
-    
-                    // Type
-                    undefined,
-    
-                    // Paramaeter
-                    [
-                        node.left,
-                        node.right,
-                    ]
-                )
-            }
-    
-            return
-        }
-    }
-
-    static binaryExpressionOverload(
-        node: ts.Node,
-        interfaceVaraible: ts.Expression,
-        callback: (
-            node: ts.BinaryExpression,
-            interfaceVaraible: ts.Expression,
-            forceApplyTop?: boolean
-        ) => ts.Expression | undefined,
-        forceApplyTop?: boolean,
-    ){
-        // Parse Nested Parenthesize
-        if(ts.isParenthesizedExpression(node)){
-
-            //
-            if(forceApplyTop === undefined)
-                forceApplyTop = Helper.checkNodeIsTopCondition(node)
-
-            return Helper.binaryExpressionOverload(
-                node.expression,
-                interfaceVaraible,
-                callback,
-                forceApplyTop
-            )
-        }
-
-        if(ts.isBinaryExpression(node)){
-
-            // Parse Nested Left Expression
-            if(ts.isParenthesizedExpression(node.left)
-                || ts.isBinaryExpression(node.left)){
-
-                let overridedExpression =
-                    Helper.binaryExpressionOverload(
-                        node.left,
-                        interfaceVaraible,
-                        callback
-                    )
-
-                if(overridedExpression) node.left = overridedExpression
-            }
-
-            // Parse Nested Right Expression
-            if(ts.isParenthesizedExpression(node.right)
-                || ts.isBinaryExpression(node.right)){
-
-                let overridedExpression =
-                    Helper.binaryExpressionOverload(
-                        node.right,
-                        interfaceVaraible,
-                        callback
-                    )
-
-                if(overridedExpression) node.right = overridedExpression
-            }
-
-            // Debug Only
-            // console.log(`[FOUND] token:${node.operatorToken.getText()}\t left:${node.left.getText()}\t right:${node.right.getText()}`)
-
-            let overrideContext =
-                callback(
-                    node,
-                    interfaceVaraible,
-                    forceApplyTop
-                )
-
-            if(overrideContext) return overrideContext
-        }
-        return
-    }
-
-    static operatorOverload(
-        node: ts.Node,
-        program,
-        data,
-        overloader,
-        callback: (
-            node: ts.BinaryExpression,
-            interfaceVaraible: ts.Expression,
-            forceApplyTop?: boolean
-        ) => ts.Expression | undefined
-
-    ){
-
-        /**
-         * @description
-         * Operator Overload
-         * - Compare Function (Binary Expression)
-         *   - Rule Condition
-         *   - Value Condition
-         */
-        let overrideContext =
-        overloader(
-                node,
-                data.interfaceVaraible,
-                callback
-            )
-
-        if(overrideContext){
-            // Check interface is used
-            data.interfaceVaraibleIsHoisted = true
-            return overrideContext
-        }
-
-        /**
-         * @description
-         * Operator Overload
-         * - Compare Function (UnaryExpression)
-         *   - Rule Condition
-         *   - Value Condition
-         */
-        if(ts['isUnaryExpression'](node)){
-            // To Unary Rule Condition Definition Support
-            if(Helper.checkNodeIsTopCondition(node)){
-                let symbol = program.getTypeChecker().getSymbolAtLocation(node)
-
-                if(symbol != undefined){
-                    if(ts.isVariableDeclaration(symbol.valueDeclaration)){
-                        if(symbol.valueDeclaration.initializer != undefined){
-
-                            let overrideContext = 
-                                overloader(
-                                    symbol.valueDeclaration.initializer,
-                                    data.interfaceVaraible,
-                                    callback,
-                                    true // Fore Apply Top Condition
-                                )
-
-                            if(overrideContext){
-                                // Check interface is used
-                                data.interfaceVaraibleIsHoisted = true
-                                return overrideContext
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        return
-    }
-
-    /*
-    var d = ((a + a) + b + b)+ c + c
-    isVariableDeclarationList
-
-    var d = ((a + a) + b + b)+ c + c
-    isVariableStatement
-
-    ((a + a) + b + b)+ c + c
-    isBinaryExpression
-
-    input start: ((a + a) + b + b)+ c + c
-    input start: ((a + a) + b + b)+ c
-    input start: (a + a) + b + b
-    input start: (a + a) + b
-    input start: a + a
-
-    */
 }

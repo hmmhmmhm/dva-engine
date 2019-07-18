@@ -15,8 +15,7 @@ export interface ISetRespawnMaxTime {
      */
     player: ValuePlayerType
     /**
-     * 최대 부활 시간을
-     * 설정할 플레이어입니다.
+     * 사망과 부활 사이의 시간(초)입니다.
      */
     time: ValueNumberType
 }

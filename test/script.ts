@@ -12,21 +12,42 @@ import { Type, Value, Action, RuleEvent, Level, Match, Util, Classes } from '../
  */
 const { Rule, Player, Event, Entity, Team, Vector } = Classes
 
-// Value Compare
+// Check Compare
 let checkCompareValue1 = Value.attacker() == Value.attacker()
 let checkCompareValue2 = ((checkCompareValue1 >= (checkCompareValue1 < checkCompareValue1)))
 
-// Value And
+// Check And
 let checkAndValue1 = Value.attacker() && Value.attacker()
 
-// Value Or
+// Check Or
 let checkOrValue1 = Value.attacker() || Value.attacker()
 
-// Value Not
+// Check Not
 let checkNotValue1 = !Value.attacker()
 let checkNotValue2 = (!Value.attacker())
 let checkNotValue3 = ((!Value.attacker()))
 let checkNotValue4 = !(checkNotValue1 && checkAndValue1)
+
+// Check Operator
+let a = Value.number(1)
+let b = Value.number(2)
+let c = Value.number(3)
+let d = Value.number(4)
+let e = Value.number(4)
+let f = Value.number(4)
+let g = Value.number(4)
+let h = Value.number(4)
+let i = Value.number(4)
+let j = Value.number(4)
+let k = Value.number(4)
+let l = Value.number(4)
+let m = Value.number(4)
+let n = Value.number(4)
+let o = Value.number(4)
+
+// @ts-ignore
+let checkOperator1 = ((a*b)/c+d) % e + (f+g+h+i) - (j-(k*l/m) - n * o)
+
 
 /***
  * @TODO
