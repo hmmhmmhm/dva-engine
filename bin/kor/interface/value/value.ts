@@ -204,6 +204,9 @@ import {
     IXComponentOf,
     IYComponentOf,
     IZComponentOf,
+    IServerLoad,
+    IServerLoadAverage,
+    IServerLoadPeak,
 
 } from './child'
 
@@ -1092,6 +1095,30 @@ export interface IValue {
      * 결과값은 0이 됩니다.
      */
     scoreOf: IScoreOf
+
+    /**
+     * 현재 게임 인스턴스의 CPU 사용률(%)입니다.
+     * 이 수치가 100에 가까워지거나
+     * 100을 초과하면 과도한 리소스 사용으로
+     * 인스턴스가 종료될 가능성이 크게 증가합니다.
+     */
+    serverLoad: IServerLoad
+
+    /**
+     * 최근 2초간 게임 인스턴스의 평균 CPU 사용률(%)입니다.
+     * 이 수치가 100에 가까워지거나 100을 초과하면
+     * 과도한 리소스 사용으로 인스턴스가
+     * 종료될 가능성이 크게 증가합니다.
+     */
+    serverLoadAverage: IServerLoadAverage
+
+    /**
+     * 최근 2초간 게임 인스턴스의 최대 CPU 사용률(%)입니다.
+     * 이 수치가 100에 가까워지거나 100을 초과하면
+     * 과도한 리소스 사용으로 인스턴스가
+     * 종료될 가능성이 크게 증가합니다.
+     */
+    serverLoadPeak: IServerLoadPeak
 
     /**
      * 지정된 각(단위: 도)의 사인 값입니다.

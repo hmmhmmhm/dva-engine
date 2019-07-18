@@ -130,5 +130,13 @@
             "entityExists",
             "hasSpawned"
         ]
+    },
+    "server": {
+        "independent": [
+            "serverLoad",
+            "serverLoadAverage",
+            "serverLoadPeak"
+        ],
+        "dependent": []
     }
 }

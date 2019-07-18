@@ -69,6 +69,9 @@ import {
     IVerticalAngleTowards,
     IVerticalFacingAngleOf,
     IVerticalSpeedOf,
+    IServerLoad,
+    IServerLoadAverage,
+    IServerLoadPeak,
 
 } from '../../interface/value/child'
 
@@ -155,3 +158,6 @@ export type ValueNumberType
     | IVerticalAngleTowards
     | IVerticalFacingAngleOf
     | IVerticalSpeedOf
+    | IServerLoad
+    | IServerLoadAverage
+    | IServerLoadPeak
