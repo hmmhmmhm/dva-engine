@@ -232,3 +232,42 @@ export const pureTypeNameExtractor = (name) => {
 
     return typeNames.join('')
 }
+
+const allUpperCaseToPascalCase = (
+    name,
+    doSpace = true,
+    prefixRemove = false,
+    prefixInstall = false
+)=>{
+    let camelCase = ''
+
+    if(prefixRemove && name[0] == 'I'){
+        let temp = name.split('')
+        temp.shift()
+        name = temp.join('')
+    }
+
+    for(let alphabetIndex in name.split('')){
+        let alphabet = name[alphabetIndex]
+
+        if(Number(alphabetIndex) == 0){
+            camelCase += alphabet.toUpperCase()
+            continue
+        }
+
+        try{
+            let prevChar = name[Number(alphabetIndex)-1]
+            if(prevChar == ' '){
+                camelCase += alphabet.toUpperCase()
+                continue
+            }
+        }catch(e){}
+
+        camelCase += alphabet.toLowerCase()
+    }
+
+    if(prefixInstall && name[0] != 'I')
+        name = `I${name}`
+
+    return camelCase
+}
