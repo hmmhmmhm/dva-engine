@@ -13,12 +13,12 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
     let { Logger } = data
 
     // Sequence Logic
-    Logger.debug('Typescript Interface Initialize...')
-    data.interfaces = await Util.parseInterfaces(`${process.cwd()}/bin/${data.lang}/interface/index.ts`)
+    Logger.debug(`[${data.lang.toUpperCase()}] Typescript Interface Initialize...`)
+    data.interfaces = await Util.parseInterfaces(`${process.cwd()}/bin/release/${data.lang}/interface/index.ts`)
 
     // Collected Interfaces write
     // fs.writeFileSync(`${resolverPath}/test.json`, JSON.stringify(interfaces, null, 2))
 
-    Logger.debug('Typescript Interface Initialized.')
+    Logger.debug(`[${data.lang.toUpperCase()}] Typescript Interface Initialized.`)
     resolve()
 })

@@ -35,54 +35,59 @@ export const collectInterfaceFiles = async (
         fileData: string
         interfaceName: string
         typeName: string
-    }[]) => Promise<void>
+    }[]) => Promise<void>,
+
+    // No Collect Index File
+    noIndexFile: Boolean = true
 ) => {
-    
+
     // Search all of the child folders
-    NestedFolder(folderPath, async (folders)=>{
-
-        let data: any = []
+    return new Promise((resolve)=>{
+        NestedFolder(folderPath, async (folders)=>{
+            let data: any = []
+        
+            for(let folder of folders){
+                let files = fs.readdirSync(folder.staticPath)
     
-        for(let folder of folders){
-            let files = fs.readdirSync(folder.staticPath)
+                // Search all of the files
+                for(let file of files){
+                    let filePath = folder.staticPath + '/' + file
+                    let stats = fs.statSync(filePath)
+                    if(stats.isDirectory()) continue
+                    if(noIndexFile && file == 'index.ts') continue
     
-            // Search all of the files
-            for(let file of files){
-                let filePath = folder.staticPath + '/' + file
-                let stats = fs.statSync(filePath)
-                if(stats.isDirectory()) continue
-                if(file == 'index.ts') continue
-
-                let fileData = String(fs.readFileSync(filePath))
-                let interfaceName = ''
-                let typeName = ``
-
-                try{
-                    interfaceName = 
-                        fileData.split('export interface ')[1]
-                            .split(' {')[0]
-                            .split(' ').join('')
-                }catch(e){}
-
-                try{
-                    typeName =
-                        fileData.split('export type ')[1]
-                            .split('\n')[0]
-                            .split(' ').join('')
-                }catch(e){}
-
-                data.push({
-                    fileName: file,
-                    filePath,
-                    subPath: folder.subPath,
-                    fileData,
-                    interfaceName,
-                    typeName
-                })
+                    let fileData = String(fs.readFileSync(filePath))
+                    let interfaceName = ''
+                    let typeName = ``
+    
+                    try{
+                        interfaceName = 
+                            fileData.split('export interface ')[1]
+                                .split(' {')[0]
+                                .split(' ').join('')
+                    }catch(e){}
+    
+                    try{
+                        typeName =
+                            fileData.split('export type ')[1]
+                                .split('\n')[0]
+                                .split(' ').join('')
+                    }catch(e){}
+    
+                    data.push({
+                        fileName: file,
+                        filePath,
+                        subPath: folder.subPath,
+                        fileData,
+                        interfaceName,
+                        typeName
+                    })
+                }
             }
-        }
-
-        await callback(data)
+    
+            await callback(data)
+            resolve()
+        })
     })
 }
 

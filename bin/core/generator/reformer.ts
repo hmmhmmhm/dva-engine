@@ -14,13 +14,13 @@ import fs from 'fs'
  */
 export default () => {
     return Sequence(async ({resolve, reject, data: preData})=>{
-        
+
         // Generator Data
         let data: IData = preData
         let { Logger } = data
 
         // Sequence Logic
-        Logger.debug(`Entering Reform Generator...`)
+        Logger.debug(`[${data.lang.toUpperCase()}] Entering Reform Generator...`)
 
         // Check overwatch interfaces data is exist
         if(!data.interfaces || data.interfaces == undefined){
@@ -29,14 +29,13 @@ export default () => {
         }
         
         // Create child resolver folder
-        data.reformerPath = `${process.cwd()}/bin/${data.lang}/reformer/child/`
+        data.reformerPath = `${process.cwd()}/bin/release/${data.lang}/reformer/child/`
         try{ rimraf.sync(data.reformerPath) } catch(e){}
         try{ fs.mkdirSync(data.reformerPath) } catch(e){
             reject()
             return
         }
 
-        //const resolverPath = `${process.cwd()}/bin/${data.lang}/interface/value/child/`
         for(let interfaceType of Object.keys(reformerData)){
             let interfaceTypePascalCase = Util.camelCaseToPascalCase(interfaceType, false, false)
             let reformCode = ``
@@ -178,7 +177,7 @@ export default () => {
             }
 
             reformCode += `}\n\nexport default ${interfaceTypePascalCase}`
-            Logger.debug(`Created Reformer <${interfaceType.toLowerCase()}.ts>`)
+            Logger.debug(`[${data.lang.toUpperCase()}] Created Reformer <${interfaceType.toLowerCase()}.ts>`)
             fs.writeFileSync(`${data.reformerPath}/${interfaceType.toLowerCase()}.ts`, reformCode)
         }
 
@@ -186,7 +185,7 @@ export default () => {
         for(let interfaceType of Object.keys(reformerData))
             indexCode += `export * from './${interfaceType}'\n`
         fs.writeFileSync(`${data.reformerPath}/index.ts`, indexCode)
-        Logger.debug(`Created Reformer Index <index.ts>`)
+        Logger.debug(`[${data.lang.toUpperCase()}] Created Reformer Index <index.ts>`)
 
         resolve()
     })

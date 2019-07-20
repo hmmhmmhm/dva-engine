@@ -15,9 +15,9 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
     let { Logger } = data
 
     // Sequence Logic
-    Logger.debug('Entering Type Generate...')
+    Logger.debug(`[${data.lang.toUpperCase()}] Entering Type Generate...`)
     Util.collectInterfaceFiles(
-        `${process.cwd()}/bin/${data.lang}/type/`,
+        `${process.cwd()}/bin/release/${data.lang}/type/`,
         async (collectedDatas)=>{
 
             let typeIndexCode =``
@@ -91,7 +91,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                                     stringTypes.push (resolverType)
                                     continue
                                 }
-                                Logger.critical(`Undetected resolverType: <${resolverType}> (type/${fileName})`)
+                                Logger.critical(`[${data.lang.toUpperCase()}] Undetected resolverType: <${resolverType}> (type/${fileName})`)
                             }
                         }
                     }
@@ -110,7 +110,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
                     if(resolverCode.length != 0){
                         fs.writeFileSync(`${data.resolverPath}/type/${fileName}`, resolverCode)
-                        Logger.debug(`Created Resolver <type/${fileName}>`)
+                        Logger.debug(`[${data.lang.toUpperCase()}] Created Resolver <type/${fileName}>`)
 
                         let upperCaseFileName = lowerCaseFileName
                         let upperCaseFileNameArr = upperCaseFileName.split('')
@@ -123,7 +123,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                     }
 
                 }catch(e){
-                    Logger.critical('Generator Crashed#1')
+                    Logger.critical(`[${data.lang.toUpperCase()}] Generator Crashed#1`)
                     console.log(e)
                     reject()
                     return
@@ -132,7 +132,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
             // Create child index
             fs.writeFileSync(`${data.resolverPath}/type/index.ts`, typeIndexCode)
-            Logger.debug('Created Type Resolver <type/index.ts>')
+            Logger.debug(`[${data.lang.toUpperCase()}] Created Type Resolver <type/index.ts>`)
         }
     )
 

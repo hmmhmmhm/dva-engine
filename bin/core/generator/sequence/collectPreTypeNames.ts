@@ -14,7 +14,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     await Util.collectInterfaceFiles(
-        `${process.cwd()}/bin/${data.lang}/type/`,
+        `${process.cwd()}/bin/release/${data.lang}/type/`,
 
         async (collectedDatas)=>{
             for(let {
@@ -46,12 +46,12 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                 if(typeName.length != 0){
                     data.preCollectedTypeFileNames[typeName] = `${fileName.split('.')[0]}`
                 }else{
-                    Logger.warn(`Failed to find type of fileName: ${fileName}`)
+                    Logger.warn(`[${data.lang.toUpperCase()}] Failed to find type of fileName: ${fileName}`)
                 }
             }
         }
     )
 
-    Logger.debug('Collected Overwatch Type Data.')
+    Logger.debug(`[${data.lang.toUpperCase()}] Collected Overwatch Type Data.`)
     resolve()
 })

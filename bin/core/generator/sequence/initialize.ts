@@ -14,10 +14,10 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
     let { Logger } = data
 
     // Sequence Logic
-    Logger.debug('Running on Generator Initialize Sequence...')
-    Logger.debug('Delete all previously generated Resolver codes...')
+    Logger.debug(`[${data.lang.toUpperCase()}] Running on Generator Initialize Sequence...`)
+    Logger.debug(`[${data.lang.toUpperCase()}] Delete all previously generated Resolver codes...`)
 
-    data.resolverPath = `${process.cwd()}/bin/${data.lang}/resolver/child/`
+    data.resolverPath = `${process.cwd()}/bin/release/${data.lang}/resolver/child/`
     try{ rimraf.sync(data.resolverPath) } catch(e){}
     try{ fs.mkdirSync(data.resolverPath) } catch(e){
         reject()

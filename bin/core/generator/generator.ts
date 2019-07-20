@@ -23,10 +23,10 @@ export default ({
         let { Logger } = data
     
         // Sequence Logic
-        Logger.debug(`Entering ${interfaceType} Generate...`)
+        Logger.debug(`[${data.lang.toUpperCase()}] Entering ${interfaceType} Generate...`)
         Util.collectInterfaceFiles(
-            `${process.cwd()}/bin/${data.lang}/${interfacePath}`,
-            async (collectedDatas)=>{
+            `${process.cwd()}/bin/release/${data.lang}/${interfacePath}`,
+            async (collectedDatas) => {
 
                 // Create child resolvers
                 for(let {
@@ -115,7 +115,7 @@ export default ({
                              */
                             if(data.interfaces[interfaceName].properties[propertieName].anyOf){
     
-                                Logger.warn(`Please don't be use multiple type reference in properties (${interfaceType.toLowerCase()}/${fileName})`)
+                                Logger.warn(`[${data.lang.toUpperCase()}] Please don't be use multiple type reference in properties (${interfaceType.toLowerCase()}/${fileName})`)
     
                                 /**
                                  * @deprecated
@@ -186,14 +186,14 @@ export default ({
                                 let propertieTypeName = ``
                                 if(typeof propertieTypeMap[propertieName] != 'undefined'){
                                     if(propertieTypeMap[propertieName].length > 1)
-                                        Logger.critical(`[TYPE BROKEN ALERT] Multiple Types in Propertie! (${interfaceType.toLowerCase()}/${fileName})`)
+                                        Logger.critical(`[${data.lang.toUpperCase()}] [TYPE BROKEN ALERT] Multiple Types in Propertie! (${interfaceType.toLowerCase()}/${fileName})`)
                                     propertieTypeName = propertieTypeMap[propertieName].join(' | ')
                                 }else{
                                     // Allow Default Data Type
                                     try{
                                         propertieTypeName = data.interfaces[interfaceName].properties[propertieName].type
                                     }catch(e){
-                                        Logger.critical(`Unexpected Interface Param Type! (${interfaceType.toLowerCase()}/${fileName})`)
+                                        Logger.critical(`[${data.lang.toUpperCase()}] Unexpected Interface Param Type! (${interfaceType.toLowerCase()}/${fileName})`)
                                         console.log(data.interfaces[interfaceName].properties[propertieName])
                                     }
                                 }
@@ -285,7 +285,7 @@ export default ({
                     // console.log(interfaces[interfaceName])
                     // console.log(resolverCode)
 
-                    Logger.debug(`Created Resolver <${interfaceType.toLowerCase()}/${fileName}>`)
+                    Logger.debug(`[${data.lang.toUpperCase()}] Created Resolver <${interfaceType.toLowerCase()}/${fileName}>`)
                     fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/${fileName}`, resolverCode)
                 }
 
@@ -296,7 +296,7 @@ export default ({
                 for(let { fileName } of collectedDatas)
                     indexCode += `export * from './${fileName.split('.')[0]}'\n`
                 fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/index.ts`, indexCode)
-                Logger.debug(`Created Resolver Index <${interfaceType.toLowerCase()}/index.ts>`)
+                Logger.debug(`[${data.lang.toUpperCase()}] Created Resolver Index <${interfaceType.toLowerCase()}/index.ts>`)
             }
         )
     

@@ -20,7 +20,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
     // Sequence Logic
     Util.collectInterfaceFiles(
-        `${process.cwd()}/bin/${data.lang}/interface/${interfaceType}/child`,
+        `${process.cwd()}/bin/release/${data.lang}/interface/${interfaceType}/child`,
         async (collectedDatas)=>{
 
             // Create child resolvers
@@ -33,7 +33,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                 json[fileName] = Util.camelCaseToPascalCase(interfaceName, true, true)
             }
             fs.writeFileSync(`${data.resolverPath}/test.json`, JSON.stringify(json, null, 2))
-            Logger.debug(`Successfully Collected test.json Data.`)
+            Logger.debug(`[${data.lang.toUpperCase()}] Successfully Collected test.json Data.`)
         }
     )
 

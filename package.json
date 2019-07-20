@@ -24,7 +24,9 @@
     "build": "ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
     "clean": "rm -rf ./dist",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
-    "update": "ts-node ./bin/core/generator"
+    "update": "ts-node ./bin/core/generator",
+    "language:extract": "ts-node ./bin/core/language/extractor",
+    "language:inject": "ts-node ./bin/core/language/injector"
   },
   "repository": {
     "type": "git",

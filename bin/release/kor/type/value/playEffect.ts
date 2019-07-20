@@ -1,0 +1,11 @@
+export type ValuePlayEffect
+    = 'Good Explosion'
+    | 'Bad Explosion'
+    | 'Ring Explosion'
+    | 'Good Pickup Effect'
+    | 'Bad Pickup Effect'
+    | 'Debuff Impact Sound'
+    | 'Buff Impact Sound'
+    | 'Ring Explosion Sound'
+    | 'Buff Explosion Sound'
+    | 'Explosion Sound'
