@@ -4,7 +4,7 @@ import {
 } from '../../../type'
 
 /**
- * {343}
+ * {337}
  */
 export interface IOnGoingEachPlayer {
     team: TeamConstantType
