@@ -10,7 +10,7 @@ export const chaseGlobalVariableOverTime = (
 	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	variable: string,
+	variable: string | number | any[],
 	/**
 	 * 전역 변수가 궁극적으로 도달할 값입니다.
 	 * 이 값의 유형은 숫자 또는 벡터가 될 수 있지만,
@@ -18,14 +18,14 @@ export const chaseGlobalVariableOverTime = (
 	 * - `Type.DestinationParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	destination: string,
+	destination: string | number | any[],
 	/**
 	 * 해당 변수값이 목표치에
 	 * 도달하기까지의 시간(초)입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	duration: string,
+	duration: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중 어떤 항목을
 	 * 지속적으로 재확인할 것인지 지정합니다.
@@ -34,7 +34,7 @@ export const chaseGlobalVariableOverTime = (
 	 * - `Type.Reevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string
+	reevaluation: string | number | any[]
 ) => {
 
 	return `Chase Global Variable Over Time(${variable}, ${destination}, ${duration}, ${reevaluation})`

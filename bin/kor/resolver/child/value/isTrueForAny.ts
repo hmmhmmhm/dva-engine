@@ -7,7 +7,7 @@ export const isTrueForAny = (
 	 * - `Type.Array.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	array: string,
+	array: string | number | any[],
 	/**
 	 * 지정된 배열의 각 요소에 대해 확인할 조건입니다.
 	 * 현재 확인 대상인 배열의 요소를 참조할 때는
@@ -15,7 +15,7 @@ export const isTrueForAny = (
 	 * - `Type.Bool.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	condition: string
+	condition: string | number | any[]
 ) => {
 
 	return `Is True For Any(${array}, ${condition})`

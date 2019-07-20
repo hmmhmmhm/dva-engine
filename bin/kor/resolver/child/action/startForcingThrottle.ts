@@ -11,7 +11,7 @@ export const startForcingThrottle = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 전방 달리기의 최소값을 설정합니다.
 	 * 0이면 플레이어가 정지할 수 있지만,
@@ -19,7 +19,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	minForward: string,
+	minForward: string | number | any[],
 	/**
 	 * 전방 달리기의 최대값을 설정합니다.
 	 * 0이면 플레이어가 움직일 수 없지만,
@@ -27,7 +27,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	maxForward: string,
+	maxForward: string | number | any[],
 	/**
 	 * 후방 달리기의 최소값을 설정합니다.
 	 * 0이면 플레이어가 정지할 수 있지만,
@@ -35,7 +35,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	minBackward: string,
+	minBackward: string | number | any[],
 	/**
 	 * 후방 달리기의 최대값을 설정합니다.
 	 * 0이면 플레이어가 움직일 수 없지만,
@@ -43,7 +43,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	maxBackward: string,
+	maxBackward: string | number | any[],
 	/**
 	 * 측방 달리기의 최소값을 설정합니다.
 	 * 0이면 플레이어가 정지할 수 있지만,
@@ -51,7 +51,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	minSideways: string,
+	minSideways: string | number | any[],
 	/**
 	 * 측방 달리기의 최대값을 설정합니다.
 	 * 0이면 플레이어가 움직일 수 없지만,
@@ -59,7 +59,7 @@ export const startForcingThrottle = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	maxSideways: string
+	maxSideways: string | number | any[]
 ) => {
 
 	return `Start Forcing Throttle(${player}, ${minForward}, ${maxForward}, ${minBackward}, ${maxBackward}, ${minSideways}, ${maxSideways})`

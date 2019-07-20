@@ -28,11 +28,6 @@ export default ({
             `${process.cwd()}/bin/${data.lang}/${interfacePath}`,
             async (collectedDatas)=>{
 
-                /**
-                 * `for value/array.ts resolver`
-                 */
-                let arrayResolverCode = ``
-
                 // Create child resolvers
                 for(let {
                     fileName,
@@ -224,7 +219,7 @@ export default ({
                                 valueProperties += propertiesDescription
     
                                 if(typescriptTypeList.indexOf(propertieTypeName) == -1){
-                                    valueProperties += `\t${propertieName}: string`
+                                    valueProperties += `\t${propertieName}: string | number | any[]`
                                 }else{
                                     valueProperties += `\t${propertieName}: ${propertieTypeName}`
                                 }
@@ -264,15 +259,25 @@ export default ({
                     resolverCode += '`\n}'
 
                     /**
-                     * `Collect Value Array Resolver`
+                     * `Collect Additional Value Resolver`
                      */
-                    if(interfaceType == 'Value'){
-                        if(typeof data.preCollectedTypes[resolverName] != 'undefined'){
-                            if(data.preCollectedTypes[resolverName].indexOf('array') != -1){
-                                let singleArrayResolver = `${resolverCode.replace(`) => {`, `): any[] => {`)}\n\n`
-                                singleArrayResolver = singleArrayResolver.replace(`\n\treturn `,`\n\t// @ts-ignore\n\treturn `)
-                                arrayResolverCode += singleArrayResolver
-                            }
+                    if(interfaceType == 'Value' && typeof data.preCollectedTypes[resolverName] != 'undefined'){
+
+                        /**
+                         * `Modify Resolver Return Type to Array`
+                         */
+                        if(data.preCollectedTypes[resolverName].indexOf('array') != -1){
+                            resolverCode = `${resolverCode.replace(`) => {`, `): any[] => {`)}\n\n`
+                            resolverCode = resolverCode.replace(`\n\treturn `,`\n\t// @ts-ignore\n\treturn `)
+
+                        /**
+                         * `Modify Resolver Return Type to Number`
+                         */
+                        } else if(data.preCollectedTypes[resolverName].indexOf('number') != -1
+                            || data.preCollectedTypes[resolverName].indexOf('vector') != -1){
+
+                            resolverCode = `${resolverCode.replace(`) => {`, `): number => {`)}\n\n`
+                            resolverCode = resolverCode.replace(`\n\treturn `,`\n\t// @ts-ignore\n\treturn `)
                         }
                     }
 
@@ -284,13 +289,6 @@ export default ({
                     fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/${fileName}`, resolverCode)
                 }
 
-                /**
-                 * `Create Value Array Resolver`
-                 */
-                if(interfaceType == 'Value' && arrayResolverCode.length > 0){
-                    fs.writeFileSync(`${data.resolverPath}/array.ts`, arrayResolverCode)
-                }
-    
                 /**
                  * `Create child index`
                  */

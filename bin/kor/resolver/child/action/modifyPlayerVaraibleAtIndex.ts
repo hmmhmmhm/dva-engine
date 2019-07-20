@@ -10,7 +10,7 @@ export const modifyPlayerVaraibleAtIndex = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 변수를 수정할 플레이어입니다.
 	 * 플레이어가 다수인 경우,
@@ -18,7 +18,7 @@ export const modifyPlayerVaraibleAtIndex = (
 	 * - `Type.IPlayer.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	variable: string,
+	variable: string | number | any[],
 	/**
 	 * 수정할 배열의 인덱스입니다.
 	 * 인덱스가 배열의 끝을 벗어난 경우,
@@ -27,7 +27,7 @@ export const modifyPlayerVaraibleAtIndex = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	index: string,
+	index: string | number | any[],
 	/**
 	 * 변수값의 변경 방식입니다.
 	 * 일반적인 사칙연산,
@@ -36,7 +36,7 @@ export const modifyPlayerVaraibleAtIndex = (
 	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	operation: string,
+	operation: string | number | any[],
 	/**
 	 * 수정에 사용되는 값입니다.
 	 * 산술연산의 경우 이것은
@@ -48,7 +48,7 @@ export const modifyPlayerVaraibleAtIndex = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value: string
+	value: string | number | any[]
 ) => {
 
 	return `Modify Player Varaible At Index(${player}, ${variable}, ${index}, ${operation}, ${value})`

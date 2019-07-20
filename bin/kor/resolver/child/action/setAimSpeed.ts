@@ -9,14 +9,14 @@ export const setAimSpeed = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 일반 조준 속도에 비례하도록
 	 * 설정할 플레이어의 조준 속도입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	turnSpeedPercent: string
+	turnSpeedPercent: string | number | any[]
 ) => {
 
 	return `Set Aim Speed(${player}, ${turnSpeedPercent})`

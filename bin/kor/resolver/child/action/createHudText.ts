@@ -13,31 +13,31 @@ export const createHudText = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	visibleTo: string,
+	visibleTo: string | number | any[],
 	/**
 	 * 표시할 텍스트입니다. (비워두기 가능)
 	 * - `Type.String.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	header: string,
+	header: string | number | any[],
 	/**
 	 * 표시할 부제목입니다. (비워두기 가능)
 	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	subHeader: string,
+	subHeader: string | number | any[],
 	/**
 	 * 표시할 본문입니다. (비워두기 가능)
 	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	text: string,
+	text: string | number | any[],
 	/**
 	 * 텍스트를 표시할 화면 상의 위치입니다.
 	 * - `Type.Location.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	location: string,
+	location: string | number | any[],
 	/**
 	 * 동일한 위치에 있는 다른
 	 * 텍스트와의 정렬 순서입니다.
@@ -47,7 +47,7 @@ export const createHudText = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	sortOrder: string,
+	sortOrder: string | number | any[],
 	/**
 	 * 생성될 HEADER 텍스트의 색상입니다.
 	 * 특정 팀을 선택한 경우,
@@ -57,7 +57,7 @@ export const createHudText = (
 	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	headerColor: string,
+	headerColor: string | number | any[],
 	/**
 	 * 생성될 SUBHEADER 텍스트의 색상입니다.
 	 * 특정 팀을 선택한 경우,
@@ -67,7 +67,7 @@ export const createHudText = (
 	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	subHeaderColor: string,
+	subHeaderColor: string | number | any[],
 	/**
 	 * 생성될 텍스트의 색상입니다.
 	 * 특정 팀을 선택한 경우,
@@ -77,7 +77,7 @@ export const createHudText = (
 	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	textColor: string,
+	textColor: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중 어떤 항목을
 	 * 지속적으로 재확인할 것인지 지정합니다.
@@ -86,7 +86,7 @@ export const createHudText = (
 	 * - `Type.HudTextReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string
+	reevaluation: string | number | any[]
 ) => {
 
 	return `Create Hud Text(${visibleTo}, ${header}, ${subHeader}, ${text}, ${location}, ${sortOrder}, ${headerColor}, ${subHeaderColor}, ${textColor}, ${reevaluation})`

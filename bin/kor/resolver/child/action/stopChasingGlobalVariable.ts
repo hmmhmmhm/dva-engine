@@ -9,7 +9,7 @@ export const stopChasingGlobalVariable = (
 	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	variable: string
+	variable: string | number | any[]
 ) => {
 
 	return `Stop Chasing Global Variable(${variable})`

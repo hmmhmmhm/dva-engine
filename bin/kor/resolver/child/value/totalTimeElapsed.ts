@@ -3,7 +3,9 @@
  * (설정 및 전환 시간 포함)
  */
 export const totalTimeElapsed = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Total Time Elapsed`
 }
+

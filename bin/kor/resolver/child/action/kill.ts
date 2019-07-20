@@ -7,7 +7,7 @@ export const kill = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 처치를 기록한 것으로
 	 * 집계될 플레이어입니다.
@@ -17,7 +17,7 @@ export const kill = (
 	 * - `Type.AssisterParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	killer: string
+	killer: string | number | any[]
 ) => {
 
 	return `Kill(${player}, ${killer})`

@@ -5,7 +5,9 @@
  * 생성한 텍스트의 마지막 부분에 대한 참조입니다.
  */
 export const lastTextId = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Last Text Id`
 }
+

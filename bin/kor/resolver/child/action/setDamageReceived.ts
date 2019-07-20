@@ -9,7 +9,7 @@ export const setDamageReceived = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 순수 피해량에 비례하도록
 	 * 설정할 플레이어의
@@ -17,7 +17,7 @@ export const setDamageReceived = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	damageReceivedPercent: string
+	damageReceivedPercent: string | number | any[]
 ) => {
 
 	return `Set Damage Received(${player}, ${damageReceivedPercent})`

@@ -8,7 +8,7 @@ export const modifyGlobalVariable = (
 	 * - `Type.IGlobal.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	variable: string,
+	variable: string | number | any[],
 	/**
 	 * 변수값의 변경 방식입니다.
 	 * 일반적인 사칙연산,
@@ -17,7 +17,7 @@ export const modifyGlobalVariable = (
 	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	operation: string,
+	operation: string | number | any[],
 	/**
 	 * 수정에 사용되는 값입니다.
 	 * 산술연산의 경우 이것은
@@ -29,7 +29,7 @@ export const modifyGlobalVariable = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value: string
+	value: string | number | any[]
 ) => {
 
 	return `Modify Global Variable(${variable}, ${operation}, ${value})`

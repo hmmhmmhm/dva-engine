@@ -10,13 +10,13 @@ export const setPlayerScore = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 설정할 점수입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	score: string
+	score: string | number | any[]
 ) => {
 
 	return `Set Player Score(${player}, ${score})`

@@ -8,14 +8,16 @@ export const speedOfInDirection = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 플레이어의 속도를 측정할 이동 방향입니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	direction: string
-) => {
+	direction: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Speed Of In Direction(${player}, ${direction})`
 }
+

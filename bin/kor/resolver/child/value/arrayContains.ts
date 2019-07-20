@@ -7,13 +7,13 @@ export const arrayContains = (
 	 * - `Type.Array.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	array: string,
+	array: string | number | any[],
 	/**
 	 * 검색할 값입니다.
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value: string
+	value: string | number | any[]
 ) => {
 
 	return `Array Contains(${array}, ${value})`

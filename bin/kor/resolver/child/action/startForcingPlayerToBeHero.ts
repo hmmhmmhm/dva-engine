@@ -12,14 +12,14 @@ export const startForcingPlayerToBeHero = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 플레이어에게 강제로
 	 * 설정된 영웅입니다.
 	 * - `Type.Hero.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	hero: string
+	hero: string | number | any[]
 ) => {
 
 	return `Start Forcing Player To Be Hero(${player}, ${hero})`

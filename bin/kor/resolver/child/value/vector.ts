@@ -9,20 +9,22 @@ export const vector = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	x: string,
+	x: string | number | any[],
 	/**
 	 * 벡터의 Y 값입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	y: string,
+	y: string | number | any[],
 	/**
 	 * 벡터의 Z 값입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	z: string
-) => {
+	z: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Vector(${x}, ${y}, ${z})`
 }
+

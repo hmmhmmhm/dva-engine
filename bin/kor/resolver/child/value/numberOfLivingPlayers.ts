@@ -7,8 +7,10 @@ export const numberOfLivingPlayers = (
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string
-) => {
+	team: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Number Of Living Players(${team})`
 }
+

@@ -9,7 +9,7 @@ export const wait = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	time: string,
+	time: string | number | any[],
 	/**
 	 * WAIT이 중지되는 조건 및 방법을 설정합니다.
 	 * 조건 목록이 무시되면 WAIT은 중지되지 않으며,
@@ -18,7 +18,7 @@ export const wait = (
 	 * - `Type.WaitBehavior.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	waitBehavior: string
+	waitBehavior: string | number | any[]
 ) => {
 
 	return `Wait(${time}, ${waitBehavior})`

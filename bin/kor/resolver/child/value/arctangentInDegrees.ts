@@ -8,14 +8,16 @@ export const arctangentInDegrees = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	numerator: string,
+	numerator: string | number | any[],
 	/**
 	 * 함수의 분모 입력 정보입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	denominator: string
-) => {
+	denominator: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Arctangent In Degrees(${numerator}, ${denominator})`
 }
+

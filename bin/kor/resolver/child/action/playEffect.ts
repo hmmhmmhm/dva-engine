@@ -9,13 +9,13 @@ export const playEffect = (
 	 * - `Type.PlayersParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	visibleTo: string,
+	visibleTo: string | number | any[],
 	/**
 	 * 생성할 효과의 유형입니다.
 	 * - `Type.Play.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	type: string,
+	type: string | number | any[],
 	/**
 	 * 생성될 효과의 색상입니다.
 	 * 특정 팀을 선택한 경우,
@@ -26,7 +26,7 @@ export const playEffect = (
 	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	color: string,
+	color: string | number | any[],
 	/**
 	 * 효과의 위치입니다.
 	 * 이 값이 플레이어인 경우
@@ -37,13 +37,13 @@ export const playEffect = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	position: string,
+	position: string | number | any[],
 	/**
 	 * 효과 반경(미터)입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	radius: string
+	radius: string | number | any[]
 ) => {
 
 	return `Play Effect(${visibleTo}, ${type}, ${color}, ${position}, ${radius})`

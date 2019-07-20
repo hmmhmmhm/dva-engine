@@ -7,20 +7,20 @@ export const applyImpulse = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 충격량을 적용할 단위 방항입니다.
 	 * 이 값은 내부적으로 정규화됩니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	direction: string,
+	direction: string | number | any[],
 	/**
 	 * 플레이어에 대한 속도 변경의 크기입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	speed: string,
+	speed: string | number | any[],
 	/**
 	 * 방향이 플레이어의 월드 좌표 또는
 	 * 로컬 좌표 중 어느 쪽에 대해
@@ -28,7 +28,7 @@ export const applyImpulse = (
 	 * - `Type.Relative.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	relative: string,
+	relative: string | number | any[],
 	/**
 	 * 충격량을 적용하기 전에 DIRECTION과
 	 * 반대 방향인 기존의 속도를
@@ -36,7 +36,7 @@ export const applyImpulse = (
 	 * - `Type.Motion.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	motion: string
+	motion: string | number | any[]
 ) => {
 
 	return `Apply Impulse(${player}, ${direction}, ${speed}, ${relative}, ${motion})`

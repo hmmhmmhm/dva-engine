@@ -3,7 +3,9 @@
  * DAMAGE OVER TIME 액션의 ID입니다.
  */
 export const lastDamageOverTimeId = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Last Damage Over Time Id`
 }
+

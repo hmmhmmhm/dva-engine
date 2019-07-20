@@ -29,8 +29,6 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                 subPath
             } of collectedDatas){
 
-                let lowerCaseFileName = fileName.split('.')[0]
-
                 // Add folder name before type name.
                 let subPathArray = subPath.split('/').filter(path => path.length > 0)
                 for(let subPathIndexStr in subPathArray){
@@ -51,6 +49,8 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
                     fileName = `${subPath}${fileName}`
                 }
+
+                let lowerCaseFileName = fileName.split('.')[0]
 
                 try{
                     // Create child resolver folder
@@ -132,7 +132,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
             // Create child index
             fs.writeFileSync(`${data.resolverPath}/type/index.ts`, typeIndexCode)
-            Logger.debug('Created Value Resolver <type/index.ts>')
+            Logger.debug('Created Type Resolver <type/index.ts>')
         }
     )
 

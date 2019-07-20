@@ -12,7 +12,7 @@ export const startHealOverTime = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 치유 행동을 한 것으로
 	 * 집계될 플레이어입니다.
@@ -22,7 +22,7 @@ export const startHealOverTime = (
 	 * - `Type.AssisterParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	healer: string,
+	healer: string | number | any[],
 	/**
 	 * HEAL OVER TIME의 지속 시간(초)입니다.
 	 * HEAL OVER TIME이 스크립트에 의해
@@ -31,13 +31,13 @@ export const startHealOverTime = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	duration: string,
+	duration: string | number | any[],
 	/**
 	 * HEAL OVER TIME의 초당 치유량입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	healingPerSecond: string
+	healingPerSecond: string | number | any[]
 ) => {
 
 	return `Start Heal Over Time(${player}, ${healer}, ${duration}, ${healingPerSecond})`

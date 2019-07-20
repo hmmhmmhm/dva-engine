@@ -9,7 +9,7 @@ export const modifyPlayerScore = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 점수 증감량입니다.
 	 * 양수인 경우 점수가 오르고
@@ -17,7 +17,7 @@ export const modifyPlayerScore = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	score: string
+	score: string | number | any[]
 ) => {
 
 	return `Modify Player Score(${player}, ${score})`

@@ -9,7 +9,7 @@ export const sortedArray = (
 	 * - `Type.Array.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	array: string,
+	array: string | number | any[],
 	/**
 	 * 복사할 배열의 각 요소마다 평가할 값입니다.
 	 * 이 값의 순서에 따라 오름차순으로 복사본이 정렬됩니다.
@@ -18,8 +18,10 @@ export const sortedArray = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	valueRank: string
-) => {
+	valueRank: string | number | any[]
+): any[] => {
 
+	// @ts-ignore
 	return `Sorted Array(${array}, ${valueRank})`
 }
+

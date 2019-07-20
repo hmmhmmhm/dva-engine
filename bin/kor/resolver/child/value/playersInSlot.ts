@@ -9,14 +9,16 @@ export const playersInSlot = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	slot: string,
+	slot: string | number | any[],
 	/**
 	 * 플레이어 정보를 가져올 팀입니다.
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string
-) => {
+	team: string | number | any[]
+): any[] => {
 
+	// @ts-ignore
 	return `Players In Slot(${slot}, ${team})`
 }
+

@@ -5,7 +5,9 @@
  * 인스턴스가 종료될 가능성이 크게 증가합니다.
  */
 export const serverLoad = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Server Load`
 }
+

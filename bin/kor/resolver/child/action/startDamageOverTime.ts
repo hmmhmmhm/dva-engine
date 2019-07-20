@@ -16,7 +16,7 @@ export const startDamageOverTime = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 피해를 주는 행동을 한 것으로
 	 * 집계될 플레이어입니다.
@@ -26,7 +26,7 @@ export const startDamageOverTime = (
 	 * - `Type.AssisterParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	damager: string,
+	damager: string | number | any[],
 	/**
 	 * DAMAGE OVER TIME의
 	 * 지속 시간(초)입니다.
@@ -38,14 +38,14 @@ export const startDamageOverTime = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	duration: string,
+	duration: string | number | any[],
 	/**
 	 * DAMAGE OVER TIME의
 	 * 초당 피해량입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	damagePerSecond: string
+	damagePerSecond: string | number | any[]
 ) => {
 
 	return `Start Damage Over Time(${player}, ${damager}, ${duration}, ${damagePerSecond})`

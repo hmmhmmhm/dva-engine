@@ -12,7 +12,7 @@ export const startForcingSpawnRoom = (
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string,
+	team: string | number | any[],
 	/**
 	 * 강제된 전투준비실의 번호입니다.
 	 * 0이 첫 번째 전투준비실이며,
@@ -23,7 +23,7 @@ export const startForcingSpawnRoom = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	room: string
+	room: string | number | any[]
 ) => {
 
 	return `Start Forcing Spawn Room(${team}, ${room})`

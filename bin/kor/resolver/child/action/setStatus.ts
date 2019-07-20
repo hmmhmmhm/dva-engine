@@ -10,7 +10,7 @@ export const setStatus = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 이 상태가 적용된 플레이어가
 	 * 사망하는 경우 도움을 기록한 것으로
@@ -20,7 +20,7 @@ export const setStatus = (
 	 * - `Type.AssisterParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	assister: string,
+	assister: string | number | any[],
 	/**
 	 * 플레이어에게 적용할 상태입니다.
 	 * 영웅 능력에 의해 적용되는
@@ -28,7 +28,7 @@ export const setStatus = (
 	 * - `Type.Status.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	status: string,
+	status: string | number | any[],
 	/**
 	 * 해당 상태의 지속 시간(초)입니다.
 	 * 상태가 CLEAR STATUS 액션 실행에 의해
@@ -37,7 +37,7 @@ export const setStatus = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	duration: string
+	duration: string | number | any[]
 ) => {
 
 	return `Set Status(${player}, ${assister}, ${status}, ${duration})`

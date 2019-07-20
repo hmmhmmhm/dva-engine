@@ -14,7 +14,7 @@ export const setPlayerAllowedHeroes = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 사용할 수 있는 영웅입니다.
 	 * 제공된 영웅이 없는 경우
@@ -22,7 +22,7 @@ export const setPlayerAllowedHeroes = (
 	 * - `Type.Hero.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	hero: string
+	hero: string | number | any[]
 ) => {
 
 	return `Set Player Allowed Heroes(${player}, ${hero})`

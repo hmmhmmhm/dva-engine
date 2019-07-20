@@ -12,14 +12,16 @@ export const verticalAngleTowards = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 각 각이 종료되는 월드 내 위치입니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	position: string
-) => {
+	position: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Vertical Angle Towards(${player}, ${position})`
 }
+

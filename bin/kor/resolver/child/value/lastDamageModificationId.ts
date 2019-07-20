@@ -3,7 +3,9 @@
  * START DAMGE MODIFICATION 액션의 ID입니다.
  */
 export const lastDamageModificationId = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Last Damage Modification Id`
 }
+

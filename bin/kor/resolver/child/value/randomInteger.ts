@@ -10,7 +10,7 @@ export const randomInteger = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	min: string,
+	min: string | number | any[],
 	/**
 	 * 허용된 최대 정수입니다.
 	 * 이 입력 정보에 실수가 주어진 경우,
@@ -18,8 +18,10 @@ export const randomInteger = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	max: string
-) => {
+	max: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Random Integer(${min}, ${max})`
 }
+

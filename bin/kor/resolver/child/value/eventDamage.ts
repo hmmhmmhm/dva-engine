@@ -3,7 +3,9 @@
  * 이벤트의 VICTIM이 받는 피해량입니다.
  */
 export const eventDamage = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Event Damage`
 }
+

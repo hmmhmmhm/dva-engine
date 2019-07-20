@@ -3,7 +3,7 @@
  */
 import {
     RuleEvent, Value, Action,
-    Type, Array, Level, Server,
+    Type, Level, Server,
     Match, Util, Classes
 } from '../bin/kor'
 
@@ -49,11 +49,10 @@ let m = Value.number(4)
 let n = Value.number(4)
 let o = Value.number(4)
 
-// @ts-ignore
 let checkOperator1 = ((a*b)/c+d) % e + (f+g+h+i) - (j-(k*l/m) - n * o)
 
 // Check Array
-let allDead = Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
+let allDead = Type.Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
 
 /***
  * @TODO

@@ -9,12 +9,12 @@ export const compare = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value1: string,
+	value1: string | number | any[],
 	/**
 	 * - `Type.Operator.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	operator: string,
+	operator: string | number | any[],
 	/**
 	 * 비교 연산의 우측단입니다.
 	 * 연산이 == 또는 != 인 경우 어떤 값 유형이든 상관없지만,
@@ -22,7 +22,7 @@ export const compare = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value2: string
+	value2: string | number | any[]
 ) => {
 
 	return `Compare(${value1}, ${operator}, ${value2})`

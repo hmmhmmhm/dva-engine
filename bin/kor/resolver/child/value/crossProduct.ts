@@ -7,14 +7,16 @@ export const crossProduct = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value1: string,
+	value1: string | number | any[],
 	/**
 	 * 가위곱의 오른쪽 벡터 피연산자입니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value2: string
-) => {
+	value2: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Cross Product(${value1}, ${value2})`
 }
+

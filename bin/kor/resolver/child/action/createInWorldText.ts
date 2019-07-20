@@ -13,13 +13,13 @@ export const createInWorldText = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	visibleTo: string,
+	visibleTo: string | number | any[],
 	/**
 	 * 표시할 텍스트입니다.
 	 * - `Type.String.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	header: string,
+	header: string | number | any[],
 	/**
 	 * 텍스트의 위치입니다.
 	 * 이 값이 플레이어인 경우
@@ -30,19 +30,19 @@ export const createInWorldText = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	position: string,
+	position: string | number | any[],
 	/**
 	 * 텍스트의 배율입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	scale: string,
+	scale: string | number | any[],
 	/**
 	 * 해당 텍스트가 벽을 뚫고 보일지, 아니면 가려질지 지정합니다.
 	 * - `Type.Clipping.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	clipping: string,
+	clipping: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중 어떤 항목을
 	 * 지속적으로 재확인할 것인지 지정합니다.
@@ -51,7 +51,7 @@ export const createInWorldText = (
 	 * - `Type.InWorldTextReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string
+	reevaluation: string | number | any[]
 ) => {
 
 	return `Create In World Text(${visibleTo}, ${header}, ${position}, ${scale}, ${clipping}, ${reevaluation})`

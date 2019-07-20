@@ -9,13 +9,13 @@ export const communicate = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 의사소통 유형입니다.
 	 * - `Type.Communication.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	type: string
+	type: string | number | any[]
 ) => {
 
 	return `Communicate(${player}, ${type})`

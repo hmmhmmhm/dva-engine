@@ -10,7 +10,7 @@ export const setHealingReceived = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 받는 순수 치유량에
 	 * 비례하도록 설정할
@@ -19,7 +19,7 @@ export const setHealingReceived = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	healingReceivedPercent: string
+	healingReceivedPercent: string | number | any[]
 ) => {
 
 	return `Set Healing Received(${player}, ${healingReceivedPercent})`

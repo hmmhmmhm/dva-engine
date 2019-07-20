@@ -8,13 +8,13 @@ export const hasStatus = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 확인할 상태입니다.
 	 * - `Type.Status.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	status: string
+	status: string | number | any[]
 ) => {
 
 	return `Has Status(${player}, ${status})`

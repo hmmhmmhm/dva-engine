@@ -9,21 +9,21 @@ export const startCamera = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 카메라 위치입니다.
 	 * 지속적으로 확인됩니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	eyePosition: string,
+	eyePosition: string | number | any[],
 	/**
 	 * 카메라가 바라보는 방향입니다.
 	 * 지속적으로 확인됩니다.
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	lookAtPosition: string,
+	lookAtPosition: string | number | any[],
 	/**
 	 * 위치 변경 시 카메라 이동의
 	 * 블렌딩 속도를 설정합니다.
@@ -32,7 +32,7 @@ export const startCamera = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	blendSpeed: string
+	blendSpeed: string | number | any[]
 ) => {
 
 	return `Start Camera(${player}, ${eyePosition}, ${lookAtPosition}, ${blendSpeed})`

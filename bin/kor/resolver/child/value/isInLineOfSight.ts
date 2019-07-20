@@ -10,7 +10,7 @@ export const isInLineOfSight = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	startPos: string,
+	startPos: string | number | any[],
 	/**
 	 * 시야 확인의 종료 위치입니다.
 	 * 플레이어가 설정되어 있으면
@@ -19,7 +19,7 @@ export const isInLineOfSight = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	endPos: string,
+	endPos: string | number | any[],
 	/**
 	 * 방벽이 시야에 미치는 영향을 정의합니다.
 	 * 방벽이 적 소유인지를 판정할 때는
@@ -28,7 +28,7 @@ export const isInLineOfSight = (
 	 * - `Type.Barrier.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	barriers: string
+	barriers: string | number | any[]
 ) => {
 
 	return `Is In Line Of Sight(${startPos}, ${endPos}, ${barriers})`

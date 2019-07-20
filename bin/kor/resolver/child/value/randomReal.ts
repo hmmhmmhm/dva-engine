@@ -8,14 +8,16 @@ export const randomReal = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	min: string,
+	min: string | number | any[],
 	/**
 	 * 허용된 최소 실수값입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	max: string
-) => {
+	max: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Random Real(${min}, ${max})`
 }
+

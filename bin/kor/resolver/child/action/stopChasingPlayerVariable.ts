@@ -12,7 +12,7 @@ export const stopChasingPlayerVariable = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 수정을 중지할
 	 * 플레이어의 변수를
@@ -20,7 +20,7 @@ export const stopChasingPlayerVariable = (
 	 * - `Type.Variable.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	variable: string
+	variable: string | number | any[]
 ) => {
 
 	return `Stop Chasing Player Variable(${player}, ${variable})`

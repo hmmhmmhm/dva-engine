@@ -8,14 +8,16 @@ export const playersOnHero = (
 	 * - `Type.Hero.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	hero: string,
+	hero: string | number | any[],
 	/**
 	 * 영웅 플레이 현황을 확인할 팀입니다.
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string
-) => {
+	team: string | number | any[]
+): any[] => {
 
+	// @ts-ignore
 	return `Players On Hero(${hero}, ${team})`
 }
+

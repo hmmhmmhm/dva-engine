@@ -13,7 +13,7 @@ export const preloadHero = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 지정된 플레이어가 미리 불러올 영웅입니다.
 	 * 배열에 여러 영웅을 지정한 경우,
@@ -22,7 +22,7 @@ export const preloadHero = (
 	 * - `Type.Hero.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	hero: string
+	hero: string | number | any[]
 ) => {
 
 	return `Preload Hero(${player}, ${hero})`

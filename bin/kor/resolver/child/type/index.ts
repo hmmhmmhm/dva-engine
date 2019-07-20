@@ -7,8 +7,8 @@ export { TeamConstant }
 import * as Variable from './variable'
 export { Variable }
 
-import * as Player from './player'
-export { Player }
+import * as EventPlayer from './eventPlayer'
+export { EventPlayer }
 
 import * as Add from './add'
 export { Add }

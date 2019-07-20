@@ -8,13 +8,13 @@ export const farthestPlayerFrom = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	center: string,
+	center: string | number | any[],
 	/**
 	 * 가장 멀리 떨어진 플레이어가 소속된 팀입니다.
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string
+	team: string | number | any[]
 ) => {
 
 	return `Farthest Player From(${center}, ${team})`

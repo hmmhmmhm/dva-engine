@@ -9,13 +9,13 @@ export const setUltimateCharge = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 최대 충전량 비율입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	chargePercent: string
+	chargePercent: string | number | any[]
 ) => {
 
 	return `Set Ultimate Charge(${player}, ${chargePercent})`

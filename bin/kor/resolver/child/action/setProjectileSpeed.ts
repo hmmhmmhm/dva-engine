@@ -10,7 +10,7 @@ export const setProjectileSpeed = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 일반 투사체 속도에
 	 * 비례하도록 설정할
@@ -19,7 +19,7 @@ export const setProjectileSpeed = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	projectileSpeedPercent: string
+	projectileSpeedPercent: string | number | any[]
 ) => {
 
 	return `Set Projectile Speed(${player}, ${projectileSpeedPercent})`

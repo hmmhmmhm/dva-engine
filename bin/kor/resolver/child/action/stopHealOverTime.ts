@@ -12,7 +12,7 @@ export const stopHealOverTime = (
 	 * - `Type.HealOverTimeId.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	healOverTimeId: string
+	healOverTimeId: string | number | any[]
 ) => {
 
 	return `Stop Heal Over Time(${healOverTimeId})`

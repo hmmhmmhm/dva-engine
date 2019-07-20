@@ -8,13 +8,13 @@ export const closestPlayerTo = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	center: string,
+	center: string | number | any[],
 	/**
 	 * 가장 가까이 있는 플레이어가 소속된 팀입니다.
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string
+	team: string | number | any[]
 ) => {
 
 	return `Closest Player To(${center}, ${team})`

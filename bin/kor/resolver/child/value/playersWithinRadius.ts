@@ -8,7 +8,7 @@ export const playersWithinRadius = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	center: string,
+	center: string | number | any[],
 	/**
 	 * 결과 배열에 포함되기 위해
 	 * 플레이어가 속해 있어야 하는
@@ -16,7 +16,7 @@ export const playersWithinRadius = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	radius: string,
+	radius: string | number | any[],
 	/**
 	 * 결과 배열에 포함되기 위해
 	 * 플레이어가 속해 있어야 하는
@@ -24,7 +24,7 @@ export const playersWithinRadius = (
 	 * - `Type.Team.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	team: string,
+	team: string | number | any[],
 	/**
 	 * 결과 배열에 포함되기 위해
 	 * 플레이어가 시야 확인을
@@ -33,8 +33,10 @@ export const playersWithinRadius = (
 	 * - `Type.LosCheck.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	losCheck: string
-) => {
+	losCheck: string | number | any[]
+): any[] => {
 
+	// @ts-ignore
 	return `Players Within Radius(${center}, ${radius}, ${team}, ${losCheck})`
 }
+

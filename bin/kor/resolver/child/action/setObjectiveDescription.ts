@@ -11,13 +11,13 @@ export const setObjectiveDescription = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	visibleTo: string,
+	visibleTo: string | number | any[],
 	/**
 	 * 표시할 메시지입니다.
 	 * - `Type.String.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	header: string,
+	header: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중
 	 * 어떤 항목을 지속적으로
@@ -28,7 +28,7 @@ export const setObjectiveDescription = (
 	 * - `Type.ObjectiveDescriptionReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string
+	reevaluation: string | number | any[]
 ) => {
 
 	return `Set Objective Description(${visibleTo}, ${header}, ${reevaluation})`

@@ -8,7 +8,7 @@ export const removeFromArray = (
 	 * - `Type.Array.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	array: string,
+	array: string | number | any[],
 	/**
 	 * 배열에서 제거할 값(있는 경우)입니다.
 	 * 이 값 자체가 배열인 경우
@@ -16,8 +16,10 @@ export const removeFromArray = (
 	 * - `Type.Value.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value: string
-) => {
+	value: string | number | any[]
+): any[] => {
 
+	// @ts-ignore
 	return `Remove From Array(${array}, ${value})`
 }
+

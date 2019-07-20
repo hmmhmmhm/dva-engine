@@ -12,7 +12,7 @@ export const createIcon = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	visibleTo: string,
+	visibleTo: string | number | any[],
 	/**
 	 * 아이콘의 위치입니다.
 	 * 이 값이 플레이어인 경우
@@ -23,13 +23,13 @@ export const createIcon = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	position: string,
+	position: string | number | any[],
 	/**
 	 * 생성할 아이콘입니다.
 	 * - `Type.Icon.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	icon: string,
+	icon: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중 어떤 항목을
 	 * 지속적으로 재확인할 것인지 지정합니다.
@@ -38,7 +38,7 @@ export const createIcon = (
 	 * - `Type.IconReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string,
+	reevaluation: string | number | any[],
 	/**
 	 * 생성될 아이콘의 색상입니다.
 	 * 특정 팀을 선택한 경우,
@@ -48,7 +48,7 @@ export const createIcon = (
 	 * - `Type.Color.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	iconColor: string,
+	iconColor: string | number | any[],
 	/**
 	 * 이 아이콘이
 	 * 플레이어 뒤에 있어도
@@ -56,7 +56,7 @@ export const createIcon = (
 	 * - `Type.Bool.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	showWhenOffscreen: string
+	showWhenOffscreen: string | number | any[]
 ) => {
 
 	return `Create Icon(${visibleTo}, ${position}, ${icon}, ${reevaluation}, ${iconColor}, ${showWhenOffscreen})`

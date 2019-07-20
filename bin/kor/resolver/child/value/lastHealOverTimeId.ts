@@ -3,7 +3,9 @@
  * HEAL OVER TIME 액션의 ID입니다.
  */
 export const lastHealOverTimeId = (
-) => {
+): number => {
 
+	// @ts-ignore
 	return `Last Heal Over Time Id`
 }
+

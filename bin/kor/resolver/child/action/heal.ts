@@ -9,7 +9,7 @@ export const heal = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 치유 행동을 한 것으로
 	 * 집계될 플레이어입니다.
@@ -19,7 +19,7 @@ export const heal = (
 	 * - `Type.AssisterParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	healer: string,
+	healer: string | number | any[],
 	/**
 	 * 적용할 치유량입니다.
 	 * 이 치유량은 강화 효과,
@@ -31,7 +31,7 @@ export const heal = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	amount: string
+	amount: string | number | any[]
 ) => {
 
 	return `Heal(${player}, ${healer}, ${amount})`

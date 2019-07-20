@@ -7,14 +7,16 @@ export const roundToInteger = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	value: string,
+	value: string | number | any[],
 	/**
 	 * 값을 반올림하는 규칙을 결정합니다.
 	 * - `Type.Rounding.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	roundingType: string
-) => {
+	roundingType: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Round To Integer(${value}, ${roundingType})`
 }
+

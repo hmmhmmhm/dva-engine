@@ -8,25 +8,25 @@ export const string = (
 	 * - `Type.Text.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	string: string,
+	string: string | number | any[],
 	/**
 	 * 텍스트로 전환되어 {0}을 대체할 값입니다.
 	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	_0: string,
+	_0: string | number | any[],
 	/**
 	 * 텍스트로 전환되어 {1}을 대체할 값입니다.
 	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	_1: string,
+	_1: string | number | any[],
 	/**
 	 * 텍스트로 전환되어 {2}를 대체할 값입니다.
 	 * - `Type.StringParam.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	_2: string
+	_2: string | number | any[]
 ) => {
 
 	return `String(${string}, ${_0}, ${_1}, ${_2})`

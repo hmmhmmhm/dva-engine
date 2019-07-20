@@ -7,14 +7,16 @@ export const directionFromAngles = (
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	horizontalAngle: string,
+	horizontalAngle: string | number | any[],
 	/**
 	 * 결과 벡터를 도출하는 데 사용되는 종축각(단위: 도)입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	verticalAngle: string
-) => {
+	verticalAngle: string | number | any[]
+): number => {
 
+	// @ts-ignore
 	return `Direction From Angles(${horizontalAngle}, ${verticalAngle})`
 }
+

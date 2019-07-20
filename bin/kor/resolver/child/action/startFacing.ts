@@ -8,7 +8,7 @@ export const startFacing = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 플레이어가 궁극적으로
 	 * 바라보게 되는 단위 방향입니다.
@@ -16,13 +16,13 @@ export const startFacing = (
 	 * - `Type.Vector.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	direction: string,
+	direction: string | number | any[],
 	/**
 	 * 초당 회전율(도)입니다.
 	 * - `Type.Number.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	turnRate: string,
+	turnRate: string | number | any[],
 	/**
 	 * 방향이 플레이어의
 	 * 월드 좌표 또는 로컬 좌표 중
@@ -31,7 +31,7 @@ export const startFacing = (
 	 * - `Type.Relative.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	relative: string,
+	relative: string | number | any[],
 	/**
 	 * 이 액션의 입력 정보 중
 	 * 어떤 항목을 지속적으로
@@ -42,7 +42,7 @@ export const startFacing = (
 	 * - `Type.FacingReevaluation.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	reevaluation: string
+	reevaluation: string | number | any[]
 ) => {
 
 	return `Start Facing(${player}, ${direction}, ${turnRate}, ${relative}, ${reevaluation})`

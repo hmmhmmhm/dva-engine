@@ -7,7 +7,7 @@ export const setAbility2Enabled = (
 	 * - `Type.Player.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	player: string,
+	player: string | number | any[],
 	/**
 	 * 플레이어가 기술 2을
 	 * 사용할 수 있는지 여부를 지정합니다.
@@ -16,7 +16,7 @@ export const setAbility2Enabled = (
 	 * - `Type.Bool.` 를 입력하면 
 	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
 	 */
-	enabled: string
+	enabled: string | number | any[]
 ) => {
 
 	return `Set Ability 2 Enabled(${player}, ${enabled})`
