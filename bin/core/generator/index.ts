@@ -6,7 +6,6 @@ import Reformer from './reformer'
 import Generator from './generator'
 import generatorData from './generatorData.json'
 
-
 import tempDir from 'temp-dir'
 
 /**

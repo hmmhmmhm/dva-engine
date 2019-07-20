@@ -1,38 +1,34 @@
-/**
- * @description 오버워치 워크샵의 함수 유형입니다.
- */
-import {
-    RuleEvent, Value, Action,
-    Type, Level, Server,
-    Match, Util, Classes
-} from '../bin/kor'
+// Categorized function collection.
+import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes} from '../bin/kor'
 
-/**
- * @description 오버워치 워크샵의 클래스입니다.
- * @example 클래스 사용 예시는 아래와 같습니다.
- * 
- * let player = new Player()
- * player.health()
- */
+// Classified data type.
+const { Array, Bool, Number, String } = Type
+
+// Reprocessed function class.
 const { Rule, Player, Event, Entity, Team, Vector } = Classes
 
-// Check Compare
+/**
+ * @description
+ * Write the workshop code from below.
+ */
+
+// Check condition
 let checkCompareValue1 = Value.attacker() == Value.attacker()
 let checkCompareValue2 = ((checkCompareValue1 >= (checkCompareValue1 < checkCompareValue1)))
 
-// Check And
+// Check and
 let checkAndValue1 = Value.attacker() && Value.attacker()
 
-// Check Or
+// Check or
 let checkOrValue1 = Value.attacker() || Value.attacker()
 
-// Check Not
+// Check not
 let checkNotValue1 = !Value.attacker()
 let checkNotValue2 = (!Value.attacker())
 let checkNotValue3 = ((!Value.attacker()))
 let checkNotValue4 = !(checkNotValue1 && checkAndValue1)
 
-// Check Operator
+// Check operator overload
 let a = Value.number(1)
 let b = Value.number(2)
 let c = Value.number(3)
@@ -51,13 +47,51 @@ let o = Value.number(4)
 
 let checkOperator1 = ((a*b)/c+d) % e + (f+g+h+i) - (j-(k*l/m) - n * o)
 
-// Check Array
-let allDead = Type.Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
+// Check array
+let checkArray1 = Type.Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
 
-/***
- * @TODO
- * IF COMPARE NOT SHOW FIRST THROW ERROR
- */
+checkArray1.length
+checkArray1.pop()
+checkArray1.shift()
+checkArray1.slice(0, 1)
+checkArray1.reverse()
+checkArray1.push(Value.number(1))
+checkArray1.sort((a, b)=> a * b)
+checkArray1.reduce((previousValue, currentValue, currentIndex)=>{
+    //
+})
+checkArray1.reduceRight((previousValue, currentValue, currentIndex)=>{
+    //
+})
+checkArray1.some((value, index, array)=>{
+    //
+})
+checkArray1.splice(1, 1, [])
+checkArray1.map((value, index, array)=> {
+    //
+})
+checkArray1.unshift()
+checkArray1.values()
+checkArray1.concat()
+checkArray1.copyWithin(1, 1, 1)
+checkArray1.entries()
+checkArray1.every((value, index, array)=>{
+    //
+})
+checkArray1.fill(1, 2, 3)
+checkArray1.find((value, index,obj)=>{
+    //
+}, 1)
+checkArray1.findIndex((value, index,obj)=>{
+    //
+}, 1)
+checkArray1.forEach((value, index, array)=>{
+    //
+})
+
+
+// Check empty array overload
+let checkEmptyArray = []
 
 new Rule({
     event:
@@ -65,7 +99,7 @@ new Rule({
 
     condition: [
 
-        // Compare
+        // Check condition
         Value.attacker() == Event.EventPlayer(),
         Value.attacker() === Event.EventPlayer(),
         Value.attacker() != Event.EventPlayer(),
@@ -75,13 +109,13 @@ new Rule({
         Value.attacker() > Event.EventPlayer(),
         Value.attacker() < Event.EventPlayer(),
 
-        // Nested Compare
+        // Check nested condition
         checkCompareValue1 != checkCompareValue1,
 
-        // Complex Compare
+        // Check complex condition
         (checkCompareValue1 >= (checkCompareValue1 < checkCompareValue1)) != checkCompareValue1,
 
-        // Complex Compare (Multiple Parenthesized)
+        // Check complex condition (multiple parenthesized)
         ((checkCompareValue1 >= (checkCompareValue1 < checkCompareValue1)) != checkCompareValue1 ),
         (((checkCompareValue1 >= (checkCompareValue1 < checkCompareValue1)) != checkCompareValue1 )),
         (
@@ -100,16 +134,16 @@ new Rule({
             )
         ),
 
-        // Complex Nested Compare
+        // Check complex nested condition
         checkCompareValue2 === checkCompareValue2,
 
-        // Unary Compare
+        // Check unary condition
         checkCompareValue1,
         
-        // Complex Nested Unary Compare
+        // Check complex nested usnary compare
         checkCompareValue2,
     ],
-    
+
     action: [
         Action.kill(
             Type.Player.attacker(),

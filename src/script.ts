@@ -1,30 +1,30 @@
-/**
- * @description 오버워치 워크샵의 함수 유형입니다.
- */
-import {
-    RuleEvent, Value, Action,
-    Type, Level, Server,
-    Match, Util, Classes
-} from '../bin/kor'
+// Categorized function collection.
+import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes } from '../bin/kor'
 
-/**
- * @description 오버워치 워크샵의 클래스입니다.
- * @example 클래스 사용 예시는 아래와 같습니다.
- * 
- * let player = new Player()
- * player.health()
- */
+// Classified data type.
+const { Array, Bool, Number, String } = Type
+
+// Reprocessed function class.
 const { Rule, Player, Event, Entity, Team, Vector } = Classes
 
-// 여기에 코드를 작성합니다.
+/**
+ * @description
+ * Write the workshop code from below.
+ */
+
+// Rule Template
 new Rule({
+
+    // Write the rule description.
+    description: '',
+
+    // Set the event type
     event: RuleEvent.onGoingGlobal(),
 
     condition: [
-        //
+        // Write the rule condition.
     ],
-    
     action: [
-        //
+        // Write the rule action.
     ]
 })
