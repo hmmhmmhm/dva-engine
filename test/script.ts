@@ -1,7 +1,11 @@
 /**
  * @description 오버워치 워크샵의 함수 유형입니다.
  */
-import { Type, Value, Action, RuleEvent, Level, Match, Util, Classes } from '../bin/kor'
+import {
+    RuleEvent, Value, Action,
+    Type, Array, Level, Server,
+    Match, Util, Classes
+} from '../bin/kor'
 
 /**
  * @description 오버워치 워크샵의 클래스입니다.
@@ -48,6 +52,8 @@ let o = Value.number(4)
 // @ts-ignore
 let checkOperator1 = ((a*b)/c+d) % e + (f+g+h+i) - (j-(k*l/m) - n * o)
 
+// Check Array
+let allDead = Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
 
 /***
  * @TODO

@@ -29,6 +29,7 @@ export const Resolver = async (lang = 'kor') => {
         Logger,
         lang,
         preCollectedTypeFileNames: {},
+        preCollectedTypes: {},
         generatorData
     }
 
@@ -47,6 +48,7 @@ export const Resolver = async (lang = 'kor') => {
             // require('./sequence/collectArchivedValue'),
 
             require('./sequence/collectPreTypeNames'),
+            require('./sequence/collectType'),
 
             Generator({
                 interfacePath: `interface/event/child`,
@@ -63,7 +65,6 @@ export const Resolver = async (lang = 'kor') => {
                 interfaceType: 'Action'
             }),
 
-            require('./sequence/collectType'),
             Reformer(),
         ],
 

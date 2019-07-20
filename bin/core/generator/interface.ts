@@ -43,6 +43,12 @@ export interface IData {
     preCollectedTypeFileNames: {[key: string]: any}
 
     /**
+     * @description
+     * Collected Type Data.
+     */
+    preCollectedTypes: {[key: string]: any}
+
+    /**
      * Extracted overlatch interfaces data.
      */
     interfaces?: {[key: string]: any}

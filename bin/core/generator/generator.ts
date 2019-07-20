@@ -28,6 +28,11 @@ export default ({
             `${process.cwd()}/bin/${data.lang}/${interfacePath}`,
             async (collectedDatas)=>{
 
+                /**
+                 * `for value/array.ts resolver`
+                 */
+                let arrayResolverCode = ``
+
                 // Create child resolvers
                 for(let {
                     fileName,
@@ -229,7 +234,7 @@ export default ({
                             }
                         }
                     }
-    
+
                     resolverCode += `export const ${resolverName} = (${valueProperties}\n) => {\n\n`
                     resolverCode += '\treturn `'
     
@@ -257,16 +262,38 @@ export default ({
                      */
                     resolverCode += workshopCode
                     resolverCode += '`\n}'
-    
+
+                    /**
+                     * `Collect Value Array Resolver`
+                     */
+                    if(interfaceType == 'Value'){
+                        if(typeof data.preCollectedTypes[resolverName] != 'undefined'){
+                            if(data.preCollectedTypes[resolverName].indexOf('array') != -1){
+                                let singleArrayResolver = `${resolverCode.replace(`) => {`, `): any[] => {`)}\n\n`
+                                singleArrayResolver = singleArrayResolver.replace(`\n\treturn `,`\n\t// @ts-ignore\n\treturn `)
+                                arrayResolverCode += singleArrayResolver
+                            }
+                        }
+                    }
+
                     // console.log(`${fileName}, ${interfaceName}`)
                     // console.log(interfaces[interfaceName])
                     // console.log(resolverCode)
-    
+
                     Logger.debug(`Created Resolver <${interfaceType.toLowerCase()}/${fileName}>`)
                     fs.writeFileSync(`${data.resolverPath}/${interfaceType.toLowerCase()}/${fileName}`, resolverCode)
                 }
+
+                /**
+                 * `Create Value Array Resolver`
+                 */
+                if(interfaceType == 'Value' && arrayResolverCode.length > 0){
+                    fs.writeFileSync(`${data.resolverPath}/array.ts`, arrayResolverCode)
+                }
     
-                // Create child index
+                /**
+                 * `Create child index`
+                 */
                 let indexCode = ''
                 for(let { fileName } of collectedDatas)
                     indexCode += `export * from './${fileName.split('.')[0]}'\n`

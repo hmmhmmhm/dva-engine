@@ -29,6 +29,8 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                 subPath
             } of collectedDatas){
 
+                let lowerCaseFileName = fileName.split('.')[0]
+
                 // Add folder name before type name.
                 let subPathArray = subPath.split('/').filter(path => path.length > 0)
                 for(let subPathIndexStr in subPathArray){
@@ -70,11 +72,20 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                             // Case I*
                             let typeFilePath = Util.pascalCaseToCamelCase(resolverType, false, true)
                             typeFilePaths.push(`export * from '../value/${typeFilePath}'\n`)
+
+                            // Pre Collect Type
+                            //   key: typeFilePath
+                            // value: [lowerCaseFileName]
+                            if(typeof data.preCollectedTypes[typeFilePath] == 'undefined')
+                                data.preCollectedTypes[typeFilePath] = []
+                            data.preCollectedTypes[typeFilePath].push(lowerCaseFileName)
+
                         }else{
                             // Case Value*Type
                             if(typeof data.preCollectedTypeFileNames[resolverType] != 'undefined'){
                                 let typeFilePath = data.preCollectedTypeFileNames[resolverType]
                                 typeFilePaths.push(`export * from './${typeFilePath}'\n`)
+
                             }else{
                                 if(resolverType.length != 0 && resolverType.indexOf(`\'`) != -1){
                                     stringTypes.push (resolverType)
@@ -100,8 +111,6 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                     if(resolverCode.length != 0){
                         fs.writeFileSync(`${data.resolverPath}/type/${fileName}`, resolverCode)
                         Logger.debug(`Created Resolver <type/${fileName}>`)
-
-                        let lowerCaseFileName = fileName.split('.')[0]
 
                         let upperCaseFileName = lowerCaseFileName
                         let upperCaseFileNameArr = upperCaseFileName.split('')
