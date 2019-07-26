@@ -1,11 +1,11 @@
 import { ValueEntityType } from '../../../type'
 
 /**
- * {383}
+ * {382}
  */
 export interface IEntityExists {
     /**
-     * {579}
+     * {578}
      */
     entity: ValueEntityType
 }

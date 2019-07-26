@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetMaxHealth {
     /**
-     * {244}
+     * {243}
      */
     player: ValuePlayerType
     /**
-     * {245}
+     * {244}
      */
     healthPercent: ValueNumberType
 }

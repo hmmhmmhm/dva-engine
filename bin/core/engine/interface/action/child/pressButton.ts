@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueButtonType } from '../../../type'
  */
 export interface IPressButton {
     /**
-     * {216}
+     * {215}
      */
     player: ValuePlayerType
     /**
-     * {217}
+     * {216}
      */
     button: ValueButtonType
 }

@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {536}
+ * {535}
  */
 export interface IZComponentOf {
     /**
-     * {700}
+     * {699}
      */
     vector: ValueVectorType
 }

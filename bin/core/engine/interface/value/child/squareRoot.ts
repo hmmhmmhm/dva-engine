@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {511}
+ * {510}
  */
 export interface ISquareRoot {
     /**
-     * {675}
+     * {674}
      */
     value: ValueNumberType
 }

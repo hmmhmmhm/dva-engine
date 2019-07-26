@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {522}
+ * {521}
  */
 export interface IUltimateChargePercent {
     /**
-     * {685}
+     * {684}
      */
     player: ValuePlayerType
 }

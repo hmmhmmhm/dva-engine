@@ -1,4 +1,4 @@
 /**
- * {423}
+ * {422}
  */
 export interface IIsGameInProgress {}

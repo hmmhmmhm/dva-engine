@@ -5,7 +5,7 @@ import { ValuePlayersParamType } from '../../../type'
  */
 export interface IDisableBuiltInGameModeRespawning {
     /**
-     * {185}
+     * {184}
      */
     players: ValuePlayersParamType
 }

@@ -1,11 +1,11 @@
 import { ValueBoolType } from '../../../type'
 
 /**
- * {464}
+ * {463}
  */
 export interface INot {
     /**
-     * {635}
+     * {634}
      */
     value: ValueBoolType
 }

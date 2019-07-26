@@ -1,16 +1,16 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {354}
+ * {353}
  */
 export interface IAngleBetweenVectors {
     /**
-     * {545}
+     * {544}
      */
     vector1: ValueVectorType
 
     /**
-     * {546}
+     * {545}
      */
     vector2: ValueVectorType
 }

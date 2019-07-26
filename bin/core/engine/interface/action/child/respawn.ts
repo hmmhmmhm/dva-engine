@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IRespawn {
     /**
-     * {219}
+     * {218}
      */
     player: ValuePlayerType
 }

@@ -86,7 +86,8 @@
   },
   "4": {
     "contexts": [
-      ""
+      "Undoes the effect of the disallow button",
+      "action for one or more players."
     ],
     "usedFiles": [
       {
@@ -94,6 +95,12 @@
         "orderNumber": 4,
         "path": "/interface/action/action.ts",
         "indent": 4
+      },
+      {
+        "topName": "Allow Button",
+        "orderNumber": 0,
+        "path": "/interface/action/child/allowButton.ts",
+        "indent": 0
       }
     ]
   },
@@ -2629,20 +2636,6 @@
   },
   "127": {
     "contexts": [
-      "Undoes the effect of the disallow button",
-      "action for one or more players."
-    ],
-    "usedFiles": [
-      {
-        "topName": "Allow Button",
-        "orderNumber": 0,
-        "path": "/interface/action/child/allowButton.ts",
-        "indent": 0
-      }
-    ]
-  },
-  "128": {
-    "contexts": [
       "Player - The player or players whose button",
       "is being reenabled. Can use most Player",
       "based Value Syntax."
@@ -2656,7 +2649,7 @@
       }
     ]
   },
-  "129": {
+  "128": {
     "contexts": [
       "Button - The logical button that is being reenabled."
     ],
@@ -2669,7 +2662,7 @@
       }
     ]
   },
-  "130": {
+  "129": {
     "contexts": [
       "Player - The player or players whose velocity",
       "will be changed. Can use most Player based Value Syntax."
@@ -2683,7 +2676,7 @@
       }
     ]
   },
-  "131": {
+  "130": {
     "contexts": [
       "Direction - The unit direction in which",
       "the impulse will be applied. This value",
@@ -2699,7 +2692,7 @@
       }
     ]
   },
-  "132": {
+  "131": {
     "contexts": [
       "Speed - The magnitude of the change to the",
       "velocities of the player or players. Can",
@@ -2714,7 +2707,7 @@
       }
     ]
   },
-  "133": {
+  "132": {
     "contexts": [
       "Relative - Specifies whether the direction",
       "is relative to world coordinates or the",
@@ -2729,7 +2722,7 @@
       }
     ]
   },
-  "134": {
+  "133": {
     "contexts": [
       "To World - Relative to the world’s coordinate system."
     ],
@@ -2742,7 +2735,7 @@
       }
     ]
   },
-  "135": {
+  "134": {
     "contexts": [
       "Visible to - One or more players who will",
       "see the message. Can use most Value Syntax",
@@ -2757,7 +2750,7 @@
       }
     ]
   },
-  "136": {
+  "135": {
     "contexts": [
       "Header - The message to be displayed. Can",
       "use most String based Value Syntax to specify."
@@ -2783,7 +2776,7 @@
       }
     ]
   },
-  "137": {
+  "136": {
     "contexts": [
       "Variable - The variable the action will",
       "manipulate. Can use most Variable based Value Syntax."
@@ -2803,7 +2796,7 @@
       }
     ]
   },
-  "138": {
+  "137": {
     "contexts": [
       "Destination - The value that the global",
       "variable will eventually reach. The type",
@@ -2828,7 +2821,7 @@
       }
     ]
   },
-  "139": {
+  "138": {
     "contexts": [
       "Player - The player whose variable will",
       "gradually change. If multiple players are",
@@ -2849,7 +2842,7 @@
       }
     ]
   },
-  "140": {
+  "139": {
     "contexts": [
       "Visible to - One or more players who will",
       "be able to see the icon. Can use most Value",
@@ -2900,7 +2893,7 @@
       }
     ]
   },
-  "141": {
+  "140": {
     "contexts": [
       "Destination - The value that the player",
       "variable will eventually reach. The type",
@@ -2925,7 +2918,7 @@
       }
     ]
   },
-  "142": {
+  "141": {
     "contexts": [
       "Player - The player whose variable will",
       "gradually change. If multiple players are",
@@ -2946,7 +2939,7 @@
       }
     ]
   },
-  "143": {
+  "142": {
     "contexts": [
       "Rate - The amount of change that will happen",
       "to the variable’s value each second. Can",
@@ -2961,7 +2954,7 @@
       }
     ]
   },
-  "144": {
+  "143": {
     "contexts": [
       "Variable - The variable the action will",
       "manipulate. Can use most Variable based Value Syntax."
@@ -2981,7 +2974,7 @@
       }
     ]
   },
-  "145": {
+  "144": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continuously reevaluated.",
@@ -2998,7 +2991,7 @@
       }
     ]
   },
-  "146": {
+  "145": {
     "contexts": [
       "Player - The player or players from whom",
       "the status will be removed. Can use most",
@@ -3013,7 +3006,7 @@
       }
     ]
   },
-  "147": {
+  "146": {
     "contexts": [
       "Status - The Status to be removed from the",
       "player or players. Values include Hacked,",
@@ -3029,7 +3022,7 @@
       }
     ]
   },
-  "148": {
+  "147": {
     "contexts": [
       "Player - The player or players to perform",
       "the communication. Can use most Player based Value Syntax."
@@ -3043,7 +3036,7 @@
       }
     ]
   },
-  "149": {
+  "148": {
     "contexts": [
       "Type - The type of communication. Can use",
       "any equipped emote, equipped voice line,",
@@ -3058,7 +3051,7 @@
       }
     ]
   },
-  "150": {
+  "149": {
     "contexts": [
       "Visible to - One or more players who will",
       "be able to see the effect. Can use most",
@@ -3079,7 +3072,7 @@
       }
     ]
   },
-  "151": {
+  "150": {
     "contexts": [
       "Color - The color of the effect to be created.",
       "IF a particular team is chosen, the effect",
@@ -3100,7 +3093,7 @@
       }
     ]
   },
-  "152": {
+  "151": {
     "contexts": [
       "Position - The effect’s position. If this",
       "value is a player, then the effect will",
@@ -3122,7 +3115,7 @@
       }
     ]
   },
-  "153": {
+  "152": {
     "contexts": [
       "Radius - The effect’s radius in meters.",
       "Sound effects have their volume affected",
@@ -3141,7 +3134,7 @@
       }
     ]
   },
-  "154": {
+  "153": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continuously reevaluated,",
@@ -3157,7 +3150,7 @@
       }
     ]
   },
-  "155": {
+  "154": {
     "contexts": [
       "Header - The header text to be displayed",
       "(can be blank). Can use most String based",
@@ -3172,7 +3165,7 @@
       }
     ]
   },
-  "156": {
+  "155": {
     "contexts": [
       "Subheader - The subheader text to be displayed",
       "(can be blank). Can use most String based",
@@ -3187,7 +3180,7 @@
       }
     ]
   },
-  "157": {
+  "156": {
     "contexts": [
       "Text - The body text to be displayed (can",
       "be blank). Can use most String based Value",
@@ -3202,7 +3195,7 @@
       }
     ]
   },
-  "158": {
+  "157": {
     "contexts": [
       "Location - The location on the screen where",
       "text will appear. You can choose left, top, or right."
@@ -3216,7 +3209,7 @@
       }
     ]
   },
-  "159": {
+  "158": {
     "contexts": [
       "Sort Order - The Sort Order of the text",
       "relative to other text in the same location.",
@@ -3233,7 +3226,7 @@
       }
     ]
   },
-  "160": {
+  "159": {
     "contexts": [
       "Header Color - The color of the Header text",
       "to be created. If a particular team is chosen,",
@@ -3248,7 +3241,7 @@
       }
     ]
   },
-  "161": {
+  "160": {
     "contexts": [
       "Subheader Color - The color of the Subheader",
       "text to be created. If a particular team",
@@ -3263,7 +3256,7 @@
       }
     ]
   },
-  "162": {
+  "161": {
     "contexts": [
       "Text Color - The color of the body text",
       "to be created. If a particular team is chosen,",
@@ -3278,7 +3271,7 @@
       }
     ]
   },
-  "163": {
+  "162": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continuously reevaluated,",
@@ -3294,7 +3287,7 @@
       }
     ]
   },
-  "164": {
+  "163": {
     "contexts": [
       "Position - The icon’s position. If this",
       "value is a player, then the icon will appear",
@@ -3311,7 +3304,7 @@
       }
     ]
   },
-  "165": {
+  "164": {
     "contexts": [
       "Icon - The icon to be created. (Arrow: Down,",
       "Arrow: Left, Arrow: Right, Arrow: Up, Asterisk,",
@@ -3331,7 +3324,7 @@
       }
     ]
   },
-  "166": {
+  "165": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continously reevaluated,",
@@ -3355,7 +3348,7 @@
       }
     ]
   },
-  "167": {
+  "166": {
     "contexts": [
       "Icon Color - The color of the icon to be",
       "created. IF a particular team is chosen,",
@@ -3380,7 +3373,7 @@
       }
     ]
   },
-  "168": {
+  "167": {
     "contexts": [
       "Show when offscreen - Should this icon still",
       "appear even when it is behind you? Can use",
@@ -3395,7 +3388,7 @@
       }
     ]
   },
-  "169": {
+  "168": {
     "contexts": [
       "Visible to - One or more players who will",
       "see the HUD text. Can use most Value Syntax",
@@ -3410,7 +3403,7 @@
       }
     ]
   },
-  "170": {
+  "169": {
     "contexts": [
       "Header - The header text to be displayed",
       "(can be blank). Can use most String based",
@@ -3425,7 +3418,7 @@
       }
     ]
   },
-  "171": {
+  "170": {
     "contexts": [
       "Position - The text’s position. If this",
       "value is a player, then the text will appear",
@@ -3442,7 +3435,7 @@
       }
     ]
   },
-  "172": {
+  "171": {
     "contexts": [
       "Scale - The text’s scale. Can use most Number",
       "based Value Syntax."
@@ -3456,7 +3449,7 @@
       }
     ]
   },
-  "173": {
+  "172": {
     "contexts": [
       "Clipping - Specifies whether the text can",
       "be seen through walls or is instead clipped."
@@ -3470,7 +3463,7 @@
       }
     ]
   },
-  "174": {
+  "173": {
     "contexts": [
       "Clip Against Surfaces - The text may be",
       "partially or completely obscured by walls,",
@@ -3485,7 +3478,7 @@
       }
     ]
   },
-  "175": {
+  "174": {
     "contexts": [
       "Player - The player or players who will",
       "receive damage. Can use most Player based",
@@ -3500,7 +3493,7 @@
       }
     ]
   },
-  "176": {
+  "175": {
     "contexts": [
       "Damager - The player who will receive credit",
       "for the damage. A damager of null indicates",
@@ -3516,7 +3509,7 @@
       }
     ]
   },
-  "177": {
+  "176": {
     "contexts": [
       "Amount - The amount of damage to apply.",
       "This amount may be modified by buffs, debuffs,",
@@ -3531,7 +3524,7 @@
       }
     ]
   },
-  "178": {
+  "177": {
     "contexts": [
       "Player - The winning player. Can use most",
       "Player based Value Syntax for this value."
@@ -3545,7 +3538,7 @@
       }
     ]
   },
-  "179": {
+  "178": {
     "contexts": [
       "Team - Round winning team. Can use most",
       "Team based Value Syntax for this value."
@@ -3559,7 +3552,7 @@
       }
     ]
   },
-  "180": {
+  "179": {
     "contexts": [
       "Team - The winning team. Can use most Team",
       "based Value Syntax for this value."
@@ -3573,7 +3566,7 @@
       }
     ]
   },
-  "181": {
+  "180": {
     "contexts": [
       "Entity - Specifies which effect entity to",
       "destroy. This entity may be the last created",
@@ -3589,7 +3582,7 @@
       }
     ]
   },
-  "182": {
+  "181": {
     "contexts": [
       "Text ID - Specifies which hud text to destroy.",
       "This ID may be last text ID or a variable",
@@ -3604,7 +3597,7 @@
       }
     ]
   },
-  "183": {
+  "182": {
     "contexts": [
       "Text ID - Specifies which icon to destroy.",
       "This ID may be last text ID or a variable",
@@ -3619,7 +3612,7 @@
       }
     ]
   },
-  "184": {
+  "183": {
     "contexts": [
       "Text Id - A Reference to the last piece",
       "of text created by the event player (or",
@@ -3635,7 +3628,7 @@
       }
     ]
   },
-  "185": {
+  "184": {
     "contexts": [
       "Player - The player or players whose respawning",
       "is affected. Can use most Player based Value",
@@ -3656,7 +3649,7 @@
       }
     ]
   },
-  "186": {
+  "185": {
     "contexts": [
       "Player - The player or players whose default",
       "death spectate behavior is restored. Can",
@@ -3671,7 +3664,7 @@
       }
     ]
   },
-  "187": {
+  "186": {
     "contexts": [
       "Player - The player or players who will",
       "revert to seeing their own HUD while death",
@@ -3687,7 +3680,7 @@
       }
     ]
   },
-  "188": {
+  "187": {
     "contexts": [
       "Player - The player executing this rule,",
       "as specified by the event. May be the same",
@@ -3703,10 +3696,9 @@
       }
     ]
   },
-  "189": {
+  "188": {
     "contexts": [
-      "사용할 수 없게 된",
-      "논리적 버튼입니다."
+      "Button - The logical button that is being disabled."
     ],
     "usedFiles": [
       {
@@ -3717,7 +3709,7 @@
       }
     ]
   },
-  "190": {
+  "189": {
     "contexts": [
       "Player - The player or players who will",
       "be allowed to spectate all players. Can",
@@ -3732,7 +3724,7 @@
       }
     ]
   },
-  "191": {
+  "190": {
     "contexts": [
       "Player - The player or players who will",
       "begin seeing their spectate’s target’s hud",
@@ -3748,7 +3740,7 @@
       }
     ]
   },
-  "192": {
+  "191": {
     "contexts": [
       "Player - The player or players whose health",
       "will be restored. Can use most Player based",
@@ -3763,7 +3755,7 @@
       }
     ]
   },
-  "193": {
+  "192": {
     "contexts": [
       "Player - One or more players who will receive",
       "the heal over time. Can use most Player",
@@ -3784,7 +3776,7 @@
       }
     ]
   },
-  "194": {
+  "193": {
     "contexts": [
       "Amount - The amount of healing to apply.",
       "This amount may be modified by buffs or",
@@ -3801,7 +3793,7 @@
       }
     ]
   },
-  "195": {
+  "194": {
     "contexts": [
       "Player - The player or players who will",
       "be killed. Can use most Player based Value",
@@ -3816,7 +3808,7 @@
       }
     ]
   },
-  "196": {
+  "195": {
     "contexts": [
       "Killer - The player who will receive credit",
       "for the kill. A killer of null indicates",
@@ -3832,7 +3824,7 @@
       }
     ]
   },
-  "197": {
+  "196": {
     "contexts": [
       "Condition - Specifies whether the loop will",
       "occur. Can use most Conditional based Value",
@@ -3847,7 +3839,7 @@
       }
     ]
   },
-  "198": {
+  "197": {
     "contexts": [
       "Variable - Variable specified by a single",
       "alphabetic letter (A through Z)."
@@ -3867,7 +3859,7 @@
       }
     ]
   },
-  "199": {
+  "198": {
     "contexts": [
       "Variable - Variable specified by a single",
       "alphabetic letter (A through Z)."
@@ -3899,7 +3891,7 @@
       }
     ]
   },
-  "200": {
+  "199": {
     "contexts": [
       "Index - The index of the array to modify.",
       "If the index is beyond the end of the array,",
@@ -3927,7 +3919,7 @@
       }
     ]
   },
-  "201": {
+  "200": {
     "contexts": [
       "Player - The player or players whose variable",
       "will be set. If multiple players are provided,",
@@ -3961,7 +3953,7 @@
       }
     ]
   },
-  "202": {
+  "201": {
     "contexts": [
       "Player - The player whose score will change.",
       "Can use most Player based Value Syntax for this value."
@@ -3975,7 +3967,7 @@
       }
     ]
   },
-  "203": {
+  "202": {
     "contexts": [
       "Team - The team whose score will be changed.",
       "Can use most Player based Value Syntax for this value."
@@ -3995,7 +3987,7 @@
       }
     ]
   },
-  "204": {
+  "203": {
     "contexts": [
       "Variable - Variable specified by a single",
       "alphabetic letter (A through Z)."
@@ -4009,7 +4001,7 @@
       }
     ]
   },
-  "205": {
+  "204": {
     "contexts": [
       "Operation - The way in which the variable’s",
       "value will be changed. Options include standard",
@@ -4025,7 +4017,7 @@
       }
     ]
   },
-  "206": {
+  "205": {
     "contexts": [
       "Value - The value used for the modification.",
       "For arithmetic operations, this is the second",
@@ -4043,7 +4035,7 @@
       }
     ]
   },
-  "207": {
+  "206": {
     "contexts": [
       "Operation - The way in which the variable’s",
       "value will be changed. Options include standard",
@@ -4059,7 +4051,7 @@
       }
     ]
   },
-  "208": {
+  "207": {
     "contexts": [
       "Value - The value used for the modification.",
       "For arithmetic operations, this is the second",
@@ -4077,7 +4069,7 @@
       }
     ]
   },
-  "209": {
+  "208": {
     "contexts": [
       "Score - The amount the score will increase",
       "or decrease. If positive, the score will",
@@ -4093,7 +4085,7 @@
       }
     ]
   },
-  "210": {
+  "209": {
     "contexts": [
       "Type - The type of the effect to be created.",
       "(Good Explosion, Bad Explosion, Ring Explosion,",
@@ -4110,7 +4102,7 @@
       }
     ]
   },
-  "211": {
+  "210": {
     "contexts": [
       "Color - The color of the effect to be created.",
       "IF a particular team is chosen, the effect",
@@ -4130,7 +4122,7 @@
       }
     ]
   },
-  "212": {
+  "211": {
     "contexts": [
       "Position - The effect’s position. If this",
       "value is a player, then the effect will",
@@ -4152,7 +4144,7 @@
       }
     ]
   },
-  "213": {
+  "212": {
     "contexts": [
       "Radius - The effect’s radius in meters.",
       "Can use most Number based Value Syntax."
@@ -4166,7 +4158,7 @@
       }
     ]
   },
-  "214": {
+  "213": {
     "contexts": [
       "Player - The player or players who will",
       "begin preloading a hero or heroes. Only",
@@ -4183,7 +4175,7 @@
       }
     ]
   },
-  "215": {
+  "214": {
     "contexts": [
       "Hero - The hero or heroes to begin preloading",
       "for the specified player or players. When",
@@ -4201,7 +4193,7 @@
       }
     ]
   },
-  "216": {
+  "215": {
     "contexts": [
       "Player - The player or players for whom",
       "virtual button input will be forced. Can",
@@ -4216,7 +4208,7 @@
       }
     ]
   },
-  "217": {
+  "216": {
     "contexts": [
       "Button - The button to be pressed."
     ],
@@ -4229,7 +4221,7 @@
       }
     ]
   },
-  "218": {
+  "217": {
     "contexts": [
       "Player - The player or players whose hero",
       "list is being reset. Can use most Player",
@@ -4244,7 +4236,7 @@
       }
     ]
   },
-  "219": {
+  "218": {
     "contexts": [
       "Player - The player or players to respawn.",
       "Can use most Player based Value Syntax for this value."
@@ -4258,7 +4250,7 @@
       }
     ]
   },
-  "220": {
+  "219": {
     "contexts": [
       "Player - The player or players who will",
       "be resurrected. Can use most Player based",
@@ -4273,7 +4265,7 @@
       }
     ]
   },
-  "221": {
+  "220": {
     "contexts": [
       "Player - The player or players whose access",
       "to ability 1 is affected. Can use most Player",
@@ -4288,7 +4280,7 @@
       }
     ]
   },
-  "222": {
+  "221": {
     "contexts": [
       "Enabled - Specifies whether the player or",
       "players are able to use ability 1. Expects",
@@ -4304,7 +4296,7 @@
       }
     ]
   },
-  "223": {
+  "222": {
     "contexts": [
       "Player - The player or players whose access",
       "to ability 2 is affected. Expects a Boolean",
@@ -4320,7 +4312,7 @@
       }
     ]
   },
-  "224": {
+  "223": {
     "contexts": [
       "Enabled - Specifies whether the player or",
       "players are able to use ability 2. Can use",
@@ -4335,7 +4327,7 @@
       }
     ]
   },
-  "225": {
+  "224": {
     "contexts": [
       "Player - The player or players whose aim",
       "will be set. Can use most Player based Value",
@@ -4350,7 +4342,7 @@
       }
     ]
   },
-  "226": {
+  "225": {
     "contexts": [
       "Turn Speed Percent - The percentage of normal",
       "aim speed to which the player or players",
@@ -4366,7 +4358,7 @@
       }
     ]
   },
-  "227": {
+  "226": {
     "contexts": [
       "Player - The player or players whose damage",
       "dealt will be set. Can use most Player based",
@@ -4381,7 +4373,7 @@
       }
     ]
   },
-  "228": {
+  "227": {
     "contexts": [
       "Damage Dealt Percent - The percentage of",
       "raw damage dealt to which the player or",
@@ -4397,7 +4389,7 @@
       }
     ]
   },
-  "229": {
+  "228": {
     "contexts": [
       "Player - The player or players whose damage",
       "received will be set. Can use most Player",
@@ -4412,7 +4404,7 @@
       }
     ]
   },
-  "230": {
+  "229": {
     "contexts": [
       "Damage Received Percent - The percentage",
       "of raw damage received to which the player",
@@ -4428,7 +4420,7 @@
       }
     ]
   },
-  "231": {
+  "230": {
     "contexts": [
       "Player - The player or players whose facing",
       "will be set. Can use most Player based Value",
@@ -4443,7 +4435,7 @@
       }
     ]
   },
-  "232": {
+  "231": {
     "contexts": [
       "Direction - The unit direction in which",
       "the player or players will face. This value",
@@ -4459,7 +4451,7 @@
       }
     ]
   },
-  "233": {
+  "232": {
     "contexts": [
       "Variable - Specifies which Global Variable",
       "to store the value into. Specified by a",
@@ -4474,7 +4466,7 @@
       }
     ]
   },
-  "234": {
+  "233": {
     "contexts": [
       "Player - The player or players whose variable",
       "will be set. If multiple players are provided,",
@@ -4496,7 +4488,7 @@
       }
     ]
   },
-  "235": {
+  "234": {
     "contexts": [
       "Index - The index of the array to modify.",
       "If the index is beyond the end of the array,",
@@ -4513,7 +4505,7 @@
       }
     ]
   },
-  "236": {
+  "235": {
     "contexts": [
       "Value - The value that will be stored into",
       "the array. Nearly any Value syntax can be",
@@ -4528,7 +4520,7 @@
       }
     ]
   },
-  "237": {
+  "236": {
     "contexts": [
       "Player - The player or players whose healing",
       "dealt will be set. Can use most Player based",
@@ -4549,7 +4541,7 @@
       }
     ]
   },
-  "238": {
+  "237": {
     "contexts": [
       "Healing Dealt Percent - The percentage of",
       "raw healing dealt to which the player or",
@@ -4571,7 +4563,7 @@
       }
     ]
   },
-  "239": {
+  "238": {
     "contexts": [
       "Player - The player or players whose healing",
       "received will be set. Can use most Player",
@@ -4586,7 +4578,7 @@
       }
     ]
   },
-  "240": {
+  "239": {
     "contexts": [
       "Healing Received Percent - The percentage",
       "of raw healing received to which the player",
@@ -4602,7 +4594,7 @@
       }
     ]
   },
-  "241": {
+  "240": {
     "contexts": [
       "Player - The player or players who will",
       "become invisible. Can use most Player based",
@@ -4617,7 +4609,7 @@
       }
     ]
   },
-  "242": {
+  "241": {
     "contexts": [
       "Invisible to - Specifies for whom the player",
       "or players will be invisible. Can be set",
@@ -4632,7 +4624,7 @@
       }
     ]
   },
-  "243": {
+  "242": {
     "contexts": [
       "Time - The match time in seconds. Can use",
       "most Number based Value Syntax for this value."
@@ -4646,7 +4638,7 @@
       }
     ]
   },
-  "244": {
+  "243": {
     "contexts": [
       "Player - The player or players whose max",
       "health will be set. Can use most Player",
@@ -4661,7 +4653,7 @@
       }
     ]
   },
-  "245": {
+  "244": {
     "contexts": [
       "Player - The player or players whose move",
       "speed will be set. Can use most Player based",
@@ -4682,7 +4674,7 @@
       }
     ]
   },
-  "246": {
+  "245": {
     "contexts": [
       "Health Percent - The percentage of raw move",
       "speed to which the player or players will",
@@ -4698,7 +4690,7 @@
       }
     ]
   },
-  "247": {
+  "246": {
     "contexts": [
       "Visible to - One or more players who will",
       "see the message. Can use most Player based Value Syntax."
@@ -4718,7 +4710,7 @@
       }
     ]
   },
-  "248": {
+  "247": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continously reevaluated.",
@@ -4735,7 +4727,7 @@
       }
     ]
   },
-  "249": {
+  "248": {
     "contexts": [
       "Player - The player or players whose hero",
       "list is being set. Can use most Player based",
@@ -4750,7 +4742,7 @@
       }
     ]
   },
-  "250": {
+  "249": {
     "contexts": [
       "Hero - The hero or heroes that will be available.",
       "If no heroes are provided, the action has",
@@ -4766,7 +4758,7 @@
       }
     ]
   },
-  "251": {
+  "250": {
     "contexts": [
       "Player - The player or players whose score",
       "will be set. Can use most Player based Value",
@@ -4781,7 +4773,7 @@
       }
     ]
   },
-  "252": {
+  "251": {
     "contexts": [
       "Team - The team or teams whose score will",
       "be set. Can use most Team based Value Syntax for this value."
@@ -4801,7 +4793,7 @@
       }
     ]
   },
-  "253": {
+  "252": {
     "contexts": [
       "Variable - Specifies which Player Variable",
       "to store the value into. Specified by a",
@@ -4816,7 +4808,7 @@
       }
     ]
   },
-  "254": {
+  "253": {
     "contexts": [
       "Value - The value that will be stored. Nearly",
       "any Value syntax can be used, however it",
@@ -4831,7 +4823,7 @@
       }
     ]
   },
-  "255": {
+  "254": {
     "contexts": [
       "Variable - Specifies which player variable’s",
       "value is the array to modify, if the variable’s",
@@ -4848,7 +4840,7 @@
       }
     ]
   },
-  "256": {
+  "255": {
     "contexts": [
       "Index - The index of the array to modify.",
       "If the index is beyond the end of the array,",
@@ -4865,7 +4857,7 @@
       }
     ]
   },
-  "257": {
+  "256": {
     "contexts": [
       "Value - The value that will be stored into",
       "the array. Nearly any Value syntax can be",
@@ -4880,7 +4872,7 @@
       }
     ]
   },
-  "258": {
+  "257": {
     "contexts": [
       "Player - The player or players whose access",
       "to primary fire is affected. Can use most",
@@ -4895,7 +4887,7 @@
       }
     ]
   },
-  "259": {
+  "258": {
     "contexts": [
       "Enabled - Specifies whether the player or",
       "players are able to use primary fire. Expects",
@@ -4911,7 +4903,7 @@
       }
     ]
   },
-  "260": {
+  "259": {
     "contexts": [
       "Player - The player or players whose projectile",
       "gravity will be set. Can use most Player",
@@ -4926,7 +4918,7 @@
       }
     ]
   },
-  "261": {
+  "260": {
     "contexts": [
       "Projectile Gravity Percent - The percentage",
       "of the regular projectile gravity to which",
@@ -4943,7 +4935,7 @@
       }
     ]
   },
-  "262": {
+  "261": {
     "contexts": [
       "Player - The player or players whose projectile",
       "speed will be set. Can use most Player based",
@@ -4958,7 +4950,7 @@
       }
     ]
   },
-  "263": {
+  "262": {
     "contexts": [
       "Projectile Speed Percent - The percentage",
       "of the regular projectile speed to which",
@@ -4975,7 +4967,7 @@
       }
     ]
   },
-  "264": {
+  "263": {
     "contexts": [
       "Player - The player or players whose respawn",
       "max time will is being defined. Can use",
@@ -4990,7 +4982,7 @@
       }
     ]
   },
-  "265": {
+  "264": {
     "contexts": [
       "Time - The duration between death and respawn",
       "in seconds. Can use most Number based Value",
@@ -5005,7 +4997,7 @@
       }
     ]
   },
-  "266": {
+  "265": {
     "contexts": [
       "Player - The player or players whose access",
       "to secondary fire is affected. Can use most",
@@ -5020,7 +5012,7 @@
       }
     ]
   },
-  "267": {
+  "266": {
     "contexts": [
       "Enabled - Specifies whether the player or",
       "players are able to use secondary fire.",
@@ -5036,7 +5028,7 @@
       }
     ]
   },
-  "268": {
+  "267": {
     "contexts": [
       "Speed Percent - The simulation rate as a",
       "percentage of normal speed. Only rates up",
@@ -5052,7 +5044,7 @@
       }
     ]
   },
-  "269": {
+  "268": {
     "contexts": [
       "Player - The player or players to whom the",
       "status will be applied. Can use most Player",
@@ -5067,7 +5059,7 @@
       }
     ]
   },
-  "270": {
+  "269": {
     "contexts": [
       "Assister - Specifies a player to be awarded",
       "assist credit should the affected player",
@@ -5085,7 +5077,7 @@
       }
     ]
   },
-  "271": {
+  "270": {
     "contexts": [
       "Status - The Status to be applied from the",
       "player or players. These behave similarly",
@@ -5103,7 +5095,7 @@
       }
     ]
   },
-  "272": {
+  "271": {
     "contexts": [
       "Duration - The duration of the status effect",
       "in seconds. To have a status that lasts",
@@ -5120,7 +5112,7 @@
       }
     ]
   },
-  "273": {
+  "272": {
     "contexts": [
       "Score - The score that will be set. Can",
       "use most Number based Value Syntax for this value."
@@ -5134,7 +5126,7 @@
       }
     ]
   },
-  "274": {
+  "273": {
     "contexts": [
       "Player - The player or players whose ultimate",
       "charge will be set. Can use most Player",
@@ -5155,7 +5147,7 @@
       }
     ]
   },
-  "275": {
+  "274": {
     "contexts": [
       "Enabled - Specifies whether the player or",
       "players are able to use their ultimate ability.",
@@ -5171,7 +5163,7 @@
       }
     ]
   },
-  "276": {
+  "275": {
     "contexts": [
       "Charge Percent - The percentage of maximum",
       "charge. Can use most Number based Value Syntax."
@@ -5185,7 +5177,7 @@
       }
     ]
   },
-  "277": {
+  "276": {
     "contexts": [
       "Condition - Specifies whether the loop will",
       "occur. Can use most Conditional based Value",
@@ -5206,7 +5198,7 @@
       }
     ]
   },
-  "278": {
+  "277": {
     "contexts": [
       "Number of actions - The number of action",
       "to skip, not including this action. Can",
@@ -5221,7 +5213,7 @@
       }
     ]
   },
-  "279": {
+  "278": {
     "contexts": [
       "Player - The player or players that will",
       "begin accelerating. Can use most Player",
@@ -5236,7 +5228,7 @@
       }
     ]
   },
-  "280": {
+  "279": {
     "contexts": [
       "Direction - The unit direction in which",
       "the acceleration will be applied. This value",
@@ -5252,7 +5244,7 @@
       }
     ]
   },
-  "281": {
+  "280": {
     "contexts": [
       "Rate - The rate of acceleration in meters",
       "per second squared. This value may need",
@@ -5269,7 +5261,7 @@
       }
     ]
   },
-  "282": {
+  "281": {
     "contexts": [
       "Max Speed - The speed at which acceleration",
       "will stop for the player or players. It",
@@ -5286,7 +5278,7 @@
       }
     ]
   },
-  "283": {
+  "282": {
     "contexts": [
       "Relative - Specifies whether direction is",
       "relavtive to the world coordinates or the",
@@ -5301,7 +5293,7 @@
       }
     ]
   },
-  "284": {
+  "283": {
     "contexts": [
       "Player - The player or players who will",
       "start turning. Can use most Player based Value Syntax."
@@ -5327,7 +5319,7 @@
       }
     ]
   },
-  "285": {
+  "284": {
     "contexts": [
       "Player - The player executing this rule.",
       "As specified by the event, may be the same",
@@ -5343,7 +5335,7 @@
       }
     ]
   },
-  "286": {
+  "285": {
     "contexts": [
       "Eye Position - The position of the camrea,",
       "reevaluates continously. Can use most Vector",
@@ -5358,7 +5350,7 @@
       }
     ]
   },
-  "287": {
+  "286": {
     "contexts": [
       "Look at position - Where the camera looks",
       "at, reevaluates continously. Can use most",
@@ -5373,7 +5365,7 @@
       }
     ]
   },
-  "288": {
+  "287": {
     "contexts": [
       "Blend Speed - How fast to blend the camera",
       "movement as positions change. 0 means do",
@@ -5389,7 +5381,7 @@
       }
     ]
   },
-  "289": {
+  "288": {
     "contexts": [
       "Damagers - The player or players whose outgoing",
       "damage will be modified (when attacking",
@@ -5404,7 +5396,7 @@
       }
     ]
   },
-  "290": {
+  "289": {
     "contexts": [
       "Damage Percent - The percentage of damage",
       "that will apply to receivers when attacked",
@@ -5420,7 +5412,7 @@
       }
     ]
   },
-  "291": {
+  "290": {
     "contexts": [
       "Reevaluation - Specifies which of this action’s",
       "inputs will be continously reevaluated.",
@@ -5438,7 +5430,7 @@
       }
     ]
   },
-  "292": {
+  "291": {
     "contexts": [
       "Receivers - One or more players who will",
       "receive the damage over time. Can use most",
@@ -5453,7 +5445,7 @@
       }
     ]
   },
-  "293": {
+  "292": {
     "contexts": [
       "Damager - The player who will receive credit",
       "for the damage. A damager of null indicates",
@@ -5469,7 +5461,7 @@
       }
     ]
   },
-  "294": {
+  "293": {
     "contexts": [
       "Duration - The duration of the damage over",
       "time in seconds. To have a DOT that lasts",
@@ -5486,7 +5478,7 @@
       }
     ]
   },
-  "295": {
+  "294": {
     "contexts": [
       "Damage Per Second - The damage per second",
       "for the damage over time. Can use most Number",
@@ -5501,7 +5493,7 @@
       }
     ]
   },
-  "296": {
+  "295": {
     "contexts": [
       "Direction - The unit direction in which",
       "the player or players will eventually face.",
@@ -5516,7 +5508,7 @@
       }
     ]
   },
-  "297": {
+  "296": {
     "contexts": [
       "Turn Rate - The turn rate in degrees per",
       "second. Can use most Number based Value",
@@ -5531,7 +5523,7 @@
       }
     ]
   },
-  "298": {
+  "297": {
     "contexts": [
       "Relative - Specifies whether direction is",
       "relative to the world coordinates or the",
@@ -5546,7 +5538,7 @@
       }
     ]
   },
-  "299": {
+  "298": {
     "contexts": [
       "Reevaluation - Specifies which of this actions",
       "inputs will be continously reevaluated.",
@@ -5563,7 +5555,7 @@
       }
     ]
   },
-  "300": {
+  "299": {
     "contexts": [
       "Player - The player or players who will",
       "be forced to be a specified hero. Can use",
@@ -5578,7 +5570,7 @@
       }
     ]
   },
-  "301": {
+  "300": {
     "contexts": [
       "Hero - The hero that the player or players",
       "will be forced to be. Can use most Hero",
@@ -5593,7 +5585,7 @@
       }
     ]
   },
-  "302": {
+  "301": {
     "contexts": [
       "Team - The team whose spawn room will be",
       "forced. Can use most Team based Value Syntax."
@@ -5607,7 +5599,7 @@
       }
     ]
   },
-  "303": {
+  "302": {
     "contexts": [
       "Room - The number of the spawn room to be",
       "forced. 0 is the first spawn room, 1 is",
@@ -5625,7 +5617,7 @@
       }
     ]
   },
-  "304": {
+  "303": {
     "contexts": [
       "Player - The player or players whose movement",
       "whill be forced or limited. Can use most",
@@ -5640,7 +5632,7 @@
       }
     ]
   },
-  "305": {
+  "304": {
     "contexts": [
       "Min Forward - Sets the minimum run forward",
       "amount. 0 allows the player or players to",
@@ -5656,7 +5648,7 @@
       }
     ]
   },
-  "306": {
+  "305": {
     "contexts": [
       "Max Forward - Sets the maximum run forward",
       "amount. 0 allows the player or players to",
@@ -5672,7 +5664,7 @@
       }
     ]
   },
-  "307": {
+  "306": {
     "contexts": [
       "Min Backward - Sets the minimum run backward",
       "amount. 0 allows the player or players to",
@@ -5688,7 +5680,7 @@
       }
     ]
   },
-  "308": {
+  "307": {
     "contexts": [
       "Max Backward - Sets the maximum run backward",
       "amount. 0 allows the player or players to",
@@ -5704,7 +5696,7 @@
       }
     ]
   },
-  "309": {
+  "308": {
     "contexts": [
       "Min Sideways - Sets the minimum run sideways",
       "amount. 0 allows the player or players to",
@@ -5720,7 +5712,7 @@
       }
     ]
   },
-  "310": {
+  "309": {
     "contexts": [
       "Max Forward - Sets the maximum run sideways",
       "amount. 0 allows the player or players to",
@@ -5736,7 +5728,7 @@
       }
     ]
   },
-  "311": {
+  "310": {
     "contexts": [
       "Healer - The player who will receive credit",
       "for the heal. A damager of null indicates",
@@ -5752,7 +5744,7 @@
       }
     ]
   },
-  "312": {
+  "311": {
     "contexts": [
       "Duration - The duration of the heal over",
       "time in seconds. To have a HOT that lasts",
@@ -5769,7 +5761,7 @@
       }
     ]
   },
-  "313": {
+  "312": {
     "contexts": [
       "Damage Per Second - The heal per second",
       "for the heal over time. Can use most Number",
@@ -5784,7 +5776,7 @@
       }
     ]
   },
-  "314": {
+  "313": {
     "contexts": [
       "Player - The player or players who are holding",
       "a button virtually. Can use most Player",
@@ -5799,7 +5791,7 @@
       }
     ]
   },
-  "315": {
+  "314": {
     "contexts": [
       "Button - The logical button that is being held virtually."
     ],
@@ -5812,7 +5804,7 @@
       }
     ]
   },
-  "316": {
+  "315": {
     "contexts": [
       "Player - The player or players who will",
       "stop accelerating. Can use most Player based Value Syntax."
@@ -5826,7 +5818,7 @@
       }
     ]
   },
-  "317": {
+  "316": {
     "contexts": [
       "Player - The player or players whose scripted",
       "damage over time will stop. Can use most",
@@ -5841,7 +5833,7 @@
       }
     ]
   },
-  "318": {
+  "317": {
     "contexts": [
       "Player - The player or players whose scripted",
       "heal over time will stop. Can use most Player",
@@ -5856,7 +5848,7 @@
       }
     ]
   },
-  "319": {
+  "318": {
     "contexts": [
       "Player - The player or players whose forced",
       "camera positions will stop. Can use most",
@@ -5871,7 +5863,7 @@
       }
     ]
   },
-  "320": {
+  "319": {
     "contexts": [
       "Variable - Specifies which global variable",
       "to stop modifying. Specified by a single",
@@ -5886,7 +5878,7 @@
       }
     ]
   },
-  "321": {
+  "320": {
     "contexts": [
       "Player - The player whose variable will",
       "stop changing. If multiple players are provided,",
@@ -5902,7 +5894,7 @@
       }
     ]
   },
-  "322": {
+  "321": {
     "contexts": [
       "Variable - Specifies which player variable",
       "to stop modifying. Specified by a single",
@@ -5917,7 +5909,7 @@
       }
     ]
   },
-  "323": {
+  "322": {
     "contexts": [
       "Damage modification ID - Specifies which",
       "damage modification instance to stop, this",
@@ -5935,7 +5927,7 @@
       }
     ]
   },
-  "324": {
+  "323": {
     "contexts": [
       "Damage Over Time ID - Specifies which damage",
       "over time instance to stop, this ID may",
@@ -5952,7 +5944,7 @@
       }
     ]
   },
-  "325": {
+  "324": {
     "contexts": [
       "Player - The player or players who will",
       "stop turning. Can use most Player based Value Syntax."
@@ -5966,7 +5958,7 @@
       }
     ]
   },
-  "326": {
+  "325": {
     "contexts": [
       "Player - The player or players who will",
       "no longer be forced to be a specific hero.",
@@ -5981,7 +5973,7 @@
       }
     ]
   },
-  "327": {
+  "326": {
     "contexts": [
       "Team - The team that will resume using their",
       "normal spawn room. Can use most Team based Value Syntax."
@@ -5995,7 +5987,7 @@
       }
     ]
   },
-  "328": {
+  "327": {
     "contexts": [
       "Player - The player or players whose movement",
       "inout will be restored. Can use most Player",
@@ -6010,7 +6002,7 @@
       }
     ]
   },
-  "329": {
+  "328": {
     "contexts": [
       "Heal Over Time ID - Specifies which heal",
       "over time instance to stop, this ID may",
@@ -6027,7 +6019,7 @@
       }
     ]
   },
-  "330": {
+  "329": {
     "contexts": [
       "Player - The player or players who are no",
       "longer holding a button virtually. Can use",
@@ -6042,11 +6034,9 @@
       }
     ]
   },
-  "331": {
+  "330": {
     "contexts": [
-      "더 이상 가상으로",
-      "눌리지 않을",
-      "논리적 버튼입니다."
+      "The logical button that is no longer being held virtually."
     ],
     "usedFiles": [
       {
@@ -6057,7 +6047,7 @@
       }
     ]
   },
-  "332": {
+  "331": {
     "contexts": [
       "Player - The player or players to teleport.",
       "Can use most Player based Value Syntax."
@@ -6071,7 +6061,7 @@
       }
     ]
   },
-  "333": {
+  "332": {
     "contexts": [
       "Position - The position to which the player",
       "or players will teleport. If a player is",
@@ -6087,7 +6077,7 @@
       }
     ]
   },
-  "334": {
+  "333": {
     "contexts": [
       "Time - The duration of the pause. A minimum",
       "value of 0.250 seconds is required. Can",
@@ -6102,7 +6092,7 @@
       }
     ]
   },
-  "335": {
+  "334": {
     "contexts": [
       "Wait Behavior - Specifies if and how the",
       "wait can be interrupted. If the condition",
@@ -6119,7 +6109,7 @@
       }
     ]
   },
-  "336": {
+  "335": {
     "contexts": [
       "The ONGOING - GLOBAL event attribute will",
       "affect all entities in the game environment."
@@ -6139,7 +6129,7 @@
       }
     ]
   },
-  "337": {
+  "336": {
     "contexts": [
       "The ONGOING - EACH PLAYER event attribute",
       "will affect the specified players in the",
@@ -6160,7 +6150,7 @@
       }
     ]
   },
-  "338": {
+  "337": {
     "contexts": [
       "The PLAYER EARNED ELIMINATION event attribute",
       "will affect the specified players who successfully",
@@ -6181,7 +6171,7 @@
       }
     ]
   },
-  "339": {
+  "338": {
     "contexts": [
       "The PLAYER DEALT FINAL BLOW event attribute",
       "will affect the specified players who successfully",
@@ -6203,7 +6193,7 @@
       }
     ]
   },
-  "340": {
+  "339": {
     "contexts": [
       "The PLAYER DEALT DAMAGE event attribute",
       "will affect the specified players who successfully",
@@ -6225,7 +6215,7 @@
       }
     ]
   },
-  "341": {
+  "340": {
     "contexts": [
       "The PLAYER TOOK DAMAGE event attribute will",
       "affect the specified players who received",
@@ -6246,7 +6236,7 @@
       }
     ]
   },
-  "342": {
+  "341": {
     "contexts": [
       "The PLAYER DIED event attribute will affect",
       "the specified players who died in the game environment."
@@ -6266,7 +6256,7 @@
       }
     ]
   },
-  "343": {
+  "342": {
     "contexts": [
       "The absolute value is a measure of how far",
       "the number is from zero. If you think of",
@@ -6291,7 +6281,7 @@
       }
     ]
   },
-  "344": {
+  "343": {
     "contexts": [
       "The sum of two numbers or vectors. This",
       "value will add the two specified values."
@@ -6311,7 +6301,7 @@
       }
     ]
   },
-  "345": {
+  "344": {
     "contexts": [
       "An array containing all dead players on",
       "a team in a match. A player is defined as",
@@ -6333,7 +6323,7 @@
       }
     ]
   },
-  "346": {
+  "345": {
     "contexts": [
       "An array of all heroes in Overwatch. Not",
       "to be confused with the All Players array"
@@ -6353,7 +6343,7 @@
       }
     ]
   },
-  "347": {
+  "346": {
     "contexts": [
       "An array containing all living players on",
       "a team in a match. A player is defined as",
@@ -6375,7 +6365,7 @@
       }
     ]
   },
-  "348": {
+  "347": {
     "contexts": [
       "An array containing all players on a team in a match."
     ],
@@ -6394,7 +6384,7 @@
       }
     ]
   },
-  "349": {
+  "348": {
     "contexts": [
       "An array containing all players occupying",
       "neither a payload nor a control point (either",
@@ -6415,7 +6405,7 @@
       }
     ]
   },
-  "350": {
+  "349": {
     "contexts": [
       "An array containing all players occupying",
       "either a payload or a control point (either",
@@ -6436,7 +6426,7 @@
       }
     ]
   },
-  "351": {
+  "350": {
     "contexts": [
       "The array of heroes from which the specified",
       "player is currently allowed to select."
@@ -6456,7 +6446,7 @@
       }
     ]
   },
-  "352": {
+  "351": {
     "contexts": [
       "The player’s current height in meters above",
       "a surface. Results in a 0 whenever the place",
@@ -6477,7 +6467,7 @@
       }
     ]
   },
-  "353": {
+  "352": {
     "contexts": [
       "Whether both of the two inputs are true",
       "or equivalent to true."
@@ -6497,7 +6487,7 @@
       }
     ]
   },
-  "354": {
+  "353": {
     "contexts": [
       "The angle in degrees between two directional",
       "vectors (no normalization required)."
@@ -6517,7 +6507,7 @@
       }
     ]
   },
-  "355": {
+  "354": {
     "contexts": [
       "The difference between two angles, after",
       "the angles are wrapped within +/- 180 of",
@@ -6540,7 +6530,7 @@
       }
     ]
   },
-  "356": {
+  "355": {
     "contexts": [
       "A copy of an array with one or more values",
       "appended to the end."
@@ -6560,7 +6550,7 @@
       }
     ]
   },
-  "357": {
+  "356": {
     "contexts": [
       "Arccosine in degrees of the specified value."
     ],
@@ -6579,7 +6569,7 @@
       }
     ]
   },
-  "358": {
+  "357": {
     "contexts": [
       "Arccosine in radians of the specified value"
     ],
@@ -6598,7 +6588,7 @@
       }
     ]
   },
-  "359": {
+  "358": {
     "contexts": [
       "Arcsine in degrees of the specified value."
     ],
@@ -6617,7 +6607,7 @@
       }
     ]
   },
-  "360": {
+  "359": {
     "contexts": [
       "Arcsine in radians of the specified value."
     ],
@@ -6636,7 +6626,7 @@
       }
     ]
   },
-  "361": {
+  "360": {
     "contexts": [
       "Arctangent in degrees of the specified numerator",
       "and denominator(often referred to as atan2)."
@@ -6656,7 +6646,7 @@
       }
     ]
   },
-  "362": {
+  "361": {
     "contexts": [
       "Arctangent in radians of the specified numerator",
       "and denominator(often referred to as atan2)."
@@ -6676,7 +6666,7 @@
       }
     ]
   },
-  "363": {
+  "362": {
     "contexts": [
       "Whether the specified array contains the",
       "specified value."
@@ -6696,7 +6686,7 @@
       }
     ]
   },
-  "364": {
+  "363": {
     "contexts": [
       "A copy of the specified array containing",
       "only values from a specified index range."
@@ -6716,7 +6706,7 @@
       }
     ]
   },
-  "365": {
+  "364": {
     "contexts": [
       "The player that dealt damage for the event",
       "currently being processed by this rule.",
@@ -6737,7 +6727,7 @@
       }
     ]
   },
-  "366": {
+  "365": {
     "contexts": [
       "Shorthand for the direction vector(0, 0,",
       "-1) which points backwards."
@@ -6757,7 +6747,7 @@
       }
     ]
   },
-  "367": {
+  "366": {
     "contexts": [
       "The player closest to a position, optionally",
       "restricted by team."
@@ -6777,7 +6767,7 @@
       }
     ]
   },
-  "368": {
+  "367": {
     "contexts": [
       "Whether the comparison of the two inputs is true."
     ],
@@ -6796,7 +6786,7 @@
       }
     ]
   },
-  "369": {
+  "368": {
     "contexts": [
       "The score percentage for the specified team",
       "in the control mode."
@@ -6816,7 +6806,7 @@
       }
     ]
   },
-  "370": {
+  "369": {
     "contexts": [
       "The team that is currently accumulating",
       "score percentage in control mode Results",
@@ -6837,7 +6827,7 @@
       }
     ]
   },
-  "371": {
+  "370": {
     "contexts": [
       "The cosine of a specified angle in degrees.",
       "The cosine of the angle is equal to the",
@@ -6859,7 +6849,7 @@
       }
     ]
   },
-  "372": {
+  "371": {
     "contexts": [
       "The cosine of a specified angle in radians.",
       "The cosine of the angle is equal to the",
@@ -6884,7 +6874,7 @@
       }
     ]
   },
-  "373": {
+  "372": {
     "contexts": [
       "The number of elements in the specified array."
     ],
@@ -6903,7 +6893,7 @@
       }
     ]
   },
-  "374": {
+  "373": {
     "contexts": [
       "The cross product of the specified values."
     ],
@@ -6922,7 +6912,7 @@
       }
     ]
   },
-  "375": {
+  "374": {
     "contexts": [
       "The current array element being considered.",
       "Only meaningful during the evaluation of",
@@ -6943,7 +6933,7 @@
       }
     ]
   },
-  "376": {
+  "375": {
     "contexts": [
       "The unit-length direction vector corresponding",
       "to the specified angles."
@@ -6963,7 +6953,7 @@
       }
     ]
   },
-  "377": {
+  "376": {
     "contexts": [
       "The unit-length direction vector from position to another."
     ],
@@ -6982,7 +6972,7 @@
       }
     ]
   },
-  "378": {
+  "377": {
     "contexts": [
       "The distance between two positions in meters."
     ],
@@ -7001,7 +6991,7 @@
       }
     ]
   },
-  "379": {
+  "378": {
     "contexts": [
       "The ratio of two numbers or vectors. A vector",
       "divided by a number will yield a scaled",
@@ -7022,7 +7012,7 @@
       }
     ]
   },
-  "380": {
+  "379": {
     "contexts": [
       "The dot product of the specified values.",
       "The dot product tells you what amount of",
@@ -7043,7 +7033,7 @@
       }
     ]
   },
-  "381": {
+  "380": {
     "contexts": [
       "Shorthand for the direction vector(0, -1,",
       "0) which points down."
@@ -7063,7 +7053,7 @@
       }
     ]
   },
-  "382": {
+  "381": {
     "contexts": [
       "An array with no elements."
     ],
@@ -7082,7 +7072,7 @@
       }
     ]
   },
-  "383": {
+  "382": {
     "contexts": [
       "Whether the specified player, icon entity,",
       "or effect entity still exists. Useful for",
@@ -7104,7 +7094,7 @@
       }
     ]
   },
-  "384": {
+  "383": {
     "contexts": [
       "The amount of damage received by the victim",
       "for the event currently being processed by this rule."
@@ -7124,7 +7114,7 @@
       }
     ]
   },
-  "385": {
+  "384": {
     "contexts": [
       "The player executing the rule, as specified",
       "by the event, may be the same as the attacker or victim."
@@ -7144,7 +7134,7 @@
       }
     ]
   },
-  "386": {
+  "385": {
     "contexts": [
       "Whether the damage was a critical hit (such",
       "as a headshot) for the event currently being",
@@ -7165,7 +7155,7 @@
       }
     ]
   },
-  "387": {
+  "386": {
     "contexts": [
       "The position of a player's first person",
       "view (used for aiming)"
@@ -7185,7 +7175,7 @@
       }
     ]
   },
-  "388": {
+  "387": {
     "contexts": [
       "The unit-length directional vector of a",
       "player’s current facing relative to the",
@@ -7207,7 +7197,7 @@
       }
     ]
   },
-  "389": {
+  "388": {
     "contexts": [
       "The Boolean value of false."
     ],
@@ -7226,7 +7216,7 @@
       }
     ]
   },
-  "390": {
+  "389": {
     "contexts": [
       "The player farthest to a position, optionally",
       "restricted by team."
@@ -7246,7 +7236,7 @@
       }
     ]
   },
-  "391": {
+  "390": {
     "contexts": [
       "A copy of the specified array with any values",
       "that do not match the specified condition removed."
@@ -7266,7 +7256,7 @@
       }
     ]
   },
-  "392": {
+  "391": {
     "contexts": [
       "The value at the started of the specified",
       "array. Results in a 0 if the specified array is empty."
@@ -7286,7 +7276,7 @@
       }
     ]
   },
-  "393": {
+  "392": {
     "contexts": [
       "The position of a specific team’s flag in",
       "Capture the Flag."
@@ -7306,7 +7296,7 @@
       }
     ]
   },
-  "394": {
+  "393": {
     "contexts": [
       "Shorthand for the direction vector(0, 0,",
       "1) which points forward."
@@ -7326,7 +7316,7 @@
       }
     ]
   },
-  "395": {
+  "394": {
     "contexts": [
       "The current value of a global variable,",
       "which is a variable which belongs to the",
@@ -7347,7 +7337,7 @@
       }
     ]
   },
-  "396": {
+  "395": {
     "contexts": [
       "Whether an entity has spawned in the world.",
       "Results in false for players who have not",
@@ -7368,7 +7358,7 @@
       }
     ]
   },
-  "397": {
+  "396": {
     "contexts": [
       "Whether the specified player has the specified",
       "status, either from the set status action",
@@ -7389,7 +7379,7 @@
       }
     ]
   },
-  "398": {
+  "397": {
     "contexts": [
       "The current health of a player including",
       "armor and shields."
@@ -7409,7 +7399,7 @@
       }
     ]
   },
-  "399": {
+  "398": {
     "contexts": [
       "A hero constant. Specifies one of the available",
       "heroes by name in the game."
@@ -7429,7 +7419,7 @@
       }
     ]
   },
-  "400": {
+  "399": {
     "contexts": [
       "Converts a hero parameter into a string",
       "that shows up as an icon."
@@ -7449,7 +7439,7 @@
       }
     ]
   },
-  "401": {
+  "400": {
     "contexts": [
       "The Current Hero of a Player."
     ],
@@ -7468,7 +7458,7 @@
       }
     ]
   },
-  "402": {
+  "401": {
     "contexts": [
       "The horizontal angle in degrees corresponding",
       "to the specified direction vector."
@@ -7488,7 +7478,7 @@
       }
     ]
   },
-  "403": {
+  "402": {
     "contexts": [
       "The horizontal angle in degrees from a player’s",
       "current forward direction to the specified",
@@ -7511,7 +7501,7 @@
       }
     ]
   },
-  "404": {
+  "403": {
     "contexts": [
       "The directional angle in degrees of a player’s",
       "current facing relative to the world. This",
@@ -7533,7 +7523,7 @@
       }
     ]
   },
-  "405": {
+  "404": {
     "contexts": [
       "The current horizontal speed of a player",
       "in meters per second. This measurement excludes",
@@ -7554,7 +7544,7 @@
       }
     ]
   },
-  "406": {
+  "405": {
     "contexts": [
       "The index of a value within an array or",
       "-1 if no such value can be found."
@@ -7574,7 +7564,7 @@
       }
     ]
   },
-  "407": {
+  "406": {
     "contexts": [
       "Determines whether a player is alive. Returns",
       "a Boolean value."
@@ -7594,7 +7584,7 @@
       }
     ]
   },
-  "408": {
+  "407": {
     "contexts": [
       "Whether the match is currently in its assemble heroes phase."
     ],
@@ -7613,7 +7603,7 @@
       }
     ]
   },
-  "409": {
+  "408": {
     "contexts": [
       "Whether the match is between rounds."
     ],
@@ -7632,7 +7622,7 @@
       }
     ]
   },
-  "410": {
+  "409": {
     "contexts": [
       "Whether a player is holding a specific button."
     ],
@@ -7651,7 +7641,7 @@
       }
     ]
   },
-  "411": {
+  "410": {
     "contexts": [
       "Whether a player is using a specific communication",
       "type (such as emote, using a voice line, etc.)."
@@ -7671,7 +7661,7 @@
       }
     ]
   },
-  "412": {
+  "411": {
     "contexts": [
       "Whether a player is using any communication",
       "type (such as emoting, using a voice line, etc.)"
@@ -7691,7 +7681,7 @@
       }
     ]
   },
-  "413": {
+  "412": {
     "contexts": [
       "Whether a player is using a emote."
     ],
@@ -7710,7 +7700,7 @@
       }
     ]
   },
-  "414": {
+  "413": {
     "contexts": [
       "Whether a player is using a voice line.",
       "(The duration of a voice line is assumed",
@@ -7731,7 +7721,7 @@
       }
     ]
   },
-  "415": {
+  "414": {
     "contexts": [
       "Whether the point is locked in control mode."
     ],
@@ -7750,7 +7740,7 @@
       }
     ]
   },
-  "416": {
+  "415": {
     "contexts": [
       "Whether a player is crouching."
     ],
@@ -7769,7 +7759,7 @@
       }
     ]
   },
-  "417": {
+  "416": {
     "contexts": [
       "Whether the current game of capture the",
       "flag is in sudden death."
@@ -7789,7 +7779,7 @@
       }
     ]
   },
-  "418": {
+  "417": {
     "contexts": [
       "Whether a player is dead."
     ],
@@ -7808,7 +7798,7 @@
       }
     ]
   },
-  "419": {
+  "418": {
     "contexts": [
       "Whether the specified player’s primary weapon",
       "attack is being used."
@@ -7828,7 +7818,7 @@
       }
     ]
   },
-  "420": {
+  "419": {
     "contexts": [
       "Whether the specified player’s secondary",
       "weapon attack is being used."
@@ -7848,7 +7838,7 @@
       }
     ]
   },
-  "421": {
+  "420": {
     "contexts": [
       "Whether a specific team’s flag is at its",
       "base in capture the flag."
@@ -7868,7 +7858,7 @@
       }
     ]
   },
-  "422": {
+  "421": {
     "contexts": [
       "Whether a specific team's flag is being",
       "is being carried by a member of the opposing",
@@ -7889,7 +7879,7 @@
       }
     ]
   },
-  "423": {
+  "422": {
     "contexts": [
       "Whether the main phase of the match is in",
       "progress (during which time combat and scoring are allowed)."
@@ -7909,7 +7899,7 @@
       }
     ]
   },
-  "424": {
+  "423": {
     "contexts": [
       "Whether a specific hero is being played",
       "(either on a team or in the match)."
@@ -7929,7 +7919,7 @@
       }
     ]
   },
-  "425": {
+  "424": {
     "contexts": [
       "Whether a player is airborne."
     ],
@@ -7948,7 +7938,7 @@
       }
     ]
   },
-  "426": {
+  "425": {
     "contexts": [
       "Whether two positions have line of sight",
       "with each other."
@@ -7968,7 +7958,7 @@
       }
     ]
   },
-  "427": {
+  "426": {
     "contexts": [
       "Whether the match is currently in its setup phase."
     ],
@@ -7987,7 +7977,7 @@
       }
     ]
   },
-  "428": {
+  "427": {
     "contexts": [
       "Whether a specific player is in the spawn",
       "room (and is thus being healed and able",
@@ -8008,7 +7998,7 @@
       }
     ]
   },
-  "429": {
+  "428": {
     "contexts": [
       "Whether a location is within view of a player."
     ],
@@ -8027,7 +8017,7 @@
       }
     ]
   },
-  "430": {
+  "429": {
     "contexts": [
       "Whether the match has finished."
     ],
@@ -8046,7 +8036,7 @@
       }
     ]
   },
-  "431": {
+  "430": {
     "contexts": [
       "Whether a specific player is moving (as",
       "defined by having a non-zero constant speed)."
@@ -8066,7 +8056,7 @@
       }
     ]
   },
-  "432": {
+  "431": {
     "contexts": [
       "Whether the specified objective has been",
       "completed Results in false if the game mode",
@@ -8087,7 +8077,7 @@
       }
     ]
   },
-  "433": {
+  "432": {
     "contexts": [
       "Whether a player is on the ground (or other",
       "walkable surface)."
@@ -8107,7 +8097,7 @@
       }
     ]
   },
-  "434": {
+  "433": {
     "contexts": [
       "Whether a specific player is currently occupying",
       "a payload or capture point."
@@ -8127,7 +8117,7 @@
       }
     ]
   },
-  "435": {
+  "434": {
     "contexts": [
       "Whether a player is on a wall (climbing or riding)."
     ],
@@ -8146,7 +8136,7 @@
       }
     ]
   },
-  "436": {
+  "435": {
     "contexts": [
       "Whether a specific player’s portrait is on fire."
     ],
@@ -8165,7 +8155,7 @@
       }
     ]
   },
-  "437": {
+  "436": {
     "contexts": [
       "Whether a player is standing (defined as",
       "both not moving and not in the air)."
@@ -8185,7 +8175,7 @@
       }
     ]
   },
-  "438": {
+  "437": {
     "contexts": [
       "Whether the specified team is currently",
       "on defense in a standard match."
@@ -8205,7 +8195,7 @@
       }
     ]
   },
-  "439": {
+  "438": {
     "contexts": [
       "Whether the specified team is currently",
       "on offense in a standard match."
@@ -8225,7 +8215,7 @@
       }
     ]
   },
-  "440": {
+  "439": {
     "contexts": [
       "Whether the specified condition evaluates",
       "to true for every value in the specified array."
@@ -8245,7 +8235,7 @@
       }
     ]
   },
-  "441": {
+  "440": {
     "contexts": [
       "Whether the specified condition evaluates",
       "to true for any value in the specified array."
@@ -8265,7 +8255,7 @@
       }
     ]
   },
-  "442": {
+  "441": {
     "contexts": [
       "Whether the specified player is using ability 1."
     ],
@@ -8284,7 +8274,7 @@
       }
     ]
   },
-  "443": {
+  "442": {
     "contexts": [
       "Whether the specified player is using ability 2."
     ],
@@ -8303,7 +8293,7 @@
       }
     ]
   },
-  "444": {
+  "443": {
     "contexts": [
       "Whether the specified player is using an",
       "ultimate ability."
@@ -8323,7 +8313,7 @@
       }
     ]
   },
-  "445": {
+  "444": {
     "contexts": [
       "Whether the match is waiting for players",
       "to join before starting."
@@ -8343,7 +8333,7 @@
       }
     ]
   },
-  "446": {
+  "445": {
     "contexts": [
       "A reference to the last effect or icon entity",
       "created by the event player (or created",
@@ -8364,7 +8354,7 @@
       }
     ]
   },
-  "447": {
+  "446": {
     "contexts": [
       "An id representing the most recent start",
       "damage modification action that was executed",
@@ -8385,7 +8375,7 @@
       }
     ]
   },
-  "448": {
+  "447": {
     "contexts": [
       "An ID representing the most recent damage",
       "over time action that was executed by the",
@@ -8406,7 +8396,7 @@
       }
     ]
   },
-  "449": {
+  "448": {
     "contexts": [
       "An ID representing the most recent heal",
       "over time action that was executed by the",
@@ -8427,7 +8417,7 @@
       }
     ]
   },
-  "450": {
+  "449": {
     "contexts": [
       "The value at the end of the specified array.",
       "Results in a 0 if the specified array is empty."
@@ -8447,7 +8437,7 @@
       }
     ]
   },
-  "451": {
+  "450": {
     "contexts": [
       "A reference to the last piece of text created",
       "by the event player (or created at the global",
@@ -8469,7 +8459,7 @@
       }
     ]
   },
-  "452": {
+  "451": {
     "contexts": [
       "Shorthand for the directional vector(1,",
       "0, 0), which points to the left."
@@ -8489,7 +8479,7 @@
       }
     ]
   },
-  "453": {
+  "452": {
     "contexts": [
       "The vector in local coordinates corresponding",
       "to the provided vector in world coordinates."
@@ -8509,7 +8499,7 @@
       }
     ]
   },
-  "454": {
+  "453": {
     "contexts": [
       "The current round of the match, counting",
       "up from 1. This will return a numerical value"
@@ -8529,7 +8519,7 @@
       }
     ]
   },
-  "455": {
+  "454": {
     "contexts": [
       "The amount of time in seconds remaining",
       "in the current game mode phase. This will",
@@ -8550,7 +8540,7 @@
       }
     ]
   },
-  "456": {
+  "455": {
     "contexts": [
       "The greater of the two numbers. This will",
       "return a numerical value of two number values compared."
@@ -8570,7 +8560,7 @@
       }
     ]
   },
-  "457": {
+  "456": {
     "contexts": [
       "The max health of a player, including armor and shields."
     ],
@@ -8589,7 +8579,7 @@
       }
     ]
   },
-  "458": {
+  "457": {
     "contexts": [
       "The lesser of the two numbers. This will",
       "return a numerical value of two number values compared."
@@ -8609,7 +8599,7 @@
       }
     ]
   },
-  "459": {
+  "458": {
     "contexts": [
       "The remainder of the left-hand operand divided",
       "by the right-hand operand. Any number modulo",
@@ -8633,7 +8623,7 @@
       }
     ]
   },
-  "460": {
+  "459": {
     "contexts": [
       "The product of two numbers or vectors. A",
       "vector multiplied by a number will yield",
@@ -8654,7 +8644,7 @@
       }
     ]
   },
-  "461": {
+  "460": {
     "contexts": [
       "The position closest to the specified position",
       "that can be stood on and is accessible from a spawn point."
@@ -8674,7 +8664,7 @@
       }
     ]
   },
-  "462": {
+  "461": {
     "contexts": [
       "The unit-length normalization of a vector."
     ],
@@ -8693,7 +8683,7 @@
       }
     ]
   },
-  "463": {
+  "462": {
     "contexts": [
       "The current health of a player. including",
       "armor and shields, normalized between 0",
@@ -8715,7 +8705,7 @@
       }
     ]
   },
-  "464": {
+  "463": {
     "contexts": [
       "Whether the input is false (or the equivalent to false)"
     ],
@@ -8734,7 +8724,7 @@
       }
     ]
   },
-  "465": {
+  "464": {
     "contexts": [
       "The absence of a player, used when no player",
       "is desired for a particular input, equivalent",
@@ -8756,7 +8746,7 @@
       }
     ]
   },
-  "466": {
+  "465": {
     "contexts": [
       "Number - A real number constant. Can use",
       "most Number based Value Syntax to provide this value."
@@ -8782,7 +8772,7 @@
       }
     ]
   },
-  "467": {
+  "466": {
     "contexts": [
       "The number of dead players on a team or in the match."
     ],
@@ -8801,7 +8791,7 @@
       }
     ]
   },
-  "468": {
+  "467": {
     "contexts": [
       "The number of deaths a specific player has",
       "earned. This value only accumulates while",
@@ -8822,7 +8812,7 @@
       }
     ]
   },
-  "469": {
+  "468": {
     "contexts": [
       "The number of eliminations a specific player",
       "has earned. This value only accumulates",
@@ -8843,7 +8833,7 @@
       }
     ]
   },
-  "470": {
+  "469": {
     "contexts": [
       "The number of final blows a specific player",
       "has earned. This value only accumulates",
@@ -8864,7 +8854,7 @@
       }
     ]
   },
-  "471": {
+  "470": {
     "contexts": [
       "The number of players playing a specific",
       "hero on a team or in the match."
@@ -8884,7 +8874,7 @@
       }
     ]
   },
-  "472": {
+  "471": {
     "contexts": [
       "The number of living players on a team or in the match."
     ],
@@ -8903,7 +8893,7 @@
       }
     ]
   },
-  "473": {
+  "472": {
     "contexts": [
       "The number of players on a team or in the match."
     ],
@@ -8922,7 +8912,7 @@
       }
     ]
   },
-  "474": {
+  "473": {
     "contexts": [
       "The number of players occupying a payload",
       "or a control point (either on a team or in the match)."
@@ -8942,7 +8932,7 @@
       }
     ]
   },
-  "475": {
+  "474": {
     "contexts": [
       "The control point, payload checkpoint, or",
       "payload destination currently active (either",
@@ -8964,7 +8954,7 @@
       }
     ]
   },
-  "476": {
+  "475": {
     "contexts": [
       "The position in the world of the specified",
       "objective (either a control point, a payload",
@@ -8986,7 +8976,7 @@
       }
     ]
   },
-  "477": {
+  "476": {
     "contexts": [
       "The team opposite the specified team."
     ],
@@ -9005,7 +8995,7 @@
       }
     ]
   },
-  "478": {
+  "477": {
     "contexts": [
       "Whether either of the two inputs are true",
       "(or equivalent to true)."
@@ -9025,7 +9015,7 @@
       }
     ]
   },
-  "479": {
+  "478": {
     "contexts": [
       "The position in the world of the active payload."
     ],
@@ -9044,7 +9034,7 @@
       }
     ]
   },
-  "480": {
+  "479": {
     "contexts": [
       "The current progress towards the destination",
       "for the active payload (expressed as a percentage)."
@@ -9064,7 +9054,7 @@
       }
     ]
   },
-  "481": {
+  "480": {
     "contexts": [
       "The player carrying a particular team’s",
       "flag in capture the flag. Results in null",
@@ -9085,7 +9075,7 @@
       }
     ]
   },
-  "482": {
+  "481": {
     "contexts": [
       "The player closest to the reticle of the",
       "specified player, optionally restricted by team."
@@ -9105,7 +9095,7 @@
       }
     ]
   },
-  "483": {
+  "482": {
     "contexts": [
       "The current value of a player variable,",
       "which is a variable that belongs to a specific player."
@@ -9125,7 +9115,7 @@
       }
     ]
   },
-  "484": {
+  "483": {
     "contexts": [
       "The player or array of players who occupy",
       "a specific slot in the game."
@@ -9145,7 +9135,7 @@
       }
     ]
   },
-  "485": {
+  "484": {
     "contexts": [
       "The players who are within a specific view",
       "angle of a specific player’s reticle, optionally",
@@ -9166,7 +9156,7 @@
       }
     ]
   },
-  "486": {
+  "485": {
     "contexts": [
       "The array of players playing a specific",
       "hero on a team or in the match."
@@ -9186,7 +9176,7 @@
       }
     ]
   },
-  "487": {
+  "486": {
     "contexts": [
       "An array containing all players within a",
       "certain distance of a position, optionally",
@@ -9207,7 +9197,7 @@
       }
     ]
   },
-  "488": {
+  "487": {
     "contexts": [
       "The current progress towards capture for",
       "the active control point (expressed as a percentage)."
@@ -9227,7 +9217,7 @@
       }
     ]
   },
-  "489": {
+  "488": {
     "contexts": [
       "The current position of a player as a vector."
     ],
@@ -9246,7 +9236,7 @@
       }
     ]
   },
-  "490": {
+  "489": {
     "contexts": [
       "The left-hand operand raised to the power",
       "of the right-hand operand. For example 2 ^ 3 = 8"
@@ -9266,7 +9256,7 @@
       }
     ]
   },
-  "491": {
+  "490": {
     "contexts": [
       "A random integer between the specified min",
       "and max, inclusive."
@@ -9286,7 +9276,7 @@
       }
     ]
   },
-  "492": {
+  "491": {
     "contexts": [
       "A random real number between the specified min and max."
     ],
@@ -9305,7 +9295,7 @@
       }
     ]
   },
-  "493": {
+  "492": {
     "contexts": [
       "A random value from the specified array."
     ],
@@ -9324,7 +9314,7 @@
       }
     ]
   },
-  "494": {
+  "493": {
     "contexts": [
       "A copy of the specified array with the values",
       "in a random order"
@@ -9344,7 +9334,7 @@
       }
     ]
   },
-  "495": {
+  "494": {
     "contexts": [
       "The surface normal at the ray cast hit position",
       "(or from end pos to start pos if no hit occurs)."
@@ -9364,7 +9354,7 @@
       }
     ]
   },
-  "496": {
+  "495": {
     "contexts": [
       "The player hit by the ray cast (or null",
       "if no player is hit)."
@@ -9384,7 +9374,7 @@
       }
     ]
   },
-  "497": {
+  "496": {
     "contexts": [
       "The position where the ray cast hits a surface,",
       "object, or player (or the end POS if no hit occurs)."
@@ -9404,7 +9394,7 @@
       }
     ]
   },
-  "498": {
+  "497": {
     "contexts": [
       "A copy of an array with one or more values",
       "removed (if found)."
@@ -9424,7 +9414,7 @@
       }
     ]
   },
-  "499": {
+  "498": {
     "contexts": [
       "Shorthand for the directional vector (-1,",
       "0, 0), which points to the right."
@@ -9444,7 +9434,7 @@
       }
     ]
   },
-  "500": {
+  "499": {
     "contexts": [
       "The integer to which the specified value rounds."
     ],
@@ -9463,7 +9453,7 @@
       }
     ]
   },
-  "501": {
+  "500": {
     "contexts": [
       "The current score of a player. Results in",
       "0 if the game mode is not free-for-all."
@@ -9483,7 +9473,7 @@
       }
     ]
   },
-  "502": {
+  "501": {
     "contexts": [
       "Provides a percentage representing the cpu",
       "load of the current game instance. as this",
@@ -9506,7 +9496,7 @@
       }
     ]
   },
-  "503": {
+  "502": {
     "contexts": [
       "Provides a percentage representing the average",
       "cpu load of the current game instance over",
@@ -9530,7 +9520,7 @@
       }
     ]
   },
-  "504": {
+  "503": {
     "contexts": [
       "Provides a percentage representing the highest",
       "cpu load of the current game instance over",
@@ -9554,7 +9544,7 @@
       }
     ]
   },
-  "505": {
+  "504": {
     "contexts": [
       "Sine of the specified angle in degrees.",
       "The sine is the ratio of the length of the",
@@ -9577,7 +9567,7 @@
       }
     ]
   },
-  "506": {
+  "505": {
     "contexts": [
       "Sine of the specified angle in radians.",
       "The sine is the ratio of the length of the",
@@ -9602,7 +9592,7 @@
       }
     ]
   },
-  "507": {
+  "506": {
     "contexts": [
       "The slot number of the specified player.",
       "In team games, each team has slots 0 through",
@@ -9623,7 +9613,7 @@
       }
     ]
   },
-  "508": {
+  "507": {
     "contexts": [
       "A copy of the specified array with the values",
       "sorted according to the value rank that",
@@ -9644,7 +9634,7 @@
       }
     ]
   },
-  "509": {
+  "508": {
     "contexts": [
       "The current speed of a player in meters per second."
     ],
@@ -9663,7 +9653,7 @@
       }
     ]
   },
-  "510": {
+  "509": {
     "contexts": [
       "The current speed of a player in a specific",
       "direction in meters per second."
@@ -9683,7 +9673,7 @@
       }
     ]
   },
-  "511": {
+  "510": {
     "contexts": [
       "The square root of the specified value.",
       "For example the square root of 9 is 3."
@@ -9703,7 +9693,7 @@
       }
     ]
   },
-  "512": {
+  "511": {
     "contexts": [
       "Text formed from a selection of strings",
       "and specified values."
@@ -9723,7 +9713,7 @@
       }
     ]
   },
-  "513": {
+  "512": {
     "contexts": [
       "The difference between two numbers or vectors."
     ],
@@ -9742,7 +9732,7 @@
       }
     ]
   },
-  "514": {
+  "513": {
     "contexts": [
       "Tangent of the specified angle in degrees."
     ],
@@ -9761,7 +9751,7 @@
       }
     ]
   },
-  "515": {
+  "514": {
     "contexts": [
       "Tangent of the specified angle in radians."
     ],
@@ -9780,7 +9770,7 @@
       }
     ]
   },
-  "516": {
+  "515": {
     "contexts": [
       "A team constant. The all option represents",
       "both teams in a team or all players in a",
@@ -9801,7 +9791,7 @@
       }
     ]
   },
-  "517": {
+  "516": {
     "contexts": [
       "The team of a player. If the game mode is",
       "free-for-all, the team is considered to be all."
@@ -9821,7 +9811,7 @@
       }
     ]
   },
-  "518": {
+  "517": {
     "contexts": [
       "The current score for the specified team.",
       "Results in a 0 in free-for-all game modes."
@@ -9841,7 +9831,7 @@
       }
     ]
   },
-  "519": {
+  "518": {
     "contexts": [
       "The directional input of a player, represented",
       "by a vector with a horizontal input on the",
@@ -9863,7 +9853,7 @@
       }
     ]
   },
-  "520": {
+  "519": {
     "contexts": [
       "The total time seconds that have elapsed",
       "since the game instance was created (including",
@@ -9884,7 +9874,7 @@
       }
     ]
   },
-  "521": {
+  "520": {
     "contexts": [
       "The Boolean value of true."
     ],
@@ -9903,7 +9893,7 @@
       }
     ]
   },
-  "522": {
+  "521": {
     "contexts": [
       "The current ultimate ability charge percentage of a player."
     ],
@@ -9922,7 +9912,7 @@
       }
     ]
   },
-  "523": {
+  "522": {
     "contexts": [
       "Shorthand for the directional vector(0,",
       "1, 0). Which points upward."
@@ -9942,7 +9932,7 @@
       }
     ]
   },
-  "524": {
+  "523": {
     "contexts": [
       "The value found at a specific element of",
       "an array. Results in a 0 if the element does not exist."
@@ -9962,7 +9952,7 @@
       }
     ]
   },
-  "525": {
+  "524": {
     "contexts": [
       "A vector composed of three real numbers",
       "(X, Y, Z) where X is left, Y is Up, and",
@@ -9984,7 +9974,7 @@
       }
     ]
   },
-  "526": {
+  "525": {
     "contexts": [
       "The displacement vector from one position to another."
     ],
@@ -10003,7 +9993,7 @@
       }
     ]
   },
-  "527": {
+  "526": {
     "contexts": [
       "The current velocity of a player as a vector.",
       "If the player is on a surface, the Y component",
@@ -10025,7 +10015,7 @@
       }
     ]
   },
-  "528": {
+  "527": {
     "contexts": [
       "The vertical angle in degrees corresponding",
       "to the specified direction vector."
@@ -10045,7 +10035,7 @@
       }
     ]
   },
-  "529": {
+  "528": {
     "contexts": [
       "The vertical angle in degrees from a player’s",
       "current forward direction to the specified",
@@ -10068,7 +10058,7 @@
       }
     ]
   },
-  "530": {
+  "529": {
     "contexts": [
       "The vertical angle in degrees, of a player’s",
       "current facing relative to the world. This",
@@ -10089,7 +10079,7 @@
       }
     ]
   },
-  "531": {
+  "530": {
     "contexts": [
       "The current vertical speed of a player in",
       "meters per second. This measurement excludes",
@@ -10111,7 +10101,7 @@
       }
     ]
   },
-  "532": {
+  "531": {
     "contexts": [
       "The player that received damage for the",
       "event currently being processed by this",
@@ -10133,7 +10123,7 @@
       }
     ]
   },
-  "533": {
+  "532": {
     "contexts": [
       "The vector in the world coordinates corresponding",
       "to the provided vector in local coordinates."
@@ -10153,7 +10143,7 @@
       }
     ]
   },
-  "534": {
+  "533": {
     "contexts": [
       "The X Component of the specified Vector,",
       "usually representing a leftward amount."
@@ -10173,7 +10163,7 @@
       }
     ]
   },
-  "535": {
+  "534": {
     "contexts": [
       "The Y Component of the specified Vector,",
       "usually representing a upward amount."
@@ -10193,7 +10183,7 @@
       }
     ]
   },
-  "536": {
+  "535": {
     "contexts": [
       "The Z Component of the specified Vector,",
       "usually representing a forward amount."
@@ -10213,7 +10203,7 @@
       }
     ]
   },
-  "537": {
+  "536": {
     "contexts": [
       "Value - You can specify any Value Syntax",
       "to define the Absolute Value."
@@ -10227,7 +10217,7 @@
       }
     ]
   },
-  "538": {
+  "537": {
     "contexts": [
       "Value - You can specify any Value Syntax",
       "to define either addend."
@@ -10241,7 +10231,7 @@
       }
     ]
   },
-  "539": {
+  "538": {
     "contexts": [
       "Value - The right-hand operand. may be any",
       "value that results in a number or a vector."
@@ -10255,7 +10245,7 @@
       }
     ]
   },
-  "540": {
+  "539": {
     "contexts": [
       "Team - You can specify any Team Syntax to",
       "define the array."
@@ -10293,7 +10283,7 @@
       }
     ]
   },
-  "541": {
+  "540": {
     "contexts": [
       "Player - You can specify any Player Syntax",
       "to define the array."
@@ -10307,7 +10297,7 @@
       }
     ]
   },
-  "542": {
+  "541": {
     "contexts": [
       "Player - You can specify any Player Syntax",
       "to define the array."
@@ -10321,7 +10311,7 @@
       }
     ]
   },
-  "543": {
+  "542": {
     "contexts": [
       "Value - You can specify any Value Syntax",
       "to define both of the required values."
@@ -10335,7 +10325,7 @@
       }
     ]
   },
-  "544": {
+  "543": {
     "contexts": [
       "Value - One of the two inputs considered.",
       "if both are true (or equivalent to true),",
@@ -10350,7 +10340,7 @@
       }
     ]
   },
-  "545": {
+  "544": {
     "contexts": [
       "Vector - One of two directional vectors",
       "between which to measure the angle in degrees.",
@@ -10365,7 +10355,7 @@
       }
     ]
   },
-  "546": {
+  "545": {
     "contexts": [
       "Vector - One of two directional vectors",
       "between which to measure the angle in degrees.",
@@ -10380,7 +10370,7 @@
       }
     ]
   },
-  "547": {
+  "546": {
     "contexts": [
       "Angle - You can specify any Angle Syntax",
       "to define both of the required values."
@@ -10394,7 +10384,7 @@
       }
     ]
   },
-  "548": {
+  "547": {
     "contexts": [
       "Angle - One of the two angles between which",
       "to measure the resulting angle."
@@ -10408,7 +10398,7 @@
       }
     ]
   },
-  "549": {
+  "548": {
     "contexts": [
       "Array - You must specify the Array Syntax",
       "you are adding the value to."
@@ -10422,7 +10412,7 @@
       }
     ]
   },
-  "550": {
+  "549": {
     "contexts": [
       "Value - You must specify the Value Syntax",
       "that you are adding to the array."
@@ -10436,7 +10426,7 @@
       }
     ]
   },
-  "551": {
+  "550": {
     "contexts": [
       "Value - Input value for the function."
     ],
@@ -10455,7 +10445,7 @@
       }
     ]
   },
-  "552": {
+  "551": {
     "contexts": [
       "Value - Input value for the function."
     ],
@@ -10474,7 +10464,7 @@
       }
     ]
   },
-  "553": {
+  "552": {
     "contexts": [
       "Numerator - Numerator input for the function."
     ],
@@ -10493,7 +10483,7 @@
       }
     ]
   },
-  "554": {
+  "553": {
     "contexts": [
       "Denominator - Denominator input for the function."
     ],
@@ -10512,7 +10502,7 @@
       }
     ]
   },
-  "555": {
+  "554": {
     "contexts": [
       "Array - The array in which to search for",
       "the specified value. Can use most Array",
@@ -10533,7 +10523,7 @@
       }
     ]
   },
-  "556": {
+  "555": {
     "contexts": [
       "Value - The value for which to search. Can",
       "use most Number based Value Syntax to retrive this value."
@@ -10553,7 +10543,7 @@
       }
     ]
   },
-  "557": {
+  "556": {
     "contexts": [
       "Array - You must specify the Array Syntax",
       "you are comparing the value to."
@@ -10567,7 +10557,7 @@
       }
     ]
   },
-  "558": {
+  "557": {
     "contexts": [
       "Start Index - The first index of the range.",
       "Can use most Value Syntax to specify with."
@@ -10581,7 +10571,7 @@
       }
     ]
   },
-  "559": {
+  "558": {
     "contexts": [
       "Count - The number of elements in the resulting",
       "array. The resulting array will contain",
@@ -10598,7 +10588,7 @@
       }
     ]
   },
-  "560": {
+  "559": {
     "contexts": [
       "Center - The position to which to measure",
       "proximity. Can use most Value Syntax related",
@@ -10613,7 +10603,7 @@
       }
     ]
   },
-  "561": {
+  "560": {
     "contexts": [
       "Team - You can specify any Team Syntax to",
       "restrict which players is reported when",
@@ -10628,7 +10618,7 @@
       }
     ]
   },
-  "562": {
+  "561": {
     "contexts": [
       "Value - The left hand side of the comparison.",
       "This may be any value type if the operation",
@@ -10644,7 +10634,7 @@
       }
     ]
   },
-  "563": {
+  "562": {
     "contexts": [
       "Condition - One of the standard conditions",
       "to use for comparison. See the Condition",
@@ -10659,7 +10649,7 @@
       }
     ]
   },
-  "564": {
+  "563": {
     "contexts": [
       "Team - You can specify any Team Syntax to",
       "define which team reported when defining this value."
@@ -10673,7 +10663,7 @@
       }
     ]
   },
-  "565": {
+  "564": {
     "contexts": [
       "Angle - Angle in degrees. Can use most Player",
       "based Value Syntax to provide this value."
@@ -10699,7 +10689,7 @@
       }
     ]
   },
-  "566": {
+  "565": {
     "contexts": [
       "Angle - Angle in radians. Can use most Player",
       "based Value Syntax to provide this value."
@@ -10725,7 +10715,7 @@
       }
     ]
   },
-  "567": {
+  "566": {
     "contexts": [
       "Value - You must specify the first Value",
       "Syntax to compare to the second."
@@ -10739,7 +10729,7 @@
       }
     ]
   },
-  "568": {
+  "567": {
     "contexts": [
       "Value - You must specify the first Value",
       "Syntax to compare to the second."
@@ -10753,7 +10743,7 @@
       }
     ]
   },
-  "569": {
+  "568": {
     "contexts": [
       "Horizontal Angle - The horizontal angle",
       "in degrees used to construct the resulting",
@@ -10768,7 +10758,7 @@
       }
     ]
   },
-  "570": {
+  "569": {
     "contexts": [
       "Vertical Angle - The vertical angle in degrees",
       "used to construct the resulting vector.",
@@ -10783,7 +10773,7 @@
       }
     ]
   },
-  "571": {
+  "570": {
     "contexts": [
       "Start Pos - The position from which the",
       "resulting direction vector will point. Most",
@@ -10798,7 +10788,7 @@
       }
     ]
   },
-  "572": {
+  "571": {
     "contexts": [
       "End Pos - The position to which the resulting",
       "direction vector will point. Most positional",
@@ -10813,7 +10803,7 @@
       }
     ]
   },
-  "573": {
+  "572": {
     "contexts": [
       "Start Pos - One of the two positions used",
       "in the distance measurement. Most positional",
@@ -10828,7 +10818,7 @@
       }
     ]
   },
-  "574": {
+  "573": {
     "contexts": [
       "End Pos - One of the two positions used",
       "in the distance measurement. Most positional",
@@ -10843,7 +10833,7 @@
       }
     ]
   },
-  "575": {
+  "574": {
     "contexts": [
       "Value - The left-hand operand, may be any",
       "value that results in a number or a vector.",
@@ -10858,7 +10848,7 @@
       }
     ]
   },
-  "576": {
+  "575": {
     "contexts": [
       "Value - The right-hand operand, may be any",
       "value that results in a number or a vector.",
@@ -10873,7 +10863,7 @@
       }
     ]
   },
-  "577": {
+  "576": {
     "contexts": [
       "Value - One of the two vector operands of",
       "the dot product. Any positional based Syntax",
@@ -10888,7 +10878,7 @@
       }
     ]
   },
-  "578": {
+  "577": {
     "contexts": [
       "Value - One of the two vector operands of",
       "the dot product. Any positional based Syntax",
@@ -10903,7 +10893,7 @@
       }
     ]
   },
-  "579": {
+  "578": {
     "contexts": [
       "Entity - The player, icon entity, or effect",
       "entity whose existance to check."
@@ -10917,7 +10907,7 @@
       }
     ]
   },
-  "580": {
+  "579": {
     "contexts": [
       "Center - The position to which to measure",
       "proximity. Can use most Value Syntax related",
@@ -10932,7 +10922,7 @@
       }
     ]
   },
-  "581": {
+  "580": {
     "contexts": [
       "Team - You can specify any Team Syntax to",
       "restrict which players is reported when",
@@ -10947,7 +10937,7 @@
       }
     ]
   },
-  "582": {
+  "581": {
     "contexts": [
       "Array - The array from which the value is",
       "created. Can use most Array based Value",
@@ -10968,7 +10958,7 @@
       }
     ]
   },
-  "583": {
+  "582": {
     "contexts": [
       "Team - The team whose flag position to acquire."
     ],
@@ -10981,7 +10971,7 @@
       }
     ]
   },
-  "584": {
+  "583": {
     "contexts": [
       "Player - The player whose status to check."
     ],
@@ -10994,7 +10984,7 @@
       }
     ]
   },
-  "585": {
+  "584": {
     "contexts": [
       "Status - The status to check for. Values",
       "include Hacked, Burning, Knocked Down, Asleep,",
@@ -11010,7 +11000,7 @@
       }
     ]
   },
-  "586": {
+  "585": {
     "contexts": [
       "Player - The player whose hero to acquire.",
       "Can use most player based Value Syntax to",
@@ -11025,7 +11015,7 @@
       }
     ]
   },
-  "587": {
+  "586": {
     "contexts": [
       "Direction - The direction vector from which",
       "to acquire a horizontal angle in degrees.",
@@ -11042,7 +11032,7 @@
       }
     ]
   },
-  "588": {
+  "587": {
     "contexts": [
       "Player - The player whose current facing",
       "angle begins. Can use most player based",
@@ -11057,7 +11047,7 @@
       }
     ]
   },
-  "589": {
+  "588": {
     "contexts": [
       "Position - The player whose current facing",
       "the angle begins. Can use most Player based",
@@ -11078,7 +11068,7 @@
       }
     ]
   },
-  "590": {
+  "589": {
     "contexts": [
       "Player - The player whose facing direction",
       "to acquire. Can use most player based Value",
@@ -11093,7 +11083,7 @@
       }
     ]
   },
-  "591": {
+  "590": {
     "contexts": [
       "Player - The player whose life to check.",
       "Can use most player based Value Syntax to",
@@ -11108,7 +11098,7 @@
       }
     ]
   },
-  "592": {
+  "591": {
     "contexts": [
       "Player - The player whose button to check.",
       "Can use most player based Value Syntax to",
@@ -11123,7 +11113,7 @@
       }
     ]
   },
-  "593": {
+  "592": {
     "contexts": [
       "Button - The button to check. Designed by",
       "any action inputs by ability but not directional",
@@ -11139,7 +11129,7 @@
       }
     ]
   },
-  "594": {
+  "593": {
     "contexts": [
       "Player - The player whose communication",
       "status to check. Can use most player based",
@@ -11160,7 +11150,7 @@
       }
     ]
   },
-  "595": {
+  "594": {
     "contexts": [
       "Type - The type of communication to consider.",
       "The duration of emotes is exact, the duration",
@@ -11180,7 +11170,7 @@
       }
     ]
   },
-  "596": {
+  "595": {
     "contexts": [
       "Player - The player whose emoting status",
       "to check. Can use most player based Value",
@@ -11195,7 +11185,7 @@
       }
     ]
   },
-  "597": {
+  "596": {
     "contexts": [
       "Player - The player whose voice line status",
       "to check. Can use most player based Value",
@@ -11210,7 +11200,7 @@
       }
     ]
   },
-  "598": {
+  "597": {
     "contexts": [
       "Player - The player whose crouching status",
       "to check. Can use most player based Value",
@@ -11225,7 +11215,7 @@
       }
     ]
   },
-  "599": {
+  "598": {
     "contexts": [
       "Player - The player whose death to check.",
       "Can use most player based Value Syntax to",
@@ -11240,7 +11230,7 @@
       }
     ]
   },
-  "600": {
+  "599": {
     "contexts": [
       "Player - The player whose primary weapon",
       "attack to check. Can use most player based",
@@ -11255,7 +11245,7 @@
       }
     ]
   },
-  "601": {
+  "600": {
     "contexts": [
       "Player - The player whose secondary weapon",
       "attack to check. Can use most player based",
@@ -11270,7 +11260,7 @@
       }
     ]
   },
-  "602": {
+  "601": {
     "contexts": [
       "Team - The team whose whose flag to check.",
       "Can use most Team based Value Syntax to",
@@ -11297,7 +11287,7 @@
       }
     ]
   },
-  "603": {
+  "602": {
     "contexts": [
       "Hero - The hero to check for play. Can use",
       "most Hero based Value Syntax to provide this value."
@@ -11323,7 +11313,7 @@
       }
     ]
   },
-  "604": {
+  "603": {
     "contexts": [
       "Team - The team or teams on which to check",
       "for the hero being played. Can use most",
@@ -11350,7 +11340,7 @@
       }
     ]
   },
-  "605": {
+  "604": {
     "contexts": [
       "Player - The player whose airborne status",
       "to check. Can use most player based Value",
@@ -11365,7 +11355,7 @@
       }
     ]
   },
-  "606": {
+  "605": {
     "contexts": [
       "Start Pos - The start position for the line",
       "of sight check. Most positional based Value",
@@ -11380,7 +11370,7 @@
       }
     ]
   },
-  "607": {
+  "606": {
     "contexts": [
       "End Pos - The end position for the line",
       "of sight check. Most positional based Value",
@@ -11395,7 +11385,7 @@
       }
     ]
   },
-  "608": {
+  "607": {
     "contexts": [
       "Barriers - Defines how barriers affect line",
       "of sight, when considering whether a barrier",
@@ -11414,7 +11404,7 @@
       }
     ]
   },
-  "609": {
+  "608": {
     "contexts": [
       "Player - The player whose spawn room status",
       "to check. Can use most player based Value",
@@ -11429,7 +11419,7 @@
       }
     ]
   },
-  "610": {
+  "609": {
     "contexts": [
       "Player - The player whose view to use for",
       "the check. Can use most Player based Value",
@@ -11450,7 +11440,7 @@
       }
     ]
   },
-  "611": {
+  "610": {
     "contexts": [
       "Location - The location to test if it’s",
       "within view. Most positional based Value",
@@ -11465,7 +11455,7 @@
       }
     ]
   },
-  "612": {
+  "611": {
     "contexts": [
       "Team - The team or teams on which to consider",
       "players. Can use most Team based Value Syntax",
@@ -11486,7 +11476,7 @@
       }
     ]
   },
-  "613": {
+  "612": {
     "contexts": [
       "Player - The player whose moving status",
       "status to check. Can use most player based",
@@ -11501,7 +11491,7 @@
       }
     ]
   },
-  "614": {
+  "613": {
     "contexts": [
       "Number - The index of the objective to consider,",
       "starting at 0 and counting up. Each control",
@@ -11519,7 +11509,7 @@
       }
     ]
   },
-  "615": {
+  "614": {
     "contexts": [
       "Player - The player whose ground status",
       "to check. Can use most player based Value",
@@ -11534,7 +11524,7 @@
       }
     ]
   },
-  "616": {
+  "615": {
     "contexts": [
       "Player - The player whose objective status",
       "to check. Can use most player based Value",
@@ -11549,7 +11539,7 @@
       }
     ]
   },
-  "617": {
+  "616": {
     "contexts": [
       "Player - The player whose wall status to",
       "check. Can use most player based Value Syntax",
@@ -11564,7 +11554,7 @@
       }
     ]
   },
-  "618": {
+  "617": {
     "contexts": [
       "Player - The player whose portrait to check.",
       "Can use most player based Value Syntax to",
@@ -11579,7 +11569,7 @@
       }
     ]
   },
-  "619": {
+  "618": {
     "contexts": [
       "Player - The player whose standing status",
       "to check. Can use most player based Value",
@@ -11594,7 +11584,7 @@
       }
     ]
   },
-  "620": {
+  "619": {
     "contexts": [
       "Team - The team whose role to check. Can",
       "use most Team Based Value Syntax to retrieve this value."
@@ -11614,7 +11604,7 @@
       }
     ]
   },
-  "621": {
+  "620": {
     "contexts": [
       "Array - The array whose values will be considered.",
       "Can use most Array Based Value Syntax to",
@@ -11635,7 +11625,7 @@
       }
     ]
   },
-  "622": {
+  "621": {
     "contexts": [
       "Condition - The condition that is evaluated",
       "for each element of the specified array,",
@@ -11659,7 +11649,7 @@
       }
     ]
   },
-  "623": {
+  "622": {
     "contexts": [
       "Player - The player whose ability 1 usage",
       "to check. Can use most player based Value",
@@ -11674,7 +11664,7 @@
       }
     ]
   },
-  "624": {
+  "623": {
     "contexts": [
       "Player - The player whose ability 2 usage",
       "to check. Can use most player based Value",
@@ -11689,7 +11679,7 @@
       }
     ]
   },
-  "625": {
+  "624": {
     "contexts": [
       "Player - The player whose ultimate ability",
       "usage to check. Can use most player based",
@@ -11704,7 +11694,7 @@
       }
     ]
   },
-  "626": {
+  "625": {
     "contexts": [
       "World Vector - The vector in world coordinates",
       "that will be converted to local coordinates.",
@@ -11720,7 +11710,7 @@
       }
     ]
   },
-  "627": {
+  "626": {
     "contexts": [
       "Local vector - The vector in local coordinates",
       "that will be converted to world coordinates.",
@@ -11742,7 +11732,7 @@
       }
     ]
   },
-  "628": {
+  "627": {
     "contexts": [
       "Relative Player - The player to whom the",
       "local vector is relative. Can use most Player",
@@ -11763,7 +11753,7 @@
       }
     ]
   },
-  "629": {
+  "628": {
     "contexts": [
       "Player - The player whose max health to",
       "compare. Can use any Player based Value",
@@ -11778,7 +11768,7 @@
       }
     ]
   },
-  "630": {
+  "629": {
     "contexts": [
       "Value - The left-hand operand. May be any",
       "value that results in a number. Can use",
@@ -11805,7 +11795,7 @@
       }
     ]
   },
-  "631": {
+  "630": {
     "contexts": [
       "Value - The right-hand operand. May be any",
       "value that results in a number. Can use",
@@ -11832,7 +11822,7 @@
       }
     ]
   },
-  "632": {
+  "631": {
     "contexts": [
       "Position - The position from which to search",
       "for the nearest walkable position. Can use",
@@ -11847,7 +11837,7 @@
       }
     ]
   },
-  "633": {
+  "632": {
     "contexts": [
       "Vector - The vector to normalize. Can use",
       "any Vector based Value syntax to divide with."
@@ -11861,7 +11851,7 @@
       }
     ]
   },
-  "634": {
+  "633": {
     "contexts": [
       "Player - The player whose normalized health to acquire."
     ],
@@ -11874,7 +11864,7 @@
       }
     ]
   },
-  "635": {
+  "634": {
     "contexts": [
       "Value - When this input is false (or equivalent",
       "to false), then the not value is true. Otherwise,",
@@ -11890,7 +11880,7 @@
       }
     ]
   },
-  "636": {
+  "635": {
     "contexts": [
       "Team - The team or teams on which to count",
       "players. Can use most Team based Value Syntax",
@@ -11923,7 +11913,7 @@
       }
     ]
   },
-  "637": {
+  "636": {
     "contexts": [
       "Player - The player whose death count to",
       "acquire. Can use most Player based Value",
@@ -11938,7 +11928,7 @@
       }
     ]
   },
-  "638": {
+  "637": {
     "contexts": [
       "Player - The player whose elimination count",
       "to acquire. Can use most Player based Value",
@@ -11953,7 +11943,7 @@
       }
     ]
   },
-  "639": {
+  "638": {
     "contexts": [
       "Player - The player whose final blow count",
       "to acquire. Can use most Player based Value",
@@ -11968,7 +11958,7 @@
       }
     ]
   },
-  "640": {
+  "639": {
     "contexts": [
       "Number - The index of the objective to consider,",
       "starting at 0 and counting up. Each control",
@@ -11986,7 +11976,7 @@
       }
     ]
   },
-  "641": {
+  "640": {
     "contexts": [
       "Team - The team whose opposite to acquire.",
       "If all, the result will be all. Can use",
@@ -12001,7 +11991,7 @@
       }
     ]
   },
-  "642": {
+  "641": {
     "contexts": [
       "Value - One of the two inputs considered.",
       "If either one is true (or equivalent to",
@@ -12017,7 +12007,7 @@
       }
     ]
   },
-  "643": {
+  "642": {
     "contexts": [
       "Value - One of the two inputs considered.",
       "If either one is true (or equivalent to",
@@ -12033,7 +12023,7 @@
       }
     ]
   },
-  "644": {
+  "643": {
     "contexts": [
       "Player - The player from whose reticle to",
       "search for the closest player. Can use most",
@@ -12048,7 +12038,7 @@
       }
     ]
   },
-  "645": {
+  "644": {
     "contexts": [
       "Team - The team or teams on which to search",
       "for the closest player. Can use most Team",
@@ -12063,7 +12053,7 @@
       }
     ]
   },
-  "646": {
+  "645": {
     "contexts": [
       "Slot - The slot number from each to acquire",
       "a player or players. In team games, each",
@@ -12081,7 +12071,7 @@
       }
     ]
   },
-  "647": {
+  "646": {
     "contexts": [
       "Team - The team or teams from which to acquire",
       "a player or players. Can use most Team based",
@@ -12096,7 +12086,7 @@
       }
     ]
   },
-  "648": {
+  "647": {
     "contexts": [
       "View Angle - The view angle to compare against",
       "in degrees. Can use most Angle based Value",
@@ -12111,7 +12101,7 @@
       }
     ]
   },
-  "649": {
+  "648": {
     "contexts": [
       "Center - The center position from which",
       "to measure distance. Can use most Vector",
@@ -12126,7 +12116,7 @@
       }
     ]
   },
-  "650": {
+  "649": {
     "contexts": [
       "Radius - The radius in meters inside which",
       "players must be in order to be included",
@@ -12142,7 +12132,7 @@
       }
     ]
   },
-  "651": {
+  "650": {
     "contexts": [
       "Team - The team or teams to which a player",
       "must belong to be included in the resulting",
@@ -12158,7 +12148,7 @@
       }
     ]
   },
-  "652": {
+  "651": {
     "contexts": [
       "LOS Check - Specifies whether and how a",
       "player must pass a line-of-sight check to",
@@ -12195,7 +12185,7 @@
       }
     ]
   },
-  "653": {
+  "652": {
     "contexts": [
       "Player - The player whose position to acquire.",
       "Can use most Player based Value Syntax to",
@@ -12210,7 +12200,7 @@
       }
     ]
   },
-  "654": {
+  "653": {
     "contexts": [
       "MIN - The smallest integer allowed. If a",
       "real number is provided to this input, it",
@@ -12226,7 +12216,7 @@
       }
     ]
   },
-  "655": {
+  "654": {
     "contexts": [
       "MAX - The largest integer allowed. If a",
       "real number is provided to this input, it",
@@ -12242,7 +12232,7 @@
       }
     ]
   },
-  "656": {
+  "655": {
     "contexts": [
       "Array - The array whose copy will be randomized.",
       "Can use most Array based Value Syntax to",
@@ -12257,7 +12247,7 @@
       }
     ]
   },
-  "657": {
+  "656": {
     "contexts": [
       "MIN - The smallest real number allowed.",
       "Can use most Number based Value Syntax to",
@@ -12272,7 +12262,7 @@
       }
     ]
   },
-  "658": {
+  "657": {
     "contexts": [
       "MAX - The largest real number allowed. Can",
       "use most Number based Value Syntax to provide this value."
@@ -12286,7 +12276,7 @@
       }
     ]
   },
-  "659": {
+  "658": {
     "contexts": [
       "Array - The array from which to randomly",
       "take a value. If a non-array value is provided,",
@@ -12303,7 +12293,7 @@
       }
     ]
   },
-  "660": {
+  "659": {
     "contexts": [
       "Start POS - The start position for the ray",
       "cast. If a player is provided. A position",
@@ -12332,7 +12322,7 @@
       }
     ]
   },
-  "661": {
+  "660": {
     "contexts": [
       "End POS - The end position for the ray cast.",
       "If a player is provided. A position 2 meters",
@@ -12360,7 +12350,7 @@
       }
     ]
   },
-  "662": {
+  "661": {
     "contexts": [
       "Players to include - Which players can be",
       "hit by this ray cast. Can use most Player",
@@ -12387,7 +12377,7 @@
       }
     ]
   },
-  "663": {
+  "662": {
     "contexts": [
       "Players to exclude - Which players cannot",
       "be hit by this ray cast. This list takes",
@@ -12415,7 +12405,7 @@
       }
     ]
   },
-  "664": {
+  "663": {
     "contexts": [
       "Include player owned objects - Whether player",
       "owned objects (such as barriers or turrets)",
@@ -12443,7 +12433,7 @@
       }
     ]
   },
-  "665": {
+  "664": {
     "contexts": [
       "Array - The array from which to remove values.",
       "Can use most Array based Value Syntax to",
@@ -12458,7 +12448,7 @@
       }
     ]
   },
-  "666": {
+  "665": {
     "contexts": [
       "Value - The value to remove from the array",
       "(if found), if this value itself an array,",
@@ -12475,7 +12465,7 @@
       }
     ]
   },
-  "667": {
+  "666": {
     "contexts": [
       "Value - The real number to round. Can use",
       "most Number based Value Syntax to provide this value."
@@ -12489,7 +12479,7 @@
       }
     ]
   },
-  "668": {
+  "667": {
     "contexts": [
       "Rounding Type - Determines the direction",
       "in which the value will be rounded. You",
@@ -12504,7 +12494,7 @@
       }
     ]
   },
-  "669": {
+  "668": {
     "contexts": [
       "Player - The player whose score to acquire.",
       "Can use most Player based Value Syntax to",
@@ -12519,7 +12509,7 @@
       }
     ]
   },
-  "670": {
+  "669": {
     "contexts": [
       "Player - The player whose slot number to",
       "acquire. Can use most Player based Value",
@@ -12534,7 +12524,7 @@
       }
     ]
   },
-  "671": {
+  "670": {
     "contexts": [
       "Array - The array whose copy will be sorted.",
       "Can use most Array based Value Syntax to",
@@ -12549,7 +12539,7 @@
       }
     ]
   },
-  "672": {
+  "671": {
     "contexts": [
       "Value Rank - The value that is evaluated",
       "for each element of the copied array. The",
@@ -12568,7 +12558,7 @@
       }
     ]
   },
-  "673": {
+  "672": {
     "contexts": [
       "Player - The player whose velocity to acquire.",
       "Can use most Player based Value Syntax to",
@@ -12595,7 +12585,7 @@
       }
     ]
   },
-  "674": {
+  "673": {
     "contexts": [
       "Direction - The direction of travel in which",
       "to measure the player’s speed. Can use most",
@@ -12610,7 +12600,7 @@
       }
     ]
   },
-  "675": {
+  "674": {
     "contexts": [
       "Value - The real number value whose square",
       "root will be computed. Negative values result",
@@ -12626,7 +12616,7 @@
       }
     ]
   },
-  "676": {
+  "675": {
     "contexts": [
       "String - How the string will be structured",
       "using a series of text and phrases."
@@ -12640,7 +12630,7 @@
       }
     ]
   },
-  "677": {
+  "676": {
     "contexts": [
       "{0} - The first value in the string."
     ],
@@ -12653,7 +12643,7 @@
       }
     ]
   },
-  "678": {
+  "677": {
     "contexts": [
       "{1} - The second value in the string."
     ],
@@ -12666,7 +12656,7 @@
       }
     ]
   },
-  "679": {
+  "678": {
     "contexts": [
       "{2} - The third value in the string."
     ],
@@ -12679,7 +12669,7 @@
       }
     ]
   },
-  "680": {
+  "679": {
     "contexts": [
       "Value - The left-hand operand. May be any",
       "value that results in a number or a vector.",
@@ -12695,7 +12685,7 @@
       }
     ]
   },
-  "681": {
+  "680": {
     "contexts": [
       "Value - The right-hand operand. May be any",
       "value that results in a number or a vector.",
@@ -12711,7 +12701,7 @@
       }
     ]
   },
-  "682": {
+  "681": {
     "contexts": [
       "Player - The player whose team to acquire.",
       "Can use most Player based Value Syntax to",
@@ -12726,7 +12716,7 @@
       }
     ]
   },
-  "683": {
+  "682": {
     "contexts": [
       "Team - The team whose score to acquire.",
       "Can use most Team based Value Syntax to",
@@ -12741,7 +12731,7 @@
       }
     ]
   },
-  "684": {
+  "683": {
     "contexts": [
       "Player - The player whose directional input",
       "to acquire. Can use most Player based Value",
@@ -12756,7 +12746,7 @@
       }
     ]
   },
-  "685": {
+  "684": {
     "contexts": [
       "Player - The player whose ultimate charge",
       "percentage to acquire. Can use most Player",
@@ -12771,7 +12761,7 @@
       }
     ]
   },
-  "686": {
+  "685": {
     "contexts": [
       "Array - The array whose element to acquire.",
       "Can use most Array based Value Syntax to",
@@ -12786,7 +12776,7 @@
       }
     ]
   },
-  "687": {
+  "686": {
     "contexts": [
       "Index - The index whose element to acquire.",
       "Can use most Number based Value Syntax to",
@@ -12801,7 +12791,7 @@
       }
     ]
   },
-  "688": {
+  "687": {
     "contexts": [
       "X - The X value of the Vector. Can use most",
       "Number based Value Syntax to provide this value."
@@ -12815,7 +12805,7 @@
       }
     ]
   },
-  "689": {
+  "688": {
     "contexts": [
       "Y - The Y value of the vector. Can use most",
       "Number based Value Syntax to provide this value."
@@ -12829,7 +12819,7 @@
       }
     ]
   },
-  "690": {
+  "689": {
     "contexts": [
       "Z - The Z value of the Vector. Can use most",
       "Number based Value Syntax to provide this value."
@@ -12843,7 +12833,7 @@
       }
     ]
   },
-  "691": {
+  "690": {
     "contexts": [
       "Start Pos - The start position for the line",
       "of sight check. Most positional based Value",
@@ -12858,7 +12848,7 @@
       }
     ]
   },
-  "692": {
+  "691": {
     "contexts": [
       "End Pos - The end position for the line",
       "of sight check. Most positional based Value",
@@ -12873,7 +12863,7 @@
       }
     ]
   },
-  "693": {
+  "692": {
     "contexts": [
       "Direction - The direction vector from which",
       "to acquire a vertical angle in degrees.",
@@ -12890,7 +12880,7 @@
       }
     ]
   },
-  "694": {
+  "693": {
     "contexts": [
       "Position - The direction vector from which",
       "to acquire a vertical angle in degrees.",
@@ -12907,7 +12897,7 @@
       }
     ]
   },
-  "695": {
+  "694": {
     "contexts": [
       "Player - The player whose vertical facing",
       "angle to acquire. Can use most Player based",
@@ -12922,7 +12912,7 @@
       }
     ]
   },
-  "696": {
+  "695": {
     "contexts": [
       "Player - The player whose vertical speed",
       "to acquire. Can use most Player based Value",
@@ -12937,7 +12927,7 @@
       }
     ]
   },
-  "697": {
+  "696": {
     "contexts": [
       "Local vector - Specifies whether the vector",
       "should receive a rotation and a translation",
@@ -12955,7 +12945,7 @@
       }
     ]
   },
-  "698": {
+  "697": {
     "contexts": [
       "Value - The vector from which to acquire",
       "the X component. Can use most Vector based",
@@ -12970,7 +12960,7 @@
       }
     ]
   },
-  "699": {
+  "698": {
     "contexts": [
       "Value - The vector from which to acquire",
       "the Y component. Can use most Vector based",
@@ -12985,7 +12975,7 @@
       }
     ]
   },
-  "700": {
+  "699": {
     "contexts": [
       "Value - The vector from which to acquire",
       "the Z component. Can use most Vector based",
@@ -13000,9 +12990,11 @@
       }
     ]
   },
-  "701": {
+  "700": {
     "contexts": [
-      "팀 상수입니다. ALL 옵션은 팀전의 양팀, 또는 개별 전투 게임의 모든 플레이어를 뜻합니다."
+      "Team constant. The ALL option refers to",
+      "both teams in a team competition, or to",
+      "all players in an individual combat game."
     ],
     "usedFiles": [
       {
@@ -13013,12 +13005,14 @@
       }
     ]
   },
-  "702": {
+  "701": {
     "contexts": [
-      "- `All` Event가 모든 플레이어에게 적용됩니다.",
-      "- `Slot1` ~ `Slot11`",
-      "  Event가 특정 슬롯에 있는 플레이어에게만 적용됩니다.",
-      "  팀전에서는 플레이어 두 명이 하나의 슬롯 (각 팀 당 하나)을 차지하고 있을 수 있습니다."
+      "- `All' Event applies to all players.",
+      "- `Slot1' ~ `Slot11`",
+      " Event only applies to players in specific",
+      "slots.",
+      " In a team competition, two players can",
+      "occupy one slot (one for each team)."
     ],
     "usedFiles": [
       {
@@ -13029,16 +13023,15 @@
       }
     ]
   },
-  "703": {
+  "702": {
     "contexts": [
       "`BARRIERS DO NOT BLOCK LOS`",
-      "어떤 방벽도 시야를 방해하지 않습니다.",
-      "",
+      "No barrier interferes with the view.",
       "`ENEMY BARRIERS BLOCK LOS`",
-      "시야가 적팀의 방벽으로 인해 가려집니다.",
-      "",
+      "Syah is covered by the walls of the enemy",
+      "team.",
       "`ALL BARRIERS BLOCK LOS`",
-      "시야가 모든 방벽으로 인해 가려집니다."
+      "Syah is covered by all the barriers."
     ],
     "usedFiles": [
       {
@@ -13049,9 +13042,9 @@
       }
     ]
   },
-  "704": {
+  "703": {
     "contexts": [
-      "플레이어, 아이콘 개체 또는 효과 개체입니다."
+      "Player, icon object, or effect object."
     ],
     "usedFiles": [
       {
@@ -13062,9 +13055,9 @@
       }
     ]
   },
-  "705": {
+  "704": {
     "contexts": [
-      "사용가능한 value interface 를 나열합니다."
+      "Lists the available value interface ."
     ],
     "usedFiles": [
       {
@@ -13078,37 +13071,36 @@
   "_file": {
     "/type/heroConstant.ts": [
       "export type HeroConstantType",
-      "    = '리퍼' ",
-      "    | '트레이서'",
-      "    | '메르시'",
-      "    | '한조'",
-      "    | '토르비온'",
-      "    | '라인하르트'",
-      "    | '파라'",
-      "    | '윈스턴'",
-      "    | '위도우메이커'",
-      "    | '바스티온'",
-      "    | '시메트라'",
-      "    | '젠야타'",
-      "    | '로드호그'",
-      "    | '겐지'",
-      "    | '로드호그'",
-      "    | '맥크리'",
-      "    | '정크랫'",
-      "    | '자리야'",
-      "    | '솔져: 76'",
-      "    | '루시우'",
-      "    | 'D.VA'",
-      "    | '메이'",
-      "    | '솜브라'",
-      "    | '둠피스트'",
-      "    | '아나'",
-      "    | '오리사'",
-      "    | '브리기테'",
-      "    | '모이라'",
-      "    | '레킹볼'",
-      "    | '애쉬'",
-      "    | '바티스트'"
+      "    = 'Reaper'",
+      "    | 'Tracer'",
+      "    | 'Mercy'",
+      "    | 'Hanzo'",
+      "    | 'Torbjörn'",
+      "    | 'Reinhardt'",
+      "    | 'Pharah'",
+      "    | 'Winston'",
+      "    | 'Widowmaker'",
+      "    | 'Bastion'",
+      "    | 'Symmetra'",
+      "    | 'Zenyatta'",
+      "    | 'Genji'",
+      "    | 'Roadhog'",
+      "    | 'Mccree'",
+      "    | 'Junkrat'",
+      "    | 'Zarya'",
+      "    | 'Soldier: 76'",
+      "    | 'Lúcio'",
+      "    | 'D.Va'",
+      "    | 'Mei'",
+      "    | 'Sombra'",
+      "    | 'Doomfist'",
+      "    | 'Ana'",
+      "    | 'Orisa'",
+      "    | 'Brigitte'",
+      "    | 'Moira'",
+      "    | 'Wrecking Ball'",
+      "    | 'Ashe'",
+      "    | 'Baptiste'"
     ]
   }
 }

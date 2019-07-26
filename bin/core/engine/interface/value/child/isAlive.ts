@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {407}
+ * {406}
  */
 export interface IIsAlive {
     /**
-     * {591}
+     * {590}
      */
     player: ValuePlayerType
 }

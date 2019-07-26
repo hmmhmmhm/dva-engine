@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {413}
+ * {412}
  */
 export interface IIsCommunicatingAnyEmote {
     /**
-     * {596}
+     * {595}
      */
     player: ValuePlayerType
 }

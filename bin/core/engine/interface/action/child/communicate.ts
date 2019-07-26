@@ -7,11 +7,11 @@ import { ValuePlayerType,
  */
 export interface ICommunicate {
     /**
-     * {148}
+     * {147}
      */
     player: ValuePlayerType
     /**
-     * {149}
+     * {148}
      */
     type: ValueCommunicationType
 }

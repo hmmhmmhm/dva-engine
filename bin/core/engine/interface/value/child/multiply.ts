@@ -1,15 +1,15 @@
 import { ValueMultiplyType } from '../../../type'
 
 /**
- * {460}
+ * {459}
  */
 export interface IMultiply {
     /**
-     * {630}
+     * {629}
      */
     value1: ValueMultiplyType
     /**
-     * {631}
+     * {630}
      */
     value2: ValueMultiplyType
 }

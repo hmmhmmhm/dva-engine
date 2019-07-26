@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetProjectileSpeed {
     /**
-     * {262}
+     * {261}
      */
     player: ValuePlayerType
     /**
-     * {263}
+     * {262}
      */
     projectileSpeedPercent: ValueNumberType
 }

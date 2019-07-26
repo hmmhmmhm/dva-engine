@@ -5,19 +5,19 @@ import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../
  */
 export interface IStartHealOverTime {
     /**
-     * {311}
+     * {310}
      */
     player: ValuePlayerType
     /**
-     * {193}
+     * {192}
      */
     healer: ValueAssisterParamType
     /**
-     * {312}
+     * {311}
      */
     duration: ValueNumberType
     /**
-     * {313}
+     * {312}
      */
     healingPerSecond: ValueNumberType
 }

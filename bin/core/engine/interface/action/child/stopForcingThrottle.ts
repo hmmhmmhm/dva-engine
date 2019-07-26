@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopForcingThrottle {
     /**
-     * {328}
+     * {327}
      */
     player: ValuePlayerType
 }

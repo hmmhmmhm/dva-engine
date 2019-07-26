@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {420}
+ * {419}
  */
 export interface IIsFiringSecondary {
     /**
-     * {601}
+     * {600}
      */
     player: ValuePlayerType
 }

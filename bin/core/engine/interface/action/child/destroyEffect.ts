@@ -5,7 +5,7 @@ import { ValueEntityType } from '../../../type'
  */
 export interface IDestroyEffect {
     /**
-     * {181}
+     * {180}
      */
     entity: ValueEntityType
 }

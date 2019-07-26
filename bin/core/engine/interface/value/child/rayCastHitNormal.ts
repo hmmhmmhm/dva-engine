@@ -5,31 +5,31 @@ import {
 } from '../../../type'
 
 /**
- * {495}
+ * {494}
  */
 export interface IRayCastHitNormal {
     /**
-     * {660}
+     * {659}
      */
     startPos: ValueVectorType
 
     /**
-     * {661}
+     * {660}
      */
     endPos: ValueVectorType
 
     /**
-     * {662}
+     * {661}
      */
     playersToInclude: ValueArrayType
 
     /**
-     * {663}
+     * {662}
      */
     playersToExclude: ValueArrayType
 
     /**
-     * {664}
+     * {663}
      */
     IncludePlayerOwnedObjects: ValueBoolType
 }

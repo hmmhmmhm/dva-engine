@@ -4,19 +4,19 @@ import {
 } from '../../../type'
 
 /**
- * {426}
+ * {425}
  */
 export interface IIsInLineOfSight {
     /**
-     * {606}
+     * {605}
      */
     startPos: ValueVectorType
     /**
-     * {607}
+     * {606}
      */
     endPos: ValueVectorType
     /**
-     * {608}
+     * {607}
      */
     barriers: ValueBarrierType
 }

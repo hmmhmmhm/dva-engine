@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {425}
+ * {424}
  */
 export interface IIsInAir {
     /**
-     * {605}
+     * {604}
      */
     player: ValuePlayerType
 }

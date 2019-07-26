@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueBoolType } from '../../../type'
  */
 export interface ISetAbility1Enabled {
     /**
-     * {221}
+     * {220}
      */
     player: ValuePlayerType
     /**
-     * {222}
+     * {221}
      */
     enabled: ValueBoolType
 }

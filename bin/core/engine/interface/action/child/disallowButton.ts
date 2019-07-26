@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueButtonType } from '../../../type'
  */
 export interface IDisallowButton {
     /**
-     * {188}
+     * {187}
      */
     player: ValuePlayerType
     /**
-     * {189}
+     * {188}
      */
     button: ValueButtonType
 }

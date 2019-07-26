@@ -5,21 +5,21 @@ import {
 } from '../../../type'
 
 /**
- * {453}
+ * {452}
  */
 export interface ILocalVectorOf {
     /**
-     * {626}
+     * {625}
      */
     worldVector: ValueVectorType
 
     /**
-     * {627}
+     * {626}
      */
     relativePlayer: ValuePlayerType
 
     /**
-     * {628}
+     * {627}
      */
     transformation: ValueTransformationType
 }

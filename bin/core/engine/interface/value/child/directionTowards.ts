@@ -1,16 +1,16 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {377}
+ * {376}
  */
 export interface IDirectionTowards {
     /**
-     * {571}
+     * {570}
      */
     startPos: ValueVectorType
 
     /**
-     * {572}
+     * {571}
      */
     endPos: ValueVectorType
 }

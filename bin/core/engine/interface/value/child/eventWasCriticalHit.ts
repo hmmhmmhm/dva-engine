@@ -1,4 +1,4 @@
 /**
- * {386}
+ * {385}
  */
 export interface IEventWasCriticalHit {}

@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {524}
+ * {523}
  */
 export interface IValueInArray {
     /**
-     * {686}
+     * {685}
      */
     array: ValueArrayType
     /**
-     * {687}
+     * {686}
      */
     index: ValueNumberType
 }

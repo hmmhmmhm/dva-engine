@@ -7,15 +7,15 @@ import {
  */
 export interface IDamage {
     /**
-     * {175}
+     * {174}
      */
     player: ValuePlayerType
     /**
-     * {176}
+     * {175}
      */
     damager: ValuePlayerType
     /**
-     * {177}
+     * {176}
      */
     amount: ValueNumberType
 }

@@ -8,11 +8,11 @@ import {
  */
 export interface ISetPlayerScore {
     /**
-     * {251}
+     * {250}
      */
     player: ValuePlayerType
     /**
-     * {252}
+     * {251}
      */
     score: ValueNumberType
 }

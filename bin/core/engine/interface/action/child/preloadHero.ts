@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueHeroType } from '../../../type'
  */
 export interface IPreloadHero {
     /**
-     * {214}
+     * {213}
      */
     player: ValuePlayerType
     /**
-     * {215}
+     * {214}
      */
     hero: ValueHeroType
 }

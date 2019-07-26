@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IResetPlayerHeroAvailability {
     /**
-     * {218}
+     * {217}
      */
     player: ValuePlayerType
 }

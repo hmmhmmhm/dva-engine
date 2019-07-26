@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopForcingPlayerToBeHero {
     /**
-     * {326}
+     * {325}
      */
     player: ValuePlayerType
 }

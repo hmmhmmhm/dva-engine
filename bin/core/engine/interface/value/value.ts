@@ -212,972 +212,972 @@ import {
 
 export interface IValue {
     /**
-     * {343}
+     * {342}
      */
     absoluteValue: IAbsoluteValue
 
     /**
-     * {344}
+     * {343}
      */
     add: IAdd
 
     /**
-     * {345}
+     * {344}
      */
     allDeadPlayers: IAllDeadPlayers
 
     /**
-     * {346}
+     * {345}
      */
     allHeroes: IAllHeroes
 
     /**
-     * {347}
+     * {346}
      */
     allLivingPlayers: IAllLivingPlayers
 
     /**
-     * {348}
+     * {347}
      */
     allPlayers: IAllPlayers
 
     /**
-     * {349}
+     * {348}
      */
     allPlayersNotOnObjective: IAllPlayersNotOnObjective
 
     /**
-     * {350}
+     * {349}
      */
     allPlayersOnObjective: IAllPlayersOnObjective
 
     /**
-     * {351}
+     * {350}
      */
     allowedHeroes: IAllowedHeroes
 
     /**
-     * {352}
+     * {351}
      */
     altitudeOf: IAltitudeOf
 
     /**
-     * {353}
+     * {352}
      */
     and: IAnd
 
     /**
-     * {354}
+     * {353}
      */
     angleBetweenVectors: IAngleBetweenVectors
 
     /**
-     * {355}
+     * {354}
      */
     angleDifference: IAngleDifference
 
     /**
-     * {356}
+     * {355}
      */
     appendToArray: IAppendToArray
 
     /**
-     * {357}
+     * {356}
      */
     arccosineInDegrees: IArccosineInDegrees
 
     /**
-     * {358}
+     * {357}
      */
     arccosineInRadians: IArccosineInRadians
 
     /**
-     * {359}
+     * {358}
      */
     arcsineInDegrees: IArcsineInDegrees
 
     /**
-     * {360}
+     * {359}
      */
     arcsineInRadians: IArcsineInRadians
 
     /**
-     * {361}
+     * {360}
      */
     arctangentInDegrees: IArctangentInDegrees
 
     /**
-     * {362}
+     * {361}
      */
     arctangentInRadians: IArctangentInRadians
 
     /**
-     * {363}
+     * {362}
      */
     arrayContains: IArrayContains
 
     /**
-     * {364}
+     * {363}
      */
     arraySlice: IArraySlice
 
     /**
-     * {365}
+     * {364}
      */
     attacker: IAttacker
 
     /**
-     * {366}
+     * {365}
      */
     backward: IBackward
 
     /**
-     * {367}
+     * {366}
      */
     closestPlayerTo: IClosestPlayerTo
 
     /**
-     * {368}
+     * {367}
      */
     compare: ICompare
 
     /**
-     * {369}
+     * {368}
      */
     controlModeScoringPercentage: IControlModeScoringPercentage
 
     /**
-     * {370}
+     * {369}
      */
     controlModeScoringTeam: IControlModeScoringTeam
 
     /**
-     * {371}
+     * {370}
      */
     cosineFromDegrees: ICosineFromDegrees
 
     /**
-     * {372}
+     * {371}
      */
     cosineFromRadians: ICosineFromRadians
 
     /**
-     * {373}
+     * {372}
      */
     countOf: ICountOf
 
     /**
-     * {374}
+     * {373}
      */
     crossProduct: ICrossProduct
 
     /**
-     * {375}
+     * {374}
      */
     currentArrayElement: ICurrentArrayElement
 
     /**
-     * {376}
+     * {375}
      */
     directionFromAngles: IDirectionFromAngles
 
     /**
-     * {377}
+     * {376}
      */
     directionTowards: IDirectionTowards
 
     /**
-     * {378}
+     * {377}
      */
     distanceBetween: IDistanceBetween
     
     /**
-     * {379}
+     * {378}
      */
     divide: IDivide
 
     /**
-     * {380}
+     * {379}
      */
     dotProduct: IDotProduct
 
     /**
-     * {381}
+     * {380}
      */
     down: IDown
 
     /**
-     * {382}
+     * {381}
      */
     emptyArray: IEmptyArray
 
     /**
-     * {383}
+     * {382}
      */
     entityExists: IEntityExists
 
     /**
-     * {384}
+     * {383}
      */
     eventDamage: IEventDamage
 
     /**
-     * {385}
+     * {384}
      */
     eventPlayer: IEventPlayer
 
     /**
-     * {386}
+     * {385}
      */
     eventWasCriticalHit: IEventWasCriticalHit
 
     /**
-     * {387}
+     * {386}
      */
     eyePosition: IEyePosition
 
     /**
-     * {388}
+     * {387}
      */
     facingDirectionOf: IFacingDirectionOf
 
     /**
-     * {389}
+     * {388}
      */
     false: IFalse
 
     /**
-     * {390}
+     * {389}
      */
     farthestPlayerFrom: IFarthestPlayerFrom
 
     /**
-     * {391}
+     * {390}
      */
     filteredArray: IFilteredArray
 
     /**
-     * {392}
+     * {391}
      */
     firstOf: IFirstOf
 
     /**
-     * {393}
+     * {392}
      */
     flagPosition: IFlagPosition
 
     /**
-     * {394}
+     * {393}
      */
     forward: IForward
 
     /**
-     * {395}
+     * {394}
      */
     globalVariable: IGlobalVariable
 
     /**
-     * {396}
+     * {395}
      */
     hasSpawned: IHasSpawned
 
     /**
-     * {397}
+     * {396}
      */
     hasStatus: IHasStatus
 
     /**
-     * {398}
+     * {397}
      */
     health: IHealth
 
     /**
-     * {399}
+     * {398}
      */
     hero: IHero
 
     /**
-     * {400}
+     * {399}
      */
     heroIconString: IHeroIconString
 
     /**
-     * {401}
+     * {400}
      */
     heroOf: IHeroOf
 
     /**
-     * {402}
+     * {401}
      */
     horizontalAngleFromDirection: IHorizontalAngleFromDirection
     
     /**
-     * {403}
+     * {402}
      */
     horizontalAngleTowards: IHorizontalAngleTowards
 
     /**
-     * {404}
+     * {403}
      */
     horizontalFacingAngleOf: IHorizontalFacingAngleOf
 
     /**
-     * {405}
+     * {404}
      */
     horizontalSpeedOf: IHorizontalSpeedOf
 
     /**
-     * {406}
+     * {405}
      */
     indexOfArrayValue: IIndexOfArrayValue
 
     /**
-     * {407}
+     * {406}
      */
     isAlive: IIsAlive
     
     /**
-     * {408}
+     * {407}
      */
     isAssemblingHeroes: IIsAssemblingHeroes
 
     /**
-     * {409}
+     * {408}
      */
     isBetweenRounds: IIsBetweenRounds
 
     /**
-     * {410}
+     * {409}
      */
     isButtonHeld: IIsButtonHeld
 
     /**
-     * {411}
+     * {410}
      */
     isCommunicating: IIsCommunicating
 
     /**
-     * {412}
+     * {411}
      */
     isCommunicatingAny: IIsCommunicatingAny
 
     /**
-     * {413}
+     * {412}
      */
     isCommunicatingAnyEmote: IIsCommunicatingAnyEmote
 
     /**
-     * {414}
+     * {413}
      */
     isCommunicatingAnyVoiceLine: IIsCommunicatingAnyVoiceLine
 
     /**
-     * {415}
+     * {414}
      */
     isControlModePointLocked: IIsControlModePointLocked
     
     /**
-     * {416}
+     * {415}
      */
     isCrouching: IIsCrouching
 
     /**
-     * {417}
+     * {416}
      */
     isCTFModeInSuddenDeath: IIsCTFModeInSuddenDeath
 
     /**
-     * {418}
+     * {417}
      */
     isDead: IIsDead
 
     /**
-     * {419}
+     * {418}
      */
     isFiringPrimary: IIsFiringPrimary
 
     /**
-     * {420}
+     * {419}
      */
     isFiringSecondary: IIsFiringSecondary
 
     /**
-     * {421}
+     * {420}
      */
     isFlagAtBase: IIsFlagAtBase
 
     /**
-     * {422}
+     * {421}
      */
     isFlagBeingCarried: IIsFlagBeingCarried
 
     /**
-     * {423}
+     * {422}
      */
     isGameInProgress: IIsGameInProgress
 
     /**
-     * {424}
+     * {423}
      */
     isHeroBeingPlayed: IIsHeroBeingPlayed
 
     /**
-     * {425}
+     * {424}
      */
     isInAir: IIsInAir
 
     /**
-     * {426}
+     * {425}
      */
     isInLineOfSight: IIsInLineOfSight
 
     /**
-     * {427}
+     * {426}
      */
     isInSetup: IIsInSetup
 
     /**
-     * {428}
+     * {427}
      */
     isInSpawnRoom: IIsInSpawnRoom
 
     /**
-     * {429}
+     * {428}
      */
     isInViewAngle: IIsInViewAngle
 
     /**
-     * {430}
+     * {429}
      */
     isMatchComplete: IIsMatchComplete
 
     /**
-     * {431}
+     * {430}
      */
     isMoving: IIsMoving
 
     /**
-     * {432}
+     * {431}
      */
     isObjectiveComplete: IIsObjectiveComplete
 
     /**
-     * {433}
+     * {432}
      */
     isOnGround: IIsOnGround
 
     /**
-     * {434}
+     * {433}
      */
     isOnObjective: IIsOnObjective
 
     /**
-     * {435}
+     * {434}
      */
     isOnWall: IIsOnWall
 
     /**
-     * {436}
+     * {435}
      */
     isPortraitOnFire: IIsPortraitOnFire
 
     /**
-     * {437}
+     * {436}
      */
     isStanding: IIsStanding
 
     /**
-     * {438}
+     * {437}
      */
     isTeamOnDefense: IIsTeamOnDefense
 
     /**
-     * {439}
+     * {438}
      */
     isTeamOnOffense: IIsTeamOnOffense
 
     /**
-     * {440}
+     * {439}
      */
     isTrueForAll: IIsTrueForAll
 
     /**
-     * {441}
+     * {440}
      */
     isTrueForAny: IIsTrueForAny
 
     /**
-     * {442}
+     * {441}
      */
     isUsingAbility1: IIsUsingAbility1
 
     /**
-     * {443}
+     * {442}
      */
     isUsingAbility2: IIsUsingAbility2
 
     /**
-     * {444}
+     * {443}
      */
     isUsingUltimate: IIsUsingUltimate
 
     /**
-     * {445}
+     * {444}
      */
     isWaitingForPlayers: IIsWaitingForPlayers
 
     /**
-     * {446}
+     * {445}
      */
     lastCreatedEntity: ILastCreatedEntity
 
     /**
-     * {447}
+     * {446}
      */
     lastDamageModificationId: ILastDamageModificationId
 
     /**
-     * {448}
+     * {447}
      */
     lastDamageOverTimeId: ILastDamageOverTimeId
 
     /**
-     * {449}
+     * {448}
      */
     lastHealOverTimeId: ILastHealOverTimeId
 
     /**
-     * {450}
+     * {449}
      */
     lastOf: ILastOf
 
     /**
-     * {451}
+     * {450}
      */
     lastTextId: ILastTextId
 
     /**
-     * {452}
+     * {451}
      */
     left: ILeft
 
     /**
-     * {453}
+     * {452}
      */
     localVectorOf: ILocalVectorOf
 
     /**
-     * {454}
+     * {453}
      */
     matchRound: IMatchRound
 
     /**
-     * {455}
+     * {454}
      */
     matchTime: IMatchTime
 
     /**
-     * {456}
+     * {455}
      */
     max: IMax
 
     /**
-     * {457}
+     * {456}
      */
     maxHealth: IMaxHealth
 
     /**
-     * {458}
+     * {457}
      */
     min: IMin
 
     /**
-     * {459}
+     * {458}
      */
     modulo: IModulo
 
     /**
-     * {460}
+     * {459}
      */
     multiply: IMultiply
 
     /**
-     * {461}
+     * {460}
      */
     nearestWalkablePosition: INearestWalkablePosition
 
     /**
-     * {462}
+     * {461}
      */
     normalize: INormalize
 
     /**
-     * {463}
+     * {462}
      */
     normalizedHealth: INormalizedHealth
 
     /**
-     * {464}
+     * {463}
      */
     not: INot
 
     /**
-     * {465}
+     * {464}
      */
     null: INull
 
     /**
-     * {466}
+     * {465}
      */
     number: INumber
 
     /**
-     * {467}
+     * {466}
      */
     numberOfDeadPlayers: INumberOfDeadPlayers
 
     /**
-     * {468}
+     * {467}
      */
     numberOfDeaths: INumberOfDeaths
 
     /**
-     * {469}
+     * {468}
      */
     numberOfEliminations: INumberOfEliminations
 
     /**
-     * {470}
+     * {469}
      */
     numberOfFinalBlows: INumberOfFinalBlows
 
     /**
-     * {471}
+     * {470}
      */
     numberOfHeroes: INumberOfHeroes
 
     /**
-     * {472}
+     * {471}
      */
     numberOfLivingPlayers: INumberOfLivingPlayers
 
     /**
-     * {473}
+     * {472}
      */
     numberOfPlayers: INumberOfPlayers
 
     /**
-     * {474}
+     * {473}
      */
     numberOfPlayersOnObjective: INumberOfPlayersOnObjective
 
     /**
-     * {475}
+     * {474}
      */
     objectiveIndex: IObjectiveIndex
 
     /**
-     * {476}
+     * {475}
      */
     objectivePosition: IObjectivePosition
 
     /**
-     * {477}
+     * {476}
      */
     oppositeTeamOf: IOppositeTeamOf
 
     /**
-     * {478}
+     * {477}
      */
     or: IOr
 
     /**
-     * {479}
+     * {478}
      */
     payloadPosition: IPayloadPosition
 
     /**
-     * {480}
+     * {479}
      */
     payloadProgressPercentage: IPayloadProgressPercentage
 
     /**
-     * {481}
+     * {480}
      */
     playerCarryingFlag: IPlayerCarryingFlag
 
     /**
-     * {482}
+     * {481}
      */
     playerClosestToReticle: IPlayerClosestToReticle
 
     /**
-     * {483}
+     * {482}
      */
     playerVariable: IPlayerVariable
 
     /**
-     * {484}
+     * {483}
      */
     playersInSlot: IPlayersInSlot
 
     /**
-     * {485}
+     * {484}
      */
     playersInViewAngle: IPlayersInViewAngle
 
     /**
-     * {486}
+     * {485}
      */
     playersOnHero: IPlayersOnHero
 
     /**
-     * {487}
+     * {486}
      */
     playersWithinRadius: IPlayersWithinRadius
 
     /**
-     * {488}
+     * {487}
      */
     pointCapturePercentage: IPointCapturePercentage
 
     /**
-     * {489}
+     * {488}
      */
     positionOf: IPositionOf
 
     /**
-     * {490}
+     * {489}
      */
     raiseToPower: IRaiseToPower
 
     /**
-     * {491}
+     * {490}
      */
     randomInteger: IRandomInteger
 
     /**
-     * {492}
+     * {491}
      */
     randomReal: IRandomReal
 
     /**
-     * {493}
+     * {492}
      */
     randomValueInArray: IRandomValueInArray
 
     /**
-     * {494}
+     * {493}
      */
     randomizedArray: IRandomizedArray
 
     /**
-     * {495}
+     * {494}
      */
     rayCastHitNormal: IRayCastHitNormal
 
     /**
-     * {496}
+     * {495}
      */
     rayCastHitPlayer: IRayCastHitPlayer
 
     /**
-     * {497}
+     * {496}
      */
     rayCastHitPosition: IRayCastHitPosition
 
     /**
-     * {498}
+     * {497}
      */
     removeFromArray: IRemoveFromArray
 
     /**
-     * {499}
+     * {498}
      */
     right: IRight
 
     /**
-     * {500}
+     * {499}
      */
     roundToInteger: IRoundToInteger
 
     /**
-     * {501}
+     * {500}
      */
     scoreOf: IScoreOf
 
     /**
-     * {502}
+     * {501}
      */
     serverLoad: IServerLoad
 
     /**
-     * {503}
+     * {502}
      */
     serverLoadAverage: IServerLoadAverage
 
     /**
-     * {504}
+     * {503}
      */
     serverLoadPeak: IServerLoadPeak
 
     /**
-     * {505}
+     * {504}
      */
     sineFromDegrees: ISineFromDegrees
 
     /**
-     * {506}
+     * {505}
      */
     sineFromRadians: ISineFromRadians
 
     /**
-     * {507}
+     * {506}
      */
     slotOf: ISlotOf
 
     /**
-     * {508}
+     * {507}
      */
     sortedArray: ISortedArray
 
     /**
-     * {509}
+     * {508}
      */
     speedOf: ISpeedOf
 
     /**
-     * {510}
+     * {509}
      */
     speedOfInDirection: ISpeedOfInDirection
 
     /**
-     * {511}
+     * {510}
      */
     squareRoot: ISquareRoot
 
     /**
-     * {512}
+     * {511}
      */
     string: IString
 
     /**
-     * {513}
+     * {512}
      */
     subtract: ISubtract
 
     /**
-     * {514}
+     * {513}
      */
     tangentFromDegrees: ITangentFromDegrees
 
     /**
-     * {515}
+     * {514}
      */
     tangentFromRadians: ITangentFromRadians
 
     /**
-     * {516}
+     * {515}
      */
     team: ITeam
 
     /**
-     * {517}
+     * {516}
      */
     teamOf: ITeamOf
 
     /**
-     * {518}
+     * {517}
      */
     teamScore: ITeamScore
 
     /**
-     * {519}
+     * {518}
      */
     throttleOf: IThrottleOf
 
     /**
-     * {520}
+     * {519}
      */
     totalTimeElapsed: ITotalTimeElapsed
 
     /**
-     * {521}
+     * {520}
      */
     true: ITrue
 
     /**
-     * {522}
+     * {521}
      */
     ultimateChargePercent: IUltimateChargePercent
 
     /**
-     * {523}
+     * {522}
      */
     up: IUp
 
     /**
-     * {524}
+     * {523}
      */
     valueInArray: IValueInArray
 
     /**
-     * {525}
+     * {524}
      */
     vector: IVector
 
     /**
-     * {526}
+     * {525}
      */
     vectorTowards: IVectorTowards
 
     /**
-     * {527}
+     * {526}
      */
     velocityOf: IVelocityOf
 
     /**
-     * {528}
+     * {527}
      */
     verticalAngleFromDirection: IVerticalAngleFromDirection
 
     /**
-     * {529}
+     * {528}
      */
     verticalAngleTowards: IVerticalAngleTowards
 
     /**
-     * {530}
+     * {529}
      */
     verticalFacingAngleOf: IVerticalFacingAngleOf
 
     /**
-     * {531}
+     * {530}
      */
     verticalSpeedOf: IVerticalSpeedOf
 
     /**
-     * {532}
+     * {531}
      */
     victim: IVictim
 
     /**
-     * {533}
+     * {532}
      */
     worldVectorOf: IWorldVectorOf
 
     /**
-     * {534}
+     * {533}
      */
     xComponentOf: IXComponentOf
     
     /**
-     * {535}
+     * {534}
      */
     yComponentOf: IYComponentOf
 
     /**
-     * {536}
+     * {535}
      */
     zComponentOf: IZComponentOf
 }

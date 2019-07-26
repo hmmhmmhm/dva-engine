@@ -6,23 +6,23 @@ import {
 } from '../../../type'
 
 /**
- * {487}
+ * {486}
  */
 export interface IPlayersWithinRadius {
     /**
-     * {649}
+     * {648}
      */
     center: ValueVectorType
     /**
-     * {650}
+     * {649}
      */
     radius: ValueNumberType
     /**
-     * {651}
+     * {650}
      */
     team: ValueTeamType
     /**
-     * {652}
+     * {651}
      */
     losCheck: ValueLosCheckType
 }

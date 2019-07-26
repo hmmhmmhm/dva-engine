@@ -1,16 +1,16 @@
 import { ValueType } from '../../../type/value'
 
 /**
- * {353}
+ * {352}
  */
 export interface IAnd {
     /**
-     * {543}
+     * {542}
      */
     value1: ValueType
 
     /**
-     * {544}
+     * {543}
      */
     value2: ValueType
 }

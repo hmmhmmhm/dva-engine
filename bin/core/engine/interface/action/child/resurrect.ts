@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IResurrect {
     /**
-     * {220}
+     * {219}
      */
     player: ValuePlayerType
 }

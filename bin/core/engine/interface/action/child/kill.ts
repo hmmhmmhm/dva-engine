@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueAssisterParamType } from '../../../type'
  */
 export interface IKill {
     /**
-     * {195}
+     * {194}
      */
     player: ValuePlayerType
     /**
-     * {196}
+     * {195}
      */
     killer: ValueAssisterParamType
 }

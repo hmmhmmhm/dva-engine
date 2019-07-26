@@ -4,16 +4,16 @@ import {
 } from '../../../type'
 
 /**
- * {390}
+ * {389}
  */
 export interface IFarthestPlayerFrom {
     /**
-     * {580}
+     * {579}
      */
     center: ValueVectorType
 
     /**
-     * {581}
+     * {580}
      */
     team: ValuePlayerType
 }

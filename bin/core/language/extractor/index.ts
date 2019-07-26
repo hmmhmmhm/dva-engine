@@ -39,6 +39,13 @@ export const Extract = async (lang: string = 'kor')=>{
         `/type`
     ]
 
+    /// Collect all additional data
+    try{
+        let oldData = require(`${process.cwd()}/bin/core/language/data/${lang}.json`)
+        if(typeof oldData['_file'] != 'undefined')
+            common.resultMap['_file'] = oldData['_file']
+    }catch(e){}
+
     // Collect all interface files
     for(let collectPath of collectPaths){
         await Util.collectInterfaceFiles(

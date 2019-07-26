@@ -12,27 +12,27 @@ import {
  */
 export interface ICreateInWorldText {
     /**
-     * {169}
+     * {168}
      */
     visibleTo: ValuePlayerType
     /**
-     * {170}
+     * {169}
      */
     header: ValueStringType
     /**
-     * {171}
+     * {170}
      */
     position: ValueVectorType
     /**
-     * {172}
+     * {171}
      */
     scale: ValueNumberType
     /**
-     * {173}
+     * {172}
      */
     clipping: ValueClippingType
     /**
-     * {174}
+     * {173}
      */
     reevaluation: ValueInWorldTextReevaluationType
 }

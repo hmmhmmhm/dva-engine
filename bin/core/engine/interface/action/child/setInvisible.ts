@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueInvisibleToType } from '../../../type'
  */
 export interface ISetInvisible {
     /**
-     * {241}
+     * {240}
      */
     player: ValuePlayerType
     /**
-     * {242}
+     * {241}
      */
     invisibleTo: ValueInvisibleToType
 }

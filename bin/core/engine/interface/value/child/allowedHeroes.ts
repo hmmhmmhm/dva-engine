@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {351}
+ * {350}
  */
 export interface IAllowedHeroes {
     /**
-     * {541}
+     * {540}
      */
     player: ValuePlayerType
 }

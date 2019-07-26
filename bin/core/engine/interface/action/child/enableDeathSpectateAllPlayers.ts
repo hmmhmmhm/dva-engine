@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IEnableDeathSpectateAllPlayers {
     /**
-     * {190}
+     * {189}
      */
     player: ValuePlayerType
 }

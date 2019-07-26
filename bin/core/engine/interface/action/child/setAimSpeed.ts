@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetAimSpeed {
     /**
-     * {225}
+     * {224}
      */
     player: ValuePlayerType
     /**
-     * {226}
+     * {225}
      */
     turnSpeedPercent: ValueNumberType
 }

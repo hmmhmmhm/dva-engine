@@ -5,7 +5,7 @@ import { ValueDamageOverTimeId } from '../../../type'
  */
 export interface IStopDamageOverTime {
     /**
-     * {324}
+     * {323}
      */
     damageOverTimeId: ValueDamageOverTimeId
 }

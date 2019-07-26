@@ -10,19 +10,19 @@ import {
  */
 export interface ISetPlayerVariableAtIndex {
     /**
-     * {255}
+     * {254}
      */
     player: ValuePlayerType
     /**
-     * {256}
+     * {255}
      */
     variable: VariableType
     /**
-     * {201}
+     * {200}
      */
     index: ValueNumberType
     /**
-     * {257}
+     * {256}
      */
     value: ValueType
 }

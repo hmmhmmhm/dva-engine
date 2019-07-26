@@ -9,19 +9,19 @@ import {
  */
 export interface ISetStatus {
     /**
-     * {269}
+     * {268}
      */
     player: ValuePlayerType
     /**
-     * {270}
+     * {269}
      */
     assister: ValueAssisterParamType
     /**
-     * {271}
+     * {270}
      */
     status: ValueStatusType
     /**
-     * {272}
+     * {271}
      */
     duration: ValueNumberType
 }

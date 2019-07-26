@@ -1,16 +1,16 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {380}
+ * {379}
  */
 export interface IDotProduct {
     /**
-     * {577}
+     * {576}
      */
     value1: ValueVectorType
 
     /**
-     * {578}
+     * {577}
      */
     value2: ValueVectorType
 }

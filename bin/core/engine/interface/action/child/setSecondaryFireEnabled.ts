@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueBoolType } from '../../../type'
  */
 export interface ISetSecondaryFireEnabled {
     /**
-     * {266}
+     * {265}
      */
     player: ValuePlayerType
     /**
-     * {267}
+     * {266}
      */
     enabled: ValueBoolType
 }

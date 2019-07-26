@@ -9,19 +9,19 @@ import {
  */
 export interface IStartCamera {
     /**
-     * {285}
+     * {284}
      */
     player: ValuePlayerType
     /**
-     * {286}
+     * {285}
      */
     eyePosition: ValueVectorType
     /**
-     * {287}
+     * {286}
      */
     lookAtPosition: ValueVectorType
     /**
-     * {288}
+     * {287}
      */
     blendSpeed: ValueNumberType
 }

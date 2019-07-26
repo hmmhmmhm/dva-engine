@@ -10,37 +10,37 @@ import {
 
 export interface IEvent {
     /**
-     * {336}
+     * {335}
      */
     ongoingGlobal: IOnGoingGlobal
 
     /**
-     * {337}
+     * {336}
      */
     ongoingEachPlayer: IOnGoingEachPlayer
 
     /**
-     * {338}
+     * {337}
      */
     playerEarnedElimination: IPlayerEarnedElimination
     
     /**
-     * {339}
+     * {338}
      */
     playerDealtFinalBlow: IPlayerDealtFinalBlow
 
     /**
-     * {340}
+     * {339}
      */
     playerDealtDamage: IPlayerDealtDamage
 
     /**
-     * {341}
+     * {340}
      */
     playerTookDamage: IPlayerTookDamage
 
     /**
-     * {342}
+     * {341}
      */
     playerDied: IPlayerDied
 }

@@ -5,7 +5,7 @@ import { ValueTeamType } from '../../../type'
  */
 export interface IDeclareRoundVictory {
     /**
-     * {179}
+     * {178}
      */
     roundWinningTeam: ValueTeamType
 }

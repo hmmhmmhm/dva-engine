@@ -1,7 +1,7 @@
 import { ValueArrayType } from '../../../type'
 
 /**
- * {373}
+ * {372}
  */
 export interface ICountOf {
     array: ValueArrayType

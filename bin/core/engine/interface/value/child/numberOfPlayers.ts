@@ -1,11 +1,11 @@
 import { ValueTeamType } from '../../../type'
 
 /**
- * {473}
+ * {472}
  */
 export interface INumberOfPlayers {
     /**
-     * {636}
+     * {635}
      */
     team: ValueTeamType
 }

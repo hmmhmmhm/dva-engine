@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {461}
+ * {460}
  */
 export interface INearestWalkablePosition {
     /**
-     * {632}
+     * {631}
      */
     position: ValueVectorType
 }

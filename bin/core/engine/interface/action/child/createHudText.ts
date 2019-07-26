@@ -15,43 +15,43 @@ import { INull } from '../../value'
  */
 export interface ICreateHudText {
     /**
-     * {155}
+     * {154}
      */
     visibleTo: ValuePlayerType
     /**
-     * {156}
+     * {155}
      */
     header: ValueStringType
     /**
-     * {157}
+     * {156}
      */
     subHeader: ValueStringParamType
     /**
-     * {158}
+     * {157}
      */
     text: ValueStringParamType
     /**
-     * {159}
+     * {158}
      */
     location: ValueLocationType
     /**
-     * {160}
+     * {159}
      */
     sortOrder: ValueNumberType
     /**
-     * {161}
+     * {160}
      */
     headerColor: ValueColorType
     /**
-     * {162}
+     * {161}
      */
     subHeaderColor: ValueColorType
     /**
-     * {163}
+     * {162}
      */
     textColor: ValueColorType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueHudTextReevaluationType
 }

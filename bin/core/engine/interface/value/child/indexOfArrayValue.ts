@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {406}
+ * {405}
  */
 export interface IIndexOfArrayValue {
     /**
-     * {555}
+     * {554}
      */
     array: ValueArrayType
     /**
-     * {556}
+     * {555}
      */
     value: ValueType
 }

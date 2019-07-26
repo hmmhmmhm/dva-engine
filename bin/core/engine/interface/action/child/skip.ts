@@ -5,7 +5,7 @@ import { ValueNumberType } from '../../../type'
  */
 export interface ISkip {
     /**
-     * {277}
+     * {276}
      */
     numberOfActions: ValueNumberType
 }

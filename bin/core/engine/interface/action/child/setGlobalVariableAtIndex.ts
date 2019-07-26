@@ -9,15 +9,15 @@ import {
  */
 export interface ISetGlobalVariableAtIndex {
     /**
-     * {235}
+     * {234}
      */
     variable: VariableType
     /**
-     * {201}
+     * {200}
      */
     index: ValueNumberType
     /**
-     * {236}
+     * {235}
      */
     value: ValueType
 }

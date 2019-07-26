@@ -1,16 +1,16 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {376}
+ * {375}
  */
 export interface IDirectionFromAngles {
     /**
-     * {569}
+     * {568}
      */
     horizontalAngle: ValueNumberType
 
     /**
-     * {570}
+     * {569}
      */
     verticalAngle: ValueNumberType
 }

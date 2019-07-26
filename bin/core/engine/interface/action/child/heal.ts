@@ -5,15 +5,15 @@ import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../
  */
 export interface IHeal {
     /**
-     * {192}
+     * {191}
      */
     player: ValuePlayerType
     /**
-     * {193}
+     * {192}
      */
     healer: ValueAssisterParamType
     /**
-     * {194}
+     * {193}
      */
     amount: ValueNumberType
 }

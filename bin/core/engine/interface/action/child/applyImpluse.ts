@@ -5,23 +5,23 @@ import { ValuePlayerType, ValueVectorType, ValueNumberType, ValueRelativeType, V
  */
 export interface IApplyImpluse {
     /**
-     * {130}
+     * {129}
      */
     player: ValuePlayerType
     /**
-     * {131}
+     * {130}
      */
     direction: ValueVectorType
     /**
-     * {132}
+     * {131}
      */
     speed: ValueNumberType
     /**
-     * {133}
+     * {132}
      */
     relative: ValueRelativeType
     /**
-     * {134}
+     * {133}
      */
     motion: ValueMotionType
 }

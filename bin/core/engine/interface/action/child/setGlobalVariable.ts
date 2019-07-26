@@ -8,11 +8,11 @@ import {
  */
 export interface ISetGlobalVariable {
     /**
-     * {233}
+     * {232}
      */
     variable: VariableType
     /**
-     * {234}
+     * {233}
      */
     value: ValueType
 }

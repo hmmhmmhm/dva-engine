@@ -193,7 +193,7 @@ import {
 } from '../../interface/value/child'
 
 /**
- * {705}
+ * {704}
  */
 export type ValueType
     = IAbsoluteValue

@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {404}
+ * {403}
  */
 export interface IHorizontalFacingAngleOf {
     /**
-     * {590}
+     * {589}
      */
     player: ValuePlayerType
 }

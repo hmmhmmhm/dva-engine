@@ -4,7 +4,7 @@ import {
 } from '../../../type'
 
 /**
- * {341}
+ * {340}
  */
 export interface IPlayerTookDamage {
     team: TeamConstantType

@@ -11,23 +11,23 @@ import {
  */
 export interface IChasePlayerVariableAtRate {
     /**
-     * {142}
+     * {141}
      */
     player: ValuePlayerType
     /**
-     * {143}
+     * {142}
      */
     variable: VariableType
     /**
-     * {144}
+     * {143}
      */
     destination: ValueDestinationParamType
     /**
-     * {139}
+     * {138}
      */
     rate: ValueNumberType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueReevaluationType
 }

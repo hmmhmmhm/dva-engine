@@ -5,31 +5,31 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface IStartForcingThrottle {
     /**
-     * {304}
+     * {303}
      */
     player: ValuePlayerType
     /**
-     * {305}
+     * {304}
      */
     minForward: ValueNumberType
     /**
-     * {306}
+     * {305}
      */
     maxForward: ValueNumberType
     /**
-     * {307}
+     * {306}
      */
     minBackward: ValueNumberType
     /**
-     * {308}
+     * {307}
      */
     maxBackward: ValueNumberType
     /**
-     * {309}
+     * {308}
      */
     minSideways: ValueNumberType
     /**
-     * {310}
+     * {309}
      */
     maxSideways: ValueNumberType
 }

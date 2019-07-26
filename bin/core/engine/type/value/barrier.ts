@@ -1,5 +1,5 @@
 /**
- * {703}
+ * {702}
  */
 export type ValueBarrierType
     = 'Barriers Do Not Block Los'

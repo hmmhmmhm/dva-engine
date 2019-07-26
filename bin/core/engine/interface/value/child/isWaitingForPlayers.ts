@@ -1,4 +1,4 @@
 /**
- * {445}
+ * {444}
  */
 export interface IIsWaitingForPlayers {}   

@@ -2,17 +2,17 @@ import { ValueVectorType } from '../../../type'
 import { ValueTeamType } from '../../../type'
 
 /**
- * {367}
+ * {366}
  */
 export interface IClosestPlayerTo {
 
     /**
-     * {560}
+     * {559}
      */
     center: ValueVectorType
 
     /**
-     * {561}
+     * {560}
      */
     team: ValueTeamType
 }

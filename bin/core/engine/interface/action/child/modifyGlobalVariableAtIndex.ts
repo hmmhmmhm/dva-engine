@@ -6,19 +6,19 @@ import { IGlobalVariable } from '../../value'
  */
 export interface IModifyGlobalVariableAtIndex {
     /**
-     * {198}
+     * {197}
      */
     variable: IGlobalVariable
     /**
-     * {201}
+     * {200}
      */
     index: ValueNumberType
     /**
-     * {199}
+     * {198}
      */
     operation: ValueVariableOperation
     /**
-     * {200}
+     * {199}
      */
     value: ValueType
 }

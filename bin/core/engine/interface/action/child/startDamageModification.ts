@@ -11,19 +11,19 @@ import {
  */
 export interface IStartDamageModification {
     /**
-     * {289}
+     * {288}
      */
     receivers: ValuePlayersParamType
     /**
-     * {290}
+     * {289}
      */
     damagers: ValuePlayersParamType
     /**
-     * {291}
+     * {290}
      */
     damagePercent: ValueNumberType
     /**
-     * {284}
+     * {283}
      */
     reevaluation: ValueDamageModificationReevaluationType
 }

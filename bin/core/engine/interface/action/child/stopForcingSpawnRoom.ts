@@ -5,7 +5,7 @@ import { ValueTeamType } from '../../../type'
  */
 export interface IStopForcingSpawnRoom {
     /**
-     * {327}
+     * {326}
      */
     team: ValueTeamType
 }

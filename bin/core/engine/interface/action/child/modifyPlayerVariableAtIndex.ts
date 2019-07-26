@@ -6,23 +6,23 @@ import { IPlayerVariable } from '../../value'
  */
 export interface IModifyPlayerVariableAtIndex {
     /**
-     * {207}
+     * {206}
      */
     player: ValuePlayerType
     /**
-     * {208}
+     * {207}
      */
     variable: IPlayerVariable
     /**
-     * {201}
+     * {200}
      */
     index: ValueNumberType
     /**
-     * {199}
+     * {198}
      */
     operation: ValueVariableOperation
     /**
-     * {200}
+     * {199}
      */
     value: ValueType
 }

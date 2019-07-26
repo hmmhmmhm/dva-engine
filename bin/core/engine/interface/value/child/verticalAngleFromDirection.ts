@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {528}
+ * {527}
  */
 export interface IVerticalAngleFromDirection {
     /**
-     * {693}
+     * {692}
      */
     direction: ValueVectorType
 }

@@ -10,19 +10,19 @@ import {
  */
 export interface IChaseGlobalVariableOverTime {
     /**
-     * {137}
+     * {136}
      */
     variable: VariableType
     /**
-     * {138}
+     * {137}
      */
     destination: ValueDestinationParamType
     /**
-     * {141}
+     * {140}
      */
     duration: ValueNumberType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueReevaluationType
 }

@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetDamageDealt {
     /**
-     * {227}
+     * {226}
      */
     player: ValuePlayerType
     /**
-     * {228}
+     * {227}
      */
     damageDealtPercent: ValueNumberType
 }

@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopAllHealOverTime {
     /**
-     * {318}
+     * {317}
      */
     player: ValuePlayerType
 }

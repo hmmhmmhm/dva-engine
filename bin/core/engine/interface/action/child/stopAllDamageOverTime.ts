@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopAllDamageOverTime {
     /**
-     * {317}
+     * {316}
      */
     player: ValuePlayerType
 }

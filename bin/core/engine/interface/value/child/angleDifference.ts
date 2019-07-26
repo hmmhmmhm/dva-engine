@@ -1,16 +1,16 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {355}
+ * {354}
  */
 export interface IAngleDifference {
     /**
-     * {547}
+     * {546}
      */
     angle1: ValueNumberType
 
     /**
-     * {548}
+     * {547}
      */
     angle2: ValueNumberType
 }

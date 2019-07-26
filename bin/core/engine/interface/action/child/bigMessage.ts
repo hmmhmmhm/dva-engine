@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueStringType } from '../../../type'
  */
 export interface IBigMessage {
     /**
-     * {135}
+     * {134}
      */
     visibleTo: ValuePlayerType
     /**
-     * {136}
+     * {135}
      */
     header: ValueStringType
 }

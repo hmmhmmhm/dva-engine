@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {127}
+ * {4}
  */
 export interface IAllowButton {
     /**
-     * {128}
+     * {127}
      */
     player: ValuePlayerType
     /**
-     * {129}
+     * {128}
      */
     button: ValueButtonType
 }

@@ -147,5 +147,74 @@
     ],
     "Angle Difference/2": [
         "Angle - One of the two angles between which to measure the resulting angle."
-    ]
+    ],
+
+    "Disallow Button/2": [
+        "Button - The logical button that is being disabled."
+    ],
+    "Stop Holding Button/2": [
+        "The logical button that is no longer being held virtually."
+    ],
+
+    "TeamConstant/0": [
+        "Team constant. The ALL option refers to both teams in a team competition, or to all players in an individual combat game."
+    ],
+    "EventPlayer/0": [
+        "- `All' Event applies to all players.",
+        "- `Slot1' ~ `Slot11`",
+        " Event only applies to players in specific slots.",
+        " In a team competition, two players can occupy one slot (one for each team)."
+    ],
+    "Barrier/0": [
+        "`BARRIERS DO NOT BLOCK LOS`",
+        "No barrier interferes with the view.",
+        "",
+        "`ENEMY BARRIERS BLOCK LOS`",
+        "Syah is covered by the walls of the enemy team.",
+        "",
+        "`ALL BARRIERS BLOCK LOS`",
+        "Syah is covered by all the barriers."
+    ],
+    "Entity/0": [
+        "Player, icon object, or effect object."
+    ],
+    "Value/0": [
+        "Lists the available value interface ."
+    ],
+
+    "_file": {
+      "/type/heroConstant.ts": [
+        "export type HeroConstantType",
+        "    = 'Reaper'",
+        "    | 'Tracer'",
+        "    | 'Mercy'",
+        "    | 'Hanzo'",
+        "    | 'Torbjörn'",
+        "    | 'Reinhardt'",
+        "    | 'Pharah'",
+        "    | 'Winston'",
+        "    | 'Widowmaker'",
+        "    | 'Bastion'",
+        "    | 'Symmetra'",
+        "    | 'Zenyatta'",
+        "    | 'Genji'",
+        "    | 'Roadhog'",
+        "    | 'Mccree'",
+        "    | 'Junkrat'",
+        "    | 'Zarya'",
+        "    | 'Soldier: 76'",
+        "    | 'Lúcio'",
+        "    | 'D.Va'",
+        "    | 'Mei'",
+        "    | 'Sombra'",
+        "    | 'Doomfist'",
+        "    | 'Ana'",
+        "    | 'Orisa'",
+        "    | 'Brigitte'",
+        "    | 'Moira'",
+        "    | 'Wrecking Ball'",
+        "    | 'Ashe'",
+        "    | 'Baptiste'"
+      ]
+    }
 }

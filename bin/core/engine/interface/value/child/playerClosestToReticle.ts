@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {482}
+ * {481}
  */
 export interface IPlayerClosestToReticle {
     /**
-     * {644}
+     * {643}
      */
     player: ValuePlayerType
     /**
-     * {645}
+     * {644}
      */
     team: ValueTeamType
 }

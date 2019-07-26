@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetHealingReceived {
     /**
-     * {239}
+     * {238}
      */
     player: ValuePlayerType
     /**
-     * {240}
+     * {239}
      */
     healingReceivedPercent: ValueNumberType
 }

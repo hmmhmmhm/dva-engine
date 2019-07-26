@@ -5,7 +5,7 @@ import { ValueTeamType } from '../../../type'
  */
 export interface IDeclareTeamVictory {
     /**
-     * {180}
+     * {179}
      */
     team: ValueTeamType
 }

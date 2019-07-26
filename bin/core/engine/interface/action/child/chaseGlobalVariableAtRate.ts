@@ -10,19 +10,19 @@ import {
  */
 export interface IChaseGlobalVariableAtRate {
     /**
-     * {137}
+     * {136}
      */
     variable: VariableType
     /**
-     * {138}
+     * {137}
      */
     destination: ValueDestinationParamType
     /**
-     * {139}
+     * {138}
      */
     rate: ValueNumberType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueReevaluationType
 }

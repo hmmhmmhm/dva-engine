@@ -1,11 +1,11 @@
 import { ValueArrayType } from '../../../type'
 
 /**
- * {450}
+ * {449}
  */
 export interface ILastOf {
     /**
-     * {582}
+     * {581}
      */
     array: ValueArrayType
 }

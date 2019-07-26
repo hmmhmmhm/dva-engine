@@ -1,15 +1,15 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {490}
+ * {489}
  */
 export interface IRaiseToPower {
     /**
-     * {630}
+     * {629}
      */
     value1: ValueNumberType
     /**
-     * {631}
+     * {630}
      */
     value2: ValueNumberType
 }

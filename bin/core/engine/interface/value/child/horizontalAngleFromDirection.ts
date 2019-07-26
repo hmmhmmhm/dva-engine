@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {402}
+ * {401}
  */
 export interface IHorizontalAngleFromDirection {
     /**
-     * {587}
+     * {586}
      */
     direction: ValueVectorType
 }

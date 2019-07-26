@@ -1,18 +1,18 @@
 import { ValueType, ValueOperatorType } from '../../../type'
 
 /**
- * {368}
+ * {367}
  */
 export interface ICompare {
     /**
-     * {562}
+     * {561}
      */
     value1: ValueType
 
     operator: ValueOperatorType
 
     /**
-     * {563}
+     * {562}
      */
     value2: ValueType
 }

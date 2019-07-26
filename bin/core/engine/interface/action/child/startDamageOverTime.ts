@@ -5,19 +5,19 @@ import { ValuePlayerType, ValueNumberType, ValueAssisterParamType } from '../../
  */
 export interface IStartDamageOverTime {
     /**
-     * {292}
+     * {291}
      */
     player: ValuePlayerType
     /**
-     * {293}
+     * {292}
      */
     damager: ValueAssisterParamType
     /**
-     * {294}
+     * {293}
      */
     duration: ValueNumberType
     /**
-     * {295}
+     * {294}
      */
     damagePerSecond: ValueNumberType
 }

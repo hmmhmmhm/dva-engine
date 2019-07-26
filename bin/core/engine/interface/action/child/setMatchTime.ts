@@ -5,7 +5,7 @@ import { ValueNumberType } from '../../../type'
  */
 export interface ISetMatchTime {
     /**
-     * {243}
+     * {242}
      */
     time: ValueNumberType
 }

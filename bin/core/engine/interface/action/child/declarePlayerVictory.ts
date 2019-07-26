@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IDeclarePlayerVictory {
     /**
-     * {178}
+     * {177}
      */
     player: ValuePlayerType
 }

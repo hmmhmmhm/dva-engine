@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueHeroType } from '../../../type'
  */
 export interface IStartForcingPlayerToBeHero {
     /**
-     * {300}
+     * {299}
      */
     player: ValuePlayerType
     /**
-     * {301}
+     * {300}
      */
     hero: ValueHeroType
 }

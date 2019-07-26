@@ -1,15 +1,15 @@
 import { ValueTeamType, ValueHeroType } from '../../../type'
 
 /**
- * {486}
+ * {485}
  */
 export interface IPlayersOnHero {
     /**
-     * {603}
+     * {602}
      */
     hero: ValueHeroType
     /**
-     * {604}
+     * {603}
      */
     team: ValueTeamType
 }

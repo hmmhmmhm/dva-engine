@@ -10,6 +10,7 @@
     "async-sequencer": "^1.0.6",
     "eslint": "^6.0.1",
     "folder-logger": "^1.0.4",
+    "fs-extra": "^8.1.0",
     "nested-static": "^1.1.0",
     "rimraf": "^2.6.3",
     "string-replace-all": "^1.0.3",
@@ -28,6 +29,7 @@
     "update": "ts-node ./bin/core/generator",
     "update:rename": "ts-node ./bin/core/maintain/rename.ts",
     "language:extract": "ts-node ./bin/core/language/extractor",
+    "language:reapply": "ts-node ./bin/core/language/reapply",
     "language:inject": "ts-node ./bin/core/language/injector",
     "parse:stage2": "ts-node ./bin/core/language/parse/make_stage2.ts",
     "parse:stage3": "ts-node ./bin/core/language/parse/make_stage3.ts"

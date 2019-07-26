@@ -1,7 +1,7 @@
 import { VariableType } from '../../../type/variable'
 
 /**
- * {395}
+ * {394}
  */
 export  interface IGlobalVariable {
     variable: VariableType

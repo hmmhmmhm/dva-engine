@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopCamera {
     /**
-     * {319}
+     * {318}
      */
     player: ValuePlayerType
 }

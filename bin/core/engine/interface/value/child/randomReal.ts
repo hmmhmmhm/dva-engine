@@ -1,15 +1,15 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {492}
+ * {491}
  */
 export interface IRandomReal {
     /**
-     * {657}
+     * {656}
      */
     min: ValueNumberType
     /**
-     * {658}
+     * {657}
      */
     max: ValueNumberType
 }

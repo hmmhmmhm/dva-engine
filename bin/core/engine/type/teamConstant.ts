@@ -1,5 +1,5 @@
 /**
- * {701}
+ * {700}
  */
 export type TeamConstantType
     = 'All'

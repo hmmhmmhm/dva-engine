@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {372}
+ * {371}
  */
 export interface ICosineFromRadians {
     /**
-     * {566}
+     * {565}
      */
     angle: ValueNumberType
 }

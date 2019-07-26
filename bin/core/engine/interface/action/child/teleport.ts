@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueVectorType } from '../../../type'
  */
 export interface ITeleport {
     /**
-     * {332}
+     * {331}
      */
     player: ValuePlayerType
     /**
-     * {333}
+     * {332}
      */
     position: ValueVectorType
 }

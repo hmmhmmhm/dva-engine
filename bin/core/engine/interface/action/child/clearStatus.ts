@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueStatusType } from '../../../type'
  */
 export interface IClearStatus {
     /**
-     * {146}
+     * {145}
      */
     player: ValuePlayerType
     /**
-     * {147}
+     * {146}
      */
     status: ValueStatusType
 }

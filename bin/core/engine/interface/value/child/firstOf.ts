@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {392}
+ * {391}
  */
 export interface IFirstOf {
     /**
-     * {582}
+     * {581}
      */
     array: ValueArrayType
 }

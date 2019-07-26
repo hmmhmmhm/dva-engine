@@ -1,7 +1,7 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {387}
+ * {386}
  */
 export interface IEyePosition {
     player: ValuePlayerType

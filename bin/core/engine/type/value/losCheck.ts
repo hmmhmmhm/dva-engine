@@ -1,5 +1,5 @@
 /**
- * {652}
+ * {651}
  */
 export type ValueLosCheckType
     = 'Off'

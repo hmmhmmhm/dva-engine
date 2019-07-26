@@ -11,23 +11,23 @@ import {
  */
 export interface IChasePlayerVariableOverTime {
     /**
-     * {142}
+     * {141}
      */
     player: ValuePlayerType
     /**
-     * {145}
+     * {144}
      */
     variable: VariableType
     /**
-     * {144}
+     * {143}
      */
     destination: ValueDestinationParamType
     /**
-     * {141}
+     * {140}
      */
     duration: ValueNumberType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueReevaluationType
 }

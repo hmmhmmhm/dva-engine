@@ -11,23 +11,23 @@ import {
  */
 export interface IPlayEffect {
     /**
-     * {150}
+     * {149}
      */
     visibleTo: ValuePlayersParamType
     /**
-     * {210}
+     * {209}
      */
     type: ValuePlayEffect
     /**
-     * {211}
+     * {210}
      */
     color: ValueColorType
     /**
-     * {212}
+     * {211}
      */
     position: ValueVectorType
     /**
-     * {213}
+     * {212}
      */
     radius: ValueNumberType
 }

@@ -11,23 +11,23 @@ import {
  */
 export interface IStartFacing {
     /**
-     * {296}
+     * {295}
      */
     player: ValuePlayerType
     /**
-     * {297}
+     * {296}
      */
     direction: ValueVectorType
     /**
-     * {298}
+     * {297}
      */
     turnRate: ValueNumberType
     /**
-     * {299}
+     * {298}
      */
     relative: ValueRelativeType
     /**
-     * {284}
+     * {283}
      */
     reevaluation: ValueFacingReevaluationType
 }

@@ -1,11 +1,11 @@
 import { ValueArrayType } from '../../../type'
 
 /**
- * {494}
+ * {493}
  */
 export interface IRandomizedArray {
     /**
-     * {656}
+     * {655}
      */
     array: ValueArrayType
 }

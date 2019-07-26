@@ -5,7 +5,7 @@ import { ValueTextId } from '../../../type'
  */
 export interface IDestroyInWorldText {
     /**
-     * {184}
+     * {183}
      */
     textId: ValueTextId
 }

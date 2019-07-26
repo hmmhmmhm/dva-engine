@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueVectorType } from '../../../type'
  */
 export interface ISetFacing {
     /**
-     * {231}
+     * {230}
      */
     player: ValuePlayerType
     /**
-     * {232}
+     * {231}
      */
     direction: ValueVectorType
 }

@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {471}
+ * {470}
  */
 export interface INumberOfHeroes {
     /**
-     * {603}
+     * {602}
      */
     hero: ValueHeroType
     /**
-     * {604}
+     * {603}
      */
     team: ValueTeamType
 }

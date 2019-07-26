@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {397}
+ * {396}
  */
 export interface IHasStatus {
     /**
-     * {584}
+     * {583}
      */
     player: ValuePlayerType
     /**
-     * {585}
+     * {584}
      */
     status: ValueStatusType
 }

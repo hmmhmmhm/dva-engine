@@ -12,32 +12,32 @@ import {
  */
 export interface ICreateIcon {
     /**
-     * {164}
+     * {163}
      */
     visibleTo: ValuePlayerType
 
     /**
-     * {165}
+     * {164}
      */
     position: ValueVectorType
 
     /**
-     * {166}
+     * {165}
      */
     icon: ValueIconType
 
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueIconReevaluationType
 
     /**
-     * {167}
+     * {166}
      */
     iconColor: ValueColorType
 
     /**
-     * {168}
+     * {167}
      */
     showWhenOffscreen: ValueBoolType
 }

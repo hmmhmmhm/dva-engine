@@ -5,7 +5,7 @@ import { ValueDamageModificationId } from '../../../type'
  */
 export interface IStopDamageModification {
     /**
-     * {323}
+     * {322}
      */
     damageModificationId: ValueDamageModificationId
 }

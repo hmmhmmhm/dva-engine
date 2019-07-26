@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueButtonType } from '../../../type'
  */
 export interface IStopHoldingButton {
     /**
-     * {330}
+     * {329}
      */
     player: ValuePlayerType
     /**
-     * {331}
+     * {330}
      */
     button: ValueButtonType
 }

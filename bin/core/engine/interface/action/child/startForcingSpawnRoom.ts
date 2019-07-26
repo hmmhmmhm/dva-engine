@@ -5,11 +5,11 @@ import { ValueTeamType, ValueNumberType } from '../../../type'
  */
 export interface IStartForcingSpawnRoom {
     /**
-     * {302}
+     * {301}
      */
     team: ValueTeamType
     /**
-     * {303}
+     * {302}
      */
     room: ValueNumberType
 }

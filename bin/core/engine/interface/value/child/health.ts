@@ -3,7 +3,7 @@ import {
 } from '../../../type'
 
 /**
- * {398}
+ * {397}
  */
 export interface IHealth {
     player: ValuePlayerType

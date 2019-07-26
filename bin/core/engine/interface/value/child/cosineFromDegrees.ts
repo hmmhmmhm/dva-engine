@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {371}
+ * {370}
  */
 export interface ICosineFromDegrees {
     /**
-     * {565}
+     * {564}
      */
     angle: ValueNumberType
 }

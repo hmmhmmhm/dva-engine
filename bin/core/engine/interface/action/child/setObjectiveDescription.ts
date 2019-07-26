@@ -5,15 +5,15 @@ import { ValuePlayerType, ValueStringType, ValueObjectiveDescriptionReevaluation
  */
 export interface ISetObjectiveDescription {
     /**
-     * {247}
+     * {246}
      */
     visibleTo: ValuePlayerType
     /**
-     * {136}
+     * {135}
      */
     header: ValueStringType
     /**
-     * {248}
+     * {247}
      */
     reevaluation: ValueObjectiveDescriptionReevaluationType
 }

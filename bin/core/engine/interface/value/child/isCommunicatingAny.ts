@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {412}
+ * {411}
  */
 export interface IIsCommunicatingAny {
     /**
-     * {594}
+     * {593}
      */
     player: ValuePlayerType
 }

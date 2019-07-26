@@ -6,15 +6,15 @@ import { IGlobalVariable } from '../../value'
  */
 export interface IModifyGlobalVariable {
     /**
-     * {198}
+     * {197}
      */
     variable: IGlobalVariable
     /**
-     * {199}
+     * {198}
      */
     operation: ValueVariableOperation
     /**
-     * {200}
+     * {199}
      */
     value: ValueType
 }

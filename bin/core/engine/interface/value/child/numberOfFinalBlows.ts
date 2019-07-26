@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {470}
+ * {469}
  */
 export interface INumberOfFinalBlows {
     /**
-     * {639}
+     * {638}
      */
     player: ValuePlayerType
 }

@@ -5,7 +5,7 @@ import { VariableType } from '../../../type'
  */
 export interface IStopChasingGlobalVariable {
     /**
-     * {320}
+     * {319}
      */
     variable: VariableType
 }

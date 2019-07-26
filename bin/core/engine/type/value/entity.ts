@@ -9,7 +9,7 @@ import {
 } from '../../interface/value'
 
 /**
- * {704}
+ * {703}
  */
 export type ValueEntityType
     = ValuePlayerType

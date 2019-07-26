@@ -5,7 +5,7 @@ import { ValueHealOverTimeIdType } from '../../../type'
  */
 export interface IStopHealOverTime {
     /**
-     * {329}
+     * {328}
      */
     healOverTimeId: ValueHealOverTimeIdType
 }

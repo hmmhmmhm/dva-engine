@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {421}
+ * {420}
  */
 export interface IIsFlagAtBase {
     /**
-     * {602}
+     * {601}
      */
     team: ValueTeamType
 }

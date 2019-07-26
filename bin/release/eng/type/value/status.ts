@@ -1,0 +1,11 @@
+export type ValueStatusType
+    = 'Hacked'
+    | 'Burning'
+    | 'Knocked Down'
+    | 'Asleep'
+    | 'Frozen'
+    | 'Unkillable'
+    | 'Invincible'
+    | 'Phased Out'
+    | 'Rooted'
+    | 'Stunned'

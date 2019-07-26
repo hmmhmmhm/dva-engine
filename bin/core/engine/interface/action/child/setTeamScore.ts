@@ -5,11 +5,11 @@ import { ValueTeamType, ValueNumberType } from '../../../type'
  */
 export interface ISetTeamScore {
     /**
-     * {273}
+     * {272}
      */
     team: ValueTeamType
     /**
-     * {252}
+     * {251}
      */
     score: ValueNumberType
 }

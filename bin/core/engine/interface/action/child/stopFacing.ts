@@ -5,7 +5,7 @@ import { ValuePlayerType } from '../../../type'
  */
 export interface IStopFacing {
     /**
-     * {325}
+     * {324}
      */
     player: ValuePlayerType
 }

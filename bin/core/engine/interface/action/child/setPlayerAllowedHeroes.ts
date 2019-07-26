@@ -8,11 +8,11 @@ import {
  */
 export interface ISetPlayerAllowedHeroes {
     /**
-     * {249}
+     * {248}
      */
     player: ValuePlayerType
     /**
-     * {250}
+     * {249}
      */
     hero: ValueHeroType
 }

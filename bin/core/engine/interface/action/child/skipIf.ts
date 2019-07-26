@@ -5,11 +5,11 @@ import { ValueBoolType, ValueNumberType } from '../../../type'
  */
 export interface ISkipIf {
     /**
-     * {278}
+     * {277}
      */
     condition: ValueBoolType
     /**
-     * {277}
+     * {276}
      */
     numberOfActions: ValueNumberType
 }

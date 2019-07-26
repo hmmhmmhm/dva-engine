@@ -1,11 +1,11 @@
 import { ValueTeamType } from '../../../type'
 
 /**
- * {481}
+ * {480}
  */
 export interface IPlayerCarryingFlag {
     /**
-     * {602}
+     * {601}
      */
     team: ValueTeamType
 }

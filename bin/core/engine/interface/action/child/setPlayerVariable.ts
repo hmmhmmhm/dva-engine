@@ -9,15 +9,15 @@ import {
  */
 export interface ISetPlayerVariable {
     /**
-     * {253}
+     * {252}
      */
     player: ValuePlayerType
     /**
-     * {254}
+     * {253}
      */
     variable: VariableType
     /**
-     * {234}
+     * {233}
      */
     value: ValueType
 }

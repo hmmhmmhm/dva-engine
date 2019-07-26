@@ -1,15 +1,15 @@
 import { ValueArrayType, ValueType } from '../../../type'
 
 /**
- * {508}
+ * {507}
  */
 export interface ISortedArray {
     /**
-     * {671}
+     * {670}
      */
     array: ValueArrayType
     /**
-     * {672}
+     * {671}
      */
     valueRank: ValueType
 }

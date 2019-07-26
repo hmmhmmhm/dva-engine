@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {501}
+ * {500}
  */
 export interface IScoreOf {
     /**
-     * {669}
+     * {668}
      */
     player: ValuePlayerType
 }

@@ -8,11 +8,11 @@ import {
  */
 export interface IStartHoldingButton {
     /**
-     * {314}
+     * {313}
      */
     player: ValuePlayerType
     /**
-     * {315}
+     * {314}
      */
     button: ValueButtonType
 }

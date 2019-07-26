@@ -61,9 +61,7 @@ for(let stage2Item of stage2){
                 }catch(e){}
 
                 // CHANGE STAGE 3 DATA
-                if(translatedContext === undefined){
-                    Logger.warn(`MISSING SOURCE FILE COMMENT ID: ${stage2Item.name}[${orderNumber}]`)
-                }else{
+                if(translatedContext != undefined){
                     // CHANGE
                     if(!isMatchFounded) isMatchFounded = true
                     foundedValuesIndexMap.push(valuesIndex)
@@ -73,13 +71,26 @@ for(let stage2Item of stage2){
         }
     }
 
-    if(!isMatchFounded)
-        Logger.debug(`NO USED STAGE2 KEY (MIGHT BE WRONG NAME OR DEPRECATED NAME): ${stage2Item.name}`)
+    if(!isMatchFounded){
+        Logger.debug(`NO USED STAGE2 KEY (MIGHT BE DEPRECATED NAME): ${stage2Item.name}`)
+    }
 }
 
 console.log(``)
 for(let valuesIndex of Object.keys(values)){
-    if(valuesIndex == '_file') continue
+
+    /**
+     * @TODO
+     * _file option additional data
+     */
+    if(valuesIndex == '_file'){
+        if(typeof additional['_file'] == 'undefined'){
+            Logger.warn(`NO DATA FOUNDED _file IN value_stage3_additional.json`)
+            continue
+        }
+        stage3['_file'] = additional['_file']
+        continue
+    }
     if(foundedValuesIndexMap.indexOf(valuesIndex) == -1){
 
         // ADDITIONAL
@@ -93,7 +104,7 @@ for(let valuesIndex of Object.keys(values)){
                 isAdditionalDataExist = true
             }
         }
-        
+
         if(!isAdditionalDataExist){
             Logger.warn(`MISSING REF TRANSLATE-> ID:${valuesIndex}`)
             for(let usedFile of values[valuesIndex].usedFiles)
@@ -103,3 +114,4 @@ for(let valuesIndex of Object.keys(values)){
 }
 
 writeFileSync(`${__dirname}/value_stage3.json`, JSON.stringify(stage3, null, 2))
+Logger.debug(`Stage 3 Finished`)

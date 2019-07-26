@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetGravity {
     /**
-     * {237}
+     * {236}
      */
     player: ValuePlayerType
     /**
-     * {238}
+     * {237}
      */
     gravityPercent: ValueNumberType
 }

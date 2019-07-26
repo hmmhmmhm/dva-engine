@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {393}
+ * {392}
  */
 export interface IFlagPosition {
     /**
-     * {583}
+     * {582}
      */
     team: ValueTeamType
 }

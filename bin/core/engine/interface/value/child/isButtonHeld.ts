@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {410}
+ * {409}
  */
 export interface IIsButtonHeld {
     /**
-     * {592}
+     * {591}
      */
     player: ValuePlayerType
     /**
-     * {593}
+     * {592}
      */
     button: ValueButtonType
 }

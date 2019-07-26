@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetUltimateCharge {
     /**
-     * {274}
+     * {273}
      */
     player: ValuePlayerType
     /**
-     * {276}
+     * {275}
      */
     chargePercent: ValueNumberType
 }

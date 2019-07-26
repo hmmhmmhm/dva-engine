@@ -8,11 +8,11 @@ import {
  */
 export interface IStopChasingPlayerVariable {
     /**
-     * {321}
+     * {320}
      */
     player: ValuePlayerType
     /**
-     * {322}
+     * {321}
      */
     variable: VariableType
 }

@@ -2,7 +2,7 @@ import { ValuePlayerType } from '../../../type/value/player'
 import { VariableType } from '../../../type/variable'
 
 /**
- * {483}
+ * {482}
  */
 export interface IPlayerVariable {
     player: ValuePlayerType

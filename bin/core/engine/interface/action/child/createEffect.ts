@@ -12,27 +12,27 @@ import {
  */
 export interface ICreateEffect {
     /**
-     * {150}
+     * {149}
      */
     visibleTo: ValuePlayerType
     /**
-     * {151}
+     * {150}
      */
     type: ValueEffectType
     /**
-     * {152}
+     * {151}
      */
     color: ValueColorType
     /**
-     * {153}
+     * {152}
      */
     position: ValueVectorType
     /**
-     * {154}
+     * {153}
      */
     radius: ValueNumberType
     /**
-     * {140}
+     * {139}
      */
     reevaluation: ValueEffectReevaluationType
 }

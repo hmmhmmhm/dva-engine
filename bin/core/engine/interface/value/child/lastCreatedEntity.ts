@@ -1,4 +1,4 @@
 /**
- * {446}
+ * {445}
  */
 export interface ILastCreatedEntity {}

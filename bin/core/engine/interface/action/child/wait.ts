@@ -5,11 +5,11 @@ import { ValueNumberType, ValueWaitBehaviorType } from '../../../type'
  */
 export interface IWait {
     /**
-     * {334}
+     * {333}
      */
     time: ValueNumberType
     /**
-     * {335}
+     * {334}
      */
     waitBehavior: ValueWaitBehaviorType
 }

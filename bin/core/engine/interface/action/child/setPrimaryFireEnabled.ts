@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueBoolType } from '../../../type'
  */
 export interface ISetPrimaryFireEnabled {
     /**
-     * {258}
+     * {257}
      */
     player: ValuePlayerType
     /**
-     * {259}
+     * {258}
      */
     enabled: ValueBoolType
 }

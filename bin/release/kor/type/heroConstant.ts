@@ -1,5 +1,5 @@
 export type HeroConstantType
-    = '리퍼' 
+    = '리퍼'
     | '트레이서'
     | '메르시'
     | '한조'
@@ -11,7 +11,6 @@ export type HeroConstantType
     | '바스티온'
     | '시메트라'
     | '젠야타'
-    | '로드호그'
     | '겐지'
     | '로드호그'
     | '맥크리'
@@ -19,7 +18,7 @@ export type HeroConstantType
     | '자리야'
     | '솔져: 76'
     | '루시우'
-    | 'D.VA'
+    | 'D.Va'
     | '메이'
     | '솜브라'
     | '둠피스트'

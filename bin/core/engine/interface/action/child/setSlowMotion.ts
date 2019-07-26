@@ -5,7 +5,7 @@ import { ValueNumberType } from '../../../type'
  */
 export interface ISetSlowMotion {
     /**
-     * {268}
+     * {267}
      */
     speedPercent: ValueNumberType
 }

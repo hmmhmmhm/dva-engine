@@ -5,11 +5,11 @@ import { ValuePlayerType, ValueNumberType } from '../../../type'
  */
 export interface ISetRespawnMaxTime {
     /**
-     * {264}
+     * {263}
      */
     player: ValuePlayerType
     /**
-     * {265}
+     * {264}
      */
     time: ValueNumberType
 }
