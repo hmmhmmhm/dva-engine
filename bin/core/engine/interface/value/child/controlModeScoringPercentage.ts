@@ -1,12 +1,12 @@
 import { ValueTeamType } from '../../../type'
 
 /**
- * {370}
+ * {369}
  */
 export interface IControlModeScoringPercentage {
 
     /**
-     * {565}
+     * {564}
      */
     team: ValueTeamType
 }

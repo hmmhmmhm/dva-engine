@@ -11,15 +11,20 @@ export interface IRenderedComment {
 }
 
 export interface IResultItem {
-    contexts: string[],
+    contexts: string[]
     usedFiles: {
-        path: string,
+        topName: string
+        path: string
         indent: number
+        orderNumber: number
     }[]
 }
 
 export interface ICommonData {
     currentFilePath: string
+    currentTopName: string
+    currentOrderNumber: number
+
     idMap: {[key: string]: any}
     resultMap: {[key: string]: IResultItem}
 }
@@ -48,6 +53,7 @@ export const collectComment = (
             let preIndent = ``
             if(commentLine.length == 0) continue
             if(commentLine.indexOf(`*/`) != -1) continue
+            commentLine = commentLine.replace('\r', '')
 
             let actualCommentLine = commentLine.split('* ')
             if(actualCommentLine.length < 2) continue
@@ -66,10 +72,12 @@ export const collectComment = (
                 indent,
                 contexts
             })
-           common.resultMap[common.idMap[idMapKey]].usedFiles.push({
+            common.resultMap[common.idMap[idMapKey]].usedFiles.push({
+                topName: common.currentTopName,
+                orderNumber: common.currentOrderNumber++,
                 path: common.currentFilePath,
                 indent: indent.length
-           })
+            })
         }else{
             parsedComments.push({
                 id: id++,
@@ -81,7 +89,7 @@ export const collectComment = (
     return {id, parsedComments}
 }
 
-export const renderComment = (contexts: string[], indent: string= ``)=>{
+export const renderComment = (contexts: string[], indent: string = ``)=>{
     let renderedComment = `${indent}/**`
 
     // Loop Contexts
@@ -127,6 +135,8 @@ export const renderComments = (
                 contexts: comment.contexts,
                 usedFiles: [
                     {
+                        topName: common.currentTopName,
+                        orderNumber: common.currentOrderNumber++,
                         path: common.currentFilePath,
                         indent: indent.length
                     }
@@ -160,16 +170,26 @@ export const rearrangeComments = (
 )=>{
     let data = renderComments(sourceCode, id, common)
 
-    /*
-    console.log(data.id)
-    console.log(data.renderedComments)
-    console.log(data.collectedComments.parsedComments)
-    */
-    
     let rearrangedCode = sourceCode
     for(let renderedComment of data.renderedComments){
         let indent = renderedComment.indent
         let rearrangeComment = rearrangeCommentTemplate(renderedComment.id, indent)
+
+        while(true){
+            if(rearrangedCode.indexOf(`/** `) != -1){
+                rearrangedCode = rearrangedCode.replace(`/** `, `/**`)
+            }else if(rearrangedCode.indexOf(`*/ `) != -1){
+                rearrangedCode = rearrangedCode.replace(`*/ `, `*/`)
+            }else if(rearrangedCode.indexOf(`\r`) != -1){
+                rearrangedCode = rearrangedCode.replace(`\r`, ``)
+            }else if(renderedComment.context.indexOf(`\r`) != -1){
+                renderedComment.context = renderedComment.context.replace(`\r`, ``)
+            }else if(rearrangeComment.indexOf(`\r`) != -1){
+                rearrangeComment = rearrangeComment.replace(`\r`, ``)
+            }else{
+                break
+            }
+        }
 
         rearrangedCode = rearrangedCode.replace(renderedComment.context, rearrangeComment)
     }

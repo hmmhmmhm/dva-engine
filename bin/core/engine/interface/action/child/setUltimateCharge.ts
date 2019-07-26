@@ -1,7 +1,7 @@
 import { ValuePlayerType, ValueNumberType } from '../../../type'
 
 /**
- * {93}
+ * {94}
  */
 export interface ISetUltimateCharge {
     /**

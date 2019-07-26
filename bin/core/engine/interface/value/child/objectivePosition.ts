@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {642}
+ * {476}
  */
 export interface IObjectivePosition {
     /**
-     * {643}
+     * {640}
      */
     number: ValueNumberType
 }

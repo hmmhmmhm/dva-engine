@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {402}
+ * {401}
  */
 export interface IHeroOf {
     /**
-     * {588}
+     * {586}
      */
     player: ValuePlayerType
 }

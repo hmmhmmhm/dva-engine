@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {473}
+ * {472}
  */
 export interface INumberOfLivingPlayers {
     /**
-     * {638}
+     * {636}
      */
     team: ValueTeamType
 }

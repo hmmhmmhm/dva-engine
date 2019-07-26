@@ -1,7 +1,7 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {457}
+ * {456}
  */
 export interface IMax {
     value1: ValueNumberType

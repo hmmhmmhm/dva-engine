@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {535}
+ * {534}
  */
 export interface IXComponentOf {
     /**
-     * {705}
+     * {698}
      */
     vector: ValueVectorType
 }

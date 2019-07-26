@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {510}
+ * {509}
  */
 export interface ISpeedOf {
     /**
-     * {680}
+     * {673}
      */
     player: ValuePlayerType
 }

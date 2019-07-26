@@ -12,6 +12,7 @@
     "folder-logger": "^1.0.4",
     "nested-static": "^1.1.0",
     "rimraf": "^2.6.3",
+    "string-replace-all": "^1.0.3",
     "temp-dir": "^2.0.0",
     "ts-node": "^8.3.0",
     "tsc-watch": "^2.2.1",
@@ -25,8 +26,11 @@
     "clean": "rm -rf ./dist",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "update": "ts-node ./bin/core/generator",
+    "update:rename": "ts-node ./bin/core/maintain/rename.ts",
     "language:extract": "ts-node ./bin/core/language/extractor",
-    "language:inject": "ts-node ./bin/core/language/injector"
+    "language:inject": "ts-node ./bin/core/language/injector",
+    "parse:stage2": "ts-node ./bin/core/language/parse/make_stage2.ts",
+    "parse:stage3": "ts-node ./bin/core/language/parse/make_stage3.ts"
   },
   "repository": {
     "type": "git",

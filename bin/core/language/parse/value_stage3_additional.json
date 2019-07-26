@@ -1,0 +1,151 @@
+{
+    "Destroy All Hud Text/0": [
+        "Destroys all hud text that was created by the create hud text action."
+    ],
+
+    "Destroy In World Text/0": [
+        "Destroys in-world text that was created by create in-world text."
+    ],
+    "Destroy In World Text/1": [
+        "Text Id - A Reference to the last piece of text created by the event player (or created at the global level) via the create hud text or create in-world text action."
+    ],
+
+    "Angle Between Vectors/0": [
+        "The angle in degrees between two directional vectors (no normalization required)."
+    ],
+    "Angle Between Vectors/1": [
+        "Vector - One of two directional vectors between which to measure the angle in degrees. this vector does not need to be pre-normalized."
+    ],
+    "Angle Between Vectors/2": [
+        "Vector - One of two directional vectors between which to measure the angle in degrees. this vector does not need to be pre-normalized."
+    ],
+
+    "Arccosine In Degrees/0": [
+        "Arccosine in degrees of the specified value."
+    ],
+    "Arccosine In Degrees/1": [
+        "Value - Input value for the function."
+    ],
+
+    "Arccosine In Radians/0": [
+        "Arccosine in radians of the specified value"
+    ],
+    "Arccosine In Radians/1": [
+        "Value - Input value for the function."
+    ],
+
+    "Arcsine In Degrees/0": [
+        "Arcsine in degrees of the specified value."
+    ],
+    "Arcsine In Degrees/1": [
+        "Value - Input value for the function."
+    ],
+
+    "Arcsine In Radians/0": [
+        "Arcsine in radians of the specified value."
+    ],
+    "Arcsine In Radians/1": [
+        "Value - Input value for the function."
+    ],
+
+    "Arctangent In Degrees/0": [
+        "Arctangent in degrees of the specified numerator and denominator(often referred to as atan2)."
+    ],
+    "Arctangent In Degrees/1": [
+        "Numerator - Numerator input for the function."
+    ],
+    "Arctangent In Degrees/2": [
+        "Denominator - Denominator input for the function."
+    ],
+
+    "Arctangent In Radians/0": [
+        "Arctangent in radians of the specified numerator and denominator(often referred to as atan2)."
+    ],
+    "Arctangent In Radians/1": [
+        "Numerator - Numerator input for the function."
+    ],
+    "Arctangent In Radians/2": [
+        "Denominator - Denominator input for the function."
+    ],
+
+    "Event Damage/0": [
+        "The amount of damage received by the victim for the event currently being processed by this rule."
+    ],
+    "Event Was Critical Hit/0": [
+        "Whether the damage was a critical hit (such as a headshot) for the event currently being processed by this rule."
+    ],
+
+    "Eye Position/0": [
+        "The position of a player's first person view (used for aiming)"
+    ],
+    "Eye Position/1": [
+        "Position - The position of a player's first person view (used for aiming)"
+    ],
+
+    "Is Flag Being Carried/0": [
+        "Whether a specific team's flag is being is being carried by a member of the opposing team in capture the flag."
+    ],
+    "Is Flag Being Carried/1": [
+        "Team - The team whose flag to check."
+    ],
+
+    "Last Damage Modification Id/0": [
+        "An id representing the most recent start damage modification action that was executed by the event player (or executed at the global level)."
+    ],
+
+    "Normalized Health/0": [
+        "The current health of a player. including armor and shields, normalized between 0 and 1. (for example, 0 is no health, 0.5 is half health, 1 is full health, etc.)"
+    ],
+    "Normalized Health/1": [
+        "Player - The player whose normalized health to acquire."
+    ],
+
+    "Server Load/0": [
+        "Provides a percentage representing the cpu load of the current game instance. as this number approaches or exceeds 100, It becomes increasingly likely that the instance will be shut down because it is consuming too many resources."
+    ],
+    "Server Load Average/0": [
+        "Provides a percentage representing the average cpu load of the current game instance over the last two seconds. as this number approaches or exceeds 100, It becomes increasingly likely that the instance will be shut down because it is consuming too many resources."
+    ],
+    "Server Load Peak/0": [
+        "Provides a percentage representing the highest cpu load of the current game instance over the last two seconds. as this number approaches or exceeds 100, It becomes increasingly likely that the instance will be shut down because it is consuming too many resources."
+    ],
+
+    "Tangent From Degrees/0": [
+        "Tangent of the specified angle in degrees."
+    ],
+    "Tangent From Degrees/1": [
+        "Angle - Angle in degrees."
+    ],
+
+    "Tangent From Radians/0": [
+        "Tangent of the specified angle in radians."
+    ],
+    "Tangent From Radians/1": [
+        "Angle - Angle in radians."
+    ],
+
+    "Total Time Elapsed/0": [
+        "The total time seconds that have elapsed since the game instance was created (including setup time and transitions)."
+    ],
+
+    "And/1": [
+        "Value - One of the two inputs considered. if both are true (or equivalent to true), then the and value is true."
+    ],
+    "And/2": [
+        "Value - One of the two inputs considered. if both are true (or equivalent to true), then the and value is true."
+    ],
+
+    "Add/1": [
+        "Value - The left-hand operand. may be any value that results in a number or a vector."
+    ],
+    "Add/2": [
+        "Value - The right-hand operand. may be any value that results in a number or a vector."
+    ],
+
+    "Angle Difference/1": [
+        "Angle - One of the two angles between which to measure the resulting angle."
+    ],
+    "Angle Difference/2": [
+        "Angle - One of the two angles between which to measure the resulting angle."
+    ]
+}

@@ -194,13 +194,8 @@ class Player {
 	isCommunicatingAnyEmote(){
 		return Value.isCommunicatingAnyEmote(this.player)
 	}
-
-	/**
-	 * 플레이어가 음성 대사를 사용하는지 여부입니다.
-	 * (음성 대사의 지속 시간은 4초로 추정)
-	 */
 	isCommunicatingVoiceLine(){
-		return Value.isCommunicatingVoiceLine(this.player)
+		return Value.isCommunicatingVoiceLine()
 	}
 
 	/**
@@ -299,7 +294,7 @@ class Player {
 	}
 
 	/**
-	 * 지정된 배열의 모든 값이 지정된 조건에 대해 TRUE인지 여부입니다.
+	 * 지정된 플레이어가 기술 2를 사용하는지 여부입니다.
 	 */
 	isUsingAbility2(){
 		return Value.isUsingAbility2(this.player)

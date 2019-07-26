@@ -3,7 +3,7 @@ import {
 } from '../../../type'
 
 /**
- * {397}
+ * {396}
  */
 export interface IHasSpawned {
     entity: ValueEntityType

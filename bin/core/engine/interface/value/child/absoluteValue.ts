@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {344}
+ * {343}
  */
 export interface IAbsoluteValue {
     /**
-     * {538}
+     * {537}
      */
     value: ValueNumberType
 }

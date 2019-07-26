@@ -1,22 +1,22 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {526}
+ * {525}
  */
 export interface IVector {
 
     /**
-     * {695}
+     * {688}
      */
     x: ValueNumberType
 
     /**
-     * {696}
+     * {689}
      */
     y: ValueNumberType
 
     /**
-     * {697}
+     * {690}
      */
     z: ValueNumberType
 }

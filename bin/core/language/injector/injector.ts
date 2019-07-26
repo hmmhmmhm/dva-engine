@@ -4,7 +4,7 @@ export interface ICollectCommentItem {
     indent: string
 }
 
-export const collectCommentData = (comment: string) => {
+export const collectCommentData = (comment: string, fileName) => {
     let comments = comment.split(`/**`)
 
     // First item is always useless.

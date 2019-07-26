@@ -1,19 +1,19 @@
 import { ValueTeamType, ValuePlayerType, ValueNumberType } from '../../../type'
 
 /**
- * {486}
+ * {485}
  */
 export interface IPlayersInViewAngle {
     /**
-     * {612}
+     * {610}
      */
     player: ValuePlayerType
     /**
-     * {652}
+     * {648}
      */
     team: ValueTeamType
     /**
-     * {614}
+     * {612}
      */
     viewAngle: ValueNumberType
 }

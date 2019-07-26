@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {528}
+ * {527}
  */
 export interface IVelocityOf {
     /**
-     * {680}
+     * {673}
      */
     player: ValuePlayerType
 }

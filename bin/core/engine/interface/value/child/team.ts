@@ -1,7 +1,7 @@
 import { TeamConstantType } from '../../../type'
 
 /**
- * {517}
+ * {516}
  */
 export interface ITeam {
     team: TeamConstantType

@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {417}
+ * {416}
  */
 export interface IIsCrouching {
     /**
-     * {600}
+     * {598}
      */
     player: ValuePlayerType
 }

@@ -4,7 +4,7 @@ import {
     IAbortIfConditionsIsFalse,
     IAbortIfConditionsIsTrue,
     IAllowButton,
-    IApplyImpulse,
+    IApplyImpluse,
     IBigMessage,
     IChaseGlobalVariableAtRate,
     IChaseGlobalVariableOverTime,
@@ -21,8 +21,8 @@ import {
     IDeclarePlayerVictory,
     IDeclareRoundVictory,
     IDeclareTeamVictory,
-    IDestoryAllEffects,
-    IDestoryAllHudText,
+    IDestroyAllEffects,
+    IDestroyAllHudText,
     IDestroyAllIcons,
     IDestroyAllInWorldText,
     IDestroyEffect,
@@ -39,11 +39,11 @@ import {
     IDisallowButton,
     IEnableBuiltInGameModeAnnouncer,
     IEnableBuiltInGameModeCompletion,
-    IEnableBuildInGameModeMusic,
+    IEnableBuiltInGameModeMusic,
     IEnableBuiltInGameModeRespawning,
     IEnableBuiltInGameModeScoring,
     IEnableDeathSpectateAllPlayers,
-    IEnableDeathSpecateTargetHud,
+    IEnableDeathSpectateTargetHud,
     IGoToAssembleHeroes,
     IHeal,
     IKill,
@@ -55,13 +55,13 @@ import {
     IModifyGlobalVariableAtIndex,
     IModifyPlayerScore,
     IModifyPlayerVariable,
-    IModifyPlayerVaraibleAtIndex,
+    IModifyPlayerVariableAtIndex,
     IModifyTeamScore,
     IPauseMatchTime,
     IPlayEffect,
     IPreloadHero,
     IPressButton,
-    IResetPlayerHeroAvalability,
+    IResetPlayerHeroAvailability,
     IRespawn,
     IResurrect,
     ISetAbility1Enabled,
@@ -82,7 +82,7 @@ import {
     ISetObjectiveDescription,
     ISetPlayerAllowedHeroes,
     ISetPlayerVariable,
-    ISetPlayerVariableIndex,
+    ISetPlayerVariableAtIndex,
     ISetPrimaryFireEnabled,
     ISetProjectileGravity,
     ISetProjectileSpeed,
@@ -156,7 +156,7 @@ export interface IAction {
     /**
      * {5}
      */
-    applyImpulse: IApplyImpulse
+    applyImpluse: IApplyImpluse
     
     /**
      * {6}
@@ -241,12 +241,12 @@ export interface IAction {
     /**
      * {22}
      */
-    destoryAllEffects: IDestoryAllEffects
+    destroyAllEffects: IDestroyAllEffects
 
     /**
      * {23}
      */
-    destoryAllHudText: IDestoryAllHudText
+    destroyAllHudText: IDestroyAllHudText
 
     /**
      * {24}
@@ -331,7 +331,7 @@ export interface IAction {
     /**
      * {40}
      */
-    enableBuildInGameModeMusic: IEnableBuildInGameModeMusic
+    enableBuiltInGameModeMusic: IEnableBuiltInGameModeMusic
 
     /**
      * {41}
@@ -351,7 +351,7 @@ export interface IAction {
     /**
      * {44}
      */
-    enableDeathSpecateTargetHud: IEnableDeathSpecateTargetHud
+    enableDeathSpectateTargetHud: IEnableDeathSpectateTargetHud
 
     /**
      * {45}
@@ -411,7 +411,7 @@ export interface IAction {
     /**
      * {56}
      */
-    modifyPlayerVaraibleAtIndex: IModifyPlayerVaraibleAtIndex
+    modifyPlayerVariableAtIndex: IModifyPlayerVariableAtIndex
 
     /**
      * {57}
@@ -441,7 +441,7 @@ export interface IAction {
     /**
      * {62}
      */
-    resetPlayerHeroAvalability: IResetPlayerHeroAvalability
+    resetPlayerHeroAvailability: IResetPlayerHeroAvailability
 
     /**
      * {63}
@@ -551,7 +551,7 @@ export interface IAction {
     /**
      * {84}
      */
-    setPlayerVariableIndex: ISetPlayerVariableIndex
+    setPlayerVariableAtIndex: ISetPlayerVariableAtIndex
 
     /**
      * {85}

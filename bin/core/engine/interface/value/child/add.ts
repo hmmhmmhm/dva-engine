@@ -1,16 +1,16 @@
 import { ValueAddType } from '../../../type'
 
 /**
- * {345}
+ * {344}
  */
 export interface IAdd {
     /**
-     * {540}
+     * {538}
      */
     value1: ValueAddType
     
     /**
-     * {541}
+     * {539}
      */
     value2: ValueAddType
 }

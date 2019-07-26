@@ -8,7 +8,7 @@ import {
     IAltitudeOf,
     ICountOf,
 
-    IAcrossineInDegrees,
+    IArccosineInDegrees,
     IArccosineInRadians,
     IArcsineInDegrees,
     IArcsineInRadians,
@@ -90,7 +90,7 @@ export type ValueNumberType
     | IAltitudeOf
     | ICountOf
 
-    | IAcrossineInDegrees
+    | IArccosineInDegrees
     | IArccosineInRadians
     | IArcsineInDegrees
     | IArcsineInRadians

@@ -1,15 +1,15 @@
 import { ValuePlayerType, ValueVectorType } from '../../../type'
 
 /**
- * {511}
+ * {510}
  */
 export interface ISpeedOfInDirection {
     /**
-     * {680}
+     * {673}
      */
     player: ValuePlayerType
     /**
-     * {681}
+     * {674}
      */
     direction: ValueVectorType
 }

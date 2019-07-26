@@ -1,11 +1,11 @@
 import { ValueTeamType } from '../../../type'
 
 /**
- * {440}
+ * {439}
  */
 export interface IIsTeamOnOffense {
     /**
-     * {622}
+     * {620}
      */
     team: ValueTeamType
 }

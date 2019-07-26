@@ -1,15 +1,15 @@
 import { ValuePlayerType, ValueVectorType } from '../../../type'
 
 /**
- * {530}
+ * {529}
  */
 export interface IVerticalAngleTowards {
     /**
-     * {701}
+     * {694}
      */
     player: ValuePlayerType
     /**
-     * {591}
+     * {589}
      */
     position: ValueVectorType
 }

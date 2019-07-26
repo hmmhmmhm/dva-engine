@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {433}
+ * {432}
  */
 export interface IIsObjectiveComplete {
     /**
-     * {616}
+     * {614}
      */
     number: ValueNumberType
 }

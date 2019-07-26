@@ -1,16 +1,16 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {375}
+ * {374}
  */
 export interface ICrossProduct {
     /**
-     * {568}
+     * {567}
      */
     value1: ValueVectorType
 
     /**
-     * {569}
+     * {568}
      */
     value2: ValueVectorType
 }

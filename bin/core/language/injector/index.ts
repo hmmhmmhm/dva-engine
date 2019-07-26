@@ -59,7 +59,7 @@ export const Inject = async (langs: string[] = ['kor'])=>{
                         subPath
                     } of collectedDatas){
 
-                        let collectedCommentData = Injector.collectCommentData(fileData)
+                        let collectedCommentData = Injector.collectCommentData(fileData, fileName)
                         for(let collectedComment of collectedCommentData){
 
                             let indent = collectedComment.indent

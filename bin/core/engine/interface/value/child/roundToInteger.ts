@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {501}
+ * {500}
  */
 export interface IRoundToInteger {
     /**
-     * {671}
+     * {667}
      */
     value: ValueNumberType
     /**
-     * {672}
+     * {668}
      */
     roundingType: ValueRoundingType
 }

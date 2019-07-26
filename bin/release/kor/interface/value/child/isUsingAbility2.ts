@@ -1,7 +1,7 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * 지정된 배열의 모든 값이 지정된 조건에 대해 TRUE인지 여부입니다.
+ * 지정된 플레이어가 기술 2를 사용하는지 여부입니다.
  */
 export interface IIsUsingAbility2 {
     /**

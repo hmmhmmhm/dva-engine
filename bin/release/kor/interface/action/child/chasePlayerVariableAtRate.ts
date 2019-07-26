@@ -7,9 +7,9 @@ import {
 } from '../../../type'
 
 /**
- * 전역 변수 값을 시간이 지남에
- * 따라 점진적으로 수정합니다.
- * (전역 변수(GLOBAL VARIABLE)는
+ * 플레이어 변수 값을 지정된
+ * 비율로 점진적으로 수정합니다.
+ * (플레이어 변수(PLAYER VARIABLE)는
  * 게임 자체에 종속된 변수입니다.)
  */
 export interface IChasePlayerVariableAtRate {

@@ -13,7 +13,7 @@ import {
     IAngleBetweenVectors,
     IAngleDifference,
     IAppendToArray,
-    IAcrossineInDegrees,
+    IArccosineInDegrees,
     IArccosineInRadians,
     IArcsineInDegrees,
     IArcsineInRadians,
@@ -65,12 +65,12 @@ import {
     IIndexOfArrayValue,
     IIsAlive,
     IIsAssemblingHeroes,
-    IIsBetwwenRounds,
+    IIsBetweenRounds,
     IIsButtonHeld,
     IIsCommunicating,
     IIsCommunicatingAny,
     IIsCommunicatingAnyEmote,
-    IIsCommunicatingVoiceLine,
+    IIsCommunicatingAnyVoiceLine,
     IIsControlModePointLocked,
     IIsCrouching,
     IIsCTFModeInSuddenDeath,
@@ -117,7 +117,7 @@ import {
     IMin,
     IModulo,
     IMultiply,
-    INearestWalkablePostion,
+    INearestWalkablePosition,
     INormalize,
     INormalizedHealth,
     INot,
@@ -193,7 +193,7 @@ import {
 } from '../../interface/value/child'
 
 /**
- * {712}
+ * {705}
  */
 export type ValueType
     = IAbsoluteValue
@@ -210,7 +210,7 @@ export type ValueType
     | IAngleBetweenVectors
     | IAngleDifference
     | IAppendToArray
-    | IAcrossineInDegrees
+    | IArccosineInDegrees
     | IArccosineInRadians
     | IArcsineInDegrees
     | IArcsineInRadians
@@ -262,12 +262,12 @@ export type ValueType
     | IIndexOfArrayValue
     | IIsAlive
     | IIsAssemblingHeroes
-    | IIsBetwwenRounds
+    | IIsBetweenRounds
     | IIsButtonHeld
     | IIsCommunicating
     | IIsCommunicatingAny
     | IIsCommunicatingAnyEmote
-    | IIsCommunicatingVoiceLine
+    | IIsCommunicatingAnyVoiceLine
     | IIsControlModePointLocked
     | IIsCrouching
     | IIsCTFModeInSuddenDeath
@@ -314,7 +314,7 @@ export type ValueType
     | IMin
     | IModulo
     | IMultiply
-    | INearestWalkablePostion
+    | INearestWalkablePosition
     | INormalize
     | INormalizedHealth
     | INot

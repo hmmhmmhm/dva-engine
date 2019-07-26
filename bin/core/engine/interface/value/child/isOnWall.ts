@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {436}
+ * {435}
  */
 export interface IIsOnWall {
     /**
-     * {619}
+     * {617}
      */
     player: ValuePlayerType
 }

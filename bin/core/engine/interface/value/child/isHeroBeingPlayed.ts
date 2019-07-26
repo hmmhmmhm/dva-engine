@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {425}
+ * {424}
  */
 export interface IIsHeroBeingPlayed {
     /**
-     * {605}
+     * {603}
      */
     hero: ValueHeroType
     /**
-     * {606}
+     * {604}
      */
     team: ValueTeamType
 }

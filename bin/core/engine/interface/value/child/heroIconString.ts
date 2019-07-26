@@ -1,7 +1,7 @@
 import { ValueHeroType } from '../../../type'
 
 /**
- * {401}
+ * {400}
  */
 export interface IHeroIconString {
     value: ValueHeroType

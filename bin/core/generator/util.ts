@@ -32,6 +32,7 @@ export const collectInterfaceFiles = async (
         fileName: string
         filePath: string
         subPath: string
+        staticPath: string
         fileData: string
         interfaceName: string
         typeName: string
@@ -78,6 +79,7 @@ export const collectInterfaceFiles = async (
                         fileName: file,
                         filePath,
                         subPath: folder.subPath,
+                        staticPath: folder.staticPath,
                         fileData,
                         interfaceName,
                         typeName
@@ -238,7 +240,7 @@ export const pureTypeNameExtractor = (name) => {
     return typeNames.join('')
 }
 
-const allUpperCaseToPascalCase = (
+export const allUpperCaseToPascalCase = (
     name,
     doSpace = true,
     prefixRemove = false,

@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {429}
+ * {428}
  */
 export interface IIsInSpawnRoom {
     /**
-     * {611}
+     * {609}
      */
     player: ValuePlayerType
 }

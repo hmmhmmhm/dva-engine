@@ -1,15 +1,15 @@
 import { ValueSubtractType } from '../../../type'
 
 /**
- * {514}
+ * {513}
  */
 export interface ISubtract {
     /**
-     * {687}
+     * {680}
      */
     value1: ValueSubtractType
     /**
-     * {688}
+     * {681}
      */
     value2: ValueSubtractType
 }

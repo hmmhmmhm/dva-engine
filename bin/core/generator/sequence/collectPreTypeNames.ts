@@ -44,7 +44,9 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                 }
 
                 if(typeName.length != 0){
+                    typeName = typeName.replace('\r', '')
                     data.preCollectedTypeFileNames[typeName] = `${fileName.split('.')[0]}`
+                    Logger.debug(`[${data.lang.toUpperCase()}] Collected <${typeName}> Type`)
                 }else{
                     Logger.warn(`[${data.lang.toUpperCase()}] Failed to find type of fileName: ${fileName}`)
                 }

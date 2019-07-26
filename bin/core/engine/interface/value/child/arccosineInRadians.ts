@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {359}
+ * {358}
  */
 export interface IArccosineInRadians {
     /**
-     * {539}
+     * {551}
      */
     value: ValueNumberType
 }

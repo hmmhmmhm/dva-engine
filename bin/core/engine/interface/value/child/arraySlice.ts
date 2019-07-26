@@ -4,21 +4,21 @@ import {
 } from '../../../type'
 
 /**
- * {365}
+ * {364}
  */
 export interface IArraySlice {
     /**
-     * {558}
+     * {557}
      */
     array: ValueArrayType
 
     /**
-     * {559}
+     * {558}
      */
     index: ValueNumberType
 
     /**
-     * {560}
+     * {559}
      */
     count: ValueNumberType
 }

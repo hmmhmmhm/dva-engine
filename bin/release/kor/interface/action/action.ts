@@ -4,7 +4,7 @@ import {
     IAbortIfConditionsIsFalse,
     IAbortIfConditionsIsTrue,
     IAllowButton,
-    IApplyImpulse,
+    IApplyImpluse,
     IBigMessage,
     IChaseGlobalVariableAtRate,
     IChaseGlobalVariableOverTime,
@@ -21,8 +21,8 @@ import {
     IDeclarePlayerVictory,
     IDeclareRoundVictory,
     IDeclareTeamVictory,
-    IDestoryAllEffects,
-    IDestoryAllHudText,
+    IDestroyAllEffects,
+    IDestroyAllHudText,
     IDestroyAllIcons,
     IDestroyAllInWorldText,
     IDestroyEffect,
@@ -39,11 +39,11 @@ import {
     IDisallowButton,
     IEnableBuiltInGameModeAnnouncer,
     IEnableBuiltInGameModeCompletion,
-    IEnableBuildInGameModeMusic,
+    IEnableBuiltInGameModeMusic,
     IEnableBuiltInGameModeRespawning,
     IEnableBuiltInGameModeScoring,
     IEnableDeathSpectateAllPlayers,
-    IEnableDeathSpecateTargetHud,
+    IEnableDeathSpectateTargetHud,
     IGoToAssembleHeroes,
     IHeal,
     IKill,
@@ -55,13 +55,13 @@ import {
     IModifyGlobalVariableAtIndex,
     IModifyPlayerScore,
     IModifyPlayerVariable,
-    IModifyPlayerVaraibleAtIndex,
+    IModifyPlayerVariableAtIndex,
     IModifyTeamScore,
     IPauseMatchTime,
     IPlayEffect,
     IPreloadHero,
     IPressButton,
-    IResetPlayerHeroAvalability,
+    IResetPlayerHeroAvailability,
     IRespawn,
     IResurrect,
     ISetAbility1Enabled,
@@ -82,7 +82,7 @@ import {
     ISetObjectiveDescription,
     ISetPlayerAllowedHeroes,
     ISetPlayerVariable,
-    ISetPlayerVariableIndex,
+    ISetPlayerVariableAtIndex,
     ISetPrimaryFireEnabled,
     ISetProjectileGravity,
     ISetProjectileSpeed,
@@ -154,14 +154,14 @@ export interface IAction {
     abortIfConditionsIsTrue: IAbortIfConditionsIsTrue
 
     /**
-     * 플레이어에 대해 DISALLOW BUTTON 액션의 효과를 취소합니다.
+     * 
      */
     allowButton: IAllowButton
 
     /**
      * 플레이어의 움직임에 즉각적인 속도 변화를 줍니다.
      */
-    applyImpulse: IApplyImpulse
+    applyImpluse: IApplyImpluse
     
     /**
      * 지정된 플레이엉에게 보이도록
@@ -290,13 +290,13 @@ export interface IAction {
      * CREATE EFFECT에 의해 생성된
      * 모든 효과 개체를 제거합니다.
      */
-    destoryAllEffects: IDestoryAllEffects
+    destroyAllEffects: IDestroyAllEffects
 
     /**
      * CREATE HUD TEXT 액션에 의해
      * 생성된 모든 HUD 텍스트를 제거합니다.
      */
-    destoryAllHudText: IDestoryAllHudText
+    destroyAllHudText: IDestroyAllHudText
 
     /**
      * CREATE ICON에 의해 생성된
@@ -412,7 +412,7 @@ export interface IAction {
      * DISABLE BUILT-IN GAME MODE MUSIC
      * 액션의 효과를 취소합니다.
      */
-    enableBuildInGameModeMusic: IEnableBuildInGameModeMusic
+    enableBuiltInGameModeMusic: IEnableBuiltInGameModeMusic
 
     /**
      * 플레이어에 대해
@@ -439,7 +439,7 @@ export interface IAction {
      * 플레이어 자신의 HUD 대신
      * 관전 대상의 HUD를 볼 수 있습니다.
      */
-    enableDeathSpecateTargetHud: IEnableDeathSpecateTargetHud
+    enableDeathSpectateTargetHud: IEnableDeathSpectateTargetHud
 
     /**
      * 경기를 해당 게임 모드의
@@ -522,7 +522,7 @@ export interface IAction {
      * 인덱스에서 지정된 플레이어가
      * 가진 플레이어 변수 값을 수정합니다.
      */
-    modifyPlayerVaraibleAtIndex: IModifyPlayerVaraibleAtIndex
+    modifyPlayerVariableAtIndex: IModifyPlayerVariableAtIndex
 
     /**
      * 한 팀 또는 두 팀 모두의 점수를 수정합니다.
@@ -569,7 +569,7 @@ export interface IAction {
      * 플레이어는 강제로 다른 영웅을 선택하여
      * 적절한 생성 지점에서 부활합니다.
      */
-    resetPlayerHeroAvalability: IResetPlayerHeroAvalability
+    resetPlayerHeroAvailability: IResetPlayerHeroAvailability
 
     /**
      * 플레이어의 생존 여부와 관계 없이,
@@ -731,7 +731,7 @@ export interface IAction {
      * 값 하나를 배열의
      * 특정 인덱스에 저장합니다.
      */
-    setPlayerVariableIndex: ISetPlayerVariableIndex
+    setPlayerVariableAtIndex: ISetPlayerVariableAtIndex
 
     /**
      * 플레이어의 기본 발사

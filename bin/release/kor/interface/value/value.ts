@@ -11,7 +11,7 @@ import {
     IAllPlayersOnObjective,
     IAllowedHeroes,
     IAllHeroes,
-    IAcrossineInDegrees,
+    IArccosineInDegrees,
     IArccosineInRadians,
     IArcsineInDegrees,
     IArcsineInRadians,
@@ -84,12 +84,12 @@ import {
     IIndexOfArrayValue,
     IIsAlive,
     IIsAssemblingHeroes,
-    IIsBetwwenRounds,
+    IIsBetweenRounds,
     IIsButtonHeld,
     IIsCommunicating,
     IIsCommunicatingAny,
     IIsCommunicatingAnyEmote,
-    IIsCommunicatingVoiceLine,
+    IIsCommunicatingAnyVoiceLine,
     IIsControlModePointLocked,
     IIsCrouching,
     IIsCTFModeInSuddenDeath,
@@ -134,7 +134,7 @@ import {
     IMaxHealth,
     IMin,
     IModulo,
-    INearestWalkablePostion,
+    INearestWalkablePosition,
     INormalize,
     INormalizedHealth,
     INot,
@@ -289,7 +289,7 @@ export interface IValue {
     /**
      * 지정된 각(단위: 도)의 아크코사인 값입니다.
      */
-    acrossineInDegrees: IAcrossineInDegrees
+    arccosineInDegrees: IArccosineInDegrees
 
     /**
      * 지정된 각(단위: RAD)의 아크코사인 값입니다.
@@ -372,7 +372,7 @@ export interface IValue {
      */
     cosineFromRadians: ICosineFromRadians
 
-    /** 
+    /**
      * 지정된 배열 내 요소의 수입니다. 
      */
     countOf: ICountOf
@@ -467,7 +467,8 @@ export interface IValue {
     false: IFalse
 
     /**
-     * 지정된 위치로부터 가장 멀리 떨어진 플레이어로, 팀의 제한을 받을 수 있습니다.
+     * 지정된 위치로부터 가장 멀리 떨어진 플레이어로,
+     * 팀의 제한을 받을 수 있습니다.
      */
     farthestPlayerFrom: IFarthestPlayerFrom
 
@@ -576,7 +577,7 @@ export interface IValue {
     /**
      * 경기 중 라운드 전환 시기인지 여부입니다.
      */
-    isBetwwenRounds: IIsBetwwenRounds
+    isBetweenRounds: IIsBetweenRounds
 
     /**
      * 플레이어가 지정된 버튼을 누르고 있는지 여부입니다.
@@ -604,7 +605,7 @@ export interface IValue {
      * 플레이어가 음성 대사를 사용하는지 여부입니다.
      * (음성 대사의 지속 시간은 4초로 추정)
      */
-    isCommunicatingVoiceLine: IIsCommunicatingVoiceLine
+    isCommunicatingAnyVoiceLine: IIsCommunicatingAnyVoiceLine
 
     /**
      * 쟁탈 전장에서 해당 거점이 잠겨있는지 여부입니다.
@@ -864,7 +865,7 @@ export interface IValue {
      * 서 있을 수 있고 생성 지점에서 접근 가능하며
      * 지정된 위치에서 가장 가까운 위치입니다.
      */
-    nearestWalkablePostion: INearestWalkablePostion
+    nearestWalkablePosition: INearestWalkablePosition
 
     /**
      * 벡터의 단위 길이 정규화입니다.

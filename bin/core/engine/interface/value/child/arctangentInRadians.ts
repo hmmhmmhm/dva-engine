@@ -1,17 +1,17 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {363}
+ * {362}
  */
 export interface IArctangentInRadians {
 
     /**
-     * {554}
+     * {553}
      */
     numerator: ValueNumberType
 
     /**
-     * {555}
+     * {554}
      */
     denominator: ValueNumberType
 }

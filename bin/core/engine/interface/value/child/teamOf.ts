@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {518}
+ * {517}
  */
 export interface ITeamOf {
     /**
-     * {689}
+     * {682}
      */
     player: ValuePlayerType
 }

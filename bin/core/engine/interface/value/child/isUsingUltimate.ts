@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {445}
+ * {444}
  */
 export interface IIsUsingUltimate {
     /**
-     * {627}
+     * {625}
      */
     player: ValuePlayerType
 }

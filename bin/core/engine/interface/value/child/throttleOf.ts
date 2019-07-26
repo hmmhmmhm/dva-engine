@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {520}
+ * {519}
  */
 export interface IThrottleOf {
     /**
-     * {691}
+     * {684}
      */
     player: ValuePlayerType
 }

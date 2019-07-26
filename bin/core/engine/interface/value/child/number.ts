@@ -1,9 +1,9 @@
 /**
- * {467}
+ * {466}
  */
 export interface INumber {
     /**
-     * {467}
+     * {466}
      */
     number: number
 }

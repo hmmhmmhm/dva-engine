@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {508}
+ * {507}
  */
 export interface ISlotOf {
     /**
-     * {677}
+     * {670}
      */
     player: ValuePlayerType
 }

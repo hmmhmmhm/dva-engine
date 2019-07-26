@@ -5,19 +5,19 @@ import {
 } from '../../../type'
 
 /**
- * {427}
+ * {429}
  */
 export interface IIsInViewAngle {
     /**
-     * {612}
+     * {610}
      */
     player: ValuePlayerType
     /**
-     * {613}
+     * {611}
      */
     location: ValueVectorType
     /**
-     * {614}
+     * {612}
      */
     viewAngle: ValueNumberType
 }

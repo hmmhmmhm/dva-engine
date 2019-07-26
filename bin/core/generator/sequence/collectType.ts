@@ -68,6 +68,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
 
                     // Collect Resolver Type Names
                     for(let resolverType of resolverTypes){
+                        resolverType = resolverType.replace('\r', '')
                         if(resolverType[0] == 'I'){
                             // Case I*
                             let typeFilePath = Util.pascalCaseToCamelCase(resolverType, false, true)

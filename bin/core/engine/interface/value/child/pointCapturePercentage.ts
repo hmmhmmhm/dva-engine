@@ -1,4 +1,4 @@
 /**
- * {489}
+ * {488}
  */
 export interface IPointCapturePercentage {}

@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {532}
+ * {531}
  */
 export interface IVerticalSpeedOf {
     /**
-     * {703}
+     * {696}
      */
     player: ValuePlayerType
 }

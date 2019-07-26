@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {463}
+ * {462}
  */
 export interface INormalize {
     /**
-     * {635}
+     * {633}
      */
     position: ValueVectorType
 }

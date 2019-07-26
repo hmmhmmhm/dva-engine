@@ -1,7 +1,7 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {460}
+ * {459}
  */
 export interface IModulo {
     value1: ValueNumberType

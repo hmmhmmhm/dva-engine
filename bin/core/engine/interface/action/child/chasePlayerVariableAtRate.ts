@@ -7,7 +7,7 @@ import {
 } from '../../../type'
 
 /**
- * {8}
+ * {9}
  */
 export interface IChasePlayerVariableAtRate {
     /**

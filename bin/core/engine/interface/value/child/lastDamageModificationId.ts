@@ -1,4 +1,4 @@
 /**
- * {448}
+ * {447}
  */
 export interface ILastDamageModificationId {}

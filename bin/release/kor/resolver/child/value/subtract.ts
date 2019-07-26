@@ -21,6 +21,6 @@ export const subtract = (
 ): number => {
 
 	// @ts-ignore
-	return `Substract(${value1}, ${value2})`
+	return `Subtract(${value1}, ${value2})`
 }
 

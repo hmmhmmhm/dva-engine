@@ -108,19 +108,8 @@ class Vector {
 	){
 		return Value.angleDifference(angle1, angle2)
 	}
-
-	/**
-	 * 지정된 각(단위: 도)의 아크코사인 값입니다.
-	 */
-	acrossineInDegrees(
-		/**
-		 * 함수의 입력값입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
-		 */
-		value: string
-	){
-		return Value.acrossineInDegrees(value)
+	acrossineInDegrees(){
+		return Value.acrossineInDegrees()
 	}
 
 	/**
@@ -407,7 +396,7 @@ class Vector {
 	}
 
 	/**
-	 * 두 위치가 서로 보이는지 여부입니다.
+	 * LOCATION이 플레이어의 시야에 있는지 여부입니다.
 	 */
 	isInViewAngle(
 		/**
@@ -438,20 +427,8 @@ class Vector {
 	left(){
 		return Value.left()
 	}
-
-	/**
-	 * 서 있을 수 있고 생성 지점에서 접근 가능하며
-	 * 지정된 위치에서 가장 가까운 위치입니다.
-	 */
-	nearestWalkablePostion(
-		/**
-		 * 가장 가까운 도보 가능 위치를 검색할 대상 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
-		 */
-		position: string
-	){
-		return Value.nearestWalkablePostion(position)
+	nearestWalkablePostion(){
+		return Value.nearestWalkablePostion()
 	}
 
 	/**

@@ -1,16 +1,16 @@
 import { ValueDivideType } from '../../../type'
 
 /**
- * {380}
+ * {379}
  */
 export interface IDivide {
     /**
-     * {576}
+     * {575}
      */
     value1: ValueDivideType
 
     /**
-     * {577}
+     * {576}
      */
     value2: ValueDivideType
 }

@@ -1,5 +1,5 @@
 /**
- * 두 위치가 서로 보이는지 여부입니다.
+ * LOCATION이 플레이어의 시야에 있는지 여부입니다.
  */
 export const isInViewAngle = (
 	/**

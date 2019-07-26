@@ -1,15 +1,15 @@
 import { ValueType } from '../../../type'
 
 /**
- * {645}
+ * {478}
  */
 export interface IOr {
     /**
-     * {646}
+     * {642}
      */
     value1: ValueType
     /**
-     * {647}
+     * {643}
      */
     value2: ValueType
 }

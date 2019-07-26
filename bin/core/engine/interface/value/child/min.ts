@@ -1,15 +1,15 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {459}
+ * {458}
  */
 export interface IMin {
     /**
-     * {632}
+     * {630}
      */
     value1: ValueNumberType
     /**
-     * {633}
+     * {631}
      */
     value2: ValueNumberType
 }

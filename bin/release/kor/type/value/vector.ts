@@ -16,7 +16,7 @@ import {
     IFlagPosition,
     IForward,
     ILeft,
-    INearestWalkablePostion,
+    INearestWalkablePosition,
     INormalize,
     IObjectivePosition,
     IPayloadPosition,
@@ -53,7 +53,7 @@ export type ValueVectorType
     | IFlagPosition
     | IForward
     | ILeft
-    | INearestWalkablePostion
+    | INearestWalkablePosition
     | INormalize
     | IObjectivePosition
     | IPayloadPosition

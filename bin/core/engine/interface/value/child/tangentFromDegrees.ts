@@ -1,11 +1,11 @@
 import { ValueNumberType } from '../../../type'
 
 /**
- * {515}
+ * {514}
  */
 export interface ITangentFromDegrees {
     /**
-     * {566}
+     * {565}
      */
     angle: ValueNumberType
 }

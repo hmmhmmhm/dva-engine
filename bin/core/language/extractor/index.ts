@@ -4,6 +4,7 @@ import * as Extractor from './extractor'
 import fs from 'fs'
 import path from 'path'
 import rimraf from 'rimraf'
+import generatorData from '../../generator/generatorData.json'
 
 /**
  * @description
@@ -23,6 +24,8 @@ export const Extract = async (lang: string = 'kor')=>{
     // Common Data
     let common: Extractor.ICommonData = {
         currentFilePath: ``,
+        currentTopName: ``,
+        currentOrderNumber: 0,
         idMap: {},
         resultMap: {}
     }
@@ -41,7 +44,7 @@ export const Extract = async (lang: string = 'kor')=>{
         await Util.collectInterfaceFiles(
 
             // Collect Path
-            path.resolve(`${process.cwd()}/bin/${lang}/${collectPath}`),
+            path.resolve(`${process.cwd()}/bin/release/${lang}/${collectPath}`),
 
             // Collect Process
             async (collectedDatas)=>{
@@ -50,8 +53,39 @@ export const Extract = async (lang: string = 'kor')=>{
                 for(let {
                     fileName,
                     fileData,
-                    subPath
+                    subPath,
+                    typeName,
+                    interfaceName
                 } of collectedDatas){
+
+                    /**
+                     * `typeName` Convert Type Name `ValueArrayType` To `Array`
+                     */
+                    // notUniqueInterfaceName = Util.pureTypeNameExtractor(notUniqueInterfaceName)
+                    let currentTopName = ``
+                    let nameMaps = [
+                        generatorData.action.actionName,
+                        generatorData.event.eventName,
+                        generatorData.value.valueName
+                    ]
+                    for(let nameMap of nameMaps){
+                        for(let name of Object.keys(nameMap)){
+                            if(name == fileName){
+                                currentTopName = nameMap[name]
+                                break
+                            }
+                        }
+                    }
+
+                    if(currentTopName.length == 0 && typeName.length != 0)
+                        currentTopName = Util.pureTypeNameExtractor(typeName)
+
+                    if(currentTopName.length == 0)
+                        currentTopName = interfaceName
+
+                    common.currentTopName = currentTopName
+                    common.currentOrderNumber = 0
+
 
                     // Set Common Data Prop
                     common.currentFilePath = `${collectPath}${subPath}${fileName}`

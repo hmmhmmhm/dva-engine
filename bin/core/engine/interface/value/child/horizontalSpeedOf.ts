@@ -1,7 +1,7 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {406}
+ * {405}
  */
 export interface IHorizontalSpeedOf {
     player: ValuePlayerType

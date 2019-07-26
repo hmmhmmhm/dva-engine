@@ -4,16 +4,16 @@ import {
 } from '../../../type'
 
 /**
- * {442}
+ * {441}
  */
 export interface IIsTrueForAny {
     /**
-     * {623}
+     * {621}
      */
     array: ValueArrayType
 
     /**
-     * {624}
+     * {622}
      */
     condition: ValueBoolType
 }

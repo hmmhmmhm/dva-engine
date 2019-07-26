@@ -4,16 +4,16 @@ import {
 } from '../../../type'
 
 /**
- * {364}
+ * {363}
  */
 export interface IArrayContains {
     /**
-     * {556}
+     * {555}
      */
     array: ValueArrayType
 
     /**
-     * {557}
+     * {556}
      */
     value: ValueType
 }

@@ -1,16 +1,16 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {379}
+ * {378}
  */
 export interface IDistanceBetween {
     /**
-     * {574}
+     * {573}
      */
     startPos: ValueVectorType
 
     /**
-     * {575}
+     * {574}
      */
     endPos: ValueVectorType
 }

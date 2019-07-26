@@ -3,11 +3,11 @@ import {
 } from '../../../type'
 
 /**
- * {435}
+ * {434}
  */
 export interface IIsOnObjective {
     /**
-     * {618}
+     * {616}
      */
     player: ValuePlayerType
 }

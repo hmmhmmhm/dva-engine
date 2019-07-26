@@ -4,23 +4,23 @@ import {
 } from '../../../type'
 
 /**
- * {513}
+ * {512}
  */
 export interface IString {
     /**
-     * {683}
+     * {676}
      */
     string: ValueTextType
     /**
-     * {684}
+     * {677}
      */
     _0: ValueStringParamType
     /**
-     * {685}
+     * {678}
      */
     _1: ValueStringParamType
     /**
-     * {686}
+     * {679}
      */
     _2: ValueStringParamType
 }

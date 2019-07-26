@@ -7,15 +7,15 @@ import {
 import { IPlayerVariable } from '../../value'
 
 /**
- * {52}
+ * {55}
  */
 export interface IModifyPlayerVariable {
     /**
-     * {206}
+     * {204}
      */
     player: ValuePlayerType
     /**
-     * {207}
+     * {205}
      */
     variable: IPlayerVariable
     /**
@@ -23,7 +23,7 @@ export interface IModifyPlayerVariable {
      */
     operation: ValueVariableOperation
     /**
-     * {208}
+     * {206}
      */
     value: ValueType
 }

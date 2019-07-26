@@ -1,11 +1,11 @@
 import { ValueTeamType } from '../../../type'
 
 /**
- * {478}
+ * {477}
  */
 export interface IOppositeTeamOf {
     /**
-     * {644}
+     * {641}
      */
     team: ValueTeamType
 }

@@ -1,11 +1,11 @@
 import { ValueType } from '../../../type'
 
 /**
- * {494}
+ * {493}
  */
 export interface IRandomValueInArray {
     /**
-     * {663}
+     * {659}
      */
     array: ValueType
 }

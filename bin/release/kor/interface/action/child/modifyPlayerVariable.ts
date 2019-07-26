@@ -7,8 +7,7 @@ import {
 import { IPlayerVariable } from '../../value'
 
 /**
- * 게임 자체에 종속된
- * 전역 변수 값을 수정합니다.
+ * 지정된 플레이어가 가진 플레이어 변수 값을 수정합니다.
  */
 export interface IModifyPlayerVariable {
     /**

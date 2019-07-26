@@ -3,7 +3,7 @@ import {
 } from '../../../type'
 
 /**
- * {400}
+ * {399}
  */
 export interface IHero {
     hero: HeroConstantType

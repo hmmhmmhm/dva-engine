@@ -1,7 +1,7 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {389}
+ * {388}
  */
 export interface IFacingDirectionOf {
     player: ValuePlayerType

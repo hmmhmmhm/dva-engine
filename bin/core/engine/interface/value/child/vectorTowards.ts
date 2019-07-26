@@ -3,15 +3,15 @@ import {
 } from '../../../type'
 
 /**
- * {527}
+ * {526}
  */
 export interface IVectorTowards {
     /**
-     * {698}
+     * {691}
      */
     startPos: ValueVectorType
     /**
-     * {699}
+     * {692}
      */
     endPos: ValueVectorType
 }

@@ -1,3 +1,6 @@
+/**
+ * 지정된 플레이어가 가진 플레이어 변수의 현재 값입니다.
+ */
 export const playerVariable = (
 	/**
 	 * - `Type.Player.` 를 입력하면 

@@ -1,11 +1,11 @@
 import { ValueVectorType } from '../../../type'
 
 /**
- * {536}
+ * {535}
  */
 export interface IYComponentOf {
     /**
-     * {706}
+     * {699}
      */
     vector: ValueVectorType
 }

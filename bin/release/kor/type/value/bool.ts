@@ -8,12 +8,12 @@ import {
     IHasStatus,
     IIsAlive,
     IIsAssemblingHeroes,
-    IIsBetwwenRounds,
+    IIsBetweenRounds,
     IIsButtonHeld,
     IIsCommunicating,
     IIsCommunicatingAny,
     IIsCommunicatingAnyEmote,
-    IIsCommunicatingVoiceLine,
+    IIsCommunicatingAnyVoiceLine,
     IIsControlModePointLocked,
     IIsCrouching,
     IIsCTFModeInSuddenDeath,
@@ -68,12 +68,12 @@ export type ValueBoolType
     | IIsAlive
 
     | IIsAssemblingHeroes
-    | IIsBetwwenRounds
+    | IIsBetweenRounds
     | IIsButtonHeld
     | IIsCommunicating
     | IIsCommunicatingAny
     | IIsCommunicatingAnyEmote
-    | IIsCommunicatingVoiceLine
+    | IIsCommunicatingAnyVoiceLine
     | IIsControlModePointLocked
     | IIsCrouching
     | IIsCTFModeInSuddenDeath

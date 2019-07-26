@@ -1,8 +1,6 @@
 import { Resolver } from './resolver'
 import { Inject } from '../language/injector/index'
-
-import FolderLogger from 'folder-logger'
-import tempDir from 'temp-dir'
+import { getLogger } from './logger'
 
 export const Generator = async (
     langs = [
@@ -13,7 +11,7 @@ export const Generator = async (
      * @description
      * Generator Logger
      */
-    const Logger = new FolderLogger(tempDir)
+    const Logger = getLogger()
 
     await Inject(langs)
     await Resolver(langs)

@@ -4,7 +4,7 @@ import {
 } from '../../../type'
 
 /**
- * {392}
+ * {391}
  */
 export interface IFilteredArray {
     array: ValueArrayType

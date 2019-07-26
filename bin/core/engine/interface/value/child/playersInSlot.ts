@@ -1,15 +1,15 @@
 import { ValueTeamType, ValueNumberType } from '../../../type'
 
 /**
- * {485}
+ * {484}
  */
 export interface IPlayersInSlot {
     /**
-     * {650}
+     * {646}
      */
     slot: ValueNumberType
     /**
-     * {651}
+     * {647}
      */
     team: ValueTeamType
 }

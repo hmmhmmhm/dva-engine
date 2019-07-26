@@ -1,12 +1,11 @@
-import FolderLogger from 'folder-logger'
 import { Sequencer } from 'async-sequencer'
 import { IData } from './interface'
+import { getLogger } from './logger'
 
 import Reformer from './reformer'
 import Generator from './generator'
 import generatorData from './generatorData.json'
 
-import tempDir from 'temp-dir'
 
 /**
  * @description
@@ -17,7 +16,7 @@ export const Resolver = async (langs: string[] = [ 'kor' ]) => {
      * @description
      * Generator Logger
      */
-    const Logger = new FolderLogger(tempDir)
+    const Logger = getLogger()
 
     for(let lang of langs){
 

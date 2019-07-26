@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {404}
+ * {403}
  */
 export interface IHorizontalAngleTowards {
     /**
-     * {590}
+     * {588}
      */
     player: ValuePlayerType
     /**
-     * {591}
+     * {589}
      */
     position: ValueVectorType
 }

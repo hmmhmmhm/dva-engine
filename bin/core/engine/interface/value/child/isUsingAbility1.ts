@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {443}
+ * {442}
  */
 export interface IIsUsingAbility1 {
     /**
-     * {625}
+     * {623}
      */
     player: ValuePlayerType
 }

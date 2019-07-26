@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {490}
+ * {489}
  */
 export interface IPositionOf {
     /**
-     * {657}
+     * {653}
      */
     player: ValuePlayerType
 }

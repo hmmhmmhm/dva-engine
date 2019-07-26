@@ -4,15 +4,15 @@ import {
 } from '../../../type'
 
 /**
- * {412}
+ * {411}
  */
 export interface IIsCommunicating {
     /**
-     * {596}
+     * {594}
      */
     player: ValuePlayerType
     /**
-     * {597}
+     * {595}
      */
     type: ValueCommunicationType
 }

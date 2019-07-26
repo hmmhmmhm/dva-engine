@@ -1,16 +1,16 @@
 import { ValueArrayType, ValueType } from '../../../type'
 
 /**
- * {499}
+ * {498}
  */
 export interface IRemoveFromArray {
     /**
-     * {669}
+     * {665}
      */
     array: ValueArrayType
 
     /**
-     * {670}
+     * {666}
      */
     value: ValueType
 }

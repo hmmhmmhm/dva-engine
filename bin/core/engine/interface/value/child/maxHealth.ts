@@ -1,11 +1,11 @@
 import { ValuePlayerType } from '../../../type'
 
 /**
- * {458}
+ * {457}
  */
 export interface IMaxHealth {
     /**
-     * {631}
+     * {629}
      */
     player: ValuePlayerType
 }
