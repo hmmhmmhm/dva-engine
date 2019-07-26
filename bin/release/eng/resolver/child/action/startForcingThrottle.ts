@@ -8,8 +8,7 @@ export const startForcingThrottle = (
 	 * Player - The player or players whose movement
 	 * whill be forced or limited. Can use most
 	 * Player based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -17,8 +16,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	minForward: string | number | any[],
 	/**
@@ -26,8 +24,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	maxForward: string | number | any[],
 	/**
@@ -35,8 +32,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	minBackward: string | number | any[],
 	/**
@@ -44,8 +40,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	maxBackward: string | number | any[],
 	/**
@@ -53,8 +48,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	minSideways: string | number | any[],
 	/**
@@ -62,8 +56,7 @@ export const startForcingThrottle = (
 	 * amount. 0 allows the player or players to
 	 * stop while 1 forces full forward movement.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	maxSideways: string | number | any[]
 ) => {

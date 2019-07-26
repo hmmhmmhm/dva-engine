@@ -7,8 +7,7 @@ export const removeFromArray = (
 	 * Array - The array from which to remove values.
 	 * Can use most Array based Value Syntax to
 	 * provide this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
@@ -17,8 +16,7 @@ export const removeFromArray = (
 	 * each matching element is removed. Can use
 	 * most Array based or Number based Value Syntax
 	 * to provide this value.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ): any[] => {

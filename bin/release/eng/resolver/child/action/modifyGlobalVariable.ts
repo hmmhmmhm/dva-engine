@@ -6,15 +6,13 @@ export const modifyGlobalVariable = (
 	/**
 	 * Variable - Variable specified by a single
 	 * alphabetic letter (A through Z).
-	 * - `Type.IGlobal.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IGlobal.`
 	 */
 	variable: string | number | any[],
 	/**
 	 * Variable - Variable specified by a single
 	 * alphabetic letter (A through Z).
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	operation: string | number | any[],
 	/**
@@ -22,8 +20,7 @@ export const modifyGlobalVariable = (
 	 * If the index is beyond the end of the array,
 	 * the array is extended with new elements
 	 * given a value of 0.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

@@ -4,14 +4,12 @@
 export const arrayContains = (
 	/**
 	 * 지정된 값을 검색할 배열입니다.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
 	 * 검색할 값입니다.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

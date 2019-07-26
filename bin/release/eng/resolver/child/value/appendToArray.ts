@@ -6,15 +6,13 @@ export const appendToArray = (
 	/**
 	 * Array - You must specify the Array Syntax
 	 * you are adding the value to.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
 	 * Value - You must specify the Value Syntax
 	 * that you are adding to the array.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

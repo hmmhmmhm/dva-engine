@@ -7,8 +7,7 @@ export const setProjectileGravity = (
 	 * Player - The player or players whose projectile
 	 * gravity will be set. Can use most Player
 	 * based Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -17,8 +16,7 @@ export const setProjectileGravity = (
 	 * the player or players will set their personal
 	 * projectile gravity. Can use most Number
 	 * based Value Syntax for this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	projectileGravityPercent: string | number | any[]
 ) => {

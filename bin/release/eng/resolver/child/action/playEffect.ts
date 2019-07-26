@@ -8,8 +8,7 @@ export const playEffect = (
 	 * Visible to - One or more players who will
 	 * be able to see the effect. Can use most
 	 * Value Syntax to select one or multiple players.
-	 * - `Type.PlayersParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.PlayersParam.`
 	 */
 	visibleTo: string | number | any[],
 	/**
@@ -18,8 +17,7 @@ export const playEffect = (
 	 * Good Pickup Effect, Bad Pickup Effect, Debuff
 	 * Impact Sound, Buff Impact Sound, Ring Explosion
 	 * Sound, Buff Explosion Sound, Explosion Sound)
-	 * - `Type.Play.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Play.`
 	 */
 	type: string | number | any[],
 	/**
@@ -31,8 +29,7 @@ export const playEffect = (
 	 * Good Pickup Effect, Bad Pickup Effect, Debuff
 	 * Impact Sound, Buff Impact Sound, Ring Explosion
 	 * Sound, Buff Explosion Sound, Explosion Sound)
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	color: string | number | any[],
 	/**
@@ -46,15 +43,13 @@ export const playEffect = (
 	 * Pickup Effect, Debuff Impact Sound, Buff
 	 * Impact Sound, Ring Explosion Sound, Buff
 	 * Explosion Sound, Explosion Sound)
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
 	 * Radius - The effect’s radius in meters.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	radius: string | number | any[]
 ) => {

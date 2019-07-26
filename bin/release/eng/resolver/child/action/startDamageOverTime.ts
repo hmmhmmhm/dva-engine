@@ -10,8 +10,7 @@ export const startDamageOverTime = (
 	 * Receivers - One or more players who will
 	 * receive the damage over time. Can use most
 	 * Player based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -19,8 +18,7 @@ export const startDamageOverTime = (
 	 * for the damage. A damager of null indicates
 	 * no player will receive credit. Can use most
 	 * Player based Value Syntax.
-	 * - `Type.AssisterParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.AssisterParam.`
 	 */
 	damager: string | number | any[],
 	/**
@@ -29,16 +27,14 @@ export const startDamageOverTime = (
 	 * until stopped by script, provide an arbitrarily
 	 * long duration such as 9999. Can use most
 	 * Number based Value Syntax to specify.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	duration: string | number | any[],
 	/**
 	 * Damage Per Second - The damage per second
 	 * for the damage over time. Can use most Number
 	 * based Value Syntax to specify.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	damagePerSecond: string | number | any[]
 ) => {

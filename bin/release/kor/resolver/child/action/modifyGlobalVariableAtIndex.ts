@@ -5,8 +5,7 @@
 export const modifyGlobalVariableAtIndex = (
 	/**
 	 * 수정할 전역 변수입니다.
-	 * - `Type.IGlobal.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IGlobal.`
 	 */
 	variable: string | number | any[],
 	/**
@@ -14,8 +13,7 @@ export const modifyGlobalVariableAtIndex = (
 	 * 인덱스가 배열의 끝을 벗어난 경우,
 	 * 해당 배열이 확장되며
 	 * 새 요소는 0의 값을 가집니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	index: string | number | any[],
 	/**
@@ -23,8 +21,7 @@ export const modifyGlobalVariableAtIndex = (
 	 * 일반적인 사칙연산,
 	 * 그리고 값의 추가 및 제거를 위한
 	 * ARRAY 연산 등의 옵션이 있습니다.
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	operation: string | number | any[],
 	/**
@@ -35,8 +32,7 @@ export const modifyGlobalVariableAtIndex = (
 	 * 현재 값으로 사용됩니다.
 	 * 배열 연산에서는
 	 * 이 값을 추가 또는 제거합니다.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

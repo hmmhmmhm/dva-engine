@@ -10,8 +10,7 @@ export const preloadHero = (
 	 * 영웅을 미리 불러올 플레이어입니다.
 	 * 플레이어 당 한 번에 단 한 개의
 	 * PRELOAD HERO 액션만 활성화할 수 있습니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -19,8 +18,7 @@ export const preloadHero = (
 	 * 배열에 여러 영웅을 지정한 경우,
 	 * 배열 초반에 지정된 영웅일수록
 	 * 우선순위가 가장 높습니다.
-	 * - `Type.Hero.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Hero.`
 	 */
 	hero: string | number | any[]
 ) => {

@@ -9,8 +9,7 @@ export const modifyPlayerVariableAtIndex = (
 	 * value will be changed. Options include standard
 	 * arithmetic operations as well as array operations
 	 * for appending and removing values.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -20,8 +19,7 @@ export const modifyPlayerVariableAtIndex = (
 	 * variable’s existing value. For array operations,
 	 * this is the value to append or remove. Various
 	 * Value Syntax can be used.
-	 * - `Type.IPlayer.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IPlayer.`
 	 */
 	variable: string | number | any[],
 	/**
@@ -29,15 +27,13 @@ export const modifyPlayerVariableAtIndex = (
 	 * will be set. If multiple players are provided,
 	 * each of their variables will be set. Can
 	 * use most Player based Value Syntax for this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	index: string | number | any[],
 	/**
 	 * Variable - Variable specified by a single
 	 * alphabetic letter (A through Z).
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	operation: string | number | any[],
 	/**
@@ -45,8 +41,7 @@ export const modifyPlayerVariableAtIndex = (
 	 * If the index is beyond the end of the array,
 	 * the array is extended with new elements
 	 * given a value of 0.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

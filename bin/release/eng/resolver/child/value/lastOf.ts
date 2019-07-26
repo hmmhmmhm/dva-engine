@@ -7,8 +7,7 @@ export const lastOf = (
 	 * Array - The array from which the value is
 	 * created. Can use most Array based Value
 	 * Syntax to provide this data.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[]
 ) => {

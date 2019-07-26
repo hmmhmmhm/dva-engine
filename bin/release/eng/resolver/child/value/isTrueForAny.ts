@@ -7,8 +7,7 @@ export const isTrueForAny = (
 	 * Array - The array whose values will be considered.
 	 * Can use most Array Based Value Syntax to
 	 * retrieve this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
@@ -18,8 +17,7 @@ export const isTrueForAny = (
 	 * the element of the array currently being
 	 * considered. Can use most Comparative based
 	 * Value Syntax to retrieve this value.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	condition: string | number | any[]
 ) => {

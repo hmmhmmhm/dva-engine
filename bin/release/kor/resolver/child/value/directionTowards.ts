@@ -4,14 +4,12 @@
 export const directionTowards = (
 	/**
 	 * 결과로 도출되는 방향 벡터가 시작되는 위치입니다.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	startPos: string | number | any[],
 	/**
 	 * 결과로 도출되는 방향 벡터가 끝나는 위치입니다.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	endPos: string | number | any[]
 ): number => {

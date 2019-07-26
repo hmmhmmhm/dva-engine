@@ -6,16 +6,14 @@ export const directionTowards = (
 	 * Start Pos - The position from which the
 	 * resulting direction vector will point. Most
 	 * positional based Value Syntax can be used here.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	startPos: string | number | any[],
 	/**
 	 * End Pos - The position to which the resulting
 	 * direction vector will point. Most positional
 	 * based Value Syntax can be used here.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	endPos: string | number | any[]
 ): number => {

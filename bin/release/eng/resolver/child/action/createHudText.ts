@@ -11,31 +11,27 @@ export const createHudText = (
 	 * Header - The header text to be displayed
 	 * (can be blank). Can use most String based
 	 * Value Syntax to populate.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
 	 * Subheader - The subheader text to be displayed
 	 * (can be blank). Can use most String based
 	 * Value Syntax to populate.
-	 * - `Type.String.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.String.`
 	 */
 	header: string | number | any[],
 	/**
 	 * Text - The body text to be displayed (can
 	 * be blank). Can use most String based Value
 	 * Syntax to populate.
-	 * - `Type.StringParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.StringParam.`
 	 */
 	subHeader: string | number | any[],
 	/**
 	 * Location - The location on the screen where
 	 * text will appear. You can choose left, top, or right.
-	 * - `Type.StringParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.StringParam.`
 	 */
 	text: string | number | any[],
 	/**
@@ -44,32 +40,28 @@ export const createHudText = (
 	 * Text with a higher sort order will come
 	 * after text with a lower sort order. Can
 	 * use most Number based Value Syntax.
-	 * - `Type.Location.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Location.`
 	 */
 	location: string | number | any[],
 	/**
 	 * Header Color - The color of the Header text
 	 * to be created. If a particular team is chosen,
 	 * the effect will either be red or blue.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	sortOrder: string | number | any[],
 	/**
 	 * Subheader Color - The color of the Subheader
 	 * text to be created. If a particular team
 	 * is chosen, the effect will either be red or blue.
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	headerColor: string | number | any[],
 	/**
 	 * Text Color - The color of the body text
 	 * to be created. If a particular team is chosen,
 	 * the effect will either be red or blue.
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	subHeaderColor: string | number | any[],
 	/**
@@ -77,16 +69,14 @@ export const createHudText = (
 	 * inputs will be continuously reevaluated,
 	 * the text will keep asking for and using
 	 * new values from reevaluated inputs.
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	textColor: string | number | any[],
 	/**
 	 * Visible to - One or more players who will
 	 * be able to see the icon. Can use most Value
 	 * Syntax to select one or multiple players.
-	 * - `Type.HudTextReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.HudTextReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

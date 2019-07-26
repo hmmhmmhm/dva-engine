@@ -10,8 +10,7 @@ export const createEffect = (
 	 * Visible to - One or more players who will
 	 * be able to see the effect. Can use most
 	 * Value Syntax to select one or multiple players.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
@@ -24,8 +23,7 @@ export const createEffect = (
 	 * Good Aura, Bad Aura, Energy Sound, Pick-Up
 	 * Sound, Good Aura Sound, Bad Aura Sound,
 	 * Sparkles Sound, Smoke Sound, Decal Sound, Beacon Sound)
-	 * - `Type.Effect.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Effect.`
 	 */
 	type: string | number | any[],
 	/**
@@ -39,8 +37,7 @@ export const createEffect = (
 	 * Energy Sound, Pick-Up Sound, Good Aura Sound,
 	 * Bad Aura Sound, Sparkles Sound, Smoke Sound,
 	 * Decal Sound, Beacon Sound)
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	color: string | number | any[],
 	/**
@@ -51,8 +48,7 @@ export const createEffect = (
 	 * Sound, Pick-Up Sound, Good Aura Sound, Bad
 	 * Aura Sound, Sparkles Sound, Smoke Sound,
 	 * Decal Sound, Beacon Sound)
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
@@ -60,16 +56,14 @@ export const createEffect = (
 	 * inputs will be continuously reevaluated,
 	 * the effect will keep asking for and using
 	 * new values from reevaluated inputs.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	radius: string | number | any[],
 	/**
 	 * Visible to - One or more players who will
 	 * be able to see the icon. Can use most Value
 	 * Syntax to select one or multiple players.
-	 * - `Type.EffectReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.EffectReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

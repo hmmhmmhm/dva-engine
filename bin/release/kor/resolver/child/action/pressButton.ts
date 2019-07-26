@@ -8,14 +8,12 @@ export const pressButton = (
 	/**
 	 * 가상 버튼 입력을
 	 * 강제할 플레이어입니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
 	 * 누를 버튼입니다.
-	 * - `Type.Button.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Button.`
 	 */
 	button: string | number | any[]
 ) => {

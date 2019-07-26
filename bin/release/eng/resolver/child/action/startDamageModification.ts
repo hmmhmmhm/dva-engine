@@ -12,8 +12,7 @@ export const startDamageModification = (
 	 * Damagers - The player or players whose outgoing
 	 * damage will be modified (when attacking
 	 * the receivers). Can use most Player based Value Syntax.
-	 * - `Type.PlayersParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.PlayersParam.`
 	 */
 	receivers: string | number | any[],
 	/**
@@ -21,8 +20,7 @@ export const startDamageModification = (
 	 * that will apply to receivers when attacked
 	 * by damagers. Can use most Number based Value
 	 * Syntax to specify.
-	 * - `Type.PlayersParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.PlayersParam.`
 	 */
 	damagers: string | number | any[],
 	/**
@@ -32,15 +30,13 @@ export const startDamageModification = (
 	 * new values from reevaluated inputs. Can
 	 * choose from “Receivers, Damagers, and Damage
 	 * Percent”, “Receivers and Damagers”, or “None”.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	damagePercent: string | number | any[],
 	/**
 	 * Player - The player or players who will
 	 * start turning. Can use most Player based Value Syntax.
-	 * - `Type.DamageModificationReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.DamageModificationReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

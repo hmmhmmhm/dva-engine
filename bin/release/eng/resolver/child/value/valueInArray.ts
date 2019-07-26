@@ -7,16 +7,14 @@ export const valueInArray = (
 	 * Array - The array whose element to acquire.
 	 * Can use most Array based Value Syntax to
 	 * provide this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
 	 * Index - The index whose element to acquire.
 	 * Can use most Number based Value Syntax to
 	 * provide this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	index: string | number | any[]
 ) => {

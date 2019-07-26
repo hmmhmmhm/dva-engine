@@ -8,8 +8,7 @@ export const randomValueInArray = (
 	 * the result is simply the provided value.
 	 * Can use most Array based Value Syntax to
 	 * provide this value.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	array: string | number | any[]
 ) => {

@@ -7,16 +7,14 @@ export const setInvisible = (
 	 * Player - The player or players who will
 	 * become invisible. Can use most Player based
 	 * Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
 	 * Invisible to - Specifies for whom the player
 	 * or players will be invisible. Can be set
 	 * to All, Enemies, or None.
-	 * - `Type.InvisibleTo.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.InvisibleTo.`
 	 */
 	invisibleTo: string | number | any[]
 ) => {

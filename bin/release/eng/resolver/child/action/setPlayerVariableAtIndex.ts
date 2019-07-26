@@ -11,8 +11,7 @@ export const setPlayerVariableAtIndex = (
 	 * value is not an array, then its value becomes
 	 * an empty array. Specified by a single alphabetic
 	 * letter (A through Z).
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -21,8 +20,7 @@ export const setPlayerVariableAtIndex = (
 	 * the array is extended with the new elements
 	 * given a value of zero. Can use most Number
 	 * based Value Syntax with this value.
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	variable: string | number | any[],
 	/**
@@ -30,16 +28,14 @@ export const setPlayerVariableAtIndex = (
 	 * will be set. If multiple players are provided,
 	 * each of their variables will be set. Can
 	 * use most Player based Value Syntax for this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	index: string | number | any[],
 	/**
 	 * Value - The value that will be stored into
 	 * the array. Nearly any Value syntax can be
 	 * used, however it is most common with Number based syntax.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

@@ -9,14 +9,12 @@
 export const createInWorldText = (
 	/**
 	 * 월드 내 텍스트를 보게 될 플레이어입니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
 	 * 표시할 텍스트입니다.
-	 * - `Type.String.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.String.`
 	 */
 	header: string | number | any[],
 	/**
@@ -26,20 +24,17 @@ export const createInWorldText = (
 	 * 플레이어 머리 위에 표시되고,
 	 * 그 이외의 경우 이 값은
 	 * 월드 내의 위치로 해석됩니다.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
 	 * 텍스트의 배율입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	scale: string | number | any[],
 	/**
 	 * 해당 텍스트가 벽을 뚫고 보일지, 아니면 가려질지 지정합니다.
-	 * - `Type.Clipping.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Clipping.`
 	 */
 	clipping: string | number | any[],
 	/**
@@ -47,8 +42,7 @@ export const createInWorldText = (
 	 * 지속적으로 재확인할 것인지 지정합니다.
 	 * 해당 텍스트는 입력 정보의 새로운 값을
 	 * 계속 묻게 되며, 재확인한 값을 사용합니다.
-	 * - `Type.InWorldTextReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.InWorldTextReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

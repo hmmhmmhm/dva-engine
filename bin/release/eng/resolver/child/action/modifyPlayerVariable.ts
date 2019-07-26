@@ -6,8 +6,7 @@ export const modifyPlayerVariable = (
 	/**
 	 * Variable - Variable specified by a single
 	 * alphabetic letter (A through Z).
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -15,15 +14,13 @@ export const modifyPlayerVariable = (
 	 * value will be changed. Options include standard
 	 * arithmetic operations as well as array operations
 	 * for appending and removing values.
-	 * - `Type.IPlayer.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IPlayer.`
 	 */
 	variable: string | number | any[],
 	/**
 	 * Variable - Variable specified by a single
 	 * alphabetic letter (A through Z).
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	operation: string | number | any[],
 	/**
@@ -33,8 +30,7 @@ export const modifyPlayerVariable = (
 	 * variable’s existing value. For array operations,
 	 * this is the value to append or remove. Various
 	 * Value Syntax can be used.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

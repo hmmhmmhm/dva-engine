@@ -10,8 +10,7 @@ export const setDamageReceived = (
 	 * Player - The player or players whose damage
 	 * received will be set. Can use most Player
 	 * based Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -19,8 +18,7 @@ export const setDamageReceived = (
 	 * of raw damage received to which the player
 	 * or players will set their damage received.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	damageReceivedPercent: string | number | any[]
 ) => {

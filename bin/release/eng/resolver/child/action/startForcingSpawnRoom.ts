@@ -8,8 +8,7 @@ export const startForcingSpawnRoom = (
 	/**
 	 * Team - The team whose spawn room will be
 	 * forced. Can use most Team based Value Syntax.
-	 * - `Type.Team.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Team.`
 	 */
 	team: string | number | any[],
 	/**
@@ -19,8 +18,7 @@ export const startForcingSpawnRoom = (
 	 * specified spawn room does not exist. Players
 	 * will use the normal spawn room. Can use
 	 * most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	room: string | number | any[]
 ) => {

@@ -6,20 +6,17 @@
 export const vector = (
 	/**
 	 * 벡터의 X 값입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	x: string | number | any[],
 	/**
 	 * 벡터의 Y 값입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	y: string | number | any[],
 	/**
 	 * 벡터의 Z 값입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	z: string | number | any[]
 ): number => {

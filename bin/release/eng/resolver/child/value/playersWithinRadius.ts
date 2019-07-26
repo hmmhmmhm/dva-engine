@@ -8,8 +8,7 @@ export const playersWithinRadius = (
 	 * Center - The center position from which
 	 * to measure distance. Can use most Vector
 	 * based Value Syntax to provide this value.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	center: string | number | any[],
 	/**
@@ -17,8 +16,7 @@ export const playersWithinRadius = (
 	 * players must be in order to be included
 	 * in the resulting array. Can use most Number
 	 * based Value Syntax to provide this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	radius: string | number | any[],
 	/**
@@ -26,8 +24,7 @@ export const playersWithinRadius = (
 	 * must belong to be included in the resulting
 	 * array. Can use most Team based Value Syntax
 	 * to provide this value.
-	 * - `Type.Team.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Team.`
 	 */
 	team: string | number | any[],
 	/**
@@ -50,8 +47,7 @@ export const playersWithinRadius = (
 	 * line of sight is blocked by ceilings, walls,
 	 * floors, platforms, any fixed object that
 	 * blocks projectiles, and all barriers.
-	 * - `Type.LosCheck.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.LosCheck.`
 	 */
 	losCheck: string | number | any[]
 ): any[] => {

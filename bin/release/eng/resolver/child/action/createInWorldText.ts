@@ -11,16 +11,14 @@ export const createInWorldText = (
 	 * Visible to - One or more players who will
 	 * see the HUD text. Can use most Value Syntax
 	 * to select one or multiple players.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
 	 * Header - The header text to be displayed
 	 * (can be blank). Can use most String based
 	 * Value Syntax to populate.
-	 * - `Type.String.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.String.`
 	 */
 	header: string | number | any[],
 	/**
@@ -29,30 +27,26 @@ export const createInWorldText = (
 	 * above the player’s head. Otherwise, the
 	 * value is interpreted as a position in the
 	 * world. Can use most Player or Vector based Value Syntax.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
 	 * Scale - The text’s scale. Can use most Number
 	 * based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	scale: string | number | any[],
 	/**
 	 * Clipping - Specifies whether the text can
 	 * be seen through walls or is instead clipped.
-	 * - `Type.Clipping.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Clipping.`
 	 */
 	clipping: string | number | any[],
 	/**
 	 * Clip Against Surfaces - The text may be
 	 * partially or completely obscured by walls,
 	 * floors, ceilings, players, or other solid objects.
-	 * - `Type.InWorldTextReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.InWorldTextReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

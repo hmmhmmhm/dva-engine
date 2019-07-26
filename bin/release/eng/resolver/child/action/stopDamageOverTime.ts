@@ -9,8 +9,7 @@ export const stopDamageOverTime = (
 	 * be the last damage over time ID or a variable
 	 * into which last damage over time ID was
 	 * earlier stored. Can use most Number based Value Syntax.
-	 * - `Type.DamageOverTime.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.DamageOverTime.`
 	 */
 	damageOverTimeId: string | number | any[]
 ) => {

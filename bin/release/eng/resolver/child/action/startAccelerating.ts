@@ -7,8 +7,7 @@ export const startAccelerating = (
 	 * Player - The player or players that will
 	 * begin accelerating. Can use most Player
 	 * based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -16,8 +15,7 @@ export const startAccelerating = (
 	 * the acceleration will be applied. This value
 	 * is normalized internally. Can use most Vector
 	 * based Value Syntax to specify.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	direction: string | number | any[],
 	/**
@@ -26,8 +24,7 @@ export const startAccelerating = (
 	 * to be quite high in order to overcome gravity
 	 * and/or surface friction. Can use most Number
 	 * based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	rate: string | number | any[],
 	/**
@@ -36,23 +33,20 @@ export const startAccelerating = (
 	 * may not be possible to reach this speed
 	 * due to gravity and/or surface friction.
 	 * Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	maxSpeed: string | number | any[],
 	/**
 	 * Relative - Specifies whether direction is
 	 * relavtive to the world coordinates or the
 	 * local coordinates of the player or players.
-	 * - `Type.Relative.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Relative.`
 	 */
 	relative: string | number | any[],
 	/**
 	 * Player - The player or players who will
 	 * start turning. Can use most Player based Value Syntax.
-	 * - `Type.StartAcceleratingReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.StartAcceleratingReevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

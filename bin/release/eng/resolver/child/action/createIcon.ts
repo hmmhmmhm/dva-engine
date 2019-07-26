@@ -12,8 +12,7 @@ export const createIcon = (
 	 * above the player’s head, otherwise, the
 	 * value is interpreted as a position in the
 	 * world. Can use most Player or Vector based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
@@ -25,8 +24,7 @@ export const createIcon = (
 	 * Poison 2, Question Mark, Radioactive, Recycle,
 	 * Ring Thick, Ring Thin, Sad, Skull, Spade,
 	 * Spiral, Stop, Trashcan, Warning, X)
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
@@ -42,16 +40,14 @@ export const createIcon = (
 	 * Recycle, Ring Thick, Ring Thin, Sad, Skull,
 	 * Spade, Spiral, Stop, Trashcan, Warning,
 	 * X, Visible to and position, Position, Visible to, None)
-	 * - `Type.Icon.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Icon.`
 	 */
 	icon: string | number | any[],
 	/**
 	 * Visible to - One or more players who will
 	 * be able to see the icon. Can use most Value
 	 * Syntax to select one or multiple players.
-	 * - `Type.IconReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IconReevaluation.`
 	 */
 	reevaluation: string | number | any[],
 	/**
@@ -68,16 +64,14 @@ export const createIcon = (
 	 * Sad, Skull, Spade, Spiral, Stop, Trashcan,
 	 * Warning, X, Visible to and position, Position,
 	 * Visible to, None)
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	iconColor: string | number | any[],
 	/**
 	 * Show when offscreen - Should this icon still
 	 * appear even when it is behind you? Can use
 	 * most Boolean based Value Syntax to specify.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	showWhenOffscreen: string | number | any[]
 ) => {

@@ -12,8 +12,7 @@ export const objectivePosition = (
 	 * as its own index. Can use most Number based
 	 * Value Syntax to provide this value, but
 	 * must output in a integer of 0, 1, or 2.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	number: string | number | any[]
 ): number => {

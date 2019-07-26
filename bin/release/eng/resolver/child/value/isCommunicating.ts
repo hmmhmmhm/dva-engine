@@ -7,8 +7,7 @@ export const isCommunicating = (
 	 * Player - The player whose communication
 	 * status to check. Can use most player based
 	 * Value Syntax to retrieve this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -20,8 +19,7 @@ export const isCommunicating = (
 	 * four voice lines slots, or any standard
 	 * communication (Need healing, Ultimate Status,
 	 * etc.) can be designated.
-	 * - `Type.Communication.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Communication.`
 	 */
 	type: string | number | any[]
 ) => {

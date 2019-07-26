@@ -8,8 +8,7 @@ export const sortedArray = (
 	 * Array - The array whose copy will be sorted.
 	 * Can use most Array based Value Syntax to
 	 * provide this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
@@ -20,8 +19,7 @@ export const sortedArray = (
 	 * to reference the element of the array currently
 	 * being considered. Can use most Number based
 	 * Value Syntax to provide this value.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	valueRank: string | number | any[]
 ): any[] => {

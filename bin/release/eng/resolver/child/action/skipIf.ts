@@ -9,16 +9,14 @@ export const skipIf = (
 	 * Number of actions - The number of action
 	 * to skip, not including this action. Can
 	 * use most Number based Value Syntax.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	condition: string | number | any[],
 	/**
 	 * Condition - Specifies whether the loop will
 	 * occur. Can use most Conditional based Value
 	 * Syntax for this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	numberOfActions: string | number | any[]
 ) => {

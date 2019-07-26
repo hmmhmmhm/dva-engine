@@ -5,14 +5,12 @@
 export const arctangentInRadians = (
 	/**
 	 * Numerator - Numerator input for the function.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	numerator: string | number | any[],
 	/**
 	 * Denominator - Denominator input for the function.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	denominator: string | number | any[]
 ): number => {

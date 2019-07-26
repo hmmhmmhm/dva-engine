@@ -8,22 +8,19 @@ export const vector = (
 	/**
 	 * X - The X value of the Vector. Can use most
 	 * Number based Value Syntax to provide this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	x: string | number | any[],
 	/**
 	 * Y - The Y value of the vector. Can use most
 	 * Number based Value Syntax to provide this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	y: string | number | any[],
 	/**
 	 * Z - The Z value of the Vector. Can use most
 	 * Number based Value Syntax to provide this value.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	z: string | number | any[]
 ): number => {

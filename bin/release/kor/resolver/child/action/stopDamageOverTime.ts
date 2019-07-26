@@ -8,8 +8,7 @@ export const stopDamageOverTime = (
 	 * 여기에 사용되는 ID는 LAST DAMAGE MODIFICATION ID이거나,
 	 * 이전에 LAST DAMAGE MODIFICATION ID가
 	 * 저장되었던 변수일 수 있습니다.
-	 * - `Type.DamageOverTime.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.DamageOverTime.`
 	 */
 	damageOverTimeId: string | number | any[]
 ) => {

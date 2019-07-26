@@ -5,8 +5,7 @@ export const teleport = (
 	/**
 	 * Player - The player or players to teleport.
 	 * Can use most Player based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -14,8 +13,7 @@ export const teleport = (
 	 * or players will teleport. If a player is
 	 * providedm the position of the player is
 	 * used. Can use most Vector based Value Syntax.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[]
 ) => {

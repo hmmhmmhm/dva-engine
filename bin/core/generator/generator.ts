@@ -211,10 +211,9 @@ export default ({
                                  * `Insert Propertie Type Reference By JSDoc`
                                  */
                                 let typescriptTypeList = ['number']
-                                if(typescriptTypeList.indexOf(propertieTypeName) == -1){
-                                    propertiesDescription += `\t * - \`Type.${propertieTypeName}.\` 를 입력하면 \n`
-                                    propertiesDescription += `\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
-                                }
+                                if(typescriptTypeList.indexOf(propertieTypeName) == -1)
+                                    propertiesDescription += `\t * - \`Type.${propertieTypeName}.\`\n`
+
                                 propertiesDescription += '\t */\n'
                                 valueProperties += propertiesDescription
     

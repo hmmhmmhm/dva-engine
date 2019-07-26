@@ -9,8 +9,7 @@ export const setStatus = (
 	 * Player - The player or players to whom the
 	 * status will be applied. Can use most Player
 	 * based Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -20,8 +19,7 @@ export const setStatus = (
 	 * in effect. An assister of null indicates
 	 * no player will receive credit. Can use most
 	 * Player based Value Syntax for this value.
-	 * - `Type.AssisterParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.AssisterParam.`
 	 */
 	assister: string | number | any[],
 	/**
@@ -31,8 +29,7 @@ export const setStatus = (
 	 * Values include Hacked, Burning, Knocked
 	 * Down, Asleep, Frozen, Unkillable, Invincible,
 	 * Phased Out, Rooted, or Stunned.
-	 * - `Type.Status.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Status.`
 	 */
 	status: string | number | any[],
 	/**
@@ -41,8 +38,7 @@ export const setStatus = (
 	 * until a clear status action is executed,
 	 * proivide an arbitrarily long duration such
 	 * as 9999. Can use most Number based Value Syntax.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	duration: string | number | any[]
 ) => {

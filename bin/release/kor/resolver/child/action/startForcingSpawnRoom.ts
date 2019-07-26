@@ -9,8 +9,7 @@ export const startForcingSpawnRoom = (
 	/**
 	 * 전투준비실을
 	 * 강제할 팀입니다.
-	 * - `Type.Team.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Team.`
 	 */
 	team: string | number | any[],
 	/**
@@ -20,8 +19,7 @@ export const startForcingSpawnRoom = (
 	 * 지정된 방이 존재하지 않는 경우,
 	 * 모든 플레이어는 일반
 	 * 전투준비실을 사용합니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	room: string | number | any[]
 ) => {

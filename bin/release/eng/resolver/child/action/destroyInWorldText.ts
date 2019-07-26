@@ -8,8 +8,7 @@ export const destroyInWorldText = (
 	 * of text created by the event player (or
 	 * created at the global level) via the create
 	 * hud text or create in-world text action.
-	 * - `Type.Text.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Text.`
 	 */
 	textId: string | number | any[]
 ) => {

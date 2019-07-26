@@ -10,8 +10,7 @@ export const stopDamageModification = (
 	 * or a variable into which last damage modification
 	 * ID was earlier stored. Can use most Number
 	 * based Value Syntax.
-	 * - `Type.DamageModification.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.DamageModification.`
 	 */
 	damageModificationId: string | number | any[]
 ) => {

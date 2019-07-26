@@ -5,8 +5,7 @@
 export const declareRoundVictory = (
 	/**
 	 * 라운드에서 승리한 팀입니다.
-	 * - `Type.Team.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Team.`
 	 */
 	roundWinningTeam: string | number | any[]
 ) => {

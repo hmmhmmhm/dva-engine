@@ -10,8 +10,7 @@ export const setPlayerAllowedHeroes = (
 	 * Player - The player or players whose hero
 	 * list is being set. Can use most Player based
 	 * Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -19,8 +18,7 @@ export const setPlayerAllowedHeroes = (
 	 * If no heroes are provided, the action has
 	 * no effect. Can use most Hero based Value
 	 * Syntax for this value including compatible Arrays.
-	 * - `Type.Hero.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Hero.`
 	 */
 	hero: string | number | any[]
 ) => {

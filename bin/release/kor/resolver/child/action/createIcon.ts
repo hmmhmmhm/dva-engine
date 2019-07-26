@@ -9,8 +9,7 @@
 export const createIcon = (
 	/**
 	 * 아이콘을 볼 수 있는 플레이어입니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	visibleTo: string | number | any[],
 	/**
@@ -20,14 +19,12 @@ export const createIcon = (
 	 * 플레이어 머리 위에 표시되고,
 	 * 그 이외의 경우 이 값은
 	 * 월드 내의 위치로 해석됩니다.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
 	 * 생성할 아이콘입니다.
-	 * - `Type.Icon.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Icon.`
 	 */
 	icon: string | number | any[],
 	/**
@@ -35,8 +32,7 @@ export const createIcon = (
 	 * 지속적으로 재확인할 것인지 지정합니다.
 	 * 해당 액션은 입력 정보의 새로운 값을
 	 * 계속 묻게 되며, 재확인한 값을 사용합니다.
-	 * - `Type.IconReevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.IconReevaluation.`
 	 */
 	reevaluation: string | number | any[],
 	/**
@@ -45,16 +41,14 @@ export const createIcon = (
 	 * 해당 팀이 보는 사람에게 적인지
 	 * 여부에 따라 빨강 또는 파랑으로
 	 * 효과 색상이 설정됩니다.
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	iconColor: string | number | any[],
 	/**
 	 * 이 아이콘이
 	 * 플레이어 뒤에 있어도
 	 * 표시되도록 하시겠습니까?
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	showWhenOffscreen: string | number | any[]
 ) => {

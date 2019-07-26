@@ -7,8 +7,7 @@ export const not = (
 	 * to false), then the not value is true. Otherwise,
 	 * the not value is false. Can use most Boolean-based
 	 * Value Syntax to provide this value.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	value: string | number | any[]
 ) => {

@@ -4,15 +4,13 @@
 export const appendToArray = (
 	/**
 	 * 덧붙일 대상 배열입니다.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	array: string | number | any[],
 	/**
 	 * 배열 후미에 덧붙일 값입니다.
 	 * 이 값 자체가 배열인 경우 각 요소를 덧붙입니다.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

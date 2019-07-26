@@ -6,14 +6,12 @@ export const setGlobalVariable = (
 	/**
 	 * 어느 전역 변수에
 	 * 값을 저장할지 지정합니다.
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	variable: string | number | any[],
 	/**
 	 * 저장할 값입니다.
-	 * - `Type.Value.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Value.`
 	 */
 	value: string | number | any[]
 ) => {

@@ -9,16 +9,14 @@ export const stopChasingPlayerVariable = (
 	 * 플레이어가 다수인 경우,
 	 * 각각의 변수는
 	 * 변경되지 않습니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
 	 * 수정을 중지할
 	 * 플레이어의 변수를
 	 * 지정합니다.
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	variable: string | number | any[]
 ) => {

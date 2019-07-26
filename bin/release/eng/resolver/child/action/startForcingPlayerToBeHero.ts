@@ -11,16 +11,14 @@ export const startForcingPlayerToBeHero = (
 	 * Player - The player or players who will
 	 * be forced to be a specified hero. Can use
 	 * most Player based Value Syntax.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
 	 * Hero - The hero that the player or players
 	 * will be forced to be. Can use most Hero
 	 * based Value Syntax.
-	 * - `Type.Hero.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Hero.`
 	 */
 	hero: string | number | any[]
 ) => {

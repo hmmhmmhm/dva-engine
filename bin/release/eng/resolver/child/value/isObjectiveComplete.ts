@@ -11,8 +11,7 @@ export const isObjectiveComplete = (
 	 * has its own index. Can use most number based
 	 * Value Syntax to retrieve this value. Value
 	 * must be in the form of an integer (whole number).
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	number: string | number | any[]
 ) => {

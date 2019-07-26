@@ -9,8 +9,7 @@ export const rayCastHitPlayer = (
 	 * 2 meters above the player’s feet is used.
 	 * Can use most Vector based Value Syntax to
 	 * provide this value.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	startPos: string | number | any[],
 	/**
@@ -18,16 +17,14 @@ export const rayCastHitPlayer = (
 	 * If a player is provided. A position 2 meters
 	 * above the player’s feet is used. Can use
 	 * most Vector based Value Syntax to provide this value.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	endPos: string | number | any[],
 	/**
 	 * Players to include - Which players can be
 	 * hit by this ray cast. Can use most Player
 	 * based Value Syntax to provide this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	playersToInclude: string | number | any[],
 	/**
@@ -35,8 +32,7 @@ export const rayCastHitPlayer = (
 	 * be hit by this ray cast. This list takes
 	 * precedence over players to include. Can
 	 * use most Player based Value Syntax to provide this value.
-	 * - `Type.Array.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Array.`
 	 */
 	playersToExclude: string | number | any[],
 	/**
@@ -44,8 +40,7 @@ export const rayCastHitPlayer = (
 	 * owned objects (such as barriers or turrets)
 	 * should be included in the ray cast. Can
 	 * use most Boolean based Value Syntax to provide this value.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	IncludePlayerOwnedObjects: string | number | any[]
 ): number => {

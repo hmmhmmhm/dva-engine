@@ -7,8 +7,7 @@ export const setProjectileSpeed = (
 	/**
 	 * 투사체 속도를 설정할
 	 * 플레이어입니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -16,8 +15,7 @@ export const setProjectileSpeed = (
 	 * 비례하도록 설정할
 	 * 플레이어의 개인
 	 * 투사체 속도 비율입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	projectileSpeedPercent: string | number | any[]
 ) => {

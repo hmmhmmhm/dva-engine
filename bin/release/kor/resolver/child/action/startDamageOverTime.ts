@@ -13,8 +13,7 @@ export const startDamageOverTime = (
 	/**
 	 * DAMAGE OVER TIME을
 	 * 적용할 플레이어입니다.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -23,8 +22,7 @@ export const startDamageOverTime = (
 	 * DAMAGER가 NULL이면
 	 * 집계될 플레이어가
 	 * 없음을 의미합니다.
-	 * - `Type.AssisterParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.AssisterParam.`
 	 */
 	damager: string | number | any[],
 	/**
@@ -35,15 +33,13 @@ export const startDamageOverTime = (
 	 * 중지될 때까지 지속되게 하려면
 	 * 지속 시간을 매우 길게
 	 * 설정하십시오. (9999 등)
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	duration: string | number | any[],
 	/**
 	 * DAMAGE OVER TIME의
 	 * 초당 피해량입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	damagePerSecond: string | number | any[]
 ) => {

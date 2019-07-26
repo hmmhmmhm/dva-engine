@@ -6,14 +6,12 @@
 export const playEffect = (
 	/**
 	 * 해당 효과를 보게 될 플레이어입니다.
-	 * - `Type.PlayersParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.PlayersParam.`
 	 */
 	visibleTo: string | number | any[],
 	/**
 	 * 생성할 효과의 유형입니다.
-	 * - `Type.Play.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Play.`
 	 */
 	type: string | number | any[],
 	/**
@@ -23,8 +21,7 @@ export const playEffect = (
 	 * 적인지 여부에 따라
 	 * 빨강 또는 파랑으로
 	 * 효과 색상이 설정됩니다.
-	 * - `Type.Color.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Color.`
 	 */
 	color: string | number | any[],
 	/**
@@ -34,14 +31,12 @@ export const playEffect = (
 	 * 위치에서 발생하고,
 	 * 그 이외의 경우 이 값은
 	 * 월드 좌표로서 해석됩니다.
-	 * - `Type.Vector.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Vector.`
 	 */
 	position: string | number | any[],
 	/**
 	 * 효과 반경(미터)입니다.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	radius: string | number | any[]
 ) => {

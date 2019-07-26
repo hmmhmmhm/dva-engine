@@ -7,8 +7,7 @@ export const chaseGlobalVariableAtRate = (
 	/**
 	 * Variable - The variable the action will
 	 * manipulate. Can use most Variable based Value Syntax.
-	 * - `Type.Variable.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Variable.`
 	 */
 	variable: string | number | any[],
 	/**
@@ -19,24 +18,21 @@ export const chaseGlobalVariableAtRate = (
 	 * value must be of the same type before the
 	 * chase begins. Can use most Number or Vector
 	 * based Value Syntax to specify.
-	 * - `Type.DestinationParam.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.DestinationParam.`
 	 */
 	destination: string | number | any[],
 	/**
 	 * Player - The player whose variable will
 	 * gradually change. If multiple players are
 	 * provided, each of their variables will change independently.
-	 * - `Type.Number.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Number.`
 	 */
 	rate: string | number | any[],
 	/**
 	 * Visible to - One or more players who will
 	 * be able to see the icon. Can use most Value
 	 * Syntax to select one or multiple players.
-	 * - `Type.Reevaluation.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Reevaluation.`
 	 */
 	reevaluation: string | number | any[]
 ) => {

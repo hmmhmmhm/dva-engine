@@ -5,8 +5,7 @@
 export const entityExists = (
 	/**
 	 * 존재를 확인할 플레이어, 아이콘 개체 또는 효과 개체입니다.
-	 * - `Type.Entity.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Entity.`
 	 */
 	entity: string | number | any[]
 ) => {

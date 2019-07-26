@@ -6,8 +6,7 @@ export const setAbility1Enabled = (
 	 * Player - The player or players whose access
 	 * to ability 1 is affected. Can use most Player
 	 * based Value Syntax for this value.
-	 * - `Type.Player.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Player.`
 	 */
 	player: string | number | any[],
 	/**
@@ -15,8 +14,7 @@ export const setAbility1Enabled = (
 	 * players are able to use ability 1. Expects
 	 * a Boolean Value such as True, False, or
 	 * Compare. Can use most Boolean based Value Syntax.
-	 * - `Type.Bool.` 를 입력하면 
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * - `Type.Bool.`
 	 */
 	enabled: string | number | any[]
 ) => {
