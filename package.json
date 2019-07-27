@@ -22,11 +22,12 @@
     "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
-    "start": "tsc-watch --onSuccess \"ts-node ./bin/core/transform/afterSuccess.ts\" --onFailure \"ts-node ./bin/core/transform/afterFail.ts\" --compiler ttypescript/bin/tsc",
-    "build": "ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
+    "start": "npm run update:silent && ts-node ./bin/core/transform/watch.ts",
+    "build": "npm run update:silent && ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
     "clean": "rm -rf ./dist",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "update": "ts-node ./bin/core/generator",
+    "update:silent": "ts-node ./bin/core/generator/initializer.ts",
     "update:rename": "ts-node ./bin/core/maintain/rename.ts",
     "language:extract": "ts-node ./bin/core/language/extractor",
     "language:reapply": "ts-node ./bin/core/language/reapply",
