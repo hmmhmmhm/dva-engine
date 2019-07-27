@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hmmhmmhm/overwatch-workshop-javascript.git"
+    "url": "git+https://github.com/hmmhmmhm/dva-engine.git"
   },
   "author": "hmmhmmhm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hmmhmmhm/overwatch-workshop-javascript/issues"
+    "url": "https://github.com/hmmhmmhm/dva-engine/issues"
   },
-  "homepage": "https://github.com/hmmhmmhm/overwatch-workshop-javascript#readme"
+  "homepage": "https://github.com/hmmhmmhm/dva-engine#readme"
 }
