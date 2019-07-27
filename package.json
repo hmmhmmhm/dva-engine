@@ -35,8 +35,7 @@
     "language:extract": "ts-node ./bin/core/language/extractor",
     "language:reapply": "ts-node ./bin/core/language/reapply",
     "language:inject": "ts-node ./bin/core/language/injector",
-    "parse:stage2": "ts-node ./bin/core/language/parse/make_stage2.ts",
-    "parse:stage3": "ts-node ./bin/core/language/parse/make_stage3.ts"
+    "language:parse": "ts-node ./bin/core/language/parse/stageRunner.ts"
   },
   "repository": {
     "type": "git",

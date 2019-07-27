@@ -2,7 +2,7 @@ import stage2 from './value_stage2.json'
 import additional from './value_stage3_additional.json'
 import values from './value_stage3_reference.json'
 import { writeFileSync } from 'fs'
-import { getLogger } from '../../generator/logger'
+import { getLogger } from '../../../generator/logger'
 import { splitter } from './make_stage2'
 
 let Logger = getLogger()

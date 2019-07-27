@@ -129,3 +129,4 @@ for(let value of values){
 }
 
 writeFileSync(`${__dirname}/value_stage2.json`, JSON.stringify(stage2, null, 2))
+console.log(`Finished`)
