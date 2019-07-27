@@ -4,11 +4,11 @@
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.6.1",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
+    "@types/node": "^12.6.8",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "async-sequencer": "^1.0.6",
-    "eslint": "^6.0.1",
+    "eslint": "^6.1.0",
     "folder-logger": "^1.0.4",
     "fs-extra": "^8.1.0",
     "nested-static": "^1.1.0",
@@ -22,8 +22,9 @@
     "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
-    "start": "npm run update:silent && ts-node ./bin/core/transform/watch.ts",
-    "build": "npm run update:silent && ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
+    "install": "node ./install.js",
+    "start": "npm run install && npm run update:silent && ts-node ./bin/core/transform/watch.ts",
+    "build": "npm run install && npm run update:silent && ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
     "clean": "rm -rf ./dist",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "update": "ts-node ./bin/core/generator",
