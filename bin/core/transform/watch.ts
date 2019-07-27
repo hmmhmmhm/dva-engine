@@ -7,6 +7,7 @@ import run from 'tsc-watch/lib/runner'
 import { manipulate, detectState, print } from 'tsc-watch/lib/stdout-manipulator'
 import { getLogger } from '../generator/logger'
 
+const onSuccessCommand = `ts-node "./bin/core/transform/afterSuccess.ts"`
 const Logger = getLogger()
 
 let firstTime = true
@@ -23,8 +24,6 @@ const killProcesses = (killAll) => {
   ])
 }
 
-const onSuccessCommand = `ts-node "./bin/core/transform/afterSuccess.ts"`
-
 const bin = require.resolve('ttypescript/bin/tsc')
 const tscProcess = spawn(bin, ['--watch'])
 
@@ -39,6 +38,7 @@ tscProcess.stdout.on('data', buffer => {
     if(isInit){
         Logger.debug(`D.VA ENGINE v${packageData.version}`)
         Logger.debug(`Please hold while first transpile.. Processing...`)
+        Logger.debug(`(First transpile can take a few seconds or minutes...)`)
     }
 
     const state = detectState(lines)

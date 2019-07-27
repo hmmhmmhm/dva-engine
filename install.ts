@@ -1,32 +1,18 @@
-`use strict`
-
 const cp = require(`child_process`)
 const fs = require(`fs`)
 const path = require(`path`)
 const EventEmitter = require(`events`)
 
 const events = new EventEmitter()
+let moduleCount
 
 /**
- * @description
  * The script installs all the modules listed
  * in packages.json and loads the program.
  * 
  * 이 스크립트는 packages.json 에 명시된 모듈들을
  * 모두 설치한 후 프로그램을 로드합니다.
  */
-let moduleCount
-
-const tempLogger = log => {
-    let now = new Date()
-    let timeFormat = String()
-    timeFormat += (String(now.getHours()).length > 1 ? now.getHours() : `0` + now.getHours())
-    timeFormat += `:` + (String(now.getMinutes()).length > 1 ? now.getMinutes() : `0` + now.getMinutes())
-    timeFormat += `:` + (String(now.getSeconds()).length > 1 ? now.getSeconds() : `0` + now.getSeconds()) + ``
-    let defaultFormat = String.fromCharCode(0x1b) + `[31;1m` + `[%time%] ` + String.fromCharCode(0x1b) + `[37;1m` + `%log%`
-    console.log(defaultFormat.replace(`%time%`, timeFormat).replace(`%log%`, log))
-}
-
 class ModuleInstaller {
     /**
      * @param {string} event
@@ -98,7 +84,7 @@ class ModuleInstaller {
      * @param {boolean} isNeedToPassVersionCheck
      * @return {boolean}
      */
-    static isModuleExist(packageName, sourceFolderPath, isNeedToPassVersionCheck) {
+    static isModuleExist(packageName, sourceFolderPath, isNeedToPassVersionCheck = undefined) {
         let packageList, packageVersion
 
         if (sourceFolderPath === undefined)
@@ -141,6 +127,12 @@ class ModuleInstaller {
     }
 
     /**
+     * If the node module is not ready then automatically
+     * download and install the node module and turn on the server.
+     * 
+     * 노드 모듈이 준비되어있지 않은 경우 노드모듈을
+     * 자동으로 다운로드 및 설치한 후 서버를 켭니다.
+     * 
      * @param {string} moduleName
      */
     static moduleInstall(moduleName) {
@@ -166,11 +158,11 @@ class ModuleInstaller {
         for (let key in require.cache) baseCache[key] = true
 
         for (let packageName in packageList.dependencies) {
-            if (!ModuleInstaller.isModuleExist(packageName, sourceFolderPath))
+            if (!ModuleInstaller.isModuleExist(packageName, sourceFolderPath, undefined))
                 notInstalledModules.push(packageName)
         }
         for (let packageName in packageList.devDependencies) {
-            if (!ModuleInstaller.isModuleExist(packageName, sourceFolderPath))
+            if (!ModuleInstaller.isModuleExist(packageName, sourceFolderPath, undefined))
                 notInstalledModules.push(packageName)
         }
         moduleCount = notInstalledModules.length;
@@ -179,13 +171,6 @@ class ModuleInstaller {
             if (!baseCache[key]) delete require.cache[key]
         baseCache = null
 
-        /**
-         * @description
-         * If the node module is not ready then automatically
-         * download and install the node module and turn on the server.
-         * 노드 모듈이 준비되어있지 않은 경우 노드모듈을
-         * 자동으로 다운로드 및 설치한 후 서버를 켭니다.
-         */
         if (notInstalledModules.length > 0) {
             events.emit(ModuleInstaller.INSTALL_START_EVENT, notInstalledModules)
             for(let moduleName of notInstalledModules){
@@ -205,7 +190,17 @@ class ModuleInstaller {
     static get START_CALLBACK_EVENT() { return `start_callback_event` }
 }
 
+const tempLogger = log => {
+    let now = new Date()
+    let timeFormat = String()
+    timeFormat += (String(now.getHours()).length > 1 ? now.getHours() : `0` + now.getHours())
+    timeFormat += `:` + (String(now.getMinutes()).length > 1 ? now.getMinutes() : `0` + now.getMinutes())
+    timeFormat += `:` + (String(now.getSeconds()).length > 1 ? now.getSeconds() : `0` + now.getSeconds()) + ``
+    let defaultFormat = String.fromCharCode(0x1b) + `[31;1m` + `[%time%] ` + String.fromCharCode(0x1b) + `[37;1m` + `%log%`
+    console.log(defaultFormat.replace(`%time%`, timeFormat).replace(`%log%`, log))
+}
+
 module.exports = ModuleInstaller
 
 if(`${process.argv[1]}` == __filename)
-    ModuleInstaller.automatic()
+    ModuleInstaller.automatic(undefined)

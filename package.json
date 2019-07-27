@@ -22,10 +22,10 @@
     "typescript-json-schema": "^0.38.3"
   },
   "scripts": {
-    "install": "node ./install.js",
+    "install": "node ./install.ts",
     "start": "npm run install && npm run update:silent && ts-node ./bin/core/transform/watch.ts",
     "build": "npm run install && npm run update:silent && ttsc && ts-node ./bin/core/transform/afterSuccess.ts",
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./dist && rm -rf ./bin/dist && rm -rf ./bin/release",
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "update": "ts-node ./bin/core/generator",
     "update:silent": "ts-node ./bin/core/generator/initializer.ts",
