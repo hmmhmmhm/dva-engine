@@ -185,12 +185,13 @@ export const RenameUpdater = async (targetName: string, fixName: string, debugMo
     let isJSON2_Changed = false
     for(let type1Name of Object.keys(reformerData)){
         for(let type2Name of Object.keys(reformerData[type1Name])){
+
             let valueArray: string[] = reformerData[type1Name][type2Name]
             let newValueArray: string[] = []
 
             if(Array.isArray(valueArray)){
                 for(let valueItem of valueArray){
-                    let filters = fixFilter(type2Name)
+                    let filters = fixFilter(valueItem)
 
                     if(filters.length == 0){
                         newValueArray.push(valueItem)
@@ -206,10 +207,13 @@ export const RenameUpdater = async (targetName: string, fixName: string, debugMo
                         newValueArray.push(newValueItem)
                     }
                 }
+
+                reformerData[type1Name][type2Name] = newValueArray
             }
         }
     }
     if(!debugMode && isJSON2_Changed) writeFileSync(reformerDataPath, JSON.stringify(reformerData, null, 2))
+
     Logger.debug('------------------------LOG ENDED----------------------------')
     if(!debugMode){
         Logger.debug(`The changes were applied to the file.`)
@@ -230,6 +234,7 @@ export interface INameMap {
 }
 
 export const NameMapGenerator = (camelCase: string) => {
+    
     let pascalCase = camelCaseToPascalCase(camelCase)
     let upperCase = pascalCase.toUpperCase()
     let interfaceName = `I${pascalCase.split(' ').join('')}`

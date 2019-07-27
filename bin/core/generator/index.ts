@@ -5,7 +5,7 @@ import { getLogger } from './logger'
 export const Generator = async (
     langs = [
         `kor`,
-        `eng`
+        `eng`,
     ]
 ) => {
     /**

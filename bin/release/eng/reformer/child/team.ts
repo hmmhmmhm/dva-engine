@@ -4,8 +4,7 @@ class Team {
 	public team: string
 
 	/**
-	 * @param team `Type.Team.` 를 입력하면
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * @param team `Type.Team.`
 	 */
 	constructor(team: string){
 		this.team = team
@@ -27,8 +26,7 @@ class Team {
 		/**
 		 * Hero - The hero to check for play. Can use
 		 * most Hero based Value Syntax to provide this value.
-		 * - `Type.Hero.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Hero.`
 		 */
 		hero: string
 	){
@@ -66,8 +64,7 @@ class Team {
 		/**
 		 * Hero - The hero to check for play. Can use
 		 * most Hero based Value Syntax to provide this value.
-		 * - `Type.Hero.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Hero.`
 		 */
 		hero: string
 	){
@@ -115,8 +112,7 @@ class Team {
 		 * games, slots are numbered 0 through 11.
 		 * Can use most Number based Value Syntax to
 		 * provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		slot: string
 	){
@@ -131,8 +127,7 @@ class Team {
 		/**
 		 * Hero - The hero to check for play. Can use
 		 * most Hero based Value Syntax to provide this value.
-		 * - `Type.Hero.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Hero.`
 		 */
 		hero: string
 	){
@@ -145,24 +140,6 @@ class Team {
 	 */
 	teamScore(){
 		return Value.teamScore(this.team)
-	}
-
-	/**
-	 * The team that is currently accumulating
-	 * score percentage in control mode Results
-	 * in all if neither team is accumulating score.
-	 */
-	static ControlModeScoringTeam(){
-		return Value.controlModeScoringTeam()
-	}
-
-	/**
-	 * The team that is currently accumulating
-	 * score percentage in control mode Results
-	 * in all if neither team is accumulating score.
-	 */
-	controlModeScoringTeam(){
-		return Value.controlModeScoringTeam()
 	}
 
 	/**

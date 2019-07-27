@@ -4,8 +4,7 @@ class Player {
 	public player: string
 
 	/**
-	 * @param player `Type.Player.` 를 입력하면
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * @param player `Type.Player.`
 	 */
 	constructor(player: string = Type.Player.eventPlayer()){
 		this.player = player
@@ -26,14 +25,12 @@ class Player {
 	closestPlayerTo(
 		/**
 		 * 거리를 측정할 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
 		 * 가장 가까이 있는 플레이어가 소속된 팀입니다.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string
 	){
@@ -63,14 +60,12 @@ class Player {
 	farthestPlayerFrom(
 		/**
 		 * 거리 측정을 위한 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
 		 * 가장 멀리 떨어진 플레이어가 소속된 팀입니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		team: string
 	){
@@ -84,8 +79,7 @@ class Player {
 	hasStatus(
 		/**
 		 * 확인할 상태입니다.
-		 * - `Type.Status.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Status.`
 		 */
 		status: string
 	){
@@ -113,8 +107,7 @@ class Player {
 		/**
 		 * 황축각(단위: 도)정보를 가져올 방향 벡터입니다.
 		 * 이 벡터는 연산 전에 단위 벡터로 정규화됩니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){
@@ -152,8 +145,7 @@ class Player {
 	isButtonHeld(
 		/**
 		 * 확인할 버튼입니다.
-		 * - `Type.Button.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Button.`
 		 */
 		button: string
 	){
@@ -172,8 +164,7 @@ class Player {
 		 * 음성 대사의 지속 시간은 4초로 간주합니다.
 		 * 
 		 * 그 이외의 지속 시간은 2초로 간주합니다.
-		 * - `Type.Communication.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Communication.`
 		 */
 		type: string
 	){
@@ -194,8 +185,13 @@ class Player {
 	isCommunicatingAnyEmote(){
 		return Value.isCommunicatingAnyEmote(this.player)
 	}
-	isCommunicatingVoiceLine(){
-		return Value.isCommunicatingVoiceLine()
+
+	/**
+	 * 플레이어가 음성 대사를 사용하는지 여부입니다.
+	 * (음성 대사의 지속 시간은 4초로 추정)
+	 */
+	isCommunicatingAnyVoiceLine(){
+		return Value.isCommunicatingAnyVoiceLine(this.player)
 	}
 
 	/**
@@ -346,8 +342,7 @@ class Player {
 	playerClosestToReticle(
 		/**
 		 * 가장 가까운 플레이어를 검색할 팀입니다.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string
 	){
@@ -362,14 +357,12 @@ class Player {
 	playersInViewAngle(
 		/**
 		 * 플레이어를 고려할 팀입니다.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string,
 		/**
 		 * 비교 대상인 VIEW ANGLE(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		viewAngle: string
 	){
@@ -406,8 +399,7 @@ class Player {
 	speedOfInDirection(
 		/**
 		 * 플레이어의 속도를 측정할 이동 방향입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){
@@ -457,8 +449,7 @@ class Player {
 	verticalAngleTowards(
 		/**
 		 * 각 각이 종료되는 월드 내 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){

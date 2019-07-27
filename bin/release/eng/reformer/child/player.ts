@@ -4,8 +4,7 @@ class Player {
 	public player: string
 
 	/**
-	 * @param player `Type.Player.` 를 입력하면
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * @param player `Type.Player.`
 	 */
 	constructor(player: string = Type.Player.eventPlayer()){
 		this.player = player
@@ -29,16 +28,14 @@ class Player {
 		 * Center - The position to which to measure
 		 * proximity. Can use most Value Syntax related
 		 * to reporting a position in the map.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
 		 * Team - You can specify any Team Syntax to
 		 * restrict which players is reported when
 		 * defining this value.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string
 	){
@@ -72,16 +69,14 @@ class Player {
 		 * Center - The position to which to measure
 		 * proximity. Can use most Value Syntax related
 		 * to reporting a position in the map.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
 		 * Team - You can specify any Team Syntax to
 		 * restrict which players is reported when
 		 * defining this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		team: string
 	){
@@ -99,8 +94,7 @@ class Player {
 		 * include Hacked, Burning, Knocked Down, Asleep,
 		 * Frozen, Unkillable, Invincible, Phased Out,
 		 * Rooted, or Stunned.
-		 * - `Type.Status.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Status.`
 		 */
 		status: string
 	){
@@ -133,8 +127,7 @@ class Player {
 		 * The vector is unitized before calculation
 		 * begins. Can use most Vector based Value
 		 * Syntax to retrieve this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){
@@ -177,8 +170,7 @@ class Player {
 		 * any action inputs by ability but not directional
 		 * inputs. (i.e. Primary Fire, Secondary Fire,
 		 * Ultimate Ability, Jump, Crouch, etc.)
-		 * - `Type.Button.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Button.`
 		 */
 		button: string
 	){
@@ -199,8 +191,7 @@ class Player {
 		 * four voice lines slots, or any standard
 		 * communication (Need healing, Ultimate Status,
 		 * etc.) can be designated.
-		 * - `Type.Communication.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Communication.`
 		 */
 		type: string
 	){
@@ -221,8 +212,14 @@ class Player {
 	isCommunicatingAnyEmote(){
 		return Value.isCommunicatingAnyEmote(this.player)
 	}
-	isCommunicatingVoiceLine(){
-		return Value.isCommunicatingVoiceLine()
+
+	/**
+	 * Whether a player is using a voice line.
+	 * (The duration of a voice line is assumed
+	 * to be 4 seconds.)
+	 */
+	isCommunicatingAnyVoiceLine(){
+		return Value.isCommunicatingAnyVoiceLine(this.player)
 	}
 
 	/**
@@ -382,8 +379,7 @@ class Player {
 		 * Team - The team or teams on which to search
 		 * for the closest player. Can use most Team
 		 * based Value Syntax to provide this value.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string
 	){
@@ -400,16 +396,14 @@ class Player {
 		 * View Angle - The view angle to compare against
 		 * in degrees. Can use most Angle based Value
 		 * Syntax to provide this value.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string,
 		/**
 		 * Team - The team or teams on which to consider
 		 * players. Can use most Team based Value Syntax
 		 * to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		viewAngle: string
 	){
@@ -447,8 +441,7 @@ class Player {
 		 * Direction - The direction of travel in which
 		 * to measure the player’s speed. Can use most
 		 * Vector based Value Syntax to provide this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){
@@ -502,8 +495,7 @@ class Player {
 		 * Position - The player whose current facing
 		 * the angle begins. Can use most Player based
 		 * Value Syntax to provide this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){

@@ -2,7 +2,6 @@ import { Sequence } from 'async-sequencer'
 import { IData } from './interface'
 import * as Util from './util'
 
-import reformerData from './reformerData.json'
 import rimraf from 'rimraf'
 import fs from 'fs'
 
@@ -14,6 +13,9 @@ import fs from 'fs'
  */
 export default () => {
     return Sequence(async ({resolve, reject, data: preData})=>{
+
+        // IF USING REQUIRE, IT'LL BE MAKES CONFLICT.
+        let reformerData = JSON.parse(String(fs.readFileSync(`${__dirname}/reformerData.json`)))
 
         // Generator Data
         let data: IData = preData
@@ -27,7 +29,7 @@ export default () => {
             reject()
             return
         }
-        
+
         // Create child resolver folder
         data.reformerPath = `${process.cwd()}/bin/release/${data.lang}/reformer/child/`
         try{ rimraf.sync(data.reformerPath) } catch(e){}
@@ -46,8 +48,7 @@ export default () => {
             reformCode += `\tpublic ${interfaceType}: string\n\n`
 
             reformCode += `\t/**\n`
-            reformCode += `\t * @param ${interfaceType} \`Type.${interfaceTypePascalCase}.\` 를 입력하면\n`
-            reformCode += `\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
+            reformCode += `\t * @param ${interfaceType} \`Type.${interfaceTypePascalCase}.\`\n`
             reformCode += `\t */\n`
 
             // Write Constructor Init
@@ -57,6 +58,7 @@ export default () => {
 
             reformCode += `\tconstructor(${interfaceType}: string${constructorInit}){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
 
+            // ?
             if(typeof reformerData[interfaceType]['independent'] != 'undefined')
                 reformerData[interfaceType]['dependent'] = 
                     reformerData[interfaceType]['dependent'].concat(reformerData[interfaceType]['independent'])
@@ -132,13 +134,12 @@ export default () => {
                             if(typeof data.interfaces[interfaceName].properties[propertieName]['$ref'] != 'undefined'){
                                 let notUniqueInterface = data.interfaces[interfaceName].properties[propertieName]
                                 let propertieTypeName = String(notUniqueInterface.$ref).split('#/definitions/')[1]
-    
+
                                 /**
                                  * Convert Type Name `ValueArrayType` To `Array`
                                  */
                                 propertieTypeName = Util.pureTypeNameExtractor(propertieTypeName)
-                                propertiesCode += `\t\t * - \`Type.${propertieTypeName}.\` 를 입력하면 \n`
-                                propertiesCode += `\t\t *   여기서 사용 가능한 함수를 확인할 수 있습니다.\n`
+                                propertiesCode += `\t\t * - \`Type.${propertieTypeName}.\`\n`
                             }
                             propertiesCode += `\t\t */\n`
                         }
@@ -164,12 +165,15 @@ export default () => {
                     dependentPascalCase[0] = dependentPascalCase[0].toUpperCase()
                     dependentPascalCase = dependentPascalCase.join('')
 
-                    reformCode += innerFunctionCode
-                        .replace('$$static$$', 'static ')
-                        .replace('$$dependent$$', `${dependentPascalCase}`)
-                    reformCode += innerFunctionCode
-                        .replace('$$static$$', '')
-                        .replace('$$dependent$$', `${dependent}`)
+                    reformCode += 
+                        (innerFunctionCode
+                            .replace('$$static$$', 'static ')
+                            .replace('$$dependent$$', `${dependentPascalCase}`))
+
+                    reformCode += 
+                        (innerFunctionCode
+                            .replace('$$static$$', '')
+                            .replace('$$dependent$$', `${dependent}`))
                 }else{
                     reformCode += innerFunctionCode
                         .replace('$$dependent$$', `${dependent}`)

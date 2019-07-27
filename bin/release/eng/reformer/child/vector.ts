@@ -4,8 +4,7 @@ class Vector {
 	public vector: string
 
 	/**
-	 * @param vector `Type.Vector.` 를 입력하면
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * @param vector `Type.Vector.`
 	 */
 	constructor(vector: string){
 		this.vector = vector
@@ -20,16 +19,14 @@ class Vector {
 		 * Vector - One of two directional vectors
 		 * between which to measure the angle in degrees.
 		 * this vector does not need to be pre-normalized.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		vector1: string,
 		/**
 		 * Vector - One of two directional vectors
 		 * between which to measure the angle in degrees.
 		 * this vector does not need to be pre-normalized.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		vector2: string
 	){
@@ -46,8 +43,7 @@ class Vector {
 		 * that will be converted to local coordinates.
 		 * Can use most Vector based Value Syntax to
 		 * provide this data.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		worldVector: string,
 		/**
@@ -55,16 +51,14 @@ class Vector {
 		 * that will be converted to world coordinates.
 		 * Can use most Vector based Value Syntax to
 		 * provide this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		relativePlayer: string,
 		/**
 		 * Relative Player - The player to whom the
 		 * local vector is relative. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Transformation.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Transformation.`
 		 */
 		transformation: string
 	){
@@ -83,8 +77,7 @@ class Vector {
 		 * rotation (usually applied to directions
 		 * and velocities). Can select rotation or
 		 * rotation and translation.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		localVector: string,
 		/**
@@ -92,16 +85,14 @@ class Vector {
 		 * that will be converted to world coordinates.
 		 * Can use most Vector based Value Syntax to
 		 * provide this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		relativePlayer: string,
 		/**
 		 * Relative Player - The player to whom the
 		 * local vector is relative. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Transformation.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Transformation.`
 		 */
 		transformation: string
 	){
@@ -119,22 +110,30 @@ class Vector {
 		/**
 		 * Angle - You can specify any Angle Syntax
 		 * to define both of the required values.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle1: string,
 		/**
 		 * Angle - One of the two angles between which
 		 * to measure the resulting angle.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle2: string
 	){
 		return Value.angleDifference(angle1, angle2)
 	}
-	acrossineInDegrees(){
-		return Value.acrossineInDegrees()
+
+	/**
+	 * Arccosine in degrees of the specified value.
+	 */
+	arccosineInDegrees(
+		/**
+		 * Value - Input value for the function.
+		 * - `Type.Number.`
+		 */
+		value: string
+	){
+		return Value.arccosineInDegrees(value)
 	}
 
 	/**
@@ -143,8 +142,7 @@ class Vector {
 	arccosineInRadians(
 		/**
 		 * Value - Input value for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -157,8 +155,7 @@ class Vector {
 	arcsineInDegrees(
 		/**
 		 * Value - Input value for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -171,8 +168,7 @@ class Vector {
 	arcsineInRadians(
 		/**
 		 * Value - Input value for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -186,14 +182,12 @@ class Vector {
 	arctangentInDegrees(
 		/**
 		 * Numerator - Numerator input for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		numerator: string,
 		/**
 		 * Denominator - Denominator input for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		denominator: string
 	){
@@ -207,14 +201,12 @@ class Vector {
 	arctangentInRadians(
 		/**
 		 * Numerator - Numerator input for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		numerator: string,
 		/**
 		 * Denominator - Denominator input for the function.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		denominator: string
 	){
@@ -231,8 +223,7 @@ class Vector {
 		/**
 		 * Angle - Angle in degrees. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -252,8 +243,7 @@ class Vector {
 		/**
 		 * Angle - Angle in radians. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -267,15 +257,13 @@ class Vector {
 		/**
 		 * Value - You must specify the first Value
 		 * Syntax to compare to the second.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value1: string,
 		/**
 		 * Value - You must specify the first Value
 		 * Syntax to compare to the second.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value2: string
 	){
@@ -291,16 +279,14 @@ class Vector {
 		 * Horizontal Angle - The horizontal angle
 		 * in degrees used to construct the resulting
 		 * vector. Most angle based Value Syntax can be used here.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		horizontalAngle: string,
 		/**
 		 * Vertical Angle - The vertical angle in degrees
 		 * used to construct the resulting vector.
 		 * Most angle based Value Syntax can be used here.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		verticalAngle: string
 	){
@@ -315,16 +301,14 @@ class Vector {
 		 * Start Pos - The position from which the
 		 * resulting direction vector will point. Most
 		 * positional based Value Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
 		 * End Pos - The position to which the resulting
 		 * direction vector will point. Most positional
 		 * based Value Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string
 	){
@@ -339,16 +323,14 @@ class Vector {
 		 * Start Pos - One of the two positions used
 		 * in the distance measurement. Most positional
 		 * based Value Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
 		 * End Pos - One of the two positions used
 		 * in the distance measurement. Most positional
 		 * based Value Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string
 	){
@@ -365,16 +347,14 @@ class Vector {
 		 * Value - One of the two vector operands of
 		 * the dot product. Any positional based Syntax
 		 * may be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value1: string,
 		/**
 		 * Value - One of the two vector operands of
 		 * the dot product. Any positional based Syntax
 		 * may be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value2: string
 	){
@@ -409,16 +389,14 @@ class Vector {
 		 * Player - The player whose current facing
 		 * angle begins. Can use most player based
 		 * Value Syntax to retrieve this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string,
 		/**
 		 * Position - The player whose current facing
 		 * the angle begins. Can use most Player based
 		 * Value Syntax to provide this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){
@@ -434,16 +412,14 @@ class Vector {
 		 * Start Pos - The start position for the line
 		 * of sight check. Most positional based Value
 		 * Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
 		 * End Pos - The end position for the line
 		 * of sight check. Most positional based Value
 		 * Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string,
 		/**
@@ -454,8 +430,7 @@ class Vector {
 		 * used. Can be set to “Barriers do not block
 		 * LOS”, Enemy barriers block LOS", and “All
 		 * barriers block LOS”.
-		 * - `Type.Barrier.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Barrier.`
 		 */
 		barriers: string
 	){
@@ -470,24 +445,21 @@ class Vector {
 		 * Player - The player whose view to use for
 		 * the check. Can use most Player based Value
 		 * Syntax to provide this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string,
 		/**
 		 * Location - The location to test if it’s
 		 * within view. Most positional based Value
 		 * Syntax can be used here.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		location: string,
 		/**
 		 * Team - The team or teams on which to consider
 		 * players. Can use most Team based Value Syntax
 		 * to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		viewAngle: string
 	){
@@ -501,8 +473,21 @@ class Vector {
 	left(){
 		return Value.left()
 	}
-	nearestWalkablePostion(){
-		return Value.nearestWalkablePostion()
+
+	/**
+	 * The position closest to the specified position
+	 * that can be stood on and is accessible from a spawn point.
+	 */
+	nearestWalkablePosition(
+		/**
+		 * Position - The position from which to search
+		 * for the nearest walkable position. Can use
+		 * any Vector based Value syntax to divide with.
+		 * - `Type.Vector.`
+		 */
+		position: string
+	){
+		return Value.nearestWalkablePosition(position)
 	}
 
 	/**
@@ -512,8 +497,7 @@ class Vector {
 		/**
 		 * Vector - The vector to normalize. Can use
 		 * any Vector based Value syntax to divide with.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){
@@ -530,8 +514,7 @@ class Vector {
 		 * Center - The center position from which
 		 * to measure distance. Can use most Vector
 		 * based Value Syntax to provide this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
@@ -539,8 +522,7 @@ class Vector {
 		 * players must be in order to be included
 		 * in the resulting array. Can use most Number
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		radius: string,
 		/**
@@ -548,8 +530,7 @@ class Vector {
 		 * must belong to be included in the resulting
 		 * array. Can use most Team based Value Syntax
 		 * to provide this value.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string,
 		/**
@@ -572,8 +553,7 @@ class Vector {
 		 * line of sight is blocked by ceilings, walls,
 		 * floors, platforms, any fixed object that
 		 * blocks projectiles, and all barriers.
-		 * - `Type.LosCheck.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.LosCheck.`
 		 */
 		losCheck: string
 	){
@@ -599,8 +579,7 @@ class Vector {
 		/**
 		 * Angle - Angle in degrees. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -620,8 +599,7 @@ class Vector {
 		/**
 		 * Angle - Angle in radians. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -638,8 +616,7 @@ class Vector {
 		 * Player - The player whose slot number to
 		 * acquire. Can use most Player based Value
 		 * Syntax to provide this value.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string
 	){
@@ -653,8 +630,7 @@ class Vector {
 		/**
 		 * Angle - Angle in degrees. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -668,8 +644,7 @@ class Vector {
 		/**
 		 * Angle - Angle in radians. Can use most Player
 		 * based Value Syntax to provide this value.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -695,8 +670,7 @@ class Vector {
 		 * The vector is unitized before calculations
 		 * begins. Can use most Vector based Value
 		 * Syntax to provide this value.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){

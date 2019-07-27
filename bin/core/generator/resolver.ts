@@ -4,7 +4,7 @@ import { getLogger } from './logger'
 
 import Reformer from './reformer'
 import Generator from './generator'
-import generatorData from './generatorData.json'
+import { readFileSync } from 'fs'
 
 
 /**
@@ -19,6 +19,9 @@ export const Resolver = async (langs: string[] = [ 'kor' ]) => {
     const Logger = getLogger()
 
     for(let lang of langs){
+
+        // IF USING REQUIRE, IT CAN BE MAKES CONFLICT.
+        let generatorData = JSON.parse(String(readFileSync(`${__dirname}/generatorData.json`)))
 
         /**
          * @description

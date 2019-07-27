@@ -4,8 +4,7 @@ class Vector {
 	public vector: string
 
 	/**
-	 * @param vector `Type.Vector.` 를 입력하면
-	 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+	 * @param vector `Type.Vector.`
 	 */
 	constructor(vector: string){
 		this.vector = vector
@@ -18,15 +17,13 @@ class Vector {
 		/**
 		 * 사이의 각(단위: 도)을 측정하기 위한 두 방향 벡터 중 하나입니다.
 		 * 이 벡터를 미리 정규화할 필요는 없습니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		vector1: string,
 		/**
 		 * 사이의 각(단위: 도)을 측정하기 위한 두 방향 벡터 중 하나입니다.
 		 * 이 벡터를 미리 정규화할 필요는 없습니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		vector2: string
 	){
@@ -39,21 +36,18 @@ class Vector {
 	localVectorOf(
 		/**
 		 * 로컬 좌표로 전환될 월드 좌표 벡터입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		worldVector: string,
 		/**
 		 * 결과 벡터와 연관될 플레이어입니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		relativePlayer: string,
 		/**
 		 * 벡터가 회전과 평행 이동을 받는지(일반적으로 위치에 적용),
 		 * 아니면 회전만 받는지(일반적으로 방향 및 속도에 적용) 여부를 설정합니다.
-		 * - `Type.Transformation.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Transformation.`
 		 */
 		transformation: string
 	){
@@ -66,21 +60,18 @@ class Vector {
 	worldVectorOf(
 		/**
 		 * 월드 좌표로 전환될 로컬 좌표 벡터입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		localVector: string,
 		/**
 		 * 결과 벡터와 연관될 플레이어입니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		relativePlayer: string,
 		/**
 		 * 벡터가 회전과 평행 이동을 받는지(일반적으로 위치에 적용),
 		 * 아니면 회전만 받는지(일반적으로 방향 및 속도에 적용) 여부를 설정합니다.
-		 * - `Type.Transformation.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Transformation.`
 		 */
 		transformation: string
 	){
@@ -95,21 +86,29 @@ class Vector {
 	angleDifference(
 		/**
 		 * 결과각을 도출하기 위한 두 각 중 하나입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle1: string,
 		/**
 		 * 결과각을 도출하기 위한 두 각 중 하나입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle2: string
 	){
 		return Value.angleDifference(angle1, angle2)
 	}
-	acrossineInDegrees(){
-		return Value.acrossineInDegrees()
+
+	/**
+	 * 지정된 각(단위: 도)의 아크코사인 값입니다.
+	 */
+	arccosineInDegrees(
+		/**
+		 * 함수의 입력값입니다.
+		 * - `Type.Number.`
+		 */
+		value: string
+	){
+		return Value.arccosineInDegrees(value)
 	}
 
 	/**
@@ -118,8 +117,7 @@ class Vector {
 	arccosineInRadians(
 		/**
 		 * 함수의 입력값입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -132,8 +130,7 @@ class Vector {
 	arcsineInDegrees(
 		/**
 		 * 함수의 입력값입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -146,8 +143,7 @@ class Vector {
 	arcsineInRadians(
 		/**
 		 * 함수의 입력값입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		value: string
 	){
@@ -161,14 +157,12 @@ class Vector {
 	arctangentInDegrees(
 		/**
 		 * 함수의 분자 입력 정보입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		numerator: string,
 		/**
 		 * 함수의 분모 입력 정보입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		denominator: string
 	){
@@ -182,14 +176,12 @@ class Vector {
 	arctangentInRadians(
 		/**
 		 * 함수의 분자 입력 정보입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		numerator: string,
 		/**
 		 * 함수의 분모 입력 정보입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		denominator: string
 	){
@@ -202,8 +194,7 @@ class Vector {
 	cosineFromDegrees(
 		/**
 		 * 각(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -216,8 +207,7 @@ class Vector {
 	cosineFromRadians(
 		/**
 		 * 각(단위: RAD)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -230,14 +220,12 @@ class Vector {
 	crossProduct(
 		/**
 		 * 가위곱의 왼쪽 벡터 피연산자입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value1: string,
 		/**
 		 * 가위곱의 오른쪽 벡터 피연산자입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value2: string
 	){
@@ -250,14 +238,12 @@ class Vector {
 	directionFromAngles(
 		/**
 		 * 결과 벡터를 도출하는 데 사용되는 황축각(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		horizontalAngle: string,
 		/**
 		 * 결과 벡터를 도출하는 데 사용되는 종축각(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		verticalAngle: string
 	){
@@ -270,14 +256,12 @@ class Vector {
 	directionTowards(
 		/**
 		 * 결과로 도출되는 방향 벡터가 시작되는 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
 		 * 결과로 도출되는 방향 벡터가 끝나는 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string
 	){
@@ -290,14 +274,12 @@ class Vector {
 	distanceBetween(
 		/**
 		 * 거리 측정에 사용되는 두 위치 중 하나입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
 		 * 거리 측정에 사용되는 두 위치 중 하나입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string
 	){
@@ -310,14 +292,12 @@ class Vector {
 	dotProduct(
 		/**
 		 * 점곱의 백터 피연산자 두 개 중 하나입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value1: string,
 		/**
 		 * 점곱의 백터 피연산자 두 개 중 하나입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		value2: string
 	){
@@ -346,14 +326,12 @@ class Vector {
 	horizontalAngleTowards(
 		/**
 		 * 이 플레이어가 현재 바라보는 방향으로부터 각이 시작됩니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string,
 		/**
 		 * 각 각이 종료되는 월드 내 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){
@@ -369,8 +347,7 @@ class Vector {
 		 * 플레이어가 설정되어 있으면
 		 * 해당 플레이어의 발 위로
 		 * 2미터 위치가 사용됩니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		startPos: string,
 		/**
@@ -378,8 +355,7 @@ class Vector {
 		 * 플레이어가 설정되어 있으면
 		 * 해당 플레이어의 발 위로
 		 * 2미터 위치가 사용됩니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		endPos: string,
 		/**
@@ -387,8 +363,7 @@ class Vector {
 		 * 방벽이 적 소유인지를 판정할 때는
 		 * START POS에 제공된 플레이어의
 		 * 소속(있는 경우)이 사용됩니다.
-		 * - `Type.Barrier.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Barrier.`
 		 */
 		barriers: string
 	){
@@ -401,20 +376,17 @@ class Vector {
 	isInViewAngle(
 		/**
 		 * 시야를 확인할 플레이어입니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string,
 		/**
 		 * 시야에 있는지 테스트할 LOCATION입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		location: string,
 		/**
 		 * 비교 대상인 VIEW ANGLE(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		viewAngle: string
 	){
@@ -427,8 +399,19 @@ class Vector {
 	left(){
 		return Value.left()
 	}
-	nearestWalkablePostion(){
-		return Value.nearestWalkablePostion()
+
+	/**
+	 * 서 있을 수 있고 생성 지점에서 접근 가능하며
+	 * 지정된 위치에서 가장 가까운 위치입니다.
+	 */
+	nearestWalkablePosition(
+		/**
+		 * 가장 가까운 도보 가능 위치를 검색할 대상 위치입니다.
+		 * - `Type.Vector.`
+		 */
+		position: string
+	){
+		return Value.nearestWalkablePosition(position)
 	}
 
 	/**
@@ -437,8 +420,7 @@ class Vector {
 	normalize(
 		/**
 		 * 정규화할 벡터입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		position: string
 	){
@@ -452,24 +434,21 @@ class Vector {
 	playersWithinRadius(
 		/**
 		 * 거리 측정이 시작되는 중간 위치입니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		center: string,
 		/**
 		 * 결과 배열에 포함되기 위해
 		 * 플레이어가 속해 있어야 하는
 		 * 반경(미터)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		radius: string,
 		/**
 		 * 결과 배열에 포함되기 위해
 		 * 플레이어가 속해 있어야 하는
 		 * 팀입니다.
-		 * - `Type.Team.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Team.`
 		 */
 		team: string,
 		/**
@@ -477,8 +456,7 @@ class Vector {
 		 * 플레이어가 시야 확인을
 		 * 통과해야 하는지 여부 및
 		 * 방법을 지정합니다.
-		 * - `Type.LosCheck.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.LosCheck.`
 		 */
 		losCheck: string
 	){
@@ -498,8 +476,7 @@ class Vector {
 	sineFromDegrees(
 		/**
 		 * 각(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -512,8 +489,7 @@ class Vector {
 	sineFromRadians(
 		/**
 		 * 각(단위: RAD)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -528,8 +504,7 @@ class Vector {
 	slotOf(
 		/**
 		 * 슬롯 번호 정보를 가져올 플레이어입니다.
-		 * - `Type.Player.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Player.`
 		 */
 		player: string
 	){
@@ -542,8 +517,7 @@ class Vector {
 	tangentFromDegrees(
 		/**
 		 * 각(단위: 도)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -556,8 +530,7 @@ class Vector {
 	tangentFromRadians(
 		/**
 		 * 각(단위: RAD)입니다.
-		 * - `Type.Number.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Number.`
 		 */
 		angle: string
 	){
@@ -579,8 +552,7 @@ class Vector {
 		 * 종축각(단위: 도) 정보를
 		 * 가져올 방향 벡터입니다.
 		 * 벡터는 연산 전에 정규화됩니다.
-		 * - `Type.Vector.` 를 입력하면 
-		 *   여기서 사용 가능한 함수를 확인할 수 있습니다.
+		 * - `Type.Vector.`
 		 */
 		direction: string
 	){
