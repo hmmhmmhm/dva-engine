@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
   "dependencies": {
-    "easy-github-updater": "^1.0.0"
+    "easy-github-updater": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^12.6.8",

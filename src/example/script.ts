@@ -1,5 +1,5 @@
 // Categorized function collection.
-import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes } from '../bin/release/eng'
+import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes } from '../../bin/release/eng'
 
 // Classified data type.
 const { Array, Bool, Number, String } = Type
