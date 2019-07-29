@@ -3,7 +3,7 @@ import * as GithubUpdater from 'easy-github-updater'
 export const Update = () => {
     GithubUpdater.automatic({
         sourceFolderPath: process.cwd(),
-        force: true,
+        force: false,
         rebase: true,
         keep: [
             '/src/*'
