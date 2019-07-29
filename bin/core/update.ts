@@ -1,7 +1,18 @@
-import GithubUpdater from 'deploy-github'
+import GithubUpdater from 'easy-github-updater'
 
 export const Update = () => {
-    GithubUpdater.automatic()
+    GithubUpdater.automatic({
+        sourceFolderPath: process.cwd(),
+        force: false,
+        rebase: true,
+        keep: [
+            '/src/*'
+        ],
+        branch: 'master',
+        isNeedDefaultProcess: true,
+        repoUrl: undefined,
+        waitTime: 10000
+    })
 }
 
 if(`${process.argv[1]}` == __filename) Update()

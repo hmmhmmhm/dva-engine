@@ -2,13 +2,14 @@
   "name": "dva-engine",
   "version": "1.0.0",
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
-  "dependencies": {},
+  "dependencies": {
+    "easy-github-updater": "^1.0.0"
+  },
   "devDependencies": {
     "@types/node": "^12.6.8",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "async-sequencer": "^1.0.6",
-    "deploy-github": "^1.0.0",
     "eslint": "^6.1.0",
     "folder-logger": "^1.0.4",
     "fs-extra": "^8.1.0",
