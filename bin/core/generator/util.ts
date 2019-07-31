@@ -2,6 +2,7 @@ import * as TJS from 'typescript-json-schema'
 import * as Path from 'path'
 
 import fs from 'fs'
+import path from 'path'
 import NestedFolder from 'nested-static'
 
 /**
@@ -53,6 +54,8 @@ export const collectInterfaceFiles = async (
                 // Search all of the files
                 for(let file of files){
                     let filePath = folder.staticPath + '/' + file
+                    filePath = path.resolve(filePath)
+
                     let stats = fs.statSync(filePath)
                     if(stats.isDirectory()) continue
                     if(noIndexFile && file == 'index.ts') continue
