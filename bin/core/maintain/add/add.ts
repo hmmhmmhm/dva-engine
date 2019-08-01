@@ -1,29 +1,23 @@
-import { getLogger } from '../generator/logger'
-import { NameMapGenerator } from './rename'
-import { collectInterfaceFiles } from '../generator/util'
+import { getLogger } from '../../generator/logger'
+import { NameMapGenerator } from '../rename'
+import { collectInterfaceFiles } from '../../generator/util'
 import { writeFileSync, readFileSync } from 'fs'
 import { resolve } from 'path'
 
 const Logger = getLogger()
 
-export const createEvent = async (
+export type CreateEventType = `Event` | `Action` | `Value`
+export const createNewInterface = async (
+    type: CreateEventType = `Event`,
     eventName: string,
     eventActualName: string,
     params: string[],
     onlyCheck: boolean = true
 ) => {
 
-    /**
-     * @todo
-     * @description
-     * - 
-     * - eventName 에 주석붙이기
-     * - params 에 주석붙이기
-     */
-
-    Logger.debug(`EVENT NAME: ${eventName}`)
-    Logger.debug(`EVENT ACTUAL NAME: ${eventActualName}`)
-    Logger.debug(`EVENT PARAM: ${JSON.stringify(params, null, 2)}`)
+    Logger.debug(`${type.toUpperCase()} NAME: ${eventName}`)
+    Logger.debug(`${type.toUpperCase()} ACTUAL NAME: ${eventActualName}`)
+    Logger.debug(`${type.toUpperCase()} PARAM: ${JSON.stringify(params, null, 2)}`)
 
     // Description Count
     const descriptionCount = 1 + params.length
@@ -66,7 +60,7 @@ export const createEvent = async (
                             for(let usedFile of jsonData[key].usedFiles){
                                 //
                                 if(typeof usedFile.path != 'undefined'
-                                && usedFile.path == '/interface/event/event.ts'){
+                                && usedFile.path == `/interface/${type.toLowerCase()}/${type.toLowerCase()}.ts`){
 
                                     // Parse Order Number
                                     if(typeof usedFile.orderNumber != 'undefined'){
@@ -100,9 +94,9 @@ export const createEvent = async (
                             usedFiles: [
                                 // event.ts
                                 {
-                                    "topName": "IEvent",
+                                    "topName": `I${type}`,
                                     "orderNumber": checkIndexOrderNum + i,
-                                    "path": "/interface/event/event.ts",
+                                    "path": `/interface/${type.toLowerCase()}/${type.toLowerCase()}.ts`,
                                     "indent": 0
                                 },
 
@@ -110,7 +104,7 @@ export const createEvent = async (
                                 {
                                     "topName": eventActualName,
                                     "orderNumber": (i-1),
-                                    "path": `/interface/event/child/${eventName}.ts`,
+                                    "path": `/interface/${type.toLowerCase()}/child/${eventName}.ts`,
                                     "indent": ((i-1)==0) ? 0 : 4
                                 }
                             ]
@@ -159,7 +153,7 @@ export const createEvent = async (
     }
     fileCode += `}`
 
-    let interfaceFilePath = resolve(`${process.cwd()}/bin/core/engine/interface/event/child/${eventNameMap.camelCase}.ts`)
+    let interfaceFilePath = resolve(`${process.cwd()}/bin/core/engine/interface/${type.toLowerCase()}/child/${eventNameMap.camelCase}.ts`)
 
     console.log(``)
     if(!onlyCheck){
@@ -173,7 +167,7 @@ export const createEvent = async (
     }
 
     // /bin/core/engine/interface/event/event.ts
-    let eventIndexPath = resolve(`${process.cwd()}/bin/core/engine/interface/event/event.ts`)
+    let eventIndexPath = resolve(`${process.cwd()}/bin/core/engine/interface/${type.toLowerCase()}/${type.toLowerCase()}.ts`)
     let eventIndexData = String(readFileSync(eventIndexPath))
 
     let eventIndexDataParse = eventIndexData.split('}')
@@ -186,7 +180,16 @@ export const createEvent = async (
     newEventIndexCode += `     */\n`
     newEventIndexCode += `    ${eventNameMap.camelCase}: ${eventNameMap.interfaceName}\n`
     newEventIndexCode += `}`
-    
+
+    // Write Event Interface File.
+    // /bin/core/engine/interface/event/child/index.ts
+
+    /**
+     * @TODO
+     * 1. 이거
+     * 2. event, action, value 처리통합
+     */
+
     // Import Inject
     console.log(``)
     if(!onlyCheck){
@@ -196,10 +199,10 @@ export const createEvent = async (
 
         writeFileSync(eventIndexPath, newEventIndexCode)
 
-        Logger.debug(`EVENT INDEX FILE HAS BEEN WRITED`)
+        Logger.debug(`${type.toUpperCase()} INDEX FILE HAS BEEN WRITED`)
         Logger.debug(`    (${eventIndexPath})`)
     }else{
-        Logger.debug(`EVENT INDEX FILE WILL BE WRITE`)
+        Logger.debug(`${type.toUpperCase()} INDEX FILE WILL BE WRITE`)
         Logger.debug(`    (${eventIndexPath})`)
     }
 
@@ -207,7 +210,7 @@ export const createEvent = async (
     let generatorDataFilePath = resolve(`${process.cwd()}/bin/core/generator/generatorData.json`)
     let generatorData = JSON.parse(String(readFileSync(generatorDataFilePath)))
 
-    generatorData.event.eventName[`${eventNameMap.camelCase}.ts`] = eventActualName
+    generatorData[`${type.toLowerCase()}`][`${type.toLowerCase()}Name`][`${eventNameMap.camelCase}.ts`] = eventActualName
 
     console.log(``)
     if(onlyCheck){
@@ -217,33 +220,8 @@ export const createEvent = async (
         Logger.debug(`GENERATOR DATA HAS BEEN REPLACED`)
     }
     Logger.debug(`\t(${generatorDataFilePath})`)
-    Logger.debug(`\t(event.eventName['${eventNameMap.camelCase}.ts'] = '${eventActualName}')`)
+    Logger.debug(`\t(${type.toLowerCase()}.${type.toLowerCase()}Name['${eventNameMap.camelCase}.ts'] = '${eventActualName}')`)
 
     console.log(``)
-    Logger.debug(`Event '${eventName}' has been successfully created!`)
+    Logger.debug(`${type} '${eventName}' has been successfully created!`)
 }
-
-try{
-    if(`${process.argv[1]}` == __filename){
-        if(process.argv.length >= 4){
-
-            // Cloning Array
-            let params = JSON.parse(JSON.stringify(process.argv))
-
-            // Remove Script Paths
-            params.shift(); params.shift()
-
-            // npm run maintain:event onGoingGlobal 'Ongoing - Global' param1 param2 param3
-
-            // onGoingGlobal
-            let eventName = params.shift()
-
-            //  'Ongoing - Global'
-            let eventActualName = params.shift()
-            createEvent(eventName, eventActualName, params)
-        }else{
-            // INFO MESSAGE
-            Logger.debug(``)
-        }
-    }
-}catch(e){}
