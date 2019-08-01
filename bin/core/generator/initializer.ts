@@ -3,6 +3,7 @@ import { Inject } from '../language/injector/index'
 import { getLogger } from './logger'
 import { existsSync } from 'fs'
 import packageData from '../../../package.json'
+import { exec } from 'child_process'
 
 export const Generator = async (
     langs = [
@@ -23,6 +24,22 @@ export const Generator = async (
         await Inject(langs)
         await Resolver(langs)
         Logger.debug(`All generator operations succeeded.`)
+
+        Logger.debug(`Starting core typescript files transpile...`)
+        await new Promise((resolve)=>{
+            exec(`npm run ttsc`, (error, body)=>{
+                if(error){
+                    Logger.debug(`Body:`)
+                    console.log(body)
+                    Logger.debug(`Error:`)
+                    console.log(error)
+                    Logger.debug(`Failed core typescript files transpile.`)
+                }else{
+                    Logger.debug(`Finished core typescript files transpile.`)
+                    resolve()
+                }
+            })
+        })
     }
 }
 

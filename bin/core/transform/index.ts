@@ -176,7 +176,7 @@ export default Hook({
             // Create Module Path
             let modulePath = ``
             for(let i= 0; i<= subCount; i++) modulePath += `../`
-            modulePath = `${modulePath}bin/kor`
+            modulePath = `${modulePath}bin/release/eng`
 
             // Require Statement
             let importInject = 

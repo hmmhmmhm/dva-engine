@@ -3,7 +3,7 @@ export * from './child/value/flagPosition'
 // @ts-ignore
 export * from './child/value/isAssemblingHeroes'
 // @ts-ignore
-export * from './child/value/isBetwwenRounds'
+export * from './child/value/isBetweenRounds'
 // @ts-ignore
 export * from './child/value/isControlModePointLocked'
 // @ts-ignore

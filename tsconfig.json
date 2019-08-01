@@ -9,15 +9,16 @@
             "*": [
                 "types/*",
                 "bin"
-            ]
+            ],
+            "dist/*": ["../../dist/*"]
         },
         "importHelpers": true,
-        "sourceMap": true,
+        "sourceMap": false,
+        "declaration": true,
         "inlineSourceMap": false,
         "noImplicitAny": false,
         "module": "commonjs",
         "target": "ES5",
-        "allowJs": true,
         "types": ["node"],
         "lib": ["es5", "es6", "dom"],
         "moduleResolution": "node",
@@ -31,11 +32,27 @@
         "esModuleInterop": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "skipLibCheck": true
     },
     "include": [
         "./bin/**/*",
         "./src/**/*",
-        "./test/**/*",
+        "./test/**/*"
+    ],
+    "exclude": [
+        "./dist/**/*",
+        "./bin/dist/**/*",
+
+        "./src/script.ts",
+        "./src/script_*.ts",
+        "./src/@*.ts",
+
+        "./src/**/script.ts",
+        "./src/**/script_*.ts",
+        "./src/**/@*.ts",
+
+        "./src/example/script.ts",
+        "./test/script.ts"
     ],
     "awesomeTypescriptLoaderOptions": {
         "reportFiles": [

@@ -27,8 +27,20 @@ interface IRule {
     action: string[]
 }
 
+export let collectedCode = ``
+
+console.log('Rule Testing...')
 export default class Rule {
     constructor(data: IRule){
-        //
+        let innerCode = ``
+        innerCode += `rule("${data.description}")\n`
+        innerCode += `{\n`
+        console.log(`data.condition`)
+        console.log(data.condition)
+        console.log(`data.event`)
+        console.log(data.event)
+        console.log(`data.action`)
+        console.log(data.action)
+        innerCode += `}\n`
     }
 }

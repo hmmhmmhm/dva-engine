@@ -1,14 +1,12 @@
 import FolderLogger from 'folder-logger'
 import generatorData from './generatorData.json'
 
-let loggerTemp = new FolderLogger('./')
-
 export interface IData {
 
     /**
      * Generator Logger
      */
-    Logger: typeof loggerTemp
+    Logger
 
     /**
      * Here is the grammatical name of

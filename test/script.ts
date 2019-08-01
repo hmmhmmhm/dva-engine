@@ -1,5 +1,5 @@
 // Categorized function collection.
-import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes} from '../bin/release/kor'
+import { RuleEvent, Value, Action, Level, Server, Match, Util, Type, Classes } from '../bin/release/kor'
 
 // Classified data type.
 const { Array, Bool, Number, String } = Type
@@ -48,6 +48,7 @@ let o = Value.number(4)
 let checkOperator1 = ((a*b)/c+d) % e + (f+g+h+i) - (j-(k*l/m) - n * o)
 
 // Check array
+/*
 let checkArray1 = Type.Array.allDeadPlayers(Type.Team.team(Type.TeamConstant.Default('All')))
 
 checkArray1.length
@@ -88,12 +89,13 @@ checkArray1.findIndex((value, index,obj)=>{
 checkArray1.forEach((value, index, array)=>{
     //
 })
-
+*/
 
 // Check empty array overload
 let checkEmptyArray = []
 
 new Rule({
+    description: '1',
     event:
         RuleEvent.onGoingGlobal(),
 
@@ -149,5 +151,30 @@ new Rule({
             Type.Player.attacker(),
             Type.AssisterParam.Null()
         )
+    ]
+})
+
+new Rule({
+    description: '2',
+
+    // Set the event type
+    event: RuleEvent.onGoingGlobal(),
+    condition: [
+        // Write the rule condition.
+    ],
+    action: [
+        // Write the rule action.
+    ]
+})
+new Rule({
+    description: '3',
+
+    // Set the event type
+    event: RuleEvent.onGoingGlobal(),
+    condition: [
+        // Write the rule condition.
+    ],
+    action: [
+        // Write the rule action.
     ]
 })
