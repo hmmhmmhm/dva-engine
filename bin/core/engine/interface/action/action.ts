@@ -124,6 +124,8 @@ import {
     ITeleport,
     IUnpauseMatchTime,
     IWait,
+    IStartTransformingThrottle,
+    IStopTransformingThrottle,
 } from './child'
 import { ISetPlayerScore } from './child/setPlayerScore'
 
@@ -757,4 +759,14 @@ export interface IAction {
      * {125}
      */
     wait: IWait
+
+    /**
+     * {717}
+     */
+    startTransformingThrottle: IStartTransformingThrottle
+
+    /**
+     * {722}
+     */
+    stopTransformingThrottle: IStopTransformingThrottle
 }

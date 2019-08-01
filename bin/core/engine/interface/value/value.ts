@@ -207,7 +207,10 @@ import {
     IServerLoad,
     IServerLoadAverage,
     IServerLoadPeak,
-
+    IHealer,
+    IHealee,
+    IEventHealing,
+    IHostPlayer,
 } from './child'
 
 export interface IValue {
@@ -1180,4 +1183,24 @@ export interface IValue {
      * {535}
      */
     zComponentOf: IZComponentOf
+
+    /**
+     * {724}
+     */
+    healer: IHealer
+
+    /**
+     * {725}
+     */
+    healee: IHealee
+
+    /**
+     * {726}
+     */
+    eventHealing: IEventHealing
+
+    /**
+     * {727}
+     */
+    hostPlayer: IHostPlayer
 }

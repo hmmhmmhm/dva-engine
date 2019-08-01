@@ -7,7 +7,11 @@
       "playerDealtFinalBlow.ts": "Player dealt final blow",
       "playerDealtDamage.ts": "Player dealt damage",
       "playerTookDamage.ts": "Player took damage",
-      "playerDied.ts": "Player Died"
+      "playerDied.ts": "Player Died",
+      "playerDealtHealing.ts": "Player Dealt Healing",
+      "playerReceivedHealing.ts": "Player Received Healing",
+      "playerJoinedMatch.ts": "Player Joined Match",
+      "playerLeftMatch.ts": "Player Left Match"
     }
   },
   "value": {
@@ -210,7 +214,11 @@
       "arccosineInDegrees.ts": "Arccosine In Degrees",
       "isBetweenRounds.ts": "Is Between Rounds",
       "isCommunicatingAnyVoiceLine.ts": "Is Communicating Any Voice Line",
-      "nearestWalkablePosition.ts": "Nearest Walkable Position"
+      "nearestWalkablePosition.ts": "Nearest Walkable Position",
+      "healer.ts": "Healer",
+      "healee.ts": "Healee",
+      "eventHealing.ts": "Event Healing",
+      "hostPlayer.ts": "Host Player"
     }
   },
   "action": {
@@ -340,7 +348,9 @@
       "resetPlayerHeroAvailability.ts": "Reset Player Hero Availability",
       "setPlayerVariableAtIndex.ts": "Set Player Variable At Index",
       "enableDeathSpectateTargetHud.ts": "Enable Death Spectate Target Hud",
-      "enableBuiltInGameModeMusic.ts": "Enable Built In Game Mode Music"
+      "enableBuiltInGameModeMusic.ts": "Enable Built In Game Mode Music",
+      "startTransformingThrottle.ts": "Start Transforming Throttle",
+      "stopTransformingThrottle.ts": "Stop Transforming Throttle"
     }
   }
 }

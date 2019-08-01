@@ -12531,6 +12531,378 @@
       }
     ]
   },
+  "705": {
+    "contexts": [
+      "TODO: playerDealtHealing(Player Dealt Healing)(OrderNum:0)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Dealt Healing",
+        "orderNumber": 0,
+        "path": "/interface/event/child/playerDealtHealing.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IEvent",
+        "orderNumber": 7,
+        "path": "/interface/event/event.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "706": {
+    "contexts": [
+      "TODO: playerDealtHealing(Player Dealt Healing)(OrderNum:1)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Dealt Healing",
+        "orderNumber": 1,
+        "path": "/interface/event/child/playerDealtHealing.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "707": {
+    "contexts": [
+      "TODO: playerDealtHealing(Player Dealt Healing)(OrderNum:2)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Dealt Healing",
+        "orderNumber": 2,
+        "path": "/interface/event/child/playerDealtHealing.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "708": {
+    "contexts": [
+      "TODO: playerReceivedHealing(Player Received Healing)(OrderNum:0)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Received Healing",
+        "orderNumber": 0,
+        "path": "/interface/event/child/playerReceivedHealing.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IEvent",
+        "orderNumber": 8,
+        "path": "/interface/event/event.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "709": {
+    "contexts": [
+      "TODO: playerReceivedHealing(Player Received Healing)(OrderNum:1)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Received Healing",
+        "orderNumber": 1,
+        "path": "/interface/event/child/playerReceivedHealing.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "710": {
+    "contexts": [
+      "TODO: playerReceivedHealing(Player Received Healing)(OrderNum:2)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Received Healing",
+        "orderNumber": 2,
+        "path": "/interface/event/child/playerReceivedHealing.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "711": {
+    "contexts": [
+      "TODO: playerJoinedMatch(Player Joined Match)(OrderNum:0)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Joined Match",
+        "orderNumber": 0,
+        "path": "/interface/event/child/playerJoinedMatch.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IEvent",
+        "orderNumber": 9,
+        "path": "/interface/event/event.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "712": {
+    "contexts": [
+      "TODO: playerJoinedMatch(Player Joined Match)(OrderNum:1)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Joined Match",
+        "orderNumber": 1,
+        "path": "/interface/event/child/playerJoinedMatch.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "713": {
+    "contexts": [
+      "TODO: playerJoinedMatch(Player Joined Match)(OrderNum:2)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Joined Match",
+        "orderNumber": 2,
+        "path": "/interface/event/child/playerJoinedMatch.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "714": {
+    "contexts": [
+      "TODO: playerLeftMatch(Player Left Match)(OrderNum:0)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Left Match",
+        "orderNumber": 0,
+        "path": "/interface/event/child/playerLeftMatch.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IEvent",
+        "orderNumber": 10,
+        "path": "/interface/event/event.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "715": {
+    "contexts": [
+      "TODO: playerLeftMatch(Player Left Match)(OrderNum:1)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Left Match",
+        "orderNumber": 1,
+        "path": "/interface/event/child/playerLeftMatch.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "716": {
+    "contexts": [
+      "TODO: playerLeftMatch(Player Left Match)(OrderNum:2)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Player Left Match",
+        "orderNumber": 2,
+        "path": "/interface/event/child/playerLeftMatch.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "717": {
+    "contexts": [
+      "플레이어의 스로틀(방향 입력값 조정) 변환(비율 증감 및 회전)을 시작합니다.",
+      "기존의 START TRANSFORMING THROTTLE 행동을 취소합니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Transforming Throttle",
+        "orderNumber": 0,
+        "path": "/interface/action/child/startTransformingThrottle.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 126,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "718": {
+    "contexts": [
+      "Player - 스로틀이 변환될 플레이어입니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Transforming Throttle",
+        "orderNumber": 1,
+        "path": "/interface/action/child/startTransformingThrottle.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "719": {
+    "contexts": [
+      "X Axis Scalar - 플레이어의 스로틀 X축(왼쪽에서 오른쪽)이 새로운",
+      "RELATIVE DIRECTION으로 회전하기 전에 이 값으로 곱해집니다.",
+      "이 값은 지속적으로 평가됩니다. (프레임마다 업데이트)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Transforming Throttle",
+        "orderNumber": 2,
+        "path": "/interface/action/child/startTransformingThrottle.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "720": {
+    "contexts": [
+      "Y Axis Scalar - 플레이어의 스로틀 Y축(왼쪽에서 오른쪽)이 새로운",
+      "RELATIVE DIRECTION으로 회전하기 전에 이 값으로 곱해집니다.",
+      "이 값은 지속적으로 평가됩니다. (프레임마다 업데이트)"
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Transforming Throttle",
+        "orderNumber": 3,
+        "path": "/interface/action/child/startTransformingThrottle.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "721": {
+    "contexts": [
+      "Relative Direction - 축의 스칼라 값이 적용된 이후, 플레이어는",
+      "스로틀을 변환시켜이 단위 방향 벡터에 상대적이게 합니다. 예를 들어,",
+      "스로틀 카메라를 상대적이게 하려면, 카메라가 바라보고 있는 방향을 제공하면 됩니다.",
+      "이 값은 지속적으로 평가되며(프레임마다 업데이트) 내부적으로 정규화됩니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Transforming Throttle",
+        "orderNumber": 4,
+        "path": "/interface/action/child/startTransformingThrottle.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "722": {
+    "contexts": [
+      "플레이어를 대상으로 START TRANSFORMING THROTTLE",
+      "액션에 의해 시작된 스로틀 변환을 중지합니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Stop Transforming Throttle",
+        "orderNumber": 0,
+        "path": "/interface/action/child/stopTransformingThrottle.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 127,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "723": {
+    "contexts": [
+      "Player - 스로틀 변환을 멈출 플레이어입니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Stop Transforming Throttle",
+        "orderNumber": 1,
+        "path": "/interface/action/child/stopTransformingThrottle.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "724": {
+    "contexts": [
+      "이 규칙으로 처리된 이벤트로 인해 치유를 한 플레이어입니다.",
+      "HEALEE 또는 EVENT PLAYER와 동일할 수 있습니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Healer",
+        "orderNumber": 0,
+        "path": "/interface/value/child/healer.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IValue",
+        "orderNumber": 194,
+        "path": "/interface/value/value.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "725": {
+    "contexts": [
+      "이 규칙으로 처리된 이벤트로 인해 치유를 받은 플레이어입니다.",
+      "HEALER 또는 EVENT PLAYER와 동일할 수 있습니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Healee",
+        "orderNumber": 0,
+        "path": "/interface/value/child/healee.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IValue",
+        "orderNumber": 195,
+        "path": "/interface/value/value.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "726": {
+    "contexts": [
+      "이 규칙에 의해 현재 처리되고 있는",
+      "이벤트의 HEALEE가 받는 치유량입니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Event Healing",
+        "orderNumber": 0,
+        "path": "/interface/value/child/eventHealing.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IValue",
+        "orderNumber": 196,
+        "path": "/interface/value/value.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "727": {
+    "contexts": [
+      "현재 사용자 지정 게임의 방장인 플레이어입니다.",
+      "이 값은 현재 방장이 경기를 떠나면 변경됩니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Host Player",
+        "orderNumber": 0,
+        "path": "/interface/value/child/hostPlayer.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IValue",
+        "orderNumber": 197,
+        "path": "/interface/value/value.ts",
+        "indent": 0
+      }
+    ]
+  },
   "_file": {
     "/type/heroConstant.ts": [
       "export type HeroConstantType",

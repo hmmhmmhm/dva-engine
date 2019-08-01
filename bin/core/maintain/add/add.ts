@@ -12,7 +12,7 @@ export const createNewInterface = async (
     eventName: string,
     eventActualName: string,
     params: string[],
-    onlyCheck: boolean = true
+    onlyCheck: boolean = false
 ) => {
 
     Logger.debug(`${type.toUpperCase()} NAME: ${eventName}`)
@@ -89,25 +89,30 @@ export const createNewInterface = async (
                     console.log(``)
 
                     for(let i=1; i<=descriptionCount; i++){
-                        jsonData[checkLanguageDataLastId+i] = {
-                            contexts: [`TODO`],
-                            usedFiles: [
-                                // event.ts
-                                {
-                                    "topName": `I${type}`,
-                                    "orderNumber": checkIndexOrderNum + i,
-                                    "path": `/interface/${type.toLowerCase()}/${type.toLowerCase()}.ts`,
-                                    "indent": 0
-                                },
 
-                                // actualInterface.ts
-                                {
-                                    "topName": eventActualName,
-                                    "orderNumber": (i-1),
-                                    "path": `/interface/${type.toLowerCase()}/child/${eventName}.ts`,
-                                    "indent": ((i-1)==0) ? 0 : 4
-                                }
-                            ]
+                        let usedFiles = [
+                            // actualInterface.ts
+                            {
+                                "topName": eventActualName,
+                                "orderNumber": (i-1),
+                                "path": `/interface/${type.toLowerCase()}/child/${eventName}.ts`,
+                                "indent": ((i-1)==0) ? 0 : 4
+                            }
+                        ]
+
+                        if((i-1) == 0){
+                            // event.ts
+                            usedFiles.push({
+                                "topName": `I${type}`,
+                                "orderNumber": checkIndexOrderNum + i,
+                                "path": `/interface/${type.toLowerCase()}/${type.toLowerCase()}.ts`,
+                                "indent": 0
+                            })
+                        }
+
+                        jsonData[checkLanguageDataLastId+i] = {
+                            contexts: [`TODO: ${eventName}(${eventActualName})(OrderNum:${i-1})`],
+                            usedFiles
                         }
 
                         // console.log(jsonData[descriptionCount])
@@ -181,21 +186,12 @@ export const createNewInterface = async (
     newEventIndexCode += `    ${eventNameMap.camelCase}: ${eventNameMap.interfaceName}\n`
     newEventIndexCode += `}`
 
-    // Write Event Interface File.
-    // /bin/core/engine/interface/event/child/index.ts
-
-    /**
-     * @TODO
-     * 1. 이거
-     * 2. event, action, value 처리통합
-     */
-
     // Import Inject
     console.log(``)
     if(!onlyCheck){
         newEventIndexCode = newEventIndexCode.replace(
             `\n} from './child'`,
-            `,\n    ${eventNameMap.interfaceName},\n} from './child'`)
+            `\n    ${eventNameMap.interfaceName},\n} from './child'`)
 
         writeFileSync(eventIndexPath, newEventIndexCode)
 
@@ -205,6 +201,22 @@ export const createNewInterface = async (
         Logger.debug(`${type.toUpperCase()} INDEX FILE WILL BE WRITE`)
         Logger.debug(`    (${eventIndexPath})`)
     }
+
+    // Write Event Interface File.
+    // /bin/core/engine/interface/event/child/index.ts
+
+    let indexFilePath = resolve(`${process.cwd()}/bin/core/engine/interface/${type.toLowerCase()}/child/index.ts`)
+    let oldIndexCode = readFileSync(indexFilePath)
+    let newIndexCode = `${oldIndexCode}\nexport * from './${eventName}'`
+
+    console.log(``)
+    if(onlyCheck){
+        Logger.debug(`CHILD INDEX WILL BE WRITE`)
+    }else{
+        writeFileSync(indexFilePath, newIndexCode)
+        Logger.debug(`CHILD INDEX DATA HAS BEEN REPLACED`)
+    }
+    Logger.debug(`\t(${indexFilePath})`)
 
     // /bin/core/generator/generatorData.json
     let generatorDataFilePath = resolve(`${process.cwd()}/bin/core/generator/generatorData.json`)
@@ -216,7 +228,7 @@ export const createNewInterface = async (
     if(onlyCheck){
         Logger.debug(`GENERATOR DATA WILL BE WRITE`)
     }else{
-        writeFileSync(generatorDataFilePath, generatorData)
+        writeFileSync(generatorDataFilePath, JSON.stringify(generatorData, null, 2))
         Logger.debug(`GENERATOR DATA HAS BEEN REPLACED`)
     }
     Logger.debug(`\t(${generatorDataFilePath})`)

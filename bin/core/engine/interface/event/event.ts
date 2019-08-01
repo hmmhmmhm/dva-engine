@@ -5,7 +5,11 @@ import {
     IPlayerDealtFinalBlow,
     IPlayerDealtDamage,
     IPlayerTookDamage,
-    IPlayerDied
+    IPlayerDied,
+    IPlayerDealtHealing,
+    IPlayerReceivedHealing,
+    IPlayerJoinedMatch,
+    IPlayerLeftMatch,
 } from './child'
 
 export interface IEvent {
@@ -43,4 +47,24 @@ export interface IEvent {
      * {341}
      */
     playerDied: IPlayerDied
+
+    /**
+     * {705}
+     */
+    playerDealtHealing: IPlayerDealtHealing
+
+    /**
+     * {708}
+     */
+    playerReceivedHealing: IPlayerReceivedHealing
+
+    /**
+     * {711}
+     */
+    playerJoinedMatch: IPlayerJoinedMatch
+
+    /**
+     * {714}
+     */
+    playerLeftMatch: IPlayerLeftMatch
 }
