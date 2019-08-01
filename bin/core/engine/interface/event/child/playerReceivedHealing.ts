@@ -1,4 +1,7 @@
-import { } from '../../../type'
+import {
+    ValueTeamType,
+    ValuePlayerType,
+} from '../../../type'
 
 /**
  * {708}
@@ -7,9 +10,9 @@ export interface IPlayerReceivedHealing {
     /**
      * {709}
      */
-    team: TODO
+    team: ValueTeamType
     /**
      * {710}
      */
-    player: TODO
+    player: ValuePlayerType
 }

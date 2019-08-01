@@ -1,4 +1,7 @@
-import { } from '../../../type'
+import {
+    ValueTeamType,
+    ValuePlayerType,
+} from '../../../type'
 
 /**
  * {714}
@@ -7,9 +10,9 @@ export interface IPlayerLeftMatch {
     /**
      * {715}
      */
-    team: TODO
+    team: ValueTeamType
     /**
      * {716}
      */
-    player: TODO
+    player: ValuePlayerType
 }
