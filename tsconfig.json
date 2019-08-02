@@ -41,18 +41,7 @@
     ],
     "exclude": [
         "./dist/**/*",
-        "./bin/dist/**/*",
-
-        "./src/script.ts",
-        "./src/script_*.ts",
-        "./src/@*.ts",
-
-        "./src/**/script.ts",
-        "./src/**/script_*.ts",
-        "./src/**/@*.ts",
-
-        "./src/example/script.ts",
-        "./test/script.ts"
+        "./bin/dist/**/*"
     ],
     "awesomeTypescriptLoaderOptions": {
         "reportFiles": [

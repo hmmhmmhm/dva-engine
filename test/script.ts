@@ -6,7 +6,6 @@ const { Array, Bool, Number, String } = Type
 
 // Reprocessed function class.
 const { Rule, Player, Event, Entity, Team, Vector } = Classes
-
 /**
  * @description
  * Write the workshop code from below.

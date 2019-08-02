@@ -7,6 +7,7 @@ import run from 'tsc-watch/lib/runner'
 import { manipulate, detectState, print } from 'tsc-watch/lib/stdout-manipulator'
 import { getLogger } from '../generator/logger'
 
+import { loadUserScript } from  './afterSuccess'
 const onSuccessCommand = `ts-node "./bin/core/transform/afterSuccess.ts"`
 const Logger = getLogger()
 
@@ -55,10 +56,10 @@ tscProcess.stdout.on('data', buffer => {
 
                 if (firstTime) {
                     firstTime = false
-                    if(onSuccessCommand) run(onSuccessCommand)
+                    loadUserScript()
 
                 } else {
-                    if(onSuccessCommand) run(onSuccessCommand)
+                    loadUserScript()
                 }
             }
         })

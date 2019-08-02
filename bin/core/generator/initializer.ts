@@ -1,7 +1,7 @@
 import { Resolver } from './resolver'
 import { Inject } from '../language/injector/index'
 import { getLogger } from './logger'
-import { existsSync } from 'fs'
+import { existsSync, copyFileSync, mkdirSync } from 'fs'
 import packageData from '../../../package.json'
 import { exec } from 'child_process'
 
@@ -41,6 +41,19 @@ export const Generator = async (
             })
         })
     }
+    try{
+        // Create Src Path
+        try{ mkdirSync(`${process.cwd()}/src/`) } catch(e){}
+
+        // Create Workshop Default File
+        if(existsSync(`${process.cwd()}/preset/script.ts`)
+            && !existsSync(`${process.cwd()}/src/script.ts`)){
+
+            copyFileSync(
+                `${process.cwd()}/preset/script.ts`,
+                `${process.cwd()}/src/script.ts`)
+        }
+    }catch(e){}
 }
 
 // for CLI Command Run

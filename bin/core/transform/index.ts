@@ -7,9 +7,11 @@ const data: {
     srcPath: string
     interfaceVaraible?: ts.Identifier
     interfaceVaraibleIsHoisted: boolean
+    isWorkshopScript: boolean
 } = {
     srcPath: path.resolve(`${process.cwd()}`),
-    interfaceVaraibleIsHoisted: false
+    interfaceVaraibleIsHoisted: false,
+    isWorkshopScript: false
 }
 
 export default Hook({
@@ -21,6 +23,7 @@ export default Hook({
 
         // Create unique variable name in source file
         data.interfaceVaraible = ts.createUniqueName('interface')
+        data.isWorkshopScript = false
 
         // Overload only src folder codes
         let filePath = path.resolve(sourceFile.fileName)
@@ -74,6 +77,8 @@ export default Hook({
                 && !(checkFileName.indexOf(`script_`) == 0 && checkFileExt =='ts')
                 && !(checkFileName.indexOf(`@`) == 0 && checkFileExt =='ts')) return
         }
+
+        data.isWorkshopScript = true
 
         /**
          * @description
@@ -165,6 +170,15 @@ export default Hook({
         // Data Check
         if(!data.interfaceVaraible) return
 
+        // Export Assignment
+        let exportDecl = 
+            ts.createExportAssignment(
+                sourceFile.decorators,
+                sourceFile.modifiers,
+                false,
+                ts.createIdentifier(`Rule`)
+            )
+
         /**
          * @description
          * 1. Import Interface File
@@ -203,7 +217,15 @@ export default Hook({
             // Inject Statement
             sourceFile = ts.updateSourceFileNode(sourceFile, ts.createNodeArray([
                 importInject,
-                ...sourceFile.statements
+                ...sourceFile.statements,
+                exportDecl
+            ]))
+        } else if(data.isWorkshopScript){
+
+            // Inject Statement
+            sourceFile = ts.updateSourceFileNode(sourceFile, ts.createNodeArray([
+                ...sourceFile.statements,
+                exportDecl
             ]))
         }
 
