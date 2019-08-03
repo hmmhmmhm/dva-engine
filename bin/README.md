@@ -1,16 +1,16 @@
 ![THIS IS CRITICAL SECTION, PLEASE BE A CAREFUL IMAGE](https://i.imgur.com/gZK4gwI.png)
 
-## Structure
+## 🐇 Structure
 
 > The Bin folder contains the following folders:
 
 
 
-### Core [bin/core]
+### ✏️ Core [bin/core]
 
 The Core folder stores all of the engine's sources.
 
-### Release [bin/release]
+### 📔 Release [bin/release]
 
 The Release folder contains translated versions of the Core folder's interfaces translated into each country's language. If the Release folder does not exist when the engine is first run, the engine automatically creates it.
 

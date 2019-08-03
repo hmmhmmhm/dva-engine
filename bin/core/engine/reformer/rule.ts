@@ -1,4 +1,4 @@
-interface IRule {
+export interface IRule {
     /**
      * @description
      * You can annotate this rule.
