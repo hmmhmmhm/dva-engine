@@ -10,7 +10,11 @@
 
 The Core folder stores all of the engine's sources.
 
+
+
 ### 📔 Release [bin/release]
+
+> This folder is not enclosed on Github. Enclosed only to the released compressed file; if this folder is not present, it will be automatically created when the engine is running.
 
 The Release folder contains translated versions of the Core folder's interfaces translated into each country's language. If the Release folder does not exist when the engine is first run, the engine automatically creates it.
 

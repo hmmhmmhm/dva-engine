@@ -42,31 +42,31 @@
 
 ### 💾 data [bin/core/engine/language/data] 
 
-- 이 폴더 안에 번역데이터가 JSON 형태로 담깁니다.
+- Translation data (JSON type) is contained in this folder.
 
 
 
 ### 🔍 parse [bin/core/engine/language/parse] 
 
-- `npm run language:parse` 명령어가 입력되면 실행되는 명령어 스크립트입니다. 블리자드의 오버워치 워크샵 함수 설명 페이지를 Crawling 해서 JSON 형태로 가져옵니다.
+- A command script that runs when the command `npm run language:parse` is entered. Crawling the Blizzard's Overwatch Workshop Function Description page into JSON format.
 
 
 
 ### ✂️ extractor [bin/core/engine/language/extractor] 
 
-- `npm run language:extractor` 명령어가 입력되면 실행되는 명령어 스크립트입니다. `bin/release`  폴더 안에 이미 생성이 끝난 특정 언어의 인터페이스 파일에 적힌 모든 코멘트들을 추출해서 JSON 형태로 담아내고, 인터페이스 코멘트가 모두 번역파일  상 언어코드로 교체된 인터페이스파일들을 추출합니다.  이렇게 추출된 파일들은 `/dist/_extracted` 폴더에 추출됩니다.
+- A command script that runs when the `npm run language:extractor` command is entered. In the folder `bin/release`, all comments written in the interface file of a specific language that has already been created are extracted in JSON format, and all interface comments are extracted from the interface file that has been replaced by the language code. These extracted files are extracted to the folder `/dist/_extracted`.
 
 
 
 ### 🔗 injector [bin/core/engine/language/injector] 
 
-- `npm run language:injector` 명령어가 입력되면 실행되는 명령어 스크립트입니다.  `bin/release` 폴더 안에 복사된 인터페이스 파일들에 특정 언어 코멘트 내용들을 주입하는 함수입니다. (코멘트 상에 적힌 순서번호를 실제 언어 데이터로 교체합니다.)
+- A command script that runs when the command `npm run language:injector` is entered. This function injects certain language comments into the interface files copied into the `bin/release` folder. (Replace the sequence numbers on the comments with actual language data.)
 
 
 
 ### ✂️🔗 reapply [bin/core/engine/language/reapply] 
 
-- `npm run language:reapply` 명령어가 입력되면 실행되는 명령어 스크립트입니다. `extractor` 를 통해서 추출된 데이터를 모두 `bin/core` 상에 다시 반영합니다. 특정 번역코드  내용이 삭제될 필요가  있는 경우 contexts 를 비워놓고  이 명령어를 실행하면, 해당 번역코드를 지정된 언어권 데이터에서 삭제한 후 모든 언어데이터를 갱신합니다.
+- A command script that runs when the command `npm run language:reapply` is entered. All data extracted via the `extractor` will be reflected back on the `bin/core`. If certain translation code contents need to be deleted, if you leave contexts blank and run this command, the translation code will be deleted from the specified linguistic data and all language data will be updated.
 
 
 
