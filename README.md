@@ -169,6 +169,20 @@ If entering `Ctrl+Space` or `Ctrl+Alt+Space` does not provide a hint, enter `Ctr
 
 
 
+#### 👩‍💻 Advanced Parameter Intellisense
+
+> When using a workshop function, be sure to check which function is available in the parameters hints on the list.
+
+![Code Example](https://i.imgur.com/WScPfpO.png)
+
+The parameter classification name that you can enter at that location, such as `Type.*` is displayed as a hint. If you enter it the same way, you can see the list of functions available at that parameter.
+
+![Code Example](https://i.imgur.com/jqfiM1h.png)
+
+The sub-parameter is also fully described.
+
+
+
 #### 👩‍💻 Rule Coding Guide
 
 The Rule consists of a  class. When you type like a `new Rule ({...})`, the information you need to enter is displayed.
@@ -200,28 +214,26 @@ The Rule consists of a  class. When you type like a `new Rule ({...})`, the info
 
 ![Code Example](https://i.imgur.com/z8MKM9s.png)
 
-> 
+> This is the most basic set of functions of the typescript workshop interface.
 
-- RuleEvent
-  - 
-- Value
-  - 
-- Action
-  - 
-- Level
-  - 
-- Server
-  - 
-- Match
-  - 
-- Util
-  - 
-- Type
-  - 
-- Classes
-  - 
-
-~?
+- **RuleEvent**
+  - A collection of event functions that are used to create rules.
+- **Value**
+  - A collection of function values that you can write to a conditional statement and some action functions when you create a rule.
+- **Action**
+  - A collection of action functions that you can use to create rules.
+- **Level**
+  - A collection of functions related to an overwatch game map.
+- **Server**
+  - A collection of functions related to an overwatch workshop server.
+- **Match**
+  - A collection of functions related to an overwatch workshop competition.
+- **Util**
+  - A collection of utility functions that can be used to develop an overwatch workshop.
+- **Type**
+  - Classified collection of functions that can be used as parameter values when calling all workshop functions.
+- **Classes**
+  - A collection of functions classified according to the parameters of an overwatch workshop.
 
 
 
@@ -229,22 +241,24 @@ The Rule consists of a  class. When you type like a `new Rule ({...})`, the info
 
 ![Code Example](https://i.imgur.com/m6HpeCr.png)
 
-> 
+> A collection of functions classified according to the parameters of an overwatch workshop.
 
-- Rule
-  - 
-- Player
-  - 
-- Event
-  - 
-- Entity
-  - 
-- Team
-  - 
-- Vector
-  - 
-
-~?
+- **Rule**
+  - Rule class for overwatch workshop rules.
+- **Player**
+  - ![Code Example](https://i.imgur.com/feyOKRo.png)
+  - If you give the Player a value when you create a class, it shows the available functions associated with that game player and automatically binds the player at the same time. (You don't have to pass the player as a parameter each time you use a player-related function.)
+- **Event**
+  - ![Code Example](https://i.imgur.com/w3tUkGr.png)
+  - A class that provides function related to an event in static function. There is currently no function directly related to the event, so there is no function as a class instance that binds parameters.
+- **Entity**
+  - ![Example Code](https://i.imgur.com/7rGd3MM.png)
+  - Class that binds functions associated with an entity (the current entity-related function is very small and is not practical)
+- **Team**
+  - ![Code Example](https://i.imgur.com/xsKZLzV.png)
+  - A class that binds functions related to a team.
+- **Vector**
+  - TODO - **Description to be added later**
 
 
 
@@ -252,12 +266,17 @@ The Rule consists of a  class. When you type like a `new Rule ({...})`, the info
 
 ![Code Example](https://i.imgur.com/i5sr4vE.png)
 
-- Array
-- Bool
-- Number
-- String
+> Overwatch Workshop functions classified for use as the default data type.
 
-~?
+- Bool
+  - A collection of functions that return values for an bool type.
+- Number
+  - A collection of functions that return values for an number type.
+- Array
+  - A collection of functions that return values for an array type.
+  - TODO: Binding support for typescript grammar of array is not yet available.
+- String
+  - A collection of functions that return values for an string type.
 
 
 
