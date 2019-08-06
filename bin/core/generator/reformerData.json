@@ -55,6 +55,7 @@
     ]
   },
   "vector": {
+    "constructorType": "string | number",
     "independent": [],
     "dependent": [
       "angleBetweenVectors",

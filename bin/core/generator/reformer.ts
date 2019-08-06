@@ -44,8 +44,13 @@ export default () => {
 
             reformCode += `import { Type, Value } from '../../resolver'\n\n`
 
+            // Write Constructor Type
+            let constructorType = `string`
+            if(typeof reformerData[interfaceType]['constructorType'] != 'undefined')
+                constructorType = reformerData[interfaceType]['constructorType']
+
             reformCode += `class ${interfaceTypePascalCase} {\n`
-            reformCode += `\tpublic ${interfaceType}: string\n\n`
+            reformCode += `\tpublic ${interfaceType}: ${constructorType}\n\n`
 
             reformCode += `\t/**\n`
             reformCode += `\t * @param ${interfaceType} \`Type.${interfaceTypePascalCase}.\`\n`
@@ -56,7 +61,7 @@ export default () => {
             if(typeof reformerData[interfaceType]['constructorInit'] != 'undefined')
                 constructorInit = ` = ${reformerData[interfaceType]['constructorInit']}`
 
-            reformCode += `\tconstructor(${interfaceType}: string${constructorInit}){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
+            reformCode += `\tconstructor(${interfaceType}: ${constructorType}${constructorInit}){\n\t\tthis.${interfaceType} = ${interfaceType}\n\t}\n`
 
             // ?
             if(typeof reformerData[interfaceType]['independent'] != 'undefined')
