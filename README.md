@@ -16,7 +16,9 @@
 
 ## 💬 Why?
 
-The ruleset of an overwatch workshop can be modified by default only within the game. for this reason, IDE with many functions is not available. (This is certainly not good news for modern developers.)
+Recently, under the name of Workshop in Overwatch, a custom game mode has been created where users can program game rules. Workshop can be developed by setting up Event and Condition and Action in Rule.
+
+But the ruleset of an overwatch workshop can be modified by default only within the game. for this reason, IDE with many functions is not available. (This is certainly not good news for modern developers.)
 
 ## 💭 How?
 
@@ -319,6 +321,54 @@ The targets for which the engine binds typescript to workshop grammar are specif
 
 
 
+### ❔ How to Apply
+
+> Procedure for applying the conversion result of the engine code to the overwatch workshop is as follows.
+
+
+
+![](https://i.imgur.com/vpCAw92.png)
+
+Copy the contents of the 'release/script.ows' file.
+
+
+
+![](https://i.imgur.com/01TrS8V.png)
+
+Enter the `GAME BROWSER` from the game play.
+
+
+
+![](https://i.imgur.com/BJ3Yvol.png)
+
+Click the `CREATE` button.
+
+
+
+![](https://i.imgur.com/iRDAVeg.png)
+
+Click the `WORKSHOP` button.
+
+
+
+![](https://i.imgur.com/Omtg6m7.png)
+
+If you don't have any set rules, create a rule with the `+` button.
+
+
+
+![](https://i.imgur.com/xdv2PfM.png)
+
+Click the `SELECT ALL` button.
+
+
+
+![](https://i.imgur.com/lt9Cola.png)
+
+Click the `PASTE RULE` button. (If the Paste button does not appear, please copy the contents of the 'release/script.ows' file once more.)
+
+
+
 ### 📔 Command List
 
 #### 📔 User Commands
@@ -411,6 +461,22 @@ The targets for which the engine binds typescript to workshop grammar are specif
 > If you want to contribute to the development of this project, please read the CONTRIBUTING.md file.
 
 [Go to read the CONTRIBUTING.md file](https://github.com/hmmhmmhm/dva-engine/blob/master/CONTRIBUTING.md)
+
+
+
+## 🎯 TODO
+
+- [x] Typescript binding of all overwatch workshop function structures
+- [ ] Copy all function statements & Multilingual Support System for Interface File Comments (English and Korean)
+- [x] Githeub Repo-Based Engine Automatic Update System
+- [x] TypeScript Grammar Binding for Event Conditional Statement
+- [x] TypeScript Grammar Binding for Numeric Value Operators
+- [x] Quickly apply hot module Replacements (HMRs) based on dynamic compilation
+- [ ] Support direct use of Rule condition without condition statement of function with return value boolean
+- [ ] Support for redefining Typescript sequencing grammar
+- [ ] Ruleless System - Implicit rule generation via if statement (default to onGoingGlobal when event designation is not present)
+- [ ] Additional documentation of internal structure APIs
+- [ ] Method chaining - returns the Reaper class instance by default without the user creating the Reformer class each time
 
 
 
