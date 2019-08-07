@@ -467,7 +467,7 @@ Click the `PASTE RULE` button. (If the Paste button does not appear, please copy
 ## 🎯 TODO
 
 - [x] Typescript binding of all overwatch workshop function structures
-- [ ] Copy all function statements & Multilingual Support System for Interface File Comments (English and Korean)
+- [x] Copy all function statements & Multilingual Support System for Interface File Comments (English and Korean)
 - [x] Githeub Repo-Based Engine Automatic Update System
 - [x] TypeScript Grammar Binding for Event Conditional Statement
 - [x] TypeScript Grammar Binding for Numeric Value Operators
