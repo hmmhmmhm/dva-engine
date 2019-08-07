@@ -4,21 +4,21 @@
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
   "dependencies": {
     "async-sequencer": "^1.0.6",
-    "typescript-json-schema": "^0.38.3",
-    "ts-node": "^8.3.0",
-    "tsc-watch": "^2.2.1",
-    "ttypescript": "^1.5.7",
-    "typescript": "^3.5.3",
+    "easy-github-updater": "^1.0.3",
+    "folder-logger": "^1.0.4",
     "fs-extra": "^8.1.0",
     "nested-static": "^1.1.0",
     "rimraf": "^2.6.3",
     "string-replace-all": "^1.0.3",
     "temp-dir": "^2.0.0",
-    "folder-logger": "^1.0.4",
-    "easy-github-updater": "^1.0.3"
+    "ts-node": "^8.3.0",
+    "tsc-watch": "^2.4.0",
+    "ttypescript": "^1.5.7",
+    "typescript": "^3.5.3",
+    "typescript-json-schema": "^0.38.3"
   },
   "devDependencies": {
-    "@types/node": "^12.6.8",
+    "@types/node": "^12.7.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^6.1.0"
