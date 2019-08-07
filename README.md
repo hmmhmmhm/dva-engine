@@ -269,14 +269,14 @@ The Rule consists of a  class. When you type like a `new Rule ({...})`, the info
 
 > Overwatch Workshop functions classified for use as the default data type.
 
-- Bool
+- **Bool**
   - A collection of functions that return values for an bool type.
-- Number
+- **Number**
   - A collection of functions that return values for an number type.
-- Array
+- **Array**
   - A collection of functions that return values for an array type.
-  - TODO: Binding support for typescript grammar of array is not yet available.
-- String
+  - **TODO**: Binding support for typescript grammar of array is not yet available.
+- **String**
   - A collection of functions that return values for an string type.
 
 
