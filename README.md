@@ -258,7 +258,8 @@ The Rule consists of a  class. When you type like a `new Rule ({...})`, the info
   - ![Code Example](https://i.imgur.com/xsKZLzV.png)
   - A class that binds functions related to a team.
 - **Vector**
-  - TODO - **Description to be added later**
+  - ![Code Example](https://i.imgur.com/m8h8reP.png)
+  - A class that binds functions related to a vector.
 
 
 
@@ -296,29 +297,98 @@ Any function that returns a numeric value or a numeric value can be computed usi
 
 #### 👩‍💻 Plug-In Guide
 
-> ~?
-
-~?
+> **TODO**: D.Va Engine is developing a plug-in system that allows other users to re-use user-generated rules. After downloading scripts like 'myRuleset.ts' through 'npm', we are developing a structure that can be distributed over the Internet to other users.
 
 
 
-> 
+##### Plug-in Template
 
-- Transfiler's Grammar Change Target
-  - script.ts
-  - script_`*`.ts
-  - @`*`.ts
+**TODO**: This feature is currently in the process of working.
 
-~?
+
+
+##### Naming convention
+
+The targets for which the engine binds typescript to workshop grammar are specific files with the following naming conventions: Files that do not conform to the naming conventions below will not bind to workshop grammar.
+
+> If you want to write a code that is not relevant to the Overwatch Workshop, it must be written in a separate file that is not included in the naming convention below.
+
+- script.ts
+- script_`*`.ts
+- @`*`.ts
 
 
 
 ### 📔 Command List
 
-- `npm start` (or `npm run start`)
-  - 
+#### 📔 User Commands
 
-~?
+> The following commands are the most basic user commands.
+
+- `npm start` (or `npm run start`)
+  - A command that can run the engine. The engine may take about a minute to start, and after it runs, it automatically converts the overwatch workshop files in less than a second whenever the file changes.
+- `npm run build`
+  - A command to convert to a workshop file without running the engine. It takes less than 7 seconds.
+- `npm run build:fast`
+  - A command to perform a workshop file conversion without a module inspection and Github update check. It takes less than 4 seconds
+
+
+
+#### 📔 Core Commands
+
+> The commands below are for developers developing the inside of the engine.
+
+- `npm run lint`
+  - A command to modify the indent of project files according to the project creation rules.
+- `npm run clean`
+  - This command deletes the dist folder and the release folder in the project. It is good to use if the core build is incorrect or if there is a problem.
+- `npm run generate`
+  - This command creates the `bin/release` folder for the engine. If the `bin/release` folder already exists, delete it and recreate it from the beginning.
+
+
+
+#### 📔 Maintain Commands
+
+> Script commands for developers who maintain inside the engine.
+
+##### 📔 Fix & Correction
+
+> A command that can be modified if the function name of the overwatch workshop has been changed or is incorrectly recorded on the engine.
+
+- `npm run maintain:rename`
+  - Replace a function name.
+
+##### 📔 Update & Lab
+
+> This folder contains the automation scripts that are available when new functions or events are added to the Overwatch Workshop.
+
+- `npm run maintain:event`
+  - Add a new event.
+- `npm run maintain:value`
+  - Add a new value.
+- `npm run maintain:action`
+  - Add a new action.
+- `npm run language:extract`
+  - A command script that runs when the `npm run language:extractor` command is entered. In the folder `bin/release`, all comments written in the interface file of a specific language that has already been created are extracted in JSON format, and all interface comments are extracted from the interface file that has been replaced by the language code. These extracted files are extracted to the folder `/dist/_extracted`.
+
+- `npm run maintain:run`
+  - For developers who modify the ttypescript transpiler code, recreate the release folder and proceed with the workshop file generation.
+
+
+
+#### 📔 Module Commands
+
+> The commands below are reused within the command.
+
+- `npm run install`
+  - This command generates an effect similar to `npm install`. If there are no modules to install, the command will be completed immediately.
+- `npm run update`
+  - A command that generates an effect similar to `git pull`. If there is no update, the command will be completed immediately.
+  - If you have files created separately in a folder other than the `src/*` folder and the `node_modules/*` folder, they will all be deleted.
+- `npm run generate:silent`
+  - This command generates an effect similar to `npm run generate`. If there is no update, the command will be completed.
+- `npm run ttsc`
+  - A command that proceeds with the ttypescript conversion of all project files.
 
 
 
