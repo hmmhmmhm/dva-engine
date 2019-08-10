@@ -4,7 +4,7 @@ import { getLogger } from './logger'
 
 import Reformer from './reformer'
 import Generator from './generator'
-import { readFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 
 
 /**
@@ -92,4 +92,19 @@ export const Resolver = async (langs: string[] = [ 'kor' ]) => {
 
         , sequencerData)
     }
+
+    // Generate `release/index.ts`
+    /*
+    import * as eng from './eng'
+    import * as kor from './kor'
+    export {
+        eng,
+        kor
+    }
+    */
+    let releaseIndexCode = ``
+    for(let lang of langs) releaseIndexCode += `import * as ${lang} from './${lang}'\n`
+    releaseIndexCode += `export {\n`
+    releaseIndexCode += `    ${langs.join(`,\n    `)}\n}`
+    writeFileSync(`${process.cwd()}/bin/release/index.ts`, releaseIndexCode)
 }

@@ -21,7 +21,10 @@
     "@types/node": "^12.7.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
-    "eslint": "^6.1.0"
+    "dts-bundle-webpack": "^1.0.2",
+    "eslint": "^6.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "scripts": {
     "install": "node ./install.ts",
@@ -33,6 +36,8 @@
     "lint": "eslint --fix -c ./.eslintrc.json --ext .ts .",
     "generate": "ts-node ./bin/core/generator && npm run ttsc",
     "generate:silent": "ts-node ./bin/core/generator/initializer.ts",
+    "export": "webpack --config ./preset/webpack.config.ts",
+    "export2": "ttsc -p ./tsconfig.extend.json",
     "ttsc": "ttsc && echo Typescript Transpile Done!",
     "maintain:run": "npm run generate && ts-node ./bin/core/transform/afterSuccess.ts",
     "maintain:rename": "ts-node ./bin/core/maintain/rename.ts",

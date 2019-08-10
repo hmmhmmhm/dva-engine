@@ -64,7 +64,7 @@ try{
     if(`${process.argv[1]}` == __filename){
 
         Logger.debug(`Pre Built All User Scripts...`)
-        exec('ttsc -p ./tsconfig.extend.json', (error, body)=>{
+        exec('ttsc', (error, body)=>{
             if(error){
                 Logger.debug(`An error occurred while building.`)
                 console.log(error)

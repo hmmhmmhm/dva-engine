@@ -298,7 +298,7 @@ export default ({
                 Logger.debug(`[${data.lang.toUpperCase()}] Created Resolver Index <${interfaceType.toLowerCase()}/index.ts>`)
             }
         )
-    
+
         resolve()
     })
 }
