@@ -1,9 +1,11 @@
 import { Resolver } from './resolver'
 import { Inject } from '../language/injector/index'
 import { getLogger } from './logger'
-import { existsSync, copyFileSync, mkdirSync } from 'fs'
-import packageData from '../../../package.json'
+import { existsSync, copyFileSync, mkdirSync, readFileSync } from 'fs'
 import { exec } from 'child_process'
+
+//import packageData from '../../../package.json'
+let packageData = JSON.parse(String(readFileSync(`../../../package.json`)))
 
 export const Generator = async (
     langs = [
@@ -41,6 +43,7 @@ export const Generator = async (
             })
         })
     }
+
     try{
         // Create Src Path
         try{ mkdirSync(`${process.cwd()}/src/`) } catch(e){}

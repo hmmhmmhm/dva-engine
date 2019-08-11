@@ -1,9 +1,18 @@
-import stage2 from './value_stage2.json'
-import additional from './value_stage3_additional.json'
-import values from './value_stage3_reference.json'
-import { writeFileSync } from 'fs'
+
+import { writeFileSync, readFileSync } from 'fs'
 import { getLogger } from '../../../generator/logger'
 import { splitter } from './make_stage2'
+
+
+//import stage2 from './value_stage2.json'
+let stage2 = JSON.parse(String(readFileSync(`./value_stage2.json`)))
+
+// import additional from './value_stage3_additional.json'
+let additional = JSON.parse(String(readFileSync(`./value_stage3_additional.json`)))
+
+//import values from './value_stage3_reference.json'
+let values = JSON.parse(String(readFileSync(`./value_stage3_reference.json`)))
+
 
 let Logger = getLogger()
 

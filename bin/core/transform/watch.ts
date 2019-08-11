@@ -1,7 +1,5 @@
 import nodeCleanup from 'node-cleanup'
 import spawn from 'cross-spawn'
-
-import packageData from '../../../package.json'
 import run from 'tsc-watch/lib/runner'
 
 import { manipulate, detectState, print } from 'tsc-watch/lib/stdout-manipulator'
@@ -10,6 +8,11 @@ import { getLogger } from '../generator/logger'
 import { loadUserScript } from  './afterSuccess'
 const onSuccessCommand = `ts-node "./bin/core/transform/afterSuccess.ts"`
 const Logger = getLogger()
+
+
+import { readFileSync } from 'fs'
+// import packageData from '../../../package.json'
+let packageData = JSON.parse(String(readFileSync(`../../../package.json`)))
 
 let firstTime = true
 

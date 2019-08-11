@@ -1,10 +1,12 @@
 import * as Util from '../../generator/util'
 import * as Extractor from './extractor'
 
-import fs from 'fs'
+import fs, { readFileSync } from 'fs'
 import path from 'path'
 import rimraf from 'rimraf'
-import generatorData from '../../generator/generatorData.json'
+
+// import generatorData from '../../generator/generatorData.json'
+let generatorData = JSON.parse(String(readFileSync(`../../generator/generatorData.json`)))
 
 /**
  * @description

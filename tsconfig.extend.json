@@ -1,9 +1,0 @@
-{
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "outDir": "./dist",
-        "outFile": "./dist/dva.js",
-        "baseUrl": ".",
-        "module": "amd"
-    }
-  }
