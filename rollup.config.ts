@@ -8,7 +8,7 @@ export default [
         output: {
             name: "dva",
             exports: "named",
-            file: "./dist/bundle.js",
+            file: "./dist/dva.js",
             format: "umd"
         },
         plugins: [
@@ -17,7 +17,7 @@ export default [
         ]
     }, {
         input: "./dist/bin/release/index.d.ts",
-        output: [{ file: "dist/bundle.d.ts", format: "es" }],
+        output: [{ file: "dist/dva.d.ts", format: "es" }],
         plugins: [dts()]
     }
 ]
