@@ -1,7 +1,5 @@
 import { writeFileSync, readFileSync } from 'fs'
-
-// import values from './value_stage1.json'
-let values = JSON.parse(String(readFileSync(`./value_stage1.json`)))
+import values from './value_stage1.json'
 
 export const splitter = (context: string, splitMax = 40, splitMin = 15) => {
     let chars = context.split('')

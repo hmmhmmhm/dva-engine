@@ -5,8 +5,7 @@ import fs, { readFileSync } from 'fs'
 import path from 'path'
 import rimraf from 'rimraf'
 
-// import generatorData from '../../generator/generatorData.json'
-let generatorData = JSON.parse(String(readFileSync(`../../generator/generatorData.json`)))
+import generatorData from '../../generator/generatorData.json'
 
 /**
  * @description

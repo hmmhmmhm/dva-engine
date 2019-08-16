@@ -11,8 +11,7 @@ const Logger = getLogger()
 
 
 import { readFileSync } from 'fs'
-// import packageData from '../../../package.json'
-let packageData = JSON.parse(String(readFileSync(`../../../package.json`)))
+import packageData from '../../../package.json'
 
 let firstTime = true
 

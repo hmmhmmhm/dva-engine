@@ -1,8 +1,7 @@
 import FolderLogger from 'folder-logger'
 import { readFileSync } from 'fs'
 
-// import generatorData from './generatorData.json'
-let generatorData = JSON.parse(String(readFileSync(`./generatorData.json`)))
+import generatorData from './generatorData.json'
 
 export interface IData {
 

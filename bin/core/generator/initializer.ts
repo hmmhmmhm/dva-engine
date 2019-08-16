@@ -4,8 +4,7 @@ import { getLogger } from './logger'
 import { existsSync, copyFileSync, mkdirSync, readFileSync } from 'fs'
 import { exec } from 'child_process'
 
-//import packageData from '../../../package.json'
-let packageData = JSON.parse(String(readFileSync(`../../../package.json`)))
+import packageData from '../../../package.json'
 
 export const Generator = async (
     langs = [
