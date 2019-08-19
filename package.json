@@ -8,7 +8,7 @@
     "folder-logger": "^1.0.4",
     "fs-extra": "^8.1.0",
     "nested-static": "^1.1.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.1",
     "string-replace-all": "^1.0.3",
     "temp-dir": "^2.0.0",
     "ts-node": "^8.3.0",
@@ -18,10 +18,10 @@
     "typescript-json-schema": "^0.38.3"
   },
   "devDependencies": {
-    "@types/node": "^12.7.0",
+    "@types/node": "^12.7.2",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.0",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-dts": "^1.1.6",
     "rollup-plugin-node-resolve": "^5.2.0"

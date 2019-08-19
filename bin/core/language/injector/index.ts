@@ -8,6 +8,7 @@ import tempDir from 'temp-dir'
 import fs from 'fs'
 import path from 'path'
 import rimraf from 'rimraf'
+import replaceAll from 'string-replace-all'
 
 /**
  * @description
@@ -58,6 +59,7 @@ export const Inject = async (langs: string[] = ['kor'])=>{
                         fileData,
                         subPath
                     } of collectedDatas){
+                        fileData = replaceAll(fileData, `\r`, ``)
 
                         let collectedCommentData = Injector.collectCommentData(fileData, fileName)
                         for(let collectedComment of collectedCommentData){
@@ -111,7 +113,6 @@ try{
             }else{
                 Inject()
             }
-            console.log('Finished')
         })()
     }
 }catch(e){}
