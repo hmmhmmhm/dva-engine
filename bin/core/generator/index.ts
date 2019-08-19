@@ -1,6 +1,7 @@
 import { Resolver } from './resolver'
 import { Inject } from '../language/injector/index'
 import { getLogger } from './logger'
+import { Indexer } from './indexer'
 
 export const Generator = async (
     langs = [
@@ -16,6 +17,7 @@ export const Generator = async (
 
     await Inject(langs)
     await Resolver(langs)
+    await Indexer(langs)
     
     Logger.debug(`All generator operations succeeded.`)
 }

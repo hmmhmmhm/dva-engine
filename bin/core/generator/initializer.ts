@@ -1,10 +1,11 @@
 import { Resolver } from './resolver'
 import { Inject } from '../language/injector/index'
 import { getLogger } from './logger'
-import { existsSync, copyFileSync, mkdirSync, readFileSync } from 'fs'
+import { existsSync, copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { exec } from 'child_process'
 
 import packageData from '../../../package.json'
+import { Indexer } from './indexer';
 
 export const Generator = async (
     langs = [
@@ -42,6 +43,9 @@ export const Generator = async (
             })
         })
     }
+
+    // Indexer are must be running.
+    await Indexer(langs)
 
     try{
         // Create Src Path
