@@ -22,9 +22,11 @@ export const Generator = async (
     Logger.debug(`D.VA ENGINE v${packageData.version}`)
     Logger.debug(`Starting initialization sequence...`)
 
-    if(!existsSync(`${process.cwd()}/bin/release`)){
+    if(!existsSync(`${process.cwd()}/bin/release/index.ts`)){
         await Inject(langs)
         await Resolver(langs)
+        await Indexer(langs)
+    
         Logger.debug(`All generator operations succeeded.`)
 
         Logger.debug(`Starting core typescript files transpile...`)
@@ -43,9 +45,6 @@ export const Generator = async (
             })
         })
     }
-
-    // Indexer are must be running.
-    await Indexer(langs)
 
     try{
         // Create Src Path
