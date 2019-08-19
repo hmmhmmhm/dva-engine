@@ -46,7 +46,9 @@ We purposed to make it possible to obtain the overwatch workshop code through ty
 
 ## 🌐 In Browser
 
-(Preparing..)
+> It's also available on mobile through the latest Chrome app.
+
+[NOW YOU CAN ENTER HERE](https://codesandbox.io/s/github/hmmhmmhm/dva-engine-codesandbox)
 
 
 
