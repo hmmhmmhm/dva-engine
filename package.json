@@ -1,6 +1,6 @@
 {
   "name": "dva-engine",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "🎮 Overwatch Workshop Ruleset with JavaScript (+Typescript) (WIP)",
   "dependencies": {
     "async-sequencer": "^1.0.6",

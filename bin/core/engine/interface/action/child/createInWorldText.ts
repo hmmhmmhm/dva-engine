@@ -6,6 +6,7 @@ import {
     ValueInWorldTextReevaluationType,
     ValueClippingType,
     ValueSpectatorsType,
+    ValueColorType,
 } from '../../../type'
 
 /**
@@ -36,6 +37,10 @@ export interface ICreateInWorldText {
      * {173}
      */
     reevaluation: ValueInWorldTextReevaluationType
+    /**
+     * {757}
+     */
+    textColor: ValueColorType
     /**
      * {756}
      */

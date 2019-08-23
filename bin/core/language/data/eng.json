@@ -13912,6 +13912,19 @@
       },
       {
         "topName": "Create In World Text",
+        "orderNumber": 8,
+        "path": "/interface/action/child/createInWorldText.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "757": {
+    "contexts": [
+      "Specifies the color of the in-world text to use."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create In World Text",
         "orderNumber": 7,
         "path": "/interface/action/child/createInWorldText.ts",
         "indent": 4

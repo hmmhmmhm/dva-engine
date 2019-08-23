@@ -13354,6 +13354,19 @@
       },
       {
         "topName": "Create In World Text",
+        "orderNumber": 8,
+        "path": "/interface/action/child/createInWorldText.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "757": {
+    "contexts": [
+      "사용할 IN-WORLD TEXT 의 색상을 명시합니다."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create In World Text",
         "orderNumber": 7,
         "path": "/interface/action/child/createInWorldText.ts",
         "indent": 4
