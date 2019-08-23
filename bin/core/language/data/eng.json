@@ -13457,6 +13457,467 @@
       }
     ]
   },
+  "728": {
+    "contexts": [
+      "Adds a new bot to the specified slot on the",
+      "specified team so long as the slot is available.",
+      "This bot will only move, fire or use",
+      "abilities if executing workshop actions."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 0,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 128,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "729": {
+    "contexts": [
+      "The hero that the bot will be. If more than",
+      "one hero is provided, One will be chosen at random."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 1,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "730": {
+    "contexts": [
+      "The team on which to create the bot, The 'All'",
+      "option only works in free-for-all game modes, will the",
+      "'Team' options only work in team-based game modes."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 2,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "731": {
+    "contexts": [
+      "The player slot which will receive the bot",
+      "(-1 for first available slot).",
+      "Up to 6 bots may be added to each team,",
+      "or 12 bots to the free-for-all team,",
+      "regardless of lobby settings."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 3,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "732": {
+    "contexts": [
+      "The initial position where the bot will appear."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 4,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "733": {
+    "contexts": [
+      "The initial direction that the bot will face."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Dummy Bot",
+        "orderNumber": 5,
+        "path": "/interface/action/child/createDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "734": {
+    "contexts": [
+      "Removes the specified dummy bot from the match."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Destroy Dummy Bot",
+        "orderNumber": 0,
+        "path": "/interface/action/child/destroyDummyBot.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 129,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "735": {
+    "contexts": [
+      "The team to remove the dummy bot from. The 'All'",
+      "option only works in free-for-all game modes,",
+      "while the 'team' options only work in team-based game modes."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Destroy Dummy Bot",
+        "orderNumber": 1,
+        "path": "/interface/action/child/destroyDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "736": {
+    "contexts": [
+      "The slot to remove the dummy bot from."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Destroy Dummy Bot",
+        "orderNumber": 2,
+        "path": "/interface/action/child/destroyDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "737": {
+    "contexts": [
+      "Removes all dummy bots from the match."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Destroy All Dummy Bot",
+        "orderNumber": 0,
+        "path": "/interface/action/child/destroyAllDummyBot.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 130,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "738": {
+    "contexts": [
+      "Sets or adds to the throttle (directional input control)",
+      "of a player or players such that they begin moving",
+      "in a particular direction.",
+      "Any previous throttle in directon is cancelled."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 0,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 131,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "739": {
+    "contexts": [
+      "The player or players whose throttle will be set or added to."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 1,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "740": {
+    "contexts": [
+      "The unit direction in which the throttle will be",
+      "set or added to. This value is normalized internally."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 2,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "741": {
+    "contexts": [
+      "The amount of throttle (or change to throttle).",
+      "A value of 1 denotes full throttle."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 3,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "742": {
+    "contexts": [
+      "Specifies whether direction is relative to world",
+      "coordinates or the local coordinates of the player or players."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 4,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "743": {
+    "contexts": [
+      "Specifies whether preexisting",
+      "throttle is replaced or added to."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 5,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "744": {
+    "contexts": [
+      "Specifies which of this action's inputs will be",
+      "continuously reevaluated. This action will keep asking",
+      "for and using new values from reevaluated inputs."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Start Throttle In Direction",
+        "orderNumber": 6,
+        "path": "/interface/action/child/startThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "745": {
+    "contexts": [
+      "Cancels the behavior caused by start throttle in direction."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Stop Throttle In Direction",
+        "orderNumber": 0,
+        "path": "/interface/action/child/stopThrottleInDirection.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 132,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "746": {
+    "contexts": [
+      "The player or players whose",
+      "default throttle control will be restored."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Stop Throttle In Direction",
+        "orderNumber": 1,
+        "path": "/interface/action/child/stopThrottleInDirection.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "747": {
+    "contexts": [
+      "Creates an in-world beam effect entity.",
+      "This effect entity will persist until destroyed.",
+      "To obtain a reference to this entity,",
+      "use the last created entity value.",
+      "This action will fail if too many entities have been created."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 0,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IAction",
+        "orderNumber": 133,
+        "path": "/interface/action/action.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "748": {
+    "contexts": [
+      "One or more players who will be able to see the effect."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 1,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "749": {
+    "contexts": [
+      "The type of effect to be created."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 2,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "750": {
+    "contexts": [
+      "The effect's start position. If this value is a player,",
+      "then the effect will move along with the player.",
+      "therwise, the value is interpreted as a position in the world."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 3,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "751": {
+    "contexts": [
+      "The effect's end position. If this value is a player,",
+      "then the effect will move along with the player.",
+      "Otherwise, the value is interpreted as a position in the world."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 4,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "752": {
+    "contexts": [
+      "The color of the beam effect to be created.",
+      "If a particular team is chosen, The effect will either",
+      "be red or blue, depending on whether the team hostile to viewer.",
+      "Does not apply to sound effects. Only the 'Good'",
+      "and 'Bad' beam effects can have color applied."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 5,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "753": {
+    "contexts": [
+      "Specifies which of this action's inputs will be",
+      "continuously reevaluated. The effect will keep asking",
+      "for and using new values from reevaluated inputs."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Beam Effect",
+        "orderNumber": 6,
+        "path": "/interface/action/child/createBeamEffect.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "754": {
+    "contexts": [
+      "Whether a player is a dummy bot."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Is Dummy Bot",
+        "orderNumber": 0,
+        "path": "/interface/value/child/isDummyBot.ts",
+        "indent": 0
+      },
+      {
+        "topName": "IValue",
+        "orderNumber": 198,
+        "path": "/interface/value/value.ts",
+        "indent": 0
+      }
+    ]
+  },
+  "755": {
+    "contexts": [
+      "Player to consider."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Is Dummy Bot",
+        "orderNumber": 1,
+        "path": "/interface/value/child/isDummyBot.ts",
+        "indent": 4
+      }
+    ]
+  },
+  "756": {
+    "contexts": [
+      "Whether spectators can see the text or not."
+    ],
+    "usedFiles": [
+      {
+        "topName": "Create Hud Text",
+        "orderNumber": 11,
+        "path": "/interface/action/child/createHudText.ts",
+        "indent": 4
+      },
+      {
+        "topName": "Create In World Text",
+        "orderNumber": 7,
+        "path": "/interface/action/child/createInWorldText.ts",
+        "indent": 4
+      }
+    ]
+  },
   "_file": {
     "/type/heroConstant.ts": [
       "export type HeroConstantType",

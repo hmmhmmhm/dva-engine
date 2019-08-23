@@ -56,7 +56,7 @@ Translation data used in this project file is copyrighted by Blizzard Entertainm
 
 ### ✅ Blizzard Patch
 
-> Project main contributor are referring to the Blizzard Update List at `https://blizztrack.com/patch_notes/overwatch_ptr`. If a new function or event has been added to the workshop from these pages, please use the command below to create a Commit name and PR as shown in `Blizzard Patch <Version Number>`.
+> Project main contributor are referring to the Blizzard Update List at [https://blizztrack.com/patch_notes/overwatch_ptr](https://blizztrack.com/patch_notes/overwatch_ptr). If a new function or event has been added to the workshop from these pages, please use the command below to create a Commit name and PR as shown in `Blizzard Patch <Version Number>`.
 
 #### 📔 Update & Lab
 

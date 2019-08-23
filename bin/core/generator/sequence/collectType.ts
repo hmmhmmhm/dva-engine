@@ -65,6 +65,7 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                     let resolverCode = ``
                     let typeFilePaths: string[] = []
                     let stringTypes: string[] = []
+                    let numberTypes: string[] = []
 
                     // Collect Resolver Type Names
                     for(let resolverType of resolverTypes){
@@ -91,14 +92,21 @@ export default Sequence(async ({resolve, reject, data: preData})=>{
                                 if(resolverType.length != 0 && resolverType.indexOf(`\'`) != -1){
                                     stringTypes.push (resolverType)
                                     continue
+                                }else if(resolverType.length != 0 && Number.isInteger(Number(resolverType))){
+                                    numberTypes.push (resolverType)
+                                    continue
                                 }
                                 Logger.critical(`[${data.lang.toUpperCase()}] Undetected resolverType: <${resolverType}> (type/${fileName})`)
                             }
                         }
                     }
+
                     if(stringTypes.length != 0){
-                        typeFilePaths.push(`/**\n * @param str 문자열 값입니다. \`''\`를 입력해서\n * 사용가능한 문자열 목록을 확인 할 수 있습니다.\n */\n`)
+                        typeFilePaths.push(`/**\n * @param str Type \'\n * Then can see list of available string lists.\n */\n`)
                         typeFilePaths.push(`export const Default = (str: ${stringTypes.join(' | ')}) => str\n`)
+                    }else if(numberTypes.length != 0){
+                        typeFilePaths.push(`/**\n * @param num Type Any Number.\n * Then can see list of available number lists. */\n`)
+                        typeFilePaths.push(`export const Default = (num: ${numberTypes.join(' | ')}) => num\n`)
                     }
 
                     // Write Export Codes

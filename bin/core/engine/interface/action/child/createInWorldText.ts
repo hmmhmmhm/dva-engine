@@ -5,6 +5,7 @@ import {
     ValueVectorType,
     ValueInWorldTextReevaluationType,
     ValueClippingType,
+    ValueSpectatorsType,
 } from '../../../type'
 
 /**
@@ -35,4 +36,8 @@ export interface ICreateInWorldText {
      * {173}
      */
     reevaluation: ValueInWorldTextReevaluationType
+    /**
+     * {756}
+     */
+    spectators: ValueSpectatorsType
 }

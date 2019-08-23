@@ -6,9 +6,8 @@ import {
     ValueLocationType,
     ValueHudTextReevaluationType,
     ValueStringParamType,
+    ValueSpectatorsType,
 } from '../../../type'
-
-import { INull } from '../../value'
 
 /**
  * {14}
@@ -54,4 +53,8 @@ export interface ICreateHudText {
      * {139}
      */
     reevaluation: ValueHudTextReevaluationType
+    /**
+     * {756}
+     */
+    spectators: ValueSpectatorsType
 }

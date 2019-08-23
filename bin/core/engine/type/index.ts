@@ -1,5 +1,6 @@
 export * from './event'
 export * from './value'
 export * from './heroConstant'
+export * from './slotRange'
 export * from './teamConstant'
 export * from './variable'

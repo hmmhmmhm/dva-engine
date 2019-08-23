@@ -126,6 +126,12 @@ import {
     IWait,
     IStartTransformingThrottle,
     IStopTransformingThrottle,
+    ICreateDummyBot,
+    IDestroyDummyBot,
+    IDestroyAllDummyBot,
+    IStartThrottleInDirection,
+    IStopThrottleInDirection,
+    ICreateBeamEffect,
 } from './child'
 import { ISetPlayerScore } from './child/setPlayerScore'
 
@@ -769,4 +775,34 @@ export interface IAction {
      * {722}
      */
     stopTransformingThrottle: IStopTransformingThrottle
+
+    /**
+     * {728}
+     */
+    createDummyBot: ICreateDummyBot
+
+    /**
+     * {734}
+     */
+    destroyDummyBot: IDestroyDummyBot
+
+    /**
+     * {737}
+     */
+    destroyAllDummyBot: IDestroyAllDummyBot
+
+    /**
+     * {738}
+     */
+    startThrottleInDirection: IStartThrottleInDirection
+
+    /**
+     * {745}
+     */
+    stopThrottleInDirection: IStopThrottleInDirection
+
+    /**
+     * {747}
+     */
+    createBeamEffect: ICreateBeamEffect
 }

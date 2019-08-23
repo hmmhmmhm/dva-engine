@@ -211,6 +211,7 @@ import {
     IHealee,
     IEventHealing,
     IHostPlayer,
+    IIsDummyBot,
 } from './child'
 
 export interface IValue {
@@ -1203,4 +1204,9 @@ export interface IValue {
      * {727}
      */
     hostPlayer: IHostPlayer
+
+    /**
+     * {754}
+     */
+    isDummyBot: IIsDummyBot
 }

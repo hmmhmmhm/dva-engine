@@ -218,7 +218,8 @@
       "healer.ts": "Healer",
       "healee.ts": "Healee",
       "eventHealing.ts": "Event Healing",
-      "hostPlayer.ts": "Host Player"
+      "hostPlayer.ts": "Host Player",
+      "isDummyBot.ts": "Is Dummy Bot"
     }
   },
   "action": {
@@ -350,7 +351,13 @@
       "enableDeathSpectateTargetHud.ts": "Enable Death Spectate Target Hud",
       "enableBuiltInGameModeMusic.ts": "Enable Built In Game Mode Music",
       "startTransformingThrottle.ts": "Start Transforming Throttle",
-      "stopTransformingThrottle.ts": "Stop Transforming Throttle"
+      "stopTransformingThrottle.ts": "Stop Transforming Throttle",
+      "createDummyBot.ts": "Create Dummy Bot",
+      "destroyDummyBot.ts": "Destroy Dummy Bot",
+      "destroyAllDummyBot.ts": "Destroy All Dummy Bot",
+      "startThrottleInDirection.ts": "Start Throttle In Direction",
+      "stopThrottleInDirection.ts": "Stop Throttle In Direction",
+      "createBeamEffect.ts": "Create Beam Effect"
     }
   }
 }
