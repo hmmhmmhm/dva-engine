@@ -1,5 +1,4 @@
-import { ValueType, ValueNumberType, ValueVariableOperation, ValuePlayerType } from '../../../type'
-import { IPlayerVariable } from '../../value'
+import { ValueType, ValueNumberType, ValueVariableOperationType, ValuePlayerType, VariableType } from '../../../type'
 
 /**
  * {56}
@@ -12,7 +11,7 @@ export interface IModifyPlayerVariableAtIndex {
     /**
      * {207}
      */
-    variable: IPlayerVariable
+    variable: VariableType
     /**
      * {200}
      */
@@ -20,7 +19,7 @@ export interface IModifyPlayerVariableAtIndex {
     /**
      * {198}
      */
-    operation: ValueVariableOperation
+    operation: ValueVariableOperationType
     /**
      * {199}
      */

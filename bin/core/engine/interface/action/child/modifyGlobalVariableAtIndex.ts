@@ -1,5 +1,4 @@
-import { ValueType, ValueNumberType, ValueVariableOperation } from '../../../type'
-import { IGlobalVariable } from '../../value'
+import { ValueType, ValueNumberType, ValueVariableOperationType, VariableType } from '../../../type'
 
 /**
  * {53}
@@ -8,7 +7,7 @@ export interface IModifyGlobalVariableAtIndex {
     /**
      * {197}
      */
-    variable: IGlobalVariable
+    variable: VariableType
     /**
      * {200}
      */
@@ -16,7 +15,7 @@ export interface IModifyGlobalVariableAtIndex {
     /**
      * {198}
      */
-    operation: ValueVariableOperation
+    operation: ValueVariableOperationType
     /**
      * {199}
      */

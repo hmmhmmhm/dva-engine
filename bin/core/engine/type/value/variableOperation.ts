@@ -1,4 +1,4 @@
-export type ValueVariableOperation
+export type ValueVariableOperationType
     = 'Add'
     | 'Subtract'
     | 'Multiply'

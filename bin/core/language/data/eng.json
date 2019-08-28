@@ -3841,8 +3841,7 @@
   },
   "197": {
     "contexts": [
-      "Variable - Variable specified by a single",
-      "alphabetic letter (A through Z)."
+      "Variable - The global variable to modify."
     ],
     "usedFiles": [
       {
@@ -3861,8 +3860,10 @@
   },
   "198": {
     "contexts": [
-      "Variable - Variable specified by a single",
-      "alphabetic letter (A through Z)."
+      "Operation - The way in which the variable’s",
+      "value will be changed. Options include standard",
+      "arithmetic operations as well as array operations",
+      "for appending and removing values."
     ],
     "usedFiles": [
       {
@@ -3893,10 +3894,11 @@
   },
   "199": {
     "contexts": [
-      "Index - The index of the array to modify.",
-      "If the index is beyond the end of the array,",
-      "the array is extended with new elements",
-      "given a value of 0."
+      "Value - The value used for the modification.",
+      "For arithmetic operations, This is the second of",
+      "the two operands, With the othher being the",
+      "variable's existing value. For array operations,",
+      " This is the value to append or remove."
     ],
     "usedFiles": [
       {
@@ -3921,10 +3923,10 @@
   },
   "200": {
     "contexts": [
-      "Player - The player or players whose variable",
-      "will be set. If multiple players are provided,",
-      "each of their variables will be set. Can",
-      "use most Player based Value Syntax for this value."
+      "Index - The index of the array to modify.",
+      "If the index is beyond the end of the array,",
+      "the array is extended with new elements",
+      "given a value of 0."
     ],
     "usedFiles": [
       {
@@ -3989,8 +3991,10 @@
   },
   "203": {
     "contexts": [
-      "Variable - Variable specified by a single",
-      "alphabetic letter (A through Z)."
+      "Player - The player or players whose variable",
+      "will be set. If multiple players are provided,",
+      "each of their variables will be set. Can",
+      "use most Player based Value Syntax for this value."
     ],
     "usedFiles": [
       {
@@ -4003,10 +4007,8 @@
   },
   "204": {
     "contexts": [
-      "Operation - The way in which the variable’s",
-      "value will be changed. Options include standard",
-      "arithmetic operations as well as array operations",
-      "for appending and removing values."
+      "Variable - Variable specified by a single",
+      "alphabetic letter (A through Z)."
     ],
     "usedFiles": [
       {
