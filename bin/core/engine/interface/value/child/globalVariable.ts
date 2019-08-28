@@ -3,6 +3,6 @@ import { VariableType } from '../../../type/variable'
 /**
  * {394}
  */
-export  interface IGlobalVariable {
+export interface IGlobalVariable {
     variable: VariableType
 }
