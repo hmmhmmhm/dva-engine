@@ -1,8 +1,13 @@
 import { Sequence } from 'async-sequencer'
 import { IData } from './interface'
 import * as Util from './util'
+import generatorData from './generatorData.json'
 
 import fs from 'fs'
+
+// Used to identify event functions.
+let eventResolverNames = Object.keys(generatorData.event.eventName)
+eventResolverNames = eventResolverNames.map(eventName => eventName.split('.')[0])
 
 /**
  * @description
@@ -241,14 +246,27 @@ export default ({
                      * [sub] `workshopCode` [properties]
                      */
                     if(isPropertiesExist){
-                        workshopCode += '('
-                        let properties = Object.keys(data.interfaces[interfaceName].properties)
-                        for(let propertieIndex in properties){
-                            if(Number(propertieIndex) != 0) workshopCode += ', '
-                            let propertie = properties[propertieIndex]
-                            workshopCode += `\$\{${propertie}\}`
+                        if(eventResolverNames.indexOf(resolverName) != -1){
+                            // Event Functions
+                            let properties = Object.keys(data.interfaces[interfaceName].properties)
+                            workshopCode += `;`
+                            for(let propertieIndex in properties){
+                                workshopCode += '\n\t\t'
+                                let propertie = properties[propertieIndex]
+                                workshopCode += `\$\{${propertie}\}`
+                                if((properties.length-1) != Number(propertieIndex)) workshopCode += `;`
+                            }
+                        }else{
+                            // Value & Action Functions
+                            workshopCode += '('
+                            let properties = Object.keys(data.interfaces[interfaceName].properties)
+                            for(let propertieIndex in properties){
+                                if(Number(propertieIndex) != 0) workshopCode += ', '
+                                let propertie = properties[propertieIndex]
+                                workshopCode += `\$\{${propertie}\}`
+                            }
+                            workshopCode += ')'
                         }
-                        workshopCode += ')'
                     }
     
                     /**
