@@ -1,4 +1,40 @@
+
+
+![FREE HONG KONG](https://i.imgur.com/KLvAahh.png)
+
+## 🌂 BOYCOTT BLIZZARD
+
+> From Republic of Korea to Hong Kong
+
+The D.Va Engine was developed by Korean. And we're 100% on Hong Kong's side. We are aware of the recent issue. Hong Kong gamers have shown their love for their country in interviews since the end of the tournament. 
+
+Of course, We can understand Blizzard's position to remain politically neutral on the issue. However, Blizzard not only suspended the player's qualifications, but also reduced the prize money to zero, and then removed all that game match videos from the Internet. Does it make sense that the player will forfeit the prize money for suspension because of the actions he made in the post-game interview?
+
+Blizzard can of course punish the competition player. However, given the usual level of fines, Blizzard's consistency in action should have been a light fine. Even the one who posted the notice on Blizzard Reddit was a user who had mocked the Hong Kong protests.
+
+Consideration of Chinese people should be as same as that of Hong Kongers. Should have been as careful, and heedful in disciplinary proceedings, Blizzard was afraid of China and chose to keep Hong Kong’s mouth shut.
+
+💬 **Democratic** Senator Ron Wyden said:
+
+```
+“Blizzard shows it is willing to humiliate itself to please the Chinese Communist Party,” Sen. Ron Wyden (D-OR)
+```
+
+💬 **Republican** Senator Marco Rubio said:
+
+```
+“Recognize what’s happening here. People who don’t live in China must  either self censor or face dismissal & suspensions,” Sen. Marco  Rubio (R-FL)
+```
+
+Isn't Blizzard a company that values political correctness? Is this right as an American company? Blizzard had the opportunity to defend his players and democracy, but they did not. So it's time for gamers and custom game developers to tell Hong Kong instead of Blizzard.
+
+Hong Kong is a totally different country from China, and it needs to be protected as a democratic country. many people will not be silent and all society's eyes are in Hong Kong. D.Va engine developers pray for Hong Kong's freedom.
+
+
+
 ![D.VA Engine Logo of Pink](https://i.imgur.com/mDreImI.png)
+
+
 
 # 🌈 D.VA Engine
 
